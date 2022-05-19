@@ -1,0 +1,76 @@
+sat
+b1
+#0
+0 001 dut_count#0
+1 00000000 dut_entries_0#0
+2 00000000 dut_entries_1#0
+3 00000000 dut_entries_2#0
+4 00000000 dut_entries_3#0
+5 0000 tracker_elementCount#0
+6 1 tracker_isActive#0
+7 10111111 tracker_packetValue#0
+8 0010 tracker_packetCount#0
+@0
+0 1 reset@0
+1 1 enq_valid@0
+2 11111111 enq_bits@0
+3 1 deq_ready@0
+4 1 startTracking@0
+5 00000000 dut_next_value_3_invalid@0
+@1
+0 0 reset@1
+1 1 enq_valid@1
+2 01000000 enq_bits@1
+3 0 deq_ready@1
+4 0 startTracking@1
+5 00000000 dut_next_value_3_invalid@1
+@2
+0 0 reset@2
+1 1 enq_valid@2
+2 00000000 enq_bits@2
+3 0 deq_ready@2
+4 0 startTracking@2
+5 00000001 dut_next_value_3_invalid@2
+@3
+0 0 reset@3
+1 1 enq_valid@3
+2 00000000 enq_bits@3
+3 0 deq_ready@3
+4 0 startTracking@3
+5 11111111 dut_next_value_3_invalid@3
+@4
+0 0 reset@4
+1 1 enq_valid@4
+2 01000000 enq_bits@4
+3 0 deq_ready@4
+4 1 startTracking@4
+5 01000001 dut_next_value_3_invalid@4
+@5
+0 0 reset@5
+1 0 enq_valid@5
+2 11111111 enq_bits@5
+3 1 deq_ready@5
+4 1 startTracking@5
+5 00000000 dut_next_value_3_invalid@5
+@6
+0 0 reset@6
+1 1 enq_valid@6
+2 00111111 enq_bits@6
+3 1 deq_ready@6
+4 1 startTracking@6
+5 00000000 dut_next_value_3_invalid@6
+@7
+0 0 reset@7
+1 1 enq_valid@7
+2 11111111 enq_bits@7
+3 1 deq_ready@7
+4 1 startTracking@7
+5 00000000 dut_next_value_3_invalid@7
+@8
+0 0 reset@8
+1 1 enq_valid@8
+2 01000000 enq_bits@8
+3 1 deq_ready@8
+4 1 startTracking@8
+5 00000000 dut_next_value_3_invalid@8
+.

@@ -1,0 +1,602 @@
+1 sort bitvec 1
+2 input 1 reset
+3 input 1 tryPush_0
+4 input 1 tryPush_1
+5 input 1 tryPush_2
+6 sort bitvec 8
+7 input 6 fifoDataIn_0
+8 input 6 fifoDataIn_1
+9 input 6 fifoDataIn_2
+10 input 1 tryReq
+11 sort bitvec 2
+12 input 11 selectShift
+13 sort bitvec 4
+14 input 13 queues_0__GEN_0_invalid ; @[Decoupled.scala 272:16 273:8]
+15 input 1 queues_0__GEN_3_invalid ; @[Decoupled.scala 272:16 273:24]
+16 input 6 queues_0__GEN_4_invalid ; @[Decoupled.scala 272:16 273:24]
+17 input 13 queues_1__GEN_0_invalid ; @[Decoupled.scala 272:16 273:8]
+18 input 1 queues_1__GEN_3_invalid ; @[Decoupled.scala 272:16 273:24]
+19 input 6 queues_1__GEN_4_invalid ; @[Decoupled.scala 272:16 273:24]
+20 input 13 queues_2__GEN_0_invalid ; @[Decoupled.scala 272:16 273:8]
+21 input 1 queues_2__GEN_3_invalid ; @[Decoupled.scala 272:16 273:24]
+22 input 6 queues_2__GEN_4_invalid ; @[Decoupled.scala 272:16 273:24]
+23 sort bitvec 3
+24 sort array 23 6
+25 state 24 dut_fifo_entries ; @[CircularPointerFifo.scala 38:20]
+26 state 13 dut_fifo_cnt ; @[CircularPointerFifo.scala 25:20]
+27 state 23 dut_fifo_wrPtr ; @[CircularPointerFifo.scala 29:22]
+28 state 23 dut_fifo_rdPtr ; @[CircularPointerFifo.scala 32:22]
+29 state 13 dut_cc_credits ; @[ArbitratedTop.scala 73:24]
+30 state 24 dut_fifo_1_entries ; @[CircularPointerFifo.scala 38:20]
+31 state 13 dut_fifo_1_cnt ; @[CircularPointerFifo.scala 25:20]
+32 state 23 dut_fifo_1_wrPtr ; @[CircularPointerFifo.scala 29:22]
+33 state 23 dut_fifo_1_rdPtr ; @[CircularPointerFifo.scala 32:22]
+34 state 13 dut_cc_1_credits ; @[ArbitratedTop.scala 73:24]
+35 state 24 dut_fifo_2_entries ; @[CircularPointerFifo.scala 38:20]
+36 state 13 dut_fifo_2_cnt ; @[CircularPointerFifo.scala 25:20]
+37 state 23 dut_fifo_2_wrPtr ; @[CircularPointerFifo.scala 29:22]
+38 state 23 dut_fifo_2_rdPtr ; @[CircularPointerFifo.scala 32:22]
+39 state 13 dut_cc_2_credits ; @[ArbitratedTop.scala 73:24]
+40 sort array 13 6
+41 state 40 queues_0_ram ; @[Decoupled.scala 259:95]
+42 state 13 queues_0_enq_ptr_value ; @[Counter.scala 62:40]
+43 state 13 queues_0_deq_ptr_value ; @[Counter.scala 62:40]
+44 state 1 queues_0_maybe_full ; @[Decoupled.scala 262:27]
+45 state 40 queues_1_ram ; @[Decoupled.scala 259:95]
+46 state 13 queues_1_enq_ptr_value ; @[Counter.scala 62:40]
+47 state 13 queues_1_deq_ptr_value ; @[Counter.scala 62:40]
+48 state 1 queues_1_maybe_full ; @[Decoupled.scala 262:27]
+49 state 40 queues_2_ram ; @[Decoupled.scala 259:95]
+50 state 13 queues_2_enq_ptr_value ; @[Counter.scala 62:40]
+51 state 13 queues_2_deq_ptr_value ; @[Counter.scala 62:40]
+52 state 1 queues_2_maybe_full ; @[Decoupled.scala 262:27]
+; _resetCount.init
+53 zero 1
+54 state 1 _resetCount
+55 init 1 54 53
+56 read 6 25 27
+57 read 6 25 28
+58 zero 1
+59 uext 13 58 3
+60 ugt 1 29 59 ; @[ArbitratedTop.scala 75:26] @[ArbitratedTop.scala 41:20]
+61 and 1 3 60 ; @[ArbitratedUniversalHarness.scala 25:69] @[ArbitratedTop.scala 31:18]
+62 sort bitvec 5
+63 uext 62 26 1
+64 uext 62 61 4
+65 add 62 63 64 ; @[CircularPointerFifo.scala 26:14]
+66 slice 13 65 3 0 ; @[CircularPointerFifo.scala 26:14]
+67 zero 1
+68 uext 13 67 3
+69 eq 1 36 68 ; @[CircularPointerFifo.scala 35:19] @[ArbitratedTop.scala 34:15]
+70 zero 1
+71 uext 13 70 3
+72 eq 1 31 71 ; @[CircularPointerFifo.scala 35:19] @[ArbitratedTop.scala 34:15]
+73 concat 11 69 72 ; @[ArbitratedUniversalHarness.scala 29:37]
+74 zero 1
+75 uext 13 74 3
+76 eq 1 26 75 ; @[CircularPointerFifo.scala 35:19] @[ArbitratedTop.scala 34:15]
+77 concat 23 73 76 ; @[ArbitratedUniversalHarness.scala 29:37]
+78 not 23 77 ; @[ArbitratedUniversalHarness.scala 29:26]
+79 const 13 1000
+80 eq 1 39 79 ; @[ArbitratedTop.scala 84:26] @[ArbitratedTop.scala 42:21]
+81 const 13 1000
+82 eq 1 34 81 ; @[ArbitratedTop.scala 84:26] @[ArbitratedTop.scala 42:21]
+83 concat 11 80 82 ; @[ArbitratedUniversalHarness.scala 29:65]
+84 const 13 1000
+85 eq 1 29 84 ; @[ArbitratedTop.scala 84:26] @[ArbitratedTop.scala 42:21]
+86 concat 23 83 85 ; @[ArbitratedUniversalHarness.scala 29:65]
+87 not 23 86 ; @[ArbitratedUniversalHarness.scala 29:48]
+88 and 23 78 87 ; @[ArbitratedUniversalHarness.scala 29:45]
+89 zero 1
+90 uext 23 89 2
+91 neq 1 88 90 ; @[ArbitratedUniversalHarness.scala 30:37]
+92 and 1 10 91 ; @[ArbitratedUniversalHarness.scala 30:24]
+93 slice 1 12 1 1 ; @[ArbitratedUniversalHarness.scala 33:46]
+94 slice 1 12 0 0 ; @[ArbitratedUniversalHarness.scala 33:46]
+95 slice 11 88 1 0 ; @[ArbitratedUniversalHarness.scala 33:46]
+96 slice 1 88 2 2 ; @[ArbitratedUniversalHarness.scala 33:46]
+97 concat 23 95 96 ; @[ArbitratedUniversalHarness.scala 33:46]
+98 ite 23 94 97 88 ; @[ArbitratedUniversalHarness.scala 33:46]
+99 slice 1 98 0 0 ; @[ArbitratedUniversalHarness.scala 33:46]
+100 slice 11 98 2 1 ; @[ArbitratedUniversalHarness.scala 33:46]
+101 concat 23 99 100 ; @[ArbitratedUniversalHarness.scala 33:46]
+102 ite 23 93 101 98 ; @[ArbitratedUniversalHarness.scala 33:46]
+103 slice 1 102 0 0 ; @[OneHot.scala 84:71]
+104 slice 1 102 1 1 ; @[OneHot.scala 84:71]
+105 slice 1 102 2 2 ; @[OneHot.scala 84:71]
+106 const 23 100
+107 zero 23
+108 ite 23 105 106 107 ; @[Mux.scala 47:70]
+109 const 23 010
+110 ite 23 104 109 108 ; @[Mux.scala 47:70]
+111 one 23
+112 ite 23 103 111 110 ; @[Mux.scala 47:70]
+113 slice 1 112 0 0 ; @[ArbitratedUniversalHarness.scala 35:46]
+114 slice 11 112 2 1 ; @[ArbitratedUniversalHarness.scala 35:46]
+115 concat 23 113 114 ; @[ArbitratedUniversalHarness.scala 35:46]
+116 ite 23 94 115 112 ; @[ArbitratedUniversalHarness.scala 35:46]
+117 slice 11 116 1 0 ; @[ArbitratedUniversalHarness.scala 35:46]
+118 slice 1 116 2 2 ; @[ArbitratedUniversalHarness.scala 35:46]
+119 concat 23 117 118 ; @[ArbitratedUniversalHarness.scala 35:46]
+120 ite 23 93 119 116 ; @[ArbitratedUniversalHarness.scala 35:46]
+121 slice 1 120 2 2 ; @[OneHot.scala 30:18]
+122 redor 1 121 ; @[OneHot.scala 32:14]
+123 slice 11 120 1 0 ; @[OneHot.scala 31:18]
+124 uext 11 121 1
+125 or 11 124 123 ; @[OneHot.scala 32:28]
+126 slice 1 125 1 1 ; @[CircuitMath.scala 30:8]
+127 concat 11 122 126 ; @[OneHot.scala 32:10]
+128 zero 1
+129 uext 11 128 1
+130 eq 1 127 129 ; @[ArbitratedTop.scala 45:41]
+131 and 1 92 130 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+132 uext 62 66 1
+133 uext 62 131 4
+134 sub 62 132 133 ; @[CircularPointerFifo.scala 26:24]
+135 slice 13 134 3 0 ; @[CircularPointerFifo.scala 26:24]
+136 uext 13 27 1
+137 uext 13 61 3
+138 add 13 136 137 ; @[CircularPointerFifo.scala 30:18]
+139 slice 23 138 2 0 ; @[CircularPointerFifo.scala 30:18]
+140 uext 13 28 1
+141 uext 13 131 3
+142 add 13 140 141 ; @[CircularPointerFifo.scala 33:18]
+143 slice 23 142 2 0 ; @[CircularPointerFifo.scala 33:18] @[CircularPointerFifo.scala 43:17]
+144 one 1
+145 one 1
+146 one 1
+147 one 1 ; @[ArbitratedUniversalHarness.scala 23:18] @[ArbitratedTop.scala 33:21]
+148 ite 6 61 7 56 ; @[ArbitratedTop.scala 39:12]
+149 uext 62 29 1
+150 uext 62 131 4
+151 add 62 149 150 ; @[ArbitratedTop.scala 74:22]
+152 slice 13 151 3 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+153 uext 62 152 1
+154 uext 62 61 4
+155 sub 62 153 154 ; @[ArbitratedTop.scala 74:28]
+156 slice 13 155 3 0 ; @[ArbitratedTop.scala 74:28]
+157 const 13 1000
+158 neq 1 29 157 ; @[ArbitratedTop.scala 78:18]
+159 not 1 131 ; @[ArbitratedTop.scala 78:38]
+160 or 1 158 159 ; @[ArbitratedTop.scala 78:35]
+161 not 1 2 ; @[ArbitratedTop.scala 78:9]
+162 not 1 160 ; @[ArbitratedTop.scala 78:9]
+163 implies 1 161 160
+164 constraint 163 ; dut_cc_assume @[ArbitratedTop.scala 78:9]
+165 read 6 30 32
+166 read 6 30 33
+167 zero 1
+168 uext 13 167 3
+169 ugt 1 34 168 ; @[ArbitratedTop.scala 75:26] @[ArbitratedTop.scala 41:20]
+170 and 1 4 169 ; @[ArbitratedUniversalHarness.scala 25:69] @[ArbitratedTop.scala 31:18]
+171 uext 62 31 1
+172 uext 62 170 4
+173 add 62 171 172 ; @[CircularPointerFifo.scala 26:14]
+174 slice 13 173 3 0 ; @[CircularPointerFifo.scala 26:14]
+175 one 1
+176 uext 11 175 1
+177 eq 1 127 176 ; @[ArbitratedTop.scala 45:41]
+178 and 1 92 177 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+179 uext 62 174 1
+180 uext 62 178 4
+181 sub 62 179 180 ; @[CircularPointerFifo.scala 26:24]
+182 slice 13 181 3 0 ; @[CircularPointerFifo.scala 26:24]
+183 uext 13 32 1
+184 uext 13 170 3
+185 add 13 183 184 ; @[CircularPointerFifo.scala 30:18]
+186 slice 23 185 2 0 ; @[CircularPointerFifo.scala 30:18]
+187 uext 13 33 1
+188 uext 13 178 3
+189 add 13 187 188 ; @[CircularPointerFifo.scala 33:18]
+190 slice 23 189 2 0 ; @[CircularPointerFifo.scala 33:18] @[CircularPointerFifo.scala 43:17]
+191 one 1
+192 one 1
+193 one 1
+194 one 1 ; @[ArbitratedUniversalHarness.scala 23:18] @[ArbitratedTop.scala 33:21]
+195 ite 6 170 8 165 ; @[ArbitratedTop.scala 39:12]
+196 uext 62 34 1
+197 uext 62 178 4
+198 add 62 196 197 ; @[ArbitratedTop.scala 74:22]
+199 slice 13 198 3 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+200 uext 62 199 1
+201 uext 62 170 4
+202 sub 62 200 201 ; @[ArbitratedTop.scala 74:28]
+203 slice 13 202 3 0 ; @[ArbitratedTop.scala 74:28]
+204 const 13 1000
+205 neq 1 34 204 ; @[ArbitratedTop.scala 78:18]
+206 not 1 178 ; @[ArbitratedTop.scala 78:38]
+207 or 1 205 206 ; @[ArbitratedTop.scala 78:35]
+208 not 1 2 ; @[ArbitratedTop.scala 78:9]
+209 not 1 207 ; @[ArbitratedTop.scala 78:9]
+210 implies 1 208 207
+211 constraint 210 ; dut_cc_1_assume @[ArbitratedTop.scala 78:9]
+212 read 6 35 37
+213 read 6 35 38
+214 zero 1
+215 uext 13 214 3
+216 ugt 1 39 215 ; @[ArbitratedTop.scala 75:26] @[ArbitratedTop.scala 41:20]
+217 and 1 5 216 ; @[ArbitratedUniversalHarness.scala 25:69] @[ArbitratedTop.scala 31:18]
+218 uext 62 36 1
+219 uext 62 217 4
+220 add 62 218 219 ; @[CircularPointerFifo.scala 26:14]
+221 slice 13 220 3 0 ; @[CircularPointerFifo.scala 26:14]
+222 const 11 10
+223 eq 1 127 222 ; @[ArbitratedTop.scala 45:41]
+224 and 1 92 223 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+225 uext 62 221 1
+226 uext 62 224 4
+227 sub 62 225 226 ; @[CircularPointerFifo.scala 26:24]
+228 slice 13 227 3 0 ; @[CircularPointerFifo.scala 26:24]
+229 uext 13 37 1
+230 uext 13 217 3
+231 add 13 229 230 ; @[CircularPointerFifo.scala 30:18]
+232 slice 23 231 2 0 ; @[CircularPointerFifo.scala 30:18]
+233 uext 13 38 1
+234 uext 13 224 3
+235 add 13 233 234 ; @[CircularPointerFifo.scala 33:18]
+236 slice 23 235 2 0 ; @[CircularPointerFifo.scala 33:18] @[CircularPointerFifo.scala 43:17]
+237 one 1
+238 one 1
+239 one 1
+240 one 1 ; @[ArbitratedUniversalHarness.scala 23:18] @[ArbitratedTop.scala 33:21]
+241 ite 6 217 9 212 ; @[ArbitratedTop.scala 39:12]
+242 uext 62 39 1
+243 uext 62 224 4
+244 add 62 242 243 ; @[ArbitratedTop.scala 74:22]
+245 slice 13 244 3 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+246 uext 62 245 1
+247 uext 62 217 4
+248 sub 62 246 247 ; @[ArbitratedTop.scala 74:28]
+249 slice 13 248 3 0 ; @[ArbitratedTop.scala 74:28]
+250 const 13 1000
+251 neq 1 39 250 ; @[ArbitratedTop.scala 78:18]
+252 not 1 224 ; @[ArbitratedTop.scala 78:38]
+253 or 1 251 252 ; @[ArbitratedTop.scala 78:35]
+254 not 1 2 ; @[ArbitratedTop.scala 78:9]
+255 not 1 253 ; @[ArbitratedTop.scala 78:9]
+256 implies 1 254 253
+257 constraint 256 ; dut_cc_2_assume @[ArbitratedTop.scala 78:9] @[ArbitratedTop.scala 23:27 36:23]
+258 zero 1
+259 uext 6 258 7
+260 ite 6 131 57 259 ; @[Mux.scala 27:73] @[ArbitratedTop.scala 23:27 36:23]
+261 zero 1
+262 uext 6 261 7
+263 ite 6 178 166 262 ; @[Mux.scala 27:73] @[ArbitratedTop.scala 23:27 36:23]
+264 zero 1
+265 uext 6 264 7
+266 ite 6 224 213 265 ; @[Mux.scala 27:73]
+267 or 6 260 263 ; @[Mux.scala 27:73]
+268 not 1 61 ; @[ArbitratedTop.scala 54:30]
+269 or 1 60 268 ; @[ArbitratedTop.scala 54:27]
+270 not 1 2 ; @[ArbitratedTop.scala 54:11]
+271 not 1 269 ; @[ArbitratedTop.scala 54:11]
+272 not 1 76 ; @[ArbitratedTop.scala 56:12]
+273 not 1 131 ; @[ArbitratedTop.scala 56:26]
+274 or 1 272 273 ; @[ArbitratedTop.scala 56:23]
+275 not 1 274 ; @[ArbitratedTop.scala 56:11]
+276 not 1 170 ; @[ArbitratedTop.scala 54:30]
+277 or 1 169 276 ; @[ArbitratedTop.scala 54:27]
+278 not 1 277 ; @[ArbitratedTop.scala 54:11]
+279 not 1 72 ; @[ArbitratedTop.scala 56:12]
+280 not 1 178 ; @[ArbitratedTop.scala 56:26]
+281 or 1 279 280 ; @[ArbitratedTop.scala 56:23]
+282 not 1 281 ; @[ArbitratedTop.scala 56:11]
+283 not 1 217 ; @[ArbitratedTop.scala 54:30]
+284 or 1 216 283 ; @[ArbitratedTop.scala 54:27]
+285 not 1 284 ; @[ArbitratedTop.scala 54:11]
+286 not 1 69 ; @[ArbitratedTop.scala 56:12]
+287 not 1 224 ; @[ArbitratedTop.scala 56:26]
+288 or 1 286 287 ; @[ArbitratedTop.scala 56:23]
+289 not 1 288 ; @[ArbitratedTop.scala 56:11]
+290 or 6 267 266 ; @[Mux.scala 27:73]
+291 implies 1 270 269
+292 constraint 291 ; dut_assume @[ArbitratedTop.scala 54:11]
+293 implies 1 270 274
+294 constraint 293 ; dut_assume_1 @[ArbitratedTop.scala 56:11]
+295 implies 1 270 277
+296 constraint 295 ; dut_assume_2 @[ArbitratedTop.scala 54:11]
+297 implies 1 270 281
+298 constraint 297 ; dut_assume_3 @[ArbitratedTop.scala 56:11]
+299 implies 1 270 284
+300 constraint 299 ; dut_assume_4 @[ArbitratedTop.scala 54:11]
+301 implies 1 270 288
+302 constraint 301 ; dut_assume_5 @[ArbitratedTop.scala 56:11]
+303 read 6 41 43
+304 eq 1 42 43 ; @[Decoupled.scala 263:33]
+305 not 1 44 ; @[Decoupled.scala 264:28]
+306 and 1 304 305 ; @[Decoupled.scala 264:25]
+307 and 1 304 44 ; @[Decoupled.scala 265:24]
+308 and 1 92 130 ; @[ArbitratedUniversalHarness.scala 44:20 42:24]
+309 not 1 307 ; @[Decoupled.scala 289:19]
+310 or 1 308 309 ; @[Decoupled.scala 289:16 309:{24,39}] @[ArbitratedUniversalHarness.scala 40:24]
+311 and 1 310 61 ; @[Decoupled.scala 50:35]
+312 not 1 306 ; @[Decoupled.scala 288:19]
+313 or 1 61 312 ; @[Decoupled.scala 288:16 300:{24,39}]
+314 and 1 308 313 ; @[Decoupled.scala 50:35]
+315 uext 62 42 1
+316 one 1
+317 uext 62 316 4
+318 add 62 315 317 ; @[Counter.scala 78:24]
+319 slice 13 318 3 0 ; @[Counter.scala 78:24]
+320 zero 1
+321 ite 1 308 320 311 ; @[Decoupled.scala 304:{26,35}]
+322 ite 1 306 321 311 ; @[Decoupled.scala 301:17]
+323 not 1 322
+324 not 1 322
+325 not 1 322
+326 ite 13 322 319 42 ; @[Decoupled.scala 272:16 Counter.scala 78:15 62:40]
+327 uext 62 43 1
+328 one 1
+329 uext 62 328 4
+330 add 62 327 329 ; @[Counter.scala 78:24]
+331 slice 13 330 3 0 ; @[Counter.scala 78:24]
+332 zero 1
+333 ite 1 306 332 314 ; @[Decoupled.scala 301:17 303:14]
+334 ite 13 333 331 43 ; @[Decoupled.scala 276:16 Counter.scala 78:15 62:40]
+335 neq 1 322 333 ; @[Decoupled.scala 279:15]
+336 ite 1 335 322 44 ; @[Decoupled.scala 279:27 280:16 262:27] @[ArbitratedUniversalHarness.scala 41:23]
+337 ite 6 306 7 303 ; @[Decoupled.scala 296:17 301:17 302:19]
+338 one 1
+339 ite 1 306 321 311
+340 not 1 322
+341 ite 13 340 14 42
+342 not 1 322
+343 one 1
+344 ite 1 342 15 343
+345 not 1 322
+346 ite 6 345 16 7
+347 read 6 45 47
+348 eq 1 46 47 ; @[Decoupled.scala 263:33]
+349 not 1 48 ; @[Decoupled.scala 264:28]
+350 and 1 348 349 ; @[Decoupled.scala 264:25]
+351 and 1 348 48 ; @[Decoupled.scala 265:24]
+352 and 1 92 177 ; @[ArbitratedUniversalHarness.scala 44:20 42:24]
+353 not 1 351 ; @[Decoupled.scala 289:19]
+354 or 1 352 353 ; @[Decoupled.scala 289:16 309:{24,39}] @[ArbitratedUniversalHarness.scala 40:24]
+355 and 1 354 170 ; @[Decoupled.scala 50:35]
+356 not 1 350 ; @[Decoupled.scala 288:19]
+357 or 1 170 356 ; @[Decoupled.scala 288:16 300:{24,39}]
+358 and 1 352 357 ; @[Decoupled.scala 50:35]
+359 uext 62 46 1
+360 one 1
+361 uext 62 360 4
+362 add 62 359 361 ; @[Counter.scala 78:24]
+363 slice 13 362 3 0 ; @[Counter.scala 78:24]
+364 zero 1
+365 ite 1 352 364 355 ; @[Decoupled.scala 304:{26,35}]
+366 ite 1 350 365 355 ; @[Decoupled.scala 301:17]
+367 not 1 366
+368 not 1 366
+369 not 1 366
+370 ite 13 366 363 46 ; @[Decoupled.scala 272:16 Counter.scala 78:15 62:40]
+371 uext 62 47 1
+372 one 1
+373 uext 62 372 4
+374 add 62 371 373 ; @[Counter.scala 78:24]
+375 slice 13 374 3 0 ; @[Counter.scala 78:24]
+376 zero 1
+377 ite 1 350 376 358 ; @[Decoupled.scala 301:17 303:14]
+378 ite 13 377 375 47 ; @[Decoupled.scala 276:16 Counter.scala 78:15 62:40]
+379 neq 1 366 377 ; @[Decoupled.scala 279:15]
+380 ite 1 379 366 48 ; @[Decoupled.scala 279:27 280:16 262:27] @[ArbitratedUniversalHarness.scala 41:23]
+381 ite 6 350 8 347 ; @[Decoupled.scala 296:17 301:17 302:19]
+382 one 1
+383 ite 1 350 365 355
+384 not 1 366
+385 ite 13 384 17 46
+386 not 1 366
+387 one 1
+388 ite 1 386 18 387
+389 not 1 366
+390 ite 6 389 19 8
+391 read 6 49 51
+392 eq 1 50 51 ; @[Decoupled.scala 263:33]
+393 not 1 52 ; @[Decoupled.scala 264:28]
+394 and 1 392 393 ; @[Decoupled.scala 264:25]
+395 and 1 392 52 ; @[Decoupled.scala 265:24]
+396 and 1 92 223 ; @[ArbitratedUniversalHarness.scala 44:20 42:24]
+397 not 1 395 ; @[Decoupled.scala 289:19]
+398 or 1 396 397 ; @[Decoupled.scala 289:16 309:{24,39}] @[ArbitratedUniversalHarness.scala 40:24]
+399 and 1 398 217 ; @[Decoupled.scala 50:35]
+400 not 1 394 ; @[Decoupled.scala 288:19]
+401 or 1 217 400 ; @[Decoupled.scala 288:16 300:{24,39}]
+402 and 1 396 401 ; @[Decoupled.scala 50:35]
+403 uext 62 50 1
+404 one 1
+405 uext 62 404 4
+406 add 62 403 405 ; @[Counter.scala 78:24]
+407 slice 13 406 3 0 ; @[Counter.scala 78:24]
+408 zero 1
+409 ite 1 396 408 399 ; @[Decoupled.scala 304:{26,35}]
+410 ite 1 394 409 399 ; @[Decoupled.scala 301:17]
+411 not 1 410
+412 not 1 410
+413 not 1 410
+414 ite 13 410 407 50 ; @[Decoupled.scala 272:16 Counter.scala 78:15 62:40]
+415 uext 62 51 1
+416 one 1
+417 uext 62 416 4
+418 add 62 415 417 ; @[Counter.scala 78:24]
+419 slice 13 418 3 0 ; @[Counter.scala 78:24]
+420 zero 1
+421 ite 1 394 420 402 ; @[Decoupled.scala 301:17 303:14]
+422 ite 13 421 419 51 ; @[Decoupled.scala 276:16 Counter.scala 78:15 62:40]
+423 neq 1 410 421 ; @[Decoupled.scala 279:15]
+424 ite 1 423 410 52 ; @[Decoupled.scala 279:27 280:16 262:27] @[ArbitratedUniversalHarness.scala 41:23]
+425 ite 6 394 9 391 ; @[Decoupled.scala 296:17 301:17 302:19]
+426 one 1
+427 ite 1 394 409 399
+428 not 1 410
+429 ite 13 428 20 50
+430 not 1 410
+431 one 1
+432 ite 1 430 21 431
+433 not 1 410
+434 ite 6 433 22 9
+435 not 1 2 ; @[ArbitratedUniversalHarness.scala 48:15]
+436 not 1 313 ; @[ArbitratedUniversalHarness.scala 48:15]
+437 eq 1 337 290 ; @[ArbitratedUniversalHarness.scala 50:29]
+438 not 1 437 ; @[ArbitratedUniversalHarness.scala 49:15]
+439 not 1 357 ; @[ArbitratedUniversalHarness.scala 48:15]
+440 eq 1 381 290 ; @[ArbitratedUniversalHarness.scala 50:29]
+441 not 1 440 ; @[ArbitratedUniversalHarness.scala 49:15]
+442 not 1 401 ; @[ArbitratedUniversalHarness.scala 48:15]
+443 eq 1 425 290 ; @[ArbitratedUniversalHarness.scala 50:29]
+444 not 1 443 ; @[ArbitratedUniversalHarness.scala 49:15]
+445 one 1
+446 ugte 1 54 445
+447 not 1 446
+448 and 1 92 130
+449 and 1 448 435
+450 implies 1 449 313
+451 not 1 450
+452 bad 451 ; assert @[ArbitratedUniversalHarness.scala 48:15]
+453 and 1 92 130
+454 and 1 453 435
+455 implies 1 454 437
+456 not 1 455
+457 bad 456 ; assert_1 @[ArbitratedUniversalHarness.scala 49:15]
+458 and 1 92 177
+459 and 1 458 435
+460 implies 1 459 357
+461 not 1 460
+462 bad 461 ; assert_2 @[ArbitratedUniversalHarness.scala 48:15]
+463 and 1 92 177
+464 and 1 463 435
+465 implies 1 464 440
+466 not 1 465
+467 bad 466 ; assert_3 @[ArbitratedUniversalHarness.scala 49:15]
+468 and 1 92 223
+469 and 1 468 435
+470 implies 1 469 401
+471 not 1 470
+472 bad 471 ; assert_4 @[ArbitratedUniversalHarness.scala 48:15]
+473 and 1 92 223
+474 and 1 473 435
+475 implies 1 474 443
+476 not 1 475
+477 bad 476 ; assert_5 @[ArbitratedUniversalHarness.scala 49:15]
+478 implies 1 447 2
+479 constraint 478 ; _resetActive
+; dut_fifo_entries.next
+480 and 1 146 147
+481 write 24 25 27 148
+482 ite 24 480 481 25
+483 next 24 25 482
+; dut_fifo_cnt.next
+484 zero 13
+485 ite 13 2 484 135
+486 next 13 26 485
+; dut_fifo_wrPtr.next
+487 zero 23
+488 ite 23 2 487 139
+489 next 23 27 488
+; dut_fifo_rdPtr.next
+490 zero 23
+491 ite 23 2 490 143
+492 next 23 28 491
+; dut_cc_credits.next
+493 const 13 1001
+494 ite 13 2 493 156
+495 next 13 29 494
+; dut_fifo_1_entries.next
+496 and 1 193 194
+497 write 24 30 32 195
+498 ite 24 496 497 30
+499 next 24 30 498
+; dut_fifo_1_cnt.next
+500 zero 13
+501 ite 13 2 500 182
+502 next 13 31 501
+; dut_fifo_1_wrPtr.next
+503 zero 23
+504 ite 23 2 503 186
+505 next 23 32 504
+; dut_fifo_1_rdPtr.next
+506 zero 23
+507 ite 23 2 506 190
+508 next 23 33 507
+; dut_cc_1_credits.next
+509 const 13 1001
+510 ite 13 2 509 203
+511 next 13 34 510
+; dut_fifo_2_entries.next
+512 and 1 239 240
+513 write 24 35 37 241
+514 ite 24 512 513 35
+515 next 24 35 514
+; dut_fifo_2_cnt.next
+516 zero 13
+517 ite 13 2 516 228
+518 next 13 36 517
+; dut_fifo_2_wrPtr.next
+519 zero 23
+520 ite 23 2 519 232
+521 next 23 37 520
+; dut_fifo_2_rdPtr.next
+522 zero 23
+523 ite 23 2 522 236
+524 next 23 38 523
+; dut_cc_2_credits.next
+525 const 13 1001
+526 ite 13 2 525 249
+527 next 13 39 526
+; queues_0_ram.next
+528 and 1 339 344
+529 write 40 41 341 346
+530 ite 40 528 529 41
+531 next 40 41 530
+; queues_0_enq_ptr_value.next
+532 zero 13
+533 ite 13 2 532 326
+534 next 13 42 533
+; queues_0_deq_ptr_value.next
+535 zero 13
+536 ite 13 2 535 334
+537 next 13 43 536
+; queues_0_maybe_full.next
+538 zero 1
+539 ite 1 2 538 336
+540 next 1 44 539
+; queues_1_ram.next
+541 and 1 383 388
+542 write 40 45 385 390
+543 ite 40 541 542 45
+544 next 40 45 543
+; queues_1_enq_ptr_value.next
+545 zero 13
+546 ite 13 2 545 370
+547 next 13 46 546
+; queues_1_deq_ptr_value.next
+548 zero 13
+549 ite 13 2 548 378
+550 next 13 47 549
+; queues_1_maybe_full.next
+551 zero 1
+552 ite 1 2 551 380
+553 next 1 48 552
+; queues_2_ram.next
+554 and 1 427 432
+555 write 40 49 429 434
+556 ite 40 554 555 49
+557 next 40 49 556
+; queues_2_enq_ptr_value.next
+558 zero 13
+559 ite 13 2 558 414
+560 next 13 50 559
+; queues_2_deq_ptr_value.next
+561 zero 13
+562 ite 13 2 561 422
+563 next 13 51 562
+; queues_2_maybe_full.next
+564 zero 1
+565 ite 1 2 564 424
+566 next 1 52 565
+; _resetCount.next
+567 uext 11 54 1
+568 one 1
+569 uext 11 568 1
+570 add 11 567 569
+571 slice 1 570 0 0
+572 ite 1 447 571 54
+573 next 1 54 572

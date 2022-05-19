@@ -1,0 +1,416 @@
+ArbitratedUniversalHarness
+input reset : bv<1>
+input tryPush_0 : bv<1>
+input tryPush_1 : bv<1>
+input tryPush_2 : bv<1>
+input fifoDataIn_0 : bv<64>
+input fifoDataIn_1 : bv<64>
+input fifoDataIn_2 : bv<64>
+input tryReq : bv<1>
+input selectShift : bv<2>
+input queues_0__GEN_0_invalid : bv<11>
+input queues_0__GEN_3_invalid : bv<1>
+input queues_0__GEN_4_invalid : bv<64>
+input queues_1__GEN_0_invalid : bv<11>
+input queues_1__GEN_3_invalid : bv<1>
+input queues_1__GEN_4_invalid : bv<64>
+input queues_2__GEN_0_invalid : bv<11>
+input queues_2__GEN_3_invalid : bv<1>
+input queues_2__GEN_4_invalid : bv<64>
+node dut_fifo_entries.input_data_MPORT.addr : bv<10> = dut_fifo_wrPtr
+node dut_fifo_entries.input_data_MPORT.data : bv<64> = dut_fifo_entries[dut_fifo_entries.input_data_MPORT.addr]
+node dut_fifo_entries.io_data_out_MPORT.addr : bv<10> = dut_fifo_rdPtr
+node dut_fifo_entries.io_data_out_MPORT.data : bv<64> = dut_fifo_entries[dut_fifo_entries.io_data_out_MPORT.addr]
+node dut_cc_has_credits : bv<1> = ugt(dut_cc_credits, zext(1'b0, 10))
+node dut_has_credit_0 : bv<1> = dut_cc_has_credits
+node dut_io_push_0 : bv<1> = and(tryPush_0, dut_has_credit_0)
+node dut_fifo_io_push : bv<1> = dut_io_push_0
+node dut_fifo__cnt_T : bv<12> = add(zext(dut_fifo_cnt, 1), zext(dut_fifo_io_push, 11))
+node dut_fifo__cnt_T_1 : bv<11> = dut_fifo__cnt_T[10:0]
+node dut_fifo_2_io_empty : bv<1> = eq(dut_fifo_2_cnt, zext(1'b0, 10))
+node dut_empty_2 : bv<1> = dut_fifo_2_io_empty
+node dut_fifo_1_io_empty : bv<1> = eq(dut_fifo_1_cnt, zext(1'b0, 10))
+node dut_empty_1 : bv<1> = dut_fifo_1_io_empty
+node available_hi : bv<2> = concat(dut_empty_2, dut_empty_1)
+node dut_fifo_io_empty : bv<1> = eq(dut_fifo_cnt, zext(1'b0, 10))
+node dut_empty_0 : bv<1> = dut_fifo_io_empty
+node _available_T : bv<3> = concat(available_hi, dut_empty_0)
+node _available_T_1 : bv<3> = not(_available_T)
+node dut_cc_2_creditIsMax : bv<1> = eq(dut_cc_2_credits, 11'x400)
+node dut_creditIsMax_2 : bv<1> = dut_cc_2_creditIsMax
+node dut_cc_1_creditIsMax : bv<1> = eq(dut_cc_1_credits, 11'x400)
+node dut_creditIsMax_1 : bv<1> = dut_cc_1_creditIsMax
+node available_hi_1 : bv<2> = concat(dut_creditIsMax_2, dut_creditIsMax_1)
+node dut_cc_creditIsMax : bv<1> = eq(dut_cc_credits, 11'x400)
+node dut_creditIsMax_0 : bv<1> = dut_cc_creditIsMax
+node _available_T_2 : bv<3> = concat(available_hi_1, dut_creditIsMax_0)
+node _available_T_3 : bv<3> = not(_available_T_2)
+node available : bv<3> = and(_available_T_1, _available_T_3)
+node _dut_io_req_T : bv<1> = not(eq(available, zext(1'b0, 2)))
+node dut_io_req : bv<1> = and(tryReq, _dut_io_req_T)
+node _availableRotated_T_1 : bv<1> = selectShift[1]
+node _availableRotated_T : bv<1> = selectShift[0]
+node _availableRotated_T_2 : bv<2> = available[1:0]
+node _availableRotated_T_3 : bv<1> = available[2]
+node _availableRotated_T_4 : bv<3> = concat(_availableRotated_T_2, _availableRotated_T_3)
+node _availableRotated_T_5 : bv<3> = ite(_availableRotated_T, _availableRotated_T_4, available)
+node _availableRotated_T_6 : bv<1> = _availableRotated_T_5[0]
+node _availableRotated_T_7 : bv<2> = _availableRotated_T_5[2:1]
+node _availableRotated_T_8 : bv<3> = concat(_availableRotated_T_6, _availableRotated_T_7)
+node availableRotated : bv<3> = ite(_availableRotated_T_1, _availableRotated_T_8, _availableRotated_T_5)
+node _availableRotatedOH_T : bv<1> = availableRotated[0]
+node _availableRotatedOH_T_1 : bv<1> = availableRotated[1]
+node _availableRotatedOH_T_2 : bv<1> = availableRotated[2]
+node _availableRotatedOH_T_3 : bv<3> = ite(_availableRotatedOH_T_2, 3'b100, 3'b0)
+node _availableRotatedOH_T_4 : bv<3> = ite(_availableRotatedOH_T_1, 3'b10, _availableRotatedOH_T_3)
+node availableRotatedOH : bv<3> = ite(_availableRotatedOH_T, 3'b1, _availableRotatedOH_T_4)
+node _select_T_2 : bv<1> = availableRotatedOH[0]
+node _select_T_3 : bv<2> = availableRotatedOH[2:1]
+node _select_T_4 : bv<3> = concat(_select_T_2, _select_T_3)
+node _select_T_5 : bv<3> = ite(_availableRotated_T, _select_T_4, availableRotatedOH)
+node _select_T_6 : bv<2> = _select_T_5[1:0]
+node _select_T_7 : bv<1> = _select_T_5[2]
+node _select_T_8 : bv<3> = concat(_select_T_6, _select_T_7)
+node select : bv<3> = ite(_availableRotated_T_1, _select_T_8, _select_T_5)
+node dut_io_gnt_sel_hi : bv<1> = select[2]
+node _dut_io_gnt_sel_T : bv<1> = redor(dut_io_gnt_sel_hi)
+node dut_io_gnt_sel_lo : bv<2> = select[1:0]
+node _dut_io_gnt_sel_T_1 : bv<2> = or(zext(dut_io_gnt_sel_hi, 1), dut_io_gnt_sel_lo)
+node _dut_io_gnt_sel_T_2 : bv<1> = _dut_io_gnt_sel_T_1[1]
+node dut_io_gnt_sel : bv<2> = concat(_dut_io_gnt_sel_T, _dut_io_gnt_sel_T_2)
+node dut__io_gnt_0_T : bv<1> = eq(dut_io_gnt_sel, zext(1'b0, 1))
+node dut_io_gnt_0 : bv<1> = and(dut_io_req, dut__io_gnt_0_T)
+node dut_fifo_io_pop : bv<1> = dut_io_gnt_0
+node dut_fifo__cnt_T_2 : bv<12> = sub(zext(dut_fifo__cnt_T_1, 1), zext(dut_fifo_io_pop, 11))
+node dut_fifo__cnt_T_3 : bv<11> = dut_fifo__cnt_T_2[10:0]
+node dut_fifo__wrPtr_T : bv<11> = add(zext(dut_fifo_wrPtr, 1), zext(dut_fifo_io_push, 10))
+node dut_fifo__wrPtr_T_1 : bv<10> = dut_fifo__wrPtr_T[9:0]
+node dut_fifo__rdPtr_T : bv<11> = add(zext(dut_fifo_rdPtr, 1), zext(dut_fifo_io_pop, 10))
+node dut_fifo__rdPtr_T_1 : bv<10> = dut_fifo__rdPtr_T[9:0]
+node dut_fifo_io_data_out : bv<64> = dut_fifo_entries.io_data_out_MPORT.data
+node dut_fifo_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.MPORT.addr : bv<10> = dut_fifo_wrPtr
+node dut_fifo_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in_0 : bv<64> = fifoDataIn_0
+node dut_fifo_io_data_in : bv<64> = dut_io_data_in_0
+node dut_fifo_entries.MPORT.data : bv<64> = ite(dut_fifo_io_push, dut_fifo_io_data_in, dut_fifo_entries.input_data_MPORT.data)
+node dut_cc_inc : bv<1> = dut_io_gnt_0
+node dut_cc__credits_T : bv<12> = add(zext(dut_cc_credits, 1), zext(dut_cc_inc, 11))
+node dut_cc__credits_T_1 : bv<11> = dut_cc__credits_T[10:0]
+node dut_cc_dec : bv<1> = dut_io_push_0
+node dut_cc__credits_T_2 : bv<12> = sub(zext(dut_cc__credits_T_1, 1), zext(dut_cc_dec, 11))
+node dut_cc__credits_T_3 : bv<11> = dut_cc__credits_T_2[10:0]
+node dut_cc__T : bv<1> = not(eq(dut_cc_credits, 11'x400))
+node dut_cc__T_1 : bv<1> = not(dut_cc_inc)
+node dut_cc__T_2 : bv<1> = or(dut_cc__T, dut_cc__T_1)
+node dut_reset : bv<1> = reset
+node dut_cc_reset : bv<1> = dut_reset
+node dut_cc__T_4 : bv<1> = not(dut_cc_reset)
+node dut_cc__T_5 : bv<1> = not(dut_cc__T_2)
+constraint dut_cc_assume : bv<1> = implies(dut_cc__T_4, dut_cc__T_2)
+node dut_fifo_1_entries.input_data_MPORT.addr : bv<10> = dut_fifo_1_wrPtr
+node dut_fifo_1_entries.input_data_MPORT.data : bv<64> = dut_fifo_1_entries[dut_fifo_1_entries.input_data_MPORT.addr]
+node dut_fifo_1_entries.io_data_out_MPORT.addr : bv<10> = dut_fifo_1_rdPtr
+node dut_fifo_1_entries.io_data_out_MPORT.data : bv<64> = dut_fifo_1_entries[dut_fifo_1_entries.io_data_out_MPORT.addr]
+node dut_cc_1_has_credits : bv<1> = ugt(dut_cc_1_credits, zext(1'b0, 10))
+node dut_has_credit_1 : bv<1> = dut_cc_1_has_credits
+node dut_io_push_1 : bv<1> = and(tryPush_1, dut_has_credit_1)
+node dut_fifo_1_io_push : bv<1> = dut_io_push_1
+node dut_fifo_1__cnt_T : bv<12> = add(zext(dut_fifo_1_cnt, 1), zext(dut_fifo_1_io_push, 11))
+node dut_fifo_1__cnt_T_1 : bv<11> = dut_fifo_1__cnt_T[10:0]
+node dut__io_gnt_1_T : bv<1> = eq(dut_io_gnt_sel, zext(1'b1, 1))
+node dut_io_gnt_1 : bv<1> = and(dut_io_req, dut__io_gnt_1_T)
+node dut_fifo_1_io_pop : bv<1> = dut_io_gnt_1
+node dut_fifo_1__cnt_T_2 : bv<12> = sub(zext(dut_fifo_1__cnt_T_1, 1), zext(dut_fifo_1_io_pop, 11))
+node dut_fifo_1__cnt_T_3 : bv<11> = dut_fifo_1__cnt_T_2[10:0]
+node dut_fifo_1__wrPtr_T : bv<11> = add(zext(dut_fifo_1_wrPtr, 1), zext(dut_fifo_1_io_push, 10))
+node dut_fifo_1__wrPtr_T_1 : bv<10> = dut_fifo_1__wrPtr_T[9:0]
+node dut_fifo_1__rdPtr_T : bv<11> = add(zext(dut_fifo_1_rdPtr, 1), zext(dut_fifo_1_io_pop, 10))
+node dut_fifo_1__rdPtr_T_1 : bv<10> = dut_fifo_1__rdPtr_T[9:0]
+node dut_fifo_1_io_data_out : bv<64> = dut_fifo_1_entries.io_data_out_MPORT.data
+node dut_fifo_1_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.MPORT.addr : bv<10> = dut_fifo_1_wrPtr
+node dut_fifo_1_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in_1 : bv<64> = fifoDataIn_1
+node dut_fifo_1_io_data_in : bv<64> = dut_io_data_in_1
+node dut_fifo_1_entries.MPORT.data : bv<64> = ite(dut_fifo_1_io_push, dut_fifo_1_io_data_in, dut_fifo_1_entries.input_data_MPORT.data)
+node dut_cc_1_inc : bv<1> = dut_io_gnt_1
+node dut_cc_1__credits_T : bv<12> = add(zext(dut_cc_1_credits, 1), zext(dut_cc_1_inc, 11))
+node dut_cc_1__credits_T_1 : bv<11> = dut_cc_1__credits_T[10:0]
+node dut_cc_1_dec : bv<1> = dut_io_push_1
+node dut_cc_1__credits_T_2 : bv<12> = sub(zext(dut_cc_1__credits_T_1, 1), zext(dut_cc_1_dec, 11))
+node dut_cc_1__credits_T_3 : bv<11> = dut_cc_1__credits_T_2[10:0]
+node dut_cc_1__T : bv<1> = not(eq(dut_cc_1_credits, 11'x400))
+node dut_cc_1__T_1 : bv<1> = not(dut_cc_1_inc)
+node dut_cc_1__T_2 : bv<1> = or(dut_cc_1__T, dut_cc_1__T_1)
+node dut_cc_1_reset : bv<1> = dut_reset
+node dut_cc_1__T_4 : bv<1> = not(dut_cc_1_reset)
+node dut_cc_1__T_5 : bv<1> = not(dut_cc_1__T_2)
+constraint dut_cc_1_assume : bv<1> = implies(dut_cc_1__T_4, dut_cc_1__T_2)
+node dut_fifo_2_entries.input_data_MPORT.addr : bv<10> = dut_fifo_2_wrPtr
+node dut_fifo_2_entries.input_data_MPORT.data : bv<64> = dut_fifo_2_entries[dut_fifo_2_entries.input_data_MPORT.addr]
+node dut_fifo_2_entries.io_data_out_MPORT.addr : bv<10> = dut_fifo_2_rdPtr
+node dut_fifo_2_entries.io_data_out_MPORT.data : bv<64> = dut_fifo_2_entries[dut_fifo_2_entries.io_data_out_MPORT.addr]
+node dut_cc_2_has_credits : bv<1> = ugt(dut_cc_2_credits, zext(1'b0, 10))
+node dut_has_credit_2 : bv<1> = dut_cc_2_has_credits
+node dut_io_push_2 : bv<1> = and(tryPush_2, dut_has_credit_2)
+node dut_fifo_2_io_push : bv<1> = dut_io_push_2
+node dut_fifo_2__cnt_T : bv<12> = add(zext(dut_fifo_2_cnt, 1), zext(dut_fifo_2_io_push, 11))
+node dut_fifo_2__cnt_T_1 : bv<11> = dut_fifo_2__cnt_T[10:0]
+node dut__io_gnt_2_T : bv<1> = eq(dut_io_gnt_sel, 2'b10)
+node dut_io_gnt_2 : bv<1> = and(dut_io_req, dut__io_gnt_2_T)
+node dut_fifo_2_io_pop : bv<1> = dut_io_gnt_2
+node dut_fifo_2__cnt_T_2 : bv<12> = sub(zext(dut_fifo_2__cnt_T_1, 1), zext(dut_fifo_2_io_pop, 11))
+node dut_fifo_2__cnt_T_3 : bv<11> = dut_fifo_2__cnt_T_2[10:0]
+node dut_fifo_2__wrPtr_T : bv<11> = add(zext(dut_fifo_2_wrPtr, 1), zext(dut_fifo_2_io_push, 10))
+node dut_fifo_2__wrPtr_T_1 : bv<10> = dut_fifo_2__wrPtr_T[9:0]
+node dut_fifo_2__rdPtr_T : bv<11> = add(zext(dut_fifo_2_rdPtr, 1), zext(dut_fifo_2_io_pop, 10))
+node dut_fifo_2__rdPtr_T_1 : bv<10> = dut_fifo_2__rdPtr_T[9:0]
+node dut_fifo_2_io_data_out : bv<64> = dut_fifo_2_entries.io_data_out_MPORT.data
+node dut_fifo_2_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_fifo_2_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_fifo_2_entries.MPORT.en : bv<1> = 1'b1
+node dut_fifo_2_entries.MPORT.addr : bv<10> = dut_fifo_2_wrPtr
+node dut_fifo_2_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in_2 : bv<64> = fifoDataIn_2
+node dut_fifo_2_io_data_in : bv<64> = dut_io_data_in_2
+node dut_fifo_2_entries.MPORT.data : bv<64> = ite(dut_fifo_2_io_push, dut_fifo_2_io_data_in, dut_fifo_2_entries.input_data_MPORT.data)
+node dut_cc_2_inc : bv<1> = dut_io_gnt_2
+node dut_cc_2__credits_T : bv<12> = add(zext(dut_cc_2_credits, 1), zext(dut_cc_2_inc, 11))
+node dut_cc_2__credits_T_1 : bv<11> = dut_cc_2__credits_T[10:0]
+node dut_cc_2_dec : bv<1> = dut_io_push_2
+node dut_cc_2__credits_T_2 : bv<12> = sub(zext(dut_cc_2__credits_T_1, 1), zext(dut_cc_2_dec, 11))
+node dut_cc_2__credits_T_3 : bv<11> = dut_cc_2__credits_T_2[10:0]
+node dut_cc_2__T : bv<1> = not(eq(dut_cc_2_credits, 11'x400))
+node dut_cc_2__T_1 : bv<1> = not(dut_cc_2_inc)
+node dut_cc_2__T_2 : bv<1> = or(dut_cc_2__T, dut_cc_2__T_1)
+node dut_cc_2_reset : bv<1> = dut_reset
+node dut_cc_2__T_4 : bv<1> = not(dut_cc_2_reset)
+node dut_cc_2__T_5 : bv<1> = not(dut_cc_2__T_2)
+constraint dut_cc_2_assume : bv<1> = implies(dut_cc_2__T_4, dut_cc_2__T_2)
+node dut_fifo_data_out_0 : bv<64> = dut_fifo_io_data_out
+node dut__io_data_out_T : bv<64> = ite(dut_io_gnt_0, dut_fifo_data_out_0, zext(1'b0, 63))
+node dut_fifo_data_out_1 : bv<64> = dut_fifo_1_io_data_out
+node dut__io_data_out_T_1 : bv<64> = ite(dut_io_gnt_1, dut_fifo_data_out_1, zext(1'b0, 63))
+node dut_fifo_data_out_2 : bv<64> = dut_fifo_2_io_data_out
+node dut__io_data_out_T_2 : bv<64> = ite(dut_io_gnt_2, dut_fifo_data_out_2, zext(1'b0, 63))
+node dut__io_data_out_T_3 : bv<64> = or(dut__io_data_out_T, dut__io_data_out_T_1)
+node dut__T : bv<1> = not(dut_io_push_0)
+node dut__T_1 : bv<1> = or(dut_has_credit_0, dut__T)
+node dut__T_3 : bv<1> = not(dut_reset)
+node dut__T_4 : bv<1> = not(dut__T_1)
+node dut__T_5 : bv<1> = not(dut_empty_0)
+node dut__T_6 : bv<1> = not(dut_io_gnt_0)
+node dut__T_7 : bv<1> = or(dut__T_5, dut__T_6)
+node dut__T_10 : bv<1> = not(dut__T_7)
+node dut__T_11 : bv<1> = not(dut_io_push_1)
+node dut__T_12 : bv<1> = or(dut_has_credit_1, dut__T_11)
+node dut__T_15 : bv<1> = not(dut__T_12)
+node dut__T_16 : bv<1> = not(dut_empty_1)
+node dut__T_17 : bv<1> = not(dut_io_gnt_1)
+node dut__T_18 : bv<1> = or(dut__T_16, dut__T_17)
+node dut__T_21 : bv<1> = not(dut__T_18)
+node dut__T_22 : bv<1> = not(dut_io_push_2)
+node dut__T_23 : bv<1> = or(dut_has_credit_2, dut__T_22)
+node dut__T_26 : bv<1> = not(dut__T_23)
+node dut__T_27 : bv<1> = not(dut_empty_2)
+node dut__T_28 : bv<1> = not(dut_io_gnt_2)
+node dut__T_29 : bv<1> = or(dut__T_27, dut__T_28)
+node dut__T_32 : bv<1> = not(dut__T_29)
+node dut_io_data_out : bv<64> = or(dut__io_data_out_T_3, dut__io_data_out_T_2)
+node dut_fifo_reset : bv<1> = dut_reset
+node dut_fifo_1_reset : bv<1> = dut_reset
+node dut_fifo_2_reset : bv<1> = dut_reset
+constraint dut_assume : bv<1> = implies(dut__T_3, dut__T_1)
+constraint dut_assume_1 : bv<1> = implies(dut__T_3, dut__T_7)
+constraint dut_assume_2 : bv<1> = implies(dut__T_3, dut__T_12)
+constraint dut_assume_3 : bv<1> = implies(dut__T_3, dut__T_18)
+constraint dut_assume_4 : bv<1> = implies(dut__T_3, dut__T_23)
+constraint dut_assume_5 : bv<1> = implies(dut__T_3, dut__T_29)
+node queues_0_ram.io_deq_bits_MPORT.addr : bv<11> = queues_0_deq_ptr_value
+node queues_0_ram.io_deq_bits_MPORT.data : bv<64> = queues_0_ram[queues_0_ram.io_deq_bits_MPORT.addr]
+node queues_0_ptr_match : bv<1> = eq(queues_0_enq_ptr_value, queues_0_deq_ptr_value)
+node queues_0__empty_T : bv<1> = not(queues_0_maybe_full)
+node queues_0_empty : bv<1> = and(queues_0_ptr_match, queues_0__empty_T)
+node queues_0_full : bv<1> = and(queues_0_ptr_match, queues_0_maybe_full)
+node queues_0_io_deq_ready : bv<1> = and(dut_io_req, dut__io_gnt_0_T)
+node queues_0__io_enq_ready_T : bv<1> = not(queues_0_full)
+node queues_0_io_enq_ready : bv<1> = or(queues_0_io_deq_ready, queues_0__io_enq_ready_T)
+node queues_0_io_enq_valid : bv<1> = dut_io_push_0
+node queues_0__do_enq_T : bv<1> = and(queues_0_io_enq_ready, queues_0_io_enq_valid)
+node queues_0__io_deq_valid_T : bv<1> = not(queues_0_empty)
+node queues_0_io_deq_valid : bv<1> = or(queues_0_io_enq_valid, queues_0__io_deq_valid_T)
+node queues_0__do_deq_T : bv<1> = and(queues_0_io_deq_ready, queues_0_io_deq_valid)
+node queues_0__value_T : bv<12> = add(zext(queues_0_enq_ptr_value, 1), zext(1'b1, 11))
+node queues_0__value_T_1 : bv<11> = queues_0__value_T[10:0]
+node queues_0__GEN_12 : bv<1> = ite(queues_0_io_deq_ready, 1'b0, queues_0__do_enq_T)
+node queues_0_do_enq : bv<1> = ite(queues_0_empty, queues_0__GEN_12, queues_0__do_enq_T)
+output queues_0__GEN_0_invalid.en : bv<1> = not(queues_0_do_enq)
+output queues_0__GEN_3_invalid.en : bv<1> = not(queues_0_do_enq)
+output queues_0__GEN_4_invalid.en : bv<1> = not(queues_0_do_enq)
+node queues_0__GEN_5 : bv<11> = ite(queues_0_do_enq, queues_0__value_T_1, queues_0_enq_ptr_value)
+node queues_0__value_T_2 : bv<12> = add(zext(queues_0_deq_ptr_value, 1), zext(1'b1, 11))
+node queues_0__value_T_3 : bv<11> = queues_0__value_T_2[10:0]
+node queues_0_do_deq : bv<1> = ite(queues_0_empty, 1'b0, queues_0__do_deq_T)
+node queues_0__GEN_6 : bv<11> = ite(queues_0_do_deq, queues_0__value_T_3, queues_0_deq_ptr_value)
+node queues_0__T : bv<1> = not(eq(queues_0_do_enq, queues_0_do_deq))
+node queues_0__GEN_7 : bv<1> = ite(queues_0__T, queues_0_do_enq, queues_0_maybe_full)
+node queues_0_io_enq_bits : bv<64> = dut_io_data_in_0
+node queues_0_io_deq_bits : bv<64> = ite(queues_0_empty, queues_0_io_enq_bits, queues_0_ram.io_deq_bits_MPORT.data)
+node queues_0_ram.io_deq_bits_MPORT.en : bv<1> = 1'b1
+node queues_0_ram.MPORT.en : bv<1> = ite(queues_0_empty, queues_0__GEN_12, queues_0__do_enq_T)
+node queues_0_ram.MPORT.addr : bv<11> = ite(not(queues_0_do_enq), queues_0__GEN_0_invalid, queues_0_enq_ptr_value)
+node queues_0_ram.MPORT.mask : bv<1> = ite(not(queues_0_do_enq), queues_0__GEN_3_invalid, 1'b1)
+node queues_0_ram.MPORT.data : bv<64> = ite(not(queues_0_do_enq), queues_0__GEN_4_invalid, queues_0_io_enq_bits)
+node queues_1_ram.io_deq_bits_MPORT.addr : bv<11> = queues_1_deq_ptr_value
+node queues_1_ram.io_deq_bits_MPORT.data : bv<64> = queues_1_ram[queues_1_ram.io_deq_bits_MPORT.addr]
+node queues_1_ptr_match : bv<1> = eq(queues_1_enq_ptr_value, queues_1_deq_ptr_value)
+node queues_1__empty_T : bv<1> = not(queues_1_maybe_full)
+node queues_1_empty : bv<1> = and(queues_1_ptr_match, queues_1__empty_T)
+node queues_1_full : bv<1> = and(queues_1_ptr_match, queues_1_maybe_full)
+node queues_1_io_deq_ready : bv<1> = and(dut_io_req, dut__io_gnt_1_T)
+node queues_1__io_enq_ready_T : bv<1> = not(queues_1_full)
+node queues_1_io_enq_ready : bv<1> = or(queues_1_io_deq_ready, queues_1__io_enq_ready_T)
+node queues_1_io_enq_valid : bv<1> = dut_io_push_1
+node queues_1__do_enq_T : bv<1> = and(queues_1_io_enq_ready, queues_1_io_enq_valid)
+node queues_1__io_deq_valid_T : bv<1> = not(queues_1_empty)
+node queues_1_io_deq_valid : bv<1> = or(queues_1_io_enq_valid, queues_1__io_deq_valid_T)
+node queues_1__do_deq_T : bv<1> = and(queues_1_io_deq_ready, queues_1_io_deq_valid)
+node queues_1__value_T : bv<12> = add(zext(queues_1_enq_ptr_value, 1), zext(1'b1, 11))
+node queues_1__value_T_1 : bv<11> = queues_1__value_T[10:0]
+node queues_1__GEN_12 : bv<1> = ite(queues_1_io_deq_ready, 1'b0, queues_1__do_enq_T)
+node queues_1_do_enq : bv<1> = ite(queues_1_empty, queues_1__GEN_12, queues_1__do_enq_T)
+output queues_1__GEN_0_invalid.en : bv<1> = not(queues_1_do_enq)
+output queues_1__GEN_3_invalid.en : bv<1> = not(queues_1_do_enq)
+output queues_1__GEN_4_invalid.en : bv<1> = not(queues_1_do_enq)
+node queues_1__GEN_5 : bv<11> = ite(queues_1_do_enq, queues_1__value_T_1, queues_1_enq_ptr_value)
+node queues_1__value_T_2 : bv<12> = add(zext(queues_1_deq_ptr_value, 1), zext(1'b1, 11))
+node queues_1__value_T_3 : bv<11> = queues_1__value_T_2[10:0]
+node queues_1_do_deq : bv<1> = ite(queues_1_empty, 1'b0, queues_1__do_deq_T)
+node queues_1__GEN_6 : bv<11> = ite(queues_1_do_deq, queues_1__value_T_3, queues_1_deq_ptr_value)
+node queues_1__T : bv<1> = not(eq(queues_1_do_enq, queues_1_do_deq))
+node queues_1__GEN_7 : bv<1> = ite(queues_1__T, queues_1_do_enq, queues_1_maybe_full)
+node queues_1_io_enq_bits : bv<64> = dut_io_data_in_1
+node queues_1_io_deq_bits : bv<64> = ite(queues_1_empty, queues_1_io_enq_bits, queues_1_ram.io_deq_bits_MPORT.data)
+node queues_1_ram.io_deq_bits_MPORT.en : bv<1> = 1'b1
+node queues_1_ram.MPORT.en : bv<1> = ite(queues_1_empty, queues_1__GEN_12, queues_1__do_enq_T)
+node queues_1_ram.MPORT.addr : bv<11> = ite(not(queues_1_do_enq), queues_1__GEN_0_invalid, queues_1_enq_ptr_value)
+node queues_1_ram.MPORT.mask : bv<1> = ite(not(queues_1_do_enq), queues_1__GEN_3_invalid, 1'b1)
+node queues_1_ram.MPORT.data : bv<64> = ite(not(queues_1_do_enq), queues_1__GEN_4_invalid, queues_1_io_enq_bits)
+node queues_2_ram.io_deq_bits_MPORT.addr : bv<11> = queues_2_deq_ptr_value
+node queues_2_ram.io_deq_bits_MPORT.data : bv<64> = queues_2_ram[queues_2_ram.io_deq_bits_MPORT.addr]
+node queues_2_ptr_match : bv<1> = eq(queues_2_enq_ptr_value, queues_2_deq_ptr_value)
+node queues_2__empty_T : bv<1> = not(queues_2_maybe_full)
+node queues_2_empty : bv<1> = and(queues_2_ptr_match, queues_2__empty_T)
+node queues_2_full : bv<1> = and(queues_2_ptr_match, queues_2_maybe_full)
+node queues_2_io_deq_ready : bv<1> = and(dut_io_req, dut__io_gnt_2_T)
+node queues_2__io_enq_ready_T : bv<1> = not(queues_2_full)
+node queues_2_io_enq_ready : bv<1> = or(queues_2_io_deq_ready, queues_2__io_enq_ready_T)
+node queues_2_io_enq_valid : bv<1> = dut_io_push_2
+node queues_2__do_enq_T : bv<1> = and(queues_2_io_enq_ready, queues_2_io_enq_valid)
+node queues_2__io_deq_valid_T : bv<1> = not(queues_2_empty)
+node queues_2_io_deq_valid : bv<1> = or(queues_2_io_enq_valid, queues_2__io_deq_valid_T)
+node queues_2__do_deq_T : bv<1> = and(queues_2_io_deq_ready, queues_2_io_deq_valid)
+node queues_2__value_T : bv<12> = add(zext(queues_2_enq_ptr_value, 1), zext(1'b1, 11))
+node queues_2__value_T_1 : bv<11> = queues_2__value_T[10:0]
+node queues_2__GEN_12 : bv<1> = ite(queues_2_io_deq_ready, 1'b0, queues_2__do_enq_T)
+node queues_2_do_enq : bv<1> = ite(queues_2_empty, queues_2__GEN_12, queues_2__do_enq_T)
+output queues_2__GEN_0_invalid.en : bv<1> = not(queues_2_do_enq)
+output queues_2__GEN_3_invalid.en : bv<1> = not(queues_2_do_enq)
+output queues_2__GEN_4_invalid.en : bv<1> = not(queues_2_do_enq)
+node queues_2__GEN_5 : bv<11> = ite(queues_2_do_enq, queues_2__value_T_1, queues_2_enq_ptr_value)
+node queues_2__value_T_2 : bv<12> = add(zext(queues_2_deq_ptr_value, 1), zext(1'b1, 11))
+node queues_2__value_T_3 : bv<11> = queues_2__value_T_2[10:0]
+node queues_2_do_deq : bv<1> = ite(queues_2_empty, 1'b0, queues_2__do_deq_T)
+node queues_2__GEN_6 : bv<11> = ite(queues_2_do_deq, queues_2__value_T_3, queues_2_deq_ptr_value)
+node queues_2__T : bv<1> = not(eq(queues_2_do_enq, queues_2_do_deq))
+node queues_2__GEN_7 : bv<1> = ite(queues_2__T, queues_2_do_enq, queues_2_maybe_full)
+node queues_2_io_enq_bits : bv<64> = dut_io_data_in_2
+node queues_2_io_deq_bits : bv<64> = ite(queues_2_empty, queues_2_io_enq_bits, queues_2_ram.io_deq_bits_MPORT.data)
+node queues_2_ram.io_deq_bits_MPORT.en : bv<1> = 1'b1
+node queues_2_ram.MPORT.en : bv<1> = ite(queues_2_empty, queues_2__GEN_12, queues_2__do_enq_T)
+node queues_2_ram.MPORT.addr : bv<11> = ite(not(queues_2_do_enq), queues_2__GEN_0_invalid, queues_2_enq_ptr_value)
+node queues_2_ram.MPORT.mask : bv<1> = ite(not(queues_2_do_enq), queues_2__GEN_3_invalid, 1'b1)
+node queues_2_ram.MPORT.data : bv<64> = ite(not(queues_2_do_enq), queues_2__GEN_4_invalid, queues_2_io_enq_bits)
+node _T_5 : bv<1> = not(reset)
+node _T_6 : bv<1> = not(queues_0_io_deq_valid)
+node _T_7 : bv<1> = eq(queues_0_io_deq_bits, dut_io_data_out)
+node _T_10 : bv<1> = not(_T_7)
+node _T_14 : bv<1> = not(queues_1_io_deq_valid)
+node _T_15 : bv<1> = eq(queues_1_io_deq_bits, dut_io_data_out)
+node _T_18 : bv<1> = not(_T_15)
+node _T_22 : bv<1> = not(queues_2_io_deq_valid)
+node _T_23 : bv<1> = eq(queues_2_io_deq_bits, dut_io_data_out)
+node _T_26 : bv<1> = not(_T_23)
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+node queues_0_reset : bv<1> = reset
+node queues_1_reset : bv<1> = reset
+node queues_2_reset : bv<1> = reset
+bad assert : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_0_T), _T_5), queues_0_io_deq_valid))
+bad assert_1 : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_0_T), _T_5), _T_7))
+bad assert_2 : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_1_T), _T_5), queues_1_io_deq_valid))
+bad assert_3 : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_1_T), _T_5), _T_15))
+bad assert_4 : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_2_T), _T_5), queues_2_io_deq_valid))
+bad assert_5 : bv<1> = not(implies(and(and(dut_io_req, dut__io_gnt_2_T), _T_5), _T_23))
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+state dut_fifo_entries : bv<10> -> bv<64>
+  [next] ite(and(dut_fifo_entries.MPORT.en, dut_fifo_entries.MPORT.mask), dut_fifo_entries[dut_fifo_entries.MPORT.addr := dut_fifo_entries.MPORT.data], dut_fifo_entries)
+state dut_fifo_cnt : bv<11>
+  [next] ite(dut_fifo_reset, 11'x0, dut_fifo__cnt_T_3)
+state dut_fifo_wrPtr : bv<10>
+  [next] ite(dut_fifo_reset, 10'x0, dut_fifo__wrPtr_T_1)
+state dut_fifo_rdPtr : bv<10>
+  [next] ite(dut_fifo_reset, 10'x0, dut_fifo__rdPtr_T_1)
+state dut_cc_credits : bv<11>
+  [next] ite(dut_cc_reset, 11'x401, dut_cc__credits_T_3)
+state dut_fifo_1_entries : bv<10> -> bv<64>
+  [next] ite(and(dut_fifo_1_entries.MPORT.en, dut_fifo_1_entries.MPORT.mask), dut_fifo_1_entries[dut_fifo_1_entries.MPORT.addr := dut_fifo_1_entries.MPORT.data], dut_fifo_1_entries)
+state dut_fifo_1_cnt : bv<11>
+  [next] ite(dut_fifo_1_reset, 11'x0, dut_fifo_1__cnt_T_3)
+state dut_fifo_1_wrPtr : bv<10>
+  [next] ite(dut_fifo_1_reset, 10'x0, dut_fifo_1__wrPtr_T_1)
+state dut_fifo_1_rdPtr : bv<10>
+  [next] ite(dut_fifo_1_reset, 10'x0, dut_fifo_1__rdPtr_T_1)
+state dut_cc_1_credits : bv<11>
+  [next] ite(dut_cc_1_reset, 11'x401, dut_cc_1__credits_T_3)
+state dut_fifo_2_entries : bv<10> -> bv<64>
+  [next] ite(and(dut_fifo_2_entries.MPORT.en, dut_fifo_2_entries.MPORT.mask), dut_fifo_2_entries[dut_fifo_2_entries.MPORT.addr := dut_fifo_2_entries.MPORT.data], dut_fifo_2_entries)
+state dut_fifo_2_cnt : bv<11>
+  [next] ite(dut_fifo_2_reset, 11'x0, dut_fifo_2__cnt_T_3)
+state dut_fifo_2_wrPtr : bv<10>
+  [next] ite(dut_fifo_2_reset, 10'x0, dut_fifo_2__wrPtr_T_1)
+state dut_fifo_2_rdPtr : bv<10>
+  [next] ite(dut_fifo_2_reset, 10'x0, dut_fifo_2__rdPtr_T_1)
+state dut_cc_2_credits : bv<11>
+  [next] ite(dut_cc_2_reset, 11'x401, dut_cc_2__credits_T_3)
+state queues_0_ram : bv<11> -> bv<64>
+  [next] ite(and(queues_0_ram.MPORT.en, queues_0_ram.MPORT.mask), queues_0_ram[queues_0_ram.MPORT.addr := queues_0_ram.MPORT.data], queues_0_ram)
+state queues_0_enq_ptr_value : bv<11>
+  [next] ite(queues_0_reset, 11'x0, queues_0__GEN_5)
+state queues_0_deq_ptr_value : bv<11>
+  [next] ite(queues_0_reset, 11'x0, queues_0__GEN_6)
+state queues_0_maybe_full : bv<1>
+  [next] ite(queues_0_reset, 1'b0, queues_0__GEN_7)
+state queues_1_ram : bv<11> -> bv<64>
+  [next] ite(and(queues_1_ram.MPORT.en, queues_1_ram.MPORT.mask), queues_1_ram[queues_1_ram.MPORT.addr := queues_1_ram.MPORT.data], queues_1_ram)
+state queues_1_enq_ptr_value : bv<11>
+  [next] ite(queues_1_reset, 11'x0, queues_1__GEN_5)
+state queues_1_deq_ptr_value : bv<11>
+  [next] ite(queues_1_reset, 11'x0, queues_1__GEN_6)
+state queues_1_maybe_full : bv<1>
+  [next] ite(queues_1_reset, 1'b0, queues_1__GEN_7)
+state queues_2_ram : bv<11> -> bv<64>
+  [next] ite(and(queues_2_ram.MPORT.en, queues_2_ram.MPORT.mask), queues_2_ram[queues_2_ram.MPORT.addr := queues_2_ram.MPORT.data], queues_2_ram)
+state queues_2_enq_ptr_value : bv<11>
+  [next] ite(queues_2_reset, 11'x0, queues_2__GEN_5)
+state queues_2_deq_ptr_value : bv<11>
+  [next] ite(queues_2_reset, 11'x0, queues_2__GEN_6)
+state queues_2_maybe_full : bv<1>
+  [next] ite(queues_2_reset, 1'b0, queues_2__GEN_7)
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)

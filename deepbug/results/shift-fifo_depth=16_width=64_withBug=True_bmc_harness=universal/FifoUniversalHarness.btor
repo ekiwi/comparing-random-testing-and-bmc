@@ -1,0 +1,446 @@
+1 sort bitvec 1
+2 input 1 reset
+3 input 1 tryPush_valid
+4 sort bitvec 64
+5 input 4 tryPush_bits
+6 input 1 tryPop
+7 input 4 dut_next_value_15_invalid
+8 sort bitvec 4
+9 input 8 reference__GEN_0_invalid ; @[Decoupled.scala 272:16 273:8]
+10 input 1 reference__GEN_3_invalid ; @[Decoupled.scala 272:16 273:24]
+11 input 4 reference__GEN_4_invalid ; @[Decoupled.scala 272:16 273:24]
+12 sort bitvec 5
+13 state 12 dut_count ; @[ShiftRegisterFifo.scala 14:22]
+14 state 4 dut_entries_0 ; @[ShiftRegisterFifo.scala 22:22]
+15 state 4 dut_entries_1 ; @[ShiftRegisterFifo.scala 22:22]
+16 state 4 dut_entries_2 ; @[ShiftRegisterFifo.scala 22:22]
+17 state 4 dut_entries_3 ; @[ShiftRegisterFifo.scala 22:22]
+18 state 4 dut_entries_4 ; @[ShiftRegisterFifo.scala 22:22]
+19 state 4 dut_entries_5 ; @[ShiftRegisterFifo.scala 22:22]
+20 state 4 dut_entries_6 ; @[ShiftRegisterFifo.scala 22:22]
+21 state 4 dut_entries_7 ; @[ShiftRegisterFifo.scala 22:22]
+22 state 4 dut_entries_8 ; @[ShiftRegisterFifo.scala 22:22]
+23 state 4 dut_entries_9 ; @[ShiftRegisterFifo.scala 22:22]
+24 state 4 dut_entries_10 ; @[ShiftRegisterFifo.scala 22:22]
+25 state 4 dut_entries_11 ; @[ShiftRegisterFifo.scala 22:22]
+26 state 4 dut_entries_12 ; @[ShiftRegisterFifo.scala 22:22]
+27 state 4 dut_entries_13 ; @[ShiftRegisterFifo.scala 22:22]
+28 state 4 dut_entries_14 ; @[ShiftRegisterFifo.scala 22:22]
+29 state 4 dut_entries_15 ; @[ShiftRegisterFifo.scala 22:22]
+30 sort array 8 4
+31 state 30 reference_ram ; @[Decoupled.scala 259:95]
+32 state 8 reference_enq_ptr_value ; @[Counter.scala 62:40]
+33 state 8 reference_deq_ptr_value ; @[Counter.scala 62:40]
+34 state 1 reference_maybe_full ; @[Decoupled.scala 262:27]
+; _resetCount.init
+35 zero 1
+36 state 1 _resetCount
+37 init 1 36 35
+38 const 12 10000
+39 ugte 1 13 38 ; @[ShiftRegisterFifo.scala 18:20]
+40 not 1 39 ; @[FifoUniversalHarness.scala 14:35]
+41 and 1 3 40 ; @[FifoUniversalHarness.scala 14:32]
+42 sort bitvec 6
+43 uext 42 13 1
+44 uext 42 41 5
+45 add 42 43 44 ; @[ShiftRegisterFifo.scala 15:18]
+46 slice 12 45 4 0 ; @[ShiftRegisterFifo.scala 15:18]
+47 zero 1
+48 uext 12 47 4
+49 eq 1 13 48 ; @[ShiftRegisterFifo.scala 17:21]
+50 not 1 49 ; @[FifoUniversalHarness.scala 18:27]
+51 and 1 6 50 ; @[FifoUniversalHarness.scala 18:24]
+52 uext 42 46 1
+53 uext 42 51 5
+54 sub 42 52 53 ; @[ShiftRegisterFifo.scala 15:28]
+55 slice 12 54 4 0 ; @[ShiftRegisterFifo.scala 15:28]
+56 zero 1
+57 uext 12 56 4
+58 eq 1 13 57 ; @[ShiftRegisterFifo.scala 17:21]
+59 and 1 41 58 ; @[ShiftRegisterFifo.scala 23:29]
+60 or 1 51 59 ; @[ShiftRegisterFifo.scala 23:17]
+61 uext 42 13 1
+62 uext 42 51 5
+63 sub 42 61 62 ; @[ShiftRegisterFifo.scala 33:35]
+64 slice 12 63 4 0 ; @[ShiftRegisterFifo.scala 33:35]
+65 zero 1
+66 uext 12 65 4
+67 eq 1 64 66 ; @[ShiftRegisterFifo.scala 33:45]
+68 and 1 41 67 ; @[ShiftRegisterFifo.scala 33:25]
+69 zero 1
+70 uext 4 69 63
+71 ite 4 51 15 70 ; @[ShiftRegisterFifo.scala 32:49] @[FifoUniversalHarness.scala 13:18]
+72 ite 4 68 5 71 ; @[ShiftRegisterFifo.scala 33:16]
+73 ite 4 60 72 14 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+74 one 1
+75 uext 12 74 4
+76 eq 1 13 75 ; @[ShiftRegisterFifo.scala 23:39]
+77 and 1 41 76 ; @[ShiftRegisterFifo.scala 23:29]
+78 or 1 51 77 ; @[ShiftRegisterFifo.scala 23:17]
+79 one 1
+80 uext 12 79 4
+81 eq 1 64 80 ; @[ShiftRegisterFifo.scala 33:45]
+82 and 1 41 81 ; @[ShiftRegisterFifo.scala 33:25]
+83 zero 1
+84 uext 4 83 63
+85 ite 4 51 16 84 ; @[ShiftRegisterFifo.scala 32:49]
+86 ite 4 82 5 85 ; @[ShiftRegisterFifo.scala 33:16]
+87 ite 4 78 86 15 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+88 sort bitvec 2
+89 const 88 10
+90 uext 12 89 3
+91 eq 1 13 90 ; @[ShiftRegisterFifo.scala 23:39]
+92 and 1 41 91 ; @[ShiftRegisterFifo.scala 23:29]
+93 or 1 51 92 ; @[ShiftRegisterFifo.scala 23:17]
+94 const 88 10
+95 uext 12 94 3
+96 eq 1 64 95 ; @[ShiftRegisterFifo.scala 33:45]
+97 and 1 41 96 ; @[ShiftRegisterFifo.scala 33:25]
+98 zero 1
+99 uext 4 98 63
+100 ite 4 51 17 99 ; @[ShiftRegisterFifo.scala 32:49]
+101 ite 4 97 5 100 ; @[ShiftRegisterFifo.scala 33:16]
+102 ite 4 93 101 16 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+103 ones 88
+104 uext 12 103 3
+105 eq 1 13 104 ; @[ShiftRegisterFifo.scala 23:39]
+106 and 1 41 105 ; @[ShiftRegisterFifo.scala 23:29]
+107 or 1 51 106 ; @[ShiftRegisterFifo.scala 23:17]
+108 ones 88
+109 uext 12 108 3
+110 eq 1 64 109 ; @[ShiftRegisterFifo.scala 33:45]
+111 and 1 41 110 ; @[ShiftRegisterFifo.scala 33:25]
+112 zero 1
+113 uext 4 112 63
+114 ite 4 51 18 113 ; @[ShiftRegisterFifo.scala 32:49]
+115 ite 4 111 5 114 ; @[ShiftRegisterFifo.scala 33:16]
+116 ite 4 107 115 17 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+117 sort bitvec 3
+118 const 117 100
+119 uext 12 118 2
+120 eq 1 13 119 ; @[ShiftRegisterFifo.scala 23:39]
+121 and 1 41 120 ; @[ShiftRegisterFifo.scala 23:29]
+122 or 1 51 121 ; @[ShiftRegisterFifo.scala 23:17]
+123 const 117 100
+124 uext 12 123 2
+125 eq 1 64 124 ; @[ShiftRegisterFifo.scala 33:45]
+126 and 1 41 125 ; @[ShiftRegisterFifo.scala 33:25]
+127 zero 1
+128 uext 4 127 63
+129 ite 4 51 19 128 ; @[ShiftRegisterFifo.scala 32:49]
+130 ite 4 126 5 129 ; @[ShiftRegisterFifo.scala 33:16]
+131 ite 4 122 130 18 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+132 const 117 101
+133 uext 12 132 2
+134 eq 1 13 133 ; @[ShiftRegisterFifo.scala 23:39]
+135 and 1 41 134 ; @[ShiftRegisterFifo.scala 23:29]
+136 or 1 51 135 ; @[ShiftRegisterFifo.scala 23:17]
+137 const 117 101
+138 uext 12 137 2
+139 eq 1 64 138 ; @[ShiftRegisterFifo.scala 33:45]
+140 and 1 41 139 ; @[ShiftRegisterFifo.scala 33:25]
+141 zero 1
+142 uext 4 141 63
+143 ite 4 51 20 142 ; @[ShiftRegisterFifo.scala 32:49]
+144 ite 4 140 5 143 ; @[ShiftRegisterFifo.scala 33:16]
+145 ite 4 136 144 19 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+146 const 117 110
+147 uext 12 146 2
+148 eq 1 13 147 ; @[ShiftRegisterFifo.scala 23:39]
+149 and 1 41 148 ; @[ShiftRegisterFifo.scala 23:29]
+150 or 1 51 149 ; @[ShiftRegisterFifo.scala 23:17]
+151 const 117 110
+152 uext 12 151 2
+153 eq 1 64 152 ; @[ShiftRegisterFifo.scala 33:45]
+154 and 1 41 153 ; @[ShiftRegisterFifo.scala 33:25]
+155 zero 1
+156 uext 4 155 63
+157 ite 4 51 21 156 ; @[ShiftRegisterFifo.scala 32:49]
+158 ite 4 154 5 157 ; @[ShiftRegisterFifo.scala 33:16]
+159 ite 4 150 158 20 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+160 ones 117
+161 uext 12 160 2
+162 eq 1 13 161 ; @[ShiftRegisterFifo.scala 23:39]
+163 and 1 41 162 ; @[ShiftRegisterFifo.scala 23:29]
+164 or 1 51 163 ; @[ShiftRegisterFifo.scala 23:17]
+165 ones 117
+166 uext 12 165 2
+167 eq 1 64 166 ; @[ShiftRegisterFifo.scala 33:45]
+168 and 1 41 167 ; @[ShiftRegisterFifo.scala 33:25]
+169 zero 1
+170 uext 4 169 63
+171 ite 4 51 22 170 ; @[ShiftRegisterFifo.scala 32:49]
+172 ite 4 168 5 171 ; @[ShiftRegisterFifo.scala 33:16]
+173 ite 4 164 172 21 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+174 const 8 1000
+175 uext 12 174 1
+176 eq 1 13 175 ; @[ShiftRegisterFifo.scala 23:39]
+177 and 1 41 176 ; @[ShiftRegisterFifo.scala 23:29]
+178 or 1 51 177 ; @[ShiftRegisterFifo.scala 23:17]
+179 const 8 1000
+180 uext 12 179 1
+181 eq 1 64 180 ; @[ShiftRegisterFifo.scala 33:45]
+182 and 1 41 181 ; @[ShiftRegisterFifo.scala 33:25]
+183 zero 1
+184 uext 4 183 63
+185 ite 4 51 23 184 ; @[ShiftRegisterFifo.scala 32:49]
+186 ite 4 182 5 185 ; @[ShiftRegisterFifo.scala 33:16]
+187 ite 4 178 186 22 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+188 const 8 1001
+189 uext 12 188 1
+190 eq 1 13 189 ; @[ShiftRegisterFifo.scala 23:39]
+191 and 1 41 190 ; @[ShiftRegisterFifo.scala 23:29]
+192 or 1 51 191 ; @[ShiftRegisterFifo.scala 23:17]
+193 const 8 1001
+194 uext 12 193 1
+195 eq 1 64 194 ; @[ShiftRegisterFifo.scala 33:45]
+196 and 1 41 195 ; @[ShiftRegisterFifo.scala 33:25]
+197 zero 1
+198 uext 4 197 63
+199 ite 4 51 24 198 ; @[ShiftRegisterFifo.scala 32:49]
+200 ite 4 196 5 199 ; @[ShiftRegisterFifo.scala 33:16]
+201 ite 4 192 200 23 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+202 const 8 1010
+203 uext 12 202 1
+204 eq 1 13 203 ; @[ShiftRegisterFifo.scala 23:39]
+205 and 1 41 204 ; @[ShiftRegisterFifo.scala 23:29]
+206 or 1 51 205 ; @[ShiftRegisterFifo.scala 23:17]
+207 const 8 1010
+208 uext 12 207 1
+209 eq 1 64 208 ; @[ShiftRegisterFifo.scala 33:45]
+210 and 1 41 209 ; @[ShiftRegisterFifo.scala 33:25]
+211 zero 1
+212 uext 4 211 63
+213 ite 4 51 25 212 ; @[ShiftRegisterFifo.scala 32:49]
+214 ite 4 210 5 213 ; @[ShiftRegisterFifo.scala 33:16]
+215 ite 4 206 214 24 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+216 const 8 1011
+217 uext 12 216 1
+218 eq 1 13 217 ; @[ShiftRegisterFifo.scala 23:39]
+219 and 1 41 218 ; @[ShiftRegisterFifo.scala 23:29]
+220 or 1 51 219 ; @[ShiftRegisterFifo.scala 23:17]
+221 const 8 1011
+222 uext 12 221 1
+223 eq 1 64 222 ; @[ShiftRegisterFifo.scala 33:45]
+224 and 1 41 223 ; @[ShiftRegisterFifo.scala 33:25]
+225 zero 1
+226 uext 4 225 63
+227 ite 4 51 26 226 ; @[ShiftRegisterFifo.scala 32:49]
+228 ite 4 224 5 227 ; @[ShiftRegisterFifo.scala 33:16]
+229 ite 4 220 228 25 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+230 const 8 1100
+231 uext 12 230 1
+232 eq 1 13 231 ; @[ShiftRegisterFifo.scala 23:39]
+233 and 1 41 232 ; @[ShiftRegisterFifo.scala 23:29]
+234 or 1 51 233 ; @[ShiftRegisterFifo.scala 23:17]
+235 const 8 1100
+236 uext 12 235 1
+237 eq 1 64 236 ; @[ShiftRegisterFifo.scala 33:45]
+238 and 1 41 237 ; @[ShiftRegisterFifo.scala 33:25]
+239 zero 1
+240 uext 4 239 63
+241 ite 4 51 27 240 ; @[ShiftRegisterFifo.scala 32:49]
+242 ite 4 238 5 241 ; @[ShiftRegisterFifo.scala 33:16]
+243 ite 4 234 242 26 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+244 const 8 1101
+245 uext 12 244 1
+246 eq 1 13 245 ; @[ShiftRegisterFifo.scala 23:39]
+247 and 1 41 246 ; @[ShiftRegisterFifo.scala 23:29]
+248 or 1 51 247 ; @[ShiftRegisterFifo.scala 23:17]
+249 const 8 1101
+250 uext 12 249 1
+251 eq 1 64 250 ; @[ShiftRegisterFifo.scala 33:45]
+252 and 1 41 251 ; @[ShiftRegisterFifo.scala 33:25]
+253 zero 1
+254 uext 4 253 63
+255 ite 4 51 28 254 ; @[ShiftRegisterFifo.scala 32:49]
+256 ite 4 252 5 255 ; @[ShiftRegisterFifo.scala 33:16]
+257 ite 4 248 256 27 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+258 const 8 1110
+259 uext 12 258 1
+260 eq 1 13 259 ; @[ShiftRegisterFifo.scala 23:39]
+261 and 1 41 260 ; @[ShiftRegisterFifo.scala 23:29]
+262 or 1 51 261 ; @[ShiftRegisterFifo.scala 23:17]
+263 const 8 1110
+264 uext 12 263 1
+265 eq 1 64 264 ; @[ShiftRegisterFifo.scala 33:45]
+266 and 1 41 265 ; @[ShiftRegisterFifo.scala 33:25]
+267 zero 1
+268 uext 4 267 63
+269 ite 4 51 29 268 ; @[ShiftRegisterFifo.scala 32:49]
+270 ite 4 266 5 269 ; @[ShiftRegisterFifo.scala 33:16]
+271 ite 4 262 270 28 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22]
+272 ones 8
+273 uext 12 272 1
+274 eq 1 13 273 ; @[ShiftRegisterFifo.scala 23:39]
+275 and 1 41 274 ; @[ShiftRegisterFifo.scala 23:29]
+276 or 1 51 275 ; @[ShiftRegisterFifo.scala 23:17]
+277 one 1
+278 ite 4 276 7 29 ; @[ShiftRegisterFifo.scala 23:51 24:11 22:22] @[ShiftRegisterFifo.scala 36:15]
+279 read 4 31 33
+280 eq 1 32 33 ; @[Decoupled.scala 263:33]
+281 not 1 34 ; @[Decoupled.scala 264:28]
+282 and 1 280 281 ; @[Decoupled.scala 264:25]
+283 and 1 280 34 ; @[Decoupled.scala 265:24] @[FifoUniversalHarness.scala 24:26]
+284 not 1 283 ; @[Decoupled.scala 289:19]
+285 or 1 51 284 ; @[Decoupled.scala 289:16 309:{24,39}] @[FifoUniversalHarness.scala 22:26]
+286 and 1 285 41 ; @[Decoupled.scala 50:35]
+287 not 1 282 ; @[Decoupled.scala 288:19]
+288 or 1 41 287 ; @[Decoupled.scala 288:16 300:{24,39}]
+289 and 1 51 288 ; @[Decoupled.scala 50:35]
+290 uext 12 32 1
+291 one 1
+292 uext 12 291 4
+293 add 12 290 292 ; @[Counter.scala 78:24]
+294 slice 8 293 3 0 ; @[Counter.scala 78:24]
+295 zero 1
+296 ite 1 51 295 286 ; @[Decoupled.scala 304:{26,35}]
+297 ite 1 282 296 286 ; @[Decoupled.scala 301:17]
+298 not 1 297
+299 not 1 297
+300 not 1 297
+301 ite 8 297 294 32 ; @[Decoupled.scala 272:16 Counter.scala 78:15 62:40]
+302 uext 12 33 1
+303 one 1
+304 uext 12 303 4
+305 add 12 302 304 ; @[Counter.scala 78:24]
+306 slice 8 305 3 0 ; @[Counter.scala 78:24]
+307 zero 1
+308 ite 1 282 307 289 ; @[Decoupled.scala 301:17 303:14]
+309 ite 8 308 306 33 ; @[Decoupled.scala 276:16 Counter.scala 78:15 62:40]
+310 neq 1 297 308 ; @[Decoupled.scala 279:15]
+311 ite 1 310 297 34 ; @[Decoupled.scala 279:27 280:16 262:27]
+312 uext 12 32 1
+313 uext 12 33 1
+314 sub 12 312 313 ; @[Decoupled.scala 312:32]
+315 slice 8 314 3 0 ; @[Decoupled.scala 312:32]
+316 and 1 34 280 ; @[Decoupled.scala 315:32]
+317 const 12 10000
+318 zero 1
+319 uext 12 318 4
+320 ite 12 316 317 319 ; @[Decoupled.scala 315:20] @[FifoUniversalHarness.scala 23:25]
+321 ite 4 282 5 279 ; @[Decoupled.scala 296:17 301:17 302:19]
+322 uext 12 315 1
+323 or 12 320 322 ; @[Decoupled.scala 315:62]
+324 one 1
+325 ite 1 282 296 286
+326 not 1 297
+327 ite 8 326 9 32
+328 not 1 297
+329 one 1
+330 ite 1 328 10 329
+331 not 1 297
+332 ite 4 331 11 5
+333 zero 1
+334 uext 12 333 4
+335 neq 1 323 334 ; @[FifoUniversalHarness.scala 26:31]
+336 not 1 2 ; @[FifoUniversalHarness.scala 26:11]
+337 not 1 335 ; @[FifoUniversalHarness.scala 26:11]
+338 eq 1 321 14 ; @[FifoUniversalHarness.scala 28:29]
+339 not 1 338 ; @[FifoUniversalHarness.scala 27:11]
+340 one 1
+341 ugte 1 36 340
+342 not 1 341
+343 and 1 51 336
+344 implies 1 343 335
+345 not 1 344
+346 bad 345 ; assert @[FifoUniversalHarness.scala 26:11]
+347 and 1 51 336
+348 implies 1 347 338
+349 not 1 348
+350 bad 349 ; assert_1 @[FifoUniversalHarness.scala 27:11]
+351 implies 1 342 2
+352 constraint 351 ; _resetActive
+; dut_count.next
+353 zero 12
+354 ite 12 2 353 55
+355 next 12 13 354
+; dut_entries_0.next
+356 zero 4
+357 ite 4 2 356 73
+358 next 4 14 357
+; dut_entries_1.next
+359 zero 4
+360 ite 4 2 359 87
+361 next 4 15 360
+; dut_entries_2.next
+362 zero 4
+363 ite 4 2 362 102
+364 next 4 16 363
+; dut_entries_3.next
+365 zero 4
+366 ite 4 2 365 116
+367 next 4 17 366
+; dut_entries_4.next
+368 zero 4
+369 ite 4 2 368 131
+370 next 4 18 369
+; dut_entries_5.next
+371 zero 4
+372 ite 4 2 371 145
+373 next 4 19 372
+; dut_entries_6.next
+374 zero 4
+375 ite 4 2 374 159
+376 next 4 20 375
+; dut_entries_7.next
+377 zero 4
+378 ite 4 2 377 173
+379 next 4 21 378
+; dut_entries_8.next
+380 zero 4
+381 ite 4 2 380 187
+382 next 4 22 381
+; dut_entries_9.next
+383 zero 4
+384 ite 4 2 383 201
+385 next 4 23 384
+; dut_entries_10.next
+386 zero 4
+387 ite 4 2 386 215
+388 next 4 24 387
+; dut_entries_11.next
+389 zero 4
+390 ite 4 2 389 229
+391 next 4 25 390
+; dut_entries_12.next
+392 zero 4
+393 ite 4 2 392 243
+394 next 4 26 393
+; dut_entries_13.next
+395 zero 4
+396 ite 4 2 395 257
+397 next 4 27 396
+; dut_entries_14.next
+398 zero 4
+399 ite 4 2 398 271
+400 next 4 28 399
+; dut_entries_15.next
+401 zero 4
+402 ite 4 2 401 278
+403 next 4 29 402
+; reference_ram.next
+404 and 1 325 330
+405 write 30 31 327 332
+406 ite 30 404 405 31
+407 next 30 31 406
+; reference_enq_ptr_value.next
+408 zero 8
+409 ite 8 2 408 301
+410 next 8 32 409
+; reference_deq_ptr_value.next
+411 zero 8
+412 ite 8 2 411 309
+413 next 8 33 412
+; reference_maybe_full.next
+414 zero 1
+415 ite 1 2 414 311
+416 next 1 34 415
+; _resetCount.next
+417 uext 88 36 1
+418 one 1
+419 uext 88 418 1
+420 add 88 417 419
+421 slice 1 420 0 0
+422 ite 1 342 421 36
+423 next 1 36 422

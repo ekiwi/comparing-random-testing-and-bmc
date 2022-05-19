@@ -1,0 +1,1 @@
+{"conf":{"design":"deepbug","designParams":{"depth":"9","withBug":"true"},"method":"bmc","harness":"universal","timeout":900},"res":{"averageInputLength":-1,"successRate":0,"averageTime":900038116935}}

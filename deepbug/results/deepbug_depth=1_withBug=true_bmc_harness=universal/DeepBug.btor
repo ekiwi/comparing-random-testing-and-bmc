@@ -1,0 +1,131 @@
+1 sort bitvec 1
+2 input 1 reset
+3 input 1 inc_x
+4 input 1 inc_y
+5 input 1 _GEN_1_invalid ; @[DeepBug.scala 33:25]
+6 input 1 _GEN_4_invalid ; @[DeepBug.scala 33:25]
+7 input 1 _GEN_6_invalid ; @[DeepBug.scala 31:15]
+8 input 1 _GEN_9_invalid ; @[DeepBug.scala 31:15]
+9 input 1 _GEN_10_invalid ; @[DeepBug.scala 31:15]
+10 input 1 _GEN_13_invalid ; @[DeepBug.scala 31:15]
+11 sort bitvec 2
+12 input 11 _GEN_14_invalid ; @[DeepBug.scala 31:15]
+; valid.init
+13 zero 1
+14 sort array 1 1
+15 state 14 valid ; @[DeepBug.scala 19:18]
+16 init 14 15 13
+17 sort array 1 11
+18 state 17 mem ; @[DeepBug.scala 25:16]
+19 state 1 x ; @[DeepBug.scala 16:18]
+20 state 1 y ; @[DeepBug.scala 17:18]
+21 state 11 data ; @[DeepBug.scala 24:21]
+; _resetCount.init
+22 zero 1
+23 state 1 _resetCount
+24 init 1 23 22
+25 read 1 15 19
+26 read 1 15 19
+27 read 11 18 19
+28 and 1 3 25 ; @[DeepBug.scala 28:14]
+29 uext 11 19 1
+30 one 1
+31 uext 11 30 1
+32 add 11 29 31 ; @[DeepBug.scala 29:12]
+33 slice 1 32 0 0 ; @[DeepBug.scala 29:12]
+34 ite 1 28 33 19 ; @[DeepBug.scala 16:18 28:23 29:7]
+35 uext 11 20 1
+36 one 1
+37 uext 11 36 1
+38 add 11 35 37 ; @[DeepBug.scala 32:12]
+39 slice 1 38 0 0 ; @[DeepBug.scala 32:12]
+40 not 1 2 ; @[DeepBug.scala 33:10]
+41 not 1 40
+42 not 1 40
+43 ite 1 42 5 20 ; @[DeepBug.scala 33:25]
+44 not 1 40
+45 not 1 40
+46 one 1
+47 ite 1 45 6 46 ; @[DeepBug.scala 33:25]
+48 zero 1
+49 uext 11 48 1
+50 eq 1 38 49 ; @[DeepBug.scala 40:28]
+51 sort bitvec 3
+52 zero 1
+53 concat 51 21 52 ; @[DeepBug.scala 40:47]
+54 one 1
+55 uext 51 54 2
+56 ite 51 50 55 53 ; @[DeepBug.scala 40:18]
+57 ite 1 4 39 20 ; @[DeepBug.scala 31:15 17:18 32:7]
+58 not 1 4
+59 not 1 4
+60 not 1 4
+61 not 1 4
+62 not 1 4
+63 uext 51 21 1
+64 ite 51 4 56 63 ; @[DeepBug.scala 31:15 40:12 24:21]
+65 one 1
+66 uext 11 65 1
+67 uext 11 19 1
+68 sll 11 66 67 ; @[DeepBug.scala 46:32]
+69 eq 1 27 68 ; @[DeepBug.scala 46:23]
+70 not 1 26 ; @[DeepBug.scala 46:42]
+71 or 1 69 70 ; @[DeepBug.scala 46:39]
+72 not 1 71 ; @[DeepBug.scala 46:9]
+73 one 1
+74 ugte 1 23 73
+75 not 1 74
+76 implies 1 40 71
+77 not 1 76
+78 bad 77 ; assert @[DeepBug.scala 46:9]
+79 implies 1 75 2
+80 constraint 79 ; _resetActive
+81 one 1
+82 one 1
+83 and 1 4 40
+84 not 1 4
+85 ite 1 84 7 43
+86 not 1 4
+87 ite 1 86 8 47
+88 not 1 4
+89 ite 1 88 8 47
+90 one 1
+91 not 1 4
+92 ite 1 91 9 20
+93 not 1 4
+94 one 1
+95 ite 1 93 10 94
+96 not 1 4
+97 ite 11 96 12 21
+; valid.next
+98 and 1 83 87
+99 write 14 15 85 89
+100 ite 14 98 99 15
+101 next 14 15 100
+; mem.next
+102 and 1 4 95
+103 write 17 18 92 97
+104 ite 17 102 103 18
+105 next 17 18 104
+; x.next
+106 zero 1
+107 ite 1 2 106 34
+108 next 1 19 107
+; y.next
+109 zero 1
+110 ite 1 2 109 57
+111 next 1 20 110
+; data.next
+112 one 11
+113 uext 51 112 1
+114 ite 51 2 113 64
+115 slice 11 114 1 0
+116 next 11 21 115
+; _resetCount.next
+117 uext 11 23 1
+118 one 1
+119 uext 11 118 1
+120 add 11 117 119
+121 slice 1 120 0 0
+122 ite 1 75 121 23
+123 next 1 23 122

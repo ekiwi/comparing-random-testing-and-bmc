@@ -1,0 +1,114 @@
+FifoUniversalHarness
+input reset : bv<1>
+input tryPush_valid : bv<1>
+input tryPush_bits : bv<8>
+input tryPop : bv<1>
+input dut_entries_input_data_MPORT_rand_data : bv<8>
+input dut_entries_io_data_out_MPORT_rand_data : bv<8>
+input reference__GEN_0_invalid : bv<5>
+input reference__GEN_3_invalid : bv<1>
+input reference__GEN_4_invalid : bv<8>
+node dut_entries.input_data_MPORT.addr : bv<6> = dut_wrPtr
+node dut_entries.input_data_MPORT.data : bv<8> = dut_entries[dut_entries.input_data_MPORT.addr]
+node dut_entries.io_data_out_MPORT.addr : bv<6> = dut_rdPtr
+node dut_entries.io_data_out_MPORT.data : bv<8> = dut_entries[dut_entries.io_data_out_MPORT.addr]
+node dut_entries_input_data_MPORT_addr : bv<6> = dut_wrPtr
+node dut_entries_input_data_MPORT_oob : bv<1> = not(ugt(6'b100001, dut_entries_input_data_MPORT_addr))
+output dut_entries_input_data_MPORT_rand_data.en : bv<1> = dut_entries_input_data_MPORT_oob
+node dut_entries_io_data_out_MPORT_addr : bv<6> = dut_rdPtr
+node dut_entries_io_data_out_MPORT_oob : bv<1> = not(ugt(6'b100001, dut_entries_io_data_out_MPORT_addr))
+output dut_entries_io_data_out_MPORT_rand_data.en : bv<1> = dut_entries_io_data_out_MPORT_oob
+node dut_io_full : bv<1> = eq(dut_cnt, zext(6'b100001, 1))
+node _dut_io_push_T : bv<1> = not(dut_io_full)
+node dut_io_push : bv<1> = and(tryPush_valid, _dut_io_push_T)
+node dut__cnt_T : bv<8> = add(zext(dut_cnt, 1), zext(dut_io_push, 7))
+node dut__cnt_T_1 : bv<7> = dut__cnt_T[6:0]
+node dut_io_empty : bv<1> = eq(dut_cnt, zext(1'b0, 6))
+node _dut_io_pop_T : bv<1> = not(dut_io_empty)
+node dut_io_pop : bv<1> = and(tryPop, _dut_io_pop_T)
+node dut__cnt_T_2 : bv<8> = sub(zext(dut__cnt_T_1, 1), zext(dut_io_pop, 7))
+node dut__cnt_T_3 : bv<7> = dut__cnt_T_2[6:0]
+node dut__wrPtr_T : bv<7> = add(zext(dut_wrPtr, 1), zext(dut_io_push, 6))
+node dut__wrPtr_T_1 : bv<6> = dut__wrPtr_T[5:0]
+node dut__rdPtr_T : bv<7> = add(zext(dut_rdPtr, 1), zext(dut_io_pop, 6))
+node dut__rdPtr_T_1 : bv<6> = dut__rdPtr_T[5:0]
+node dut_entries_input_data_MPORT_data : bv<8> = ite(dut_entries_input_data_MPORT_oob, dut_entries_input_data_MPORT_rand_data, dut_entries.input_data_MPORT.data)
+node dut_entries_io_data_out_MPORT_data : bv<8> = ite(dut_entries_io_data_out_MPORT_oob, dut_entries_io_data_out_MPORT_rand_data, dut_entries.io_data_out_MPORT.data)
+node dut_io_data_out : bv<8> = dut_entries_io_data_out_MPORT_data
+node dut_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_entries.MPORT.en : bv<1> = 1'b1
+node dut_entries.MPORT.addr : bv<6> = dut_wrPtr
+node dut_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in : bv<8> = tryPush_bits
+node dut_entries.MPORT.data : bv<8> = ite(dut_io_push, dut_io_data_in, dut_entries_input_data_MPORT_data)
+node reference_ram.io_deq_bits_MPORT.addr : bv<5> = reference_deq_ptr_value
+node reference_ram.io_deq_bits_MPORT.data : bv<8> = reference_ram[reference_ram.io_deq_bits_MPORT.addr]
+node reference_ptr_match : bv<1> = eq(reference_enq_ptr_value, reference_deq_ptr_value)
+node reference__empty_T : bv<1> = not(reference_maybe_full)
+node reference_empty : bv<1> = and(reference_ptr_match, reference__empty_T)
+node reference_full : bv<1> = and(reference_ptr_match, reference_maybe_full)
+node reference_io_deq_ready : bv<1> = dut_io_pop
+node reference__io_enq_ready_T : bv<1> = not(reference_full)
+node reference_io_enq_ready : bv<1> = or(reference_io_deq_ready, reference__io_enq_ready_T)
+node reference_io_enq_valid : bv<1> = dut_io_push
+node reference__do_enq_T : bv<1> = and(reference_io_enq_ready, reference_io_enq_valid)
+node reference__io_deq_valid_T : bv<1> = not(reference_empty)
+node reference_io_deq_valid : bv<1> = or(reference_io_enq_valid, reference__io_deq_valid_T)
+node reference__do_deq_T : bv<1> = and(reference_io_deq_ready, reference_io_deq_valid)
+node reference__value_T : bv<6> = add(zext(reference_enq_ptr_value, 1), zext(1'b1, 5))
+node reference__value_T_1 : bv<5> = reference__value_T[4:0]
+node reference__GEN_12 : bv<1> = ite(reference_io_deq_ready, 1'b0, reference__do_enq_T)
+node reference_do_enq : bv<1> = ite(reference_empty, reference__GEN_12, reference__do_enq_T)
+output reference__GEN_0_invalid.en : bv<1> = not(reference_do_enq)
+output reference__GEN_3_invalid.en : bv<1> = not(reference_do_enq)
+output reference__GEN_4_invalid.en : bv<1> = not(reference_do_enq)
+node reference__GEN_5 : bv<5> = ite(reference_do_enq, reference__value_T_1, reference_enq_ptr_value)
+node reference__value_T_2 : bv<6> = add(zext(reference_deq_ptr_value, 1), zext(1'b1, 5))
+node reference__value_T_3 : bv<5> = reference__value_T_2[4:0]
+node reference_do_deq : bv<1> = ite(reference_empty, 1'b0, reference__do_deq_T)
+node reference__GEN_6 : bv<5> = ite(reference_do_deq, reference__value_T_3, reference_deq_ptr_value)
+node reference__T : bv<1> = not(eq(reference_do_enq, reference_do_deq))
+node reference__GEN_7 : bv<1> = ite(reference__T, reference_do_enq, reference_maybe_full)
+node reference__ptr_diff_T : bv<6> = sub(zext(reference_enq_ptr_value, 1), zext(reference_deq_ptr_value, 1))
+node reference_ptr_diff : bv<5> = reference__ptr_diff_T[4:0]
+node reference__io_count_T : bv<1> = and(reference_maybe_full, reference_ptr_match)
+node reference__io_count_T_1 : bv<6> = ite(reference__io_count_T, 6'b100000, zext(1'b0, 5))
+node reference_io_enq_bits : bv<8> = dut_io_data_in
+node reference_io_deq_bits : bv<8> = ite(reference_empty, reference_io_enq_bits, reference_ram.io_deq_bits_MPORT.data)
+node reference_io_count : bv<6> = or(reference__io_count_T_1, zext(reference_ptr_diff, 1))
+node reference_ram.io_deq_bits_MPORT.en : bv<1> = 1'b1
+node reference_ram.MPORT.en : bv<1> = ite(reference_empty, reference__GEN_12, reference__do_enq_T)
+node reference_ram.MPORT.addr : bv<5> = ite(not(reference_do_enq), reference__GEN_0_invalid, reference_enq_ptr_value)
+node reference_ram.MPORT.mask : bv<1> = ite(not(reference_do_enq), reference__GEN_3_invalid, 1'b1)
+node reference_ram.MPORT.data : bv<8> = ite(not(reference_do_enq), reference__GEN_4_invalid, reference_io_enq_bits)
+node _T : bv<1> = not(eq(reference_io_count, zext(1'b0, 5)))
+node _T_2 : bv<1> = not(reset)
+node _T_3 : bv<1> = not(_T)
+node _T_4 : bv<1> = eq(reference_io_deq_bits, dut_io_data_out)
+node _T_7 : bv<1> = not(_T_4)
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+node dut_reset : bv<1> = reset
+node reference_reset : bv<1> = reset
+bad assert : bv<1> = not(implies(and(dut_io_pop, _T_2), _T))
+bad assert_1 : bv<1> = not(implies(and(dut_io_pop, _T_2), _T_4))
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+state dut_entries : bv<6> -> bv<8>
+  [next] ite(and(dut_entries.MPORT.en, dut_entries.MPORT.mask), dut_entries[dut_entries.MPORT.addr := dut_entries.MPORT.data], dut_entries)
+state dut_wrPtr : bv<6>
+  [next] ite(dut_reset, 6'b0, dut__wrPtr_T_1)
+state dut_rdPtr : bv<6>
+  [next] ite(dut_reset, 6'b0, dut__rdPtr_T_1)
+state dut_cnt : bv<7>
+  [next] ite(dut_reset, 7'b0, dut__cnt_T_3)
+state reference_ram : bv<5> -> bv<8>
+  [next] ite(and(reference_ram.MPORT.en, reference_ram.MPORT.mask), reference_ram[reference_ram.MPORT.addr := reference_ram.MPORT.data], reference_ram)
+state reference_enq_ptr_value : bv<5>
+  [next] ite(reference_reset, 5'b0, reference__GEN_5)
+state reference_deq_ptr_value : bv<5>
+  [next] ite(reference_reset, 5'b0, reference__GEN_6)
+state reference_maybe_full : bv<1>
+  [next] ite(reference_reset, 1'b0, reference__GEN_7)
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)

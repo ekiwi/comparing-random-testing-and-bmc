@@ -1,0 +1,475 @@
+1 sort bitvec 1
+2 input 1 reset
+3 input 1 io_push_0
+4 input 1 io_push_1
+5 input 1 io_push_2
+6 input 1 io_push_3
+7 sort bitvec 8
+8 input 7 io_data_in_0
+9 input 7 io_data_in_1
+10 input 7 io_data_in_2
+11 input 7 io_data_in_3
+12 input 1 io_req
+13 sort bitvec 2
+14 input 13 io_gnt_sel
+15 input 1 startTracking
+16 sort array 13 7
+17 state 16 dut_fifo_entries ; @[CircularPointerFifo.scala 38:20]
+18 sort bitvec 3
+19 state 18 dut_fifo_cnt ; @[CircularPointerFifo.scala 25:20]
+20 state 13 dut_fifo_wrPtr ; @[CircularPointerFifo.scala 29:22]
+21 state 13 dut_fifo_rdPtr ; @[CircularPointerFifo.scala 32:22]
+22 state 18 dut_cc_credits ; @[ArbitratedTop.scala 73:24]
+23 state 16 dut_fifo_1_entries ; @[CircularPointerFifo.scala 38:20]
+24 state 18 dut_fifo_1_cnt ; @[CircularPointerFifo.scala 25:20]
+25 state 13 dut_fifo_1_wrPtr ; @[CircularPointerFifo.scala 29:22]
+26 state 13 dut_fifo_1_rdPtr ; @[CircularPointerFifo.scala 32:22]
+27 state 18 dut_cc_1_credits ; @[ArbitratedTop.scala 73:24]
+28 state 16 dut_fifo_2_entries ; @[CircularPointerFifo.scala 38:20]
+29 state 18 dut_fifo_2_cnt ; @[CircularPointerFifo.scala 25:20]
+30 state 13 dut_fifo_2_wrPtr ; @[CircularPointerFifo.scala 29:22]
+31 state 13 dut_fifo_2_rdPtr ; @[CircularPointerFifo.scala 32:22]
+32 state 18 dut_cc_2_credits ; @[ArbitratedTop.scala 73:24]
+33 state 16 dut_fifo_3_entries ; @[CircularPointerFifo.scala 38:20]
+34 state 18 dut_fifo_3_cnt ; @[CircularPointerFifo.scala 25:20]
+35 state 13 dut_fifo_3_wrPtr ; @[CircularPointerFifo.scala 29:22]
+36 state 13 dut_fifo_3_rdPtr ; @[CircularPointerFifo.scala 32:22]
+37 state 18 dut_cc_3_credits ; @[ArbitratedTop.scala 73:24]
+38 state 18 tracker_elementCount ; @[MagicPacketTracker.scala 45:29]
+39 state 1 tracker_isActive ; @[MagicPacketTracker.scala 55:25]
+40 state 7 tracker_packetValue ; @[MagicPacketTracker.scala 56:24]
+41 state 18 tracker_packetCount ; @[MagicPacketTracker.scala 57:24]
+; _resetCount.init
+42 zero 1
+43 state 1 _resetCount
+44 init 1 43 42
+45 read 7 17 20
+46 read 7 17 21 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 31:18]
+47 sort bitvec 4
+48 uext 47 19 1
+49 uext 47 3 3
+50 add 47 48 49 ; @[CircularPointerFifo.scala 26:14]
+51 slice 18 50 2 0 ; @[CircularPointerFifo.scala 26:14] @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedFormalHarness.scala 11:6]
+52 zero 1
+53 uext 13 52 1
+54 eq 1 14 53 ; @[ArbitratedTop.scala 45:41]
+55 and 1 12 54 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+56 uext 47 51 1
+57 uext 47 55 3
+58 sub 47 56 57 ; @[CircularPointerFifo.scala 26:24]
+59 slice 18 58 2 0 ; @[CircularPointerFifo.scala 26:24]
+60 uext 18 20 1
+61 uext 18 3 2
+62 add 18 60 61 ; @[CircularPointerFifo.scala 30:18]
+63 slice 13 62 1 0 ; @[CircularPointerFifo.scala 30:18]
+64 uext 18 21 1
+65 uext 18 55 2
+66 add 18 64 65 ; @[CircularPointerFifo.scala 33:18]
+67 slice 13 66 1 0 ; @[CircularPointerFifo.scala 33:18]
+68 zero 1
+69 uext 18 68 2
+70 eq 1 19 69 ; @[CircularPointerFifo.scala 35:19] @[CircularPointerFifo.scala 43:17]
+71 one 1
+72 one 1
+73 one 1
+74 one 1 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 33:21]
+75 ite 7 3 8 45 ; @[ArbitratedTop.scala 39:12]
+76 uext 47 22 1
+77 uext 47 55 3
+78 add 47 76 77 ; @[ArbitratedTop.scala 74:22]
+79 slice 18 78 2 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+80 uext 47 79 1
+81 uext 47 3 3
+82 sub 47 80 81 ; @[ArbitratedTop.scala 74:28]
+83 slice 18 82 2 0 ; @[ArbitratedTop.scala 74:28]
+84 const 18 100
+85 neq 1 22 84 ; @[ArbitratedTop.scala 78:18]
+86 not 1 55 ; @[ArbitratedTop.scala 78:38]
+87 or 1 85 86 ; @[ArbitratedTop.scala 78:35]
+88 not 1 2 ; @[ArbitratedTop.scala 78:9]
+89 not 1 87 ; @[ArbitratedTop.scala 78:9]
+90 zero 1
+91 uext 18 90 2
+92 ugt 1 22 91 ; @[ArbitratedTop.scala 75:26]
+93 implies 1 88 87
+94 constraint 93 ; dut_cc_assume @[ArbitratedTop.scala 78:9]
+95 read 7 23 25
+96 read 7 23 26 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 31:18]
+97 uext 47 24 1
+98 uext 47 4 3
+99 add 47 97 98 ; @[CircularPointerFifo.scala 26:14]
+100 slice 18 99 2 0 ; @[CircularPointerFifo.scala 26:14]
+101 one 1
+102 uext 13 101 1
+103 eq 1 14 102 ; @[ArbitratedTop.scala 45:41]
+104 and 1 12 103 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+105 uext 47 100 1
+106 uext 47 104 3
+107 sub 47 105 106 ; @[CircularPointerFifo.scala 26:24]
+108 slice 18 107 2 0 ; @[CircularPointerFifo.scala 26:24]
+109 uext 18 25 1
+110 uext 18 4 2
+111 add 18 109 110 ; @[CircularPointerFifo.scala 30:18]
+112 slice 13 111 1 0 ; @[CircularPointerFifo.scala 30:18]
+113 uext 18 26 1
+114 uext 18 104 2
+115 add 18 113 114 ; @[CircularPointerFifo.scala 33:18]
+116 slice 13 115 1 0 ; @[CircularPointerFifo.scala 33:18]
+117 zero 1
+118 uext 18 117 2
+119 eq 1 24 118 ; @[CircularPointerFifo.scala 35:19] @[CircularPointerFifo.scala 43:17]
+120 one 1
+121 one 1
+122 one 1
+123 one 1 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 33:21]
+124 ite 7 4 9 95 ; @[ArbitratedTop.scala 39:12]
+125 uext 47 27 1
+126 uext 47 104 3
+127 add 47 125 126 ; @[ArbitratedTop.scala 74:22]
+128 slice 18 127 2 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+129 uext 47 128 1
+130 uext 47 4 3
+131 sub 47 129 130 ; @[ArbitratedTop.scala 74:28]
+132 slice 18 131 2 0 ; @[ArbitratedTop.scala 74:28]
+133 const 18 100
+134 neq 1 27 133 ; @[ArbitratedTop.scala 78:18]
+135 not 1 104 ; @[ArbitratedTop.scala 78:38]
+136 or 1 134 135 ; @[ArbitratedTop.scala 78:35]
+137 not 1 2 ; @[ArbitratedTop.scala 78:9]
+138 not 1 136 ; @[ArbitratedTop.scala 78:9]
+139 zero 1
+140 uext 18 139 2
+141 ugt 1 27 140 ; @[ArbitratedTop.scala 75:26]
+142 implies 1 137 136
+143 constraint 142 ; dut_cc_1_assume @[ArbitratedTop.scala 78:9]
+144 read 7 28 30
+145 read 7 28 31 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 31:18]
+146 uext 47 29 1
+147 uext 47 5 3
+148 add 47 146 147 ; @[CircularPointerFifo.scala 26:14]
+149 slice 18 148 2 0 ; @[CircularPointerFifo.scala 26:14]
+150 const 13 10
+151 eq 1 14 150 ; @[ArbitratedTop.scala 45:41]
+152 and 1 12 151 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+153 uext 47 149 1
+154 uext 47 152 3
+155 sub 47 153 154 ; @[CircularPointerFifo.scala 26:24]
+156 slice 18 155 2 0 ; @[CircularPointerFifo.scala 26:24]
+157 uext 18 30 1
+158 uext 18 5 2
+159 add 18 157 158 ; @[CircularPointerFifo.scala 30:18]
+160 slice 13 159 1 0 ; @[CircularPointerFifo.scala 30:18]
+161 uext 18 31 1
+162 uext 18 152 2
+163 add 18 161 162 ; @[CircularPointerFifo.scala 33:18]
+164 slice 13 163 1 0 ; @[CircularPointerFifo.scala 33:18]
+165 zero 1
+166 uext 18 165 2
+167 eq 1 29 166 ; @[CircularPointerFifo.scala 35:19] @[CircularPointerFifo.scala 43:17]
+168 one 1
+169 one 1
+170 one 1
+171 one 1 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 33:21]
+172 ite 7 5 10 144 ; @[ArbitratedTop.scala 39:12]
+173 uext 47 32 1
+174 uext 47 152 3
+175 add 47 173 174 ; @[ArbitratedTop.scala 74:22]
+176 slice 18 175 2 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+177 uext 47 176 1
+178 uext 47 5 3
+179 sub 47 177 178 ; @[ArbitratedTop.scala 74:28]
+180 slice 18 179 2 0 ; @[ArbitratedTop.scala 74:28]
+181 const 18 100
+182 neq 1 32 181 ; @[ArbitratedTop.scala 78:18]
+183 not 1 152 ; @[ArbitratedTop.scala 78:38]
+184 or 1 182 183 ; @[ArbitratedTop.scala 78:35]
+185 not 1 2 ; @[ArbitratedTop.scala 78:9]
+186 not 1 184 ; @[ArbitratedTop.scala 78:9]
+187 zero 1
+188 uext 18 187 2
+189 ugt 1 32 188 ; @[ArbitratedTop.scala 75:26]
+190 implies 1 185 184
+191 constraint 190 ; dut_cc_2_assume @[ArbitratedTop.scala 78:9]
+192 read 7 33 35
+193 read 7 33 36 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 31:18]
+194 uext 47 34 1
+195 uext 47 6 3
+196 add 47 194 195 ; @[CircularPointerFifo.scala 26:14]
+197 slice 18 196 2 0 ; @[CircularPointerFifo.scala 26:14]
+198 ones 13
+199 eq 1 14 198 ; @[ArbitratedTop.scala 45:41]
+200 and 1 12 199 ; @[ArbitratedTop.scala 45:26] @[ArbitratedTop.scala 32:17]
+201 uext 47 197 1
+202 uext 47 200 3
+203 sub 47 201 202 ; @[CircularPointerFifo.scala 26:24]
+204 slice 18 203 2 0 ; @[CircularPointerFifo.scala 26:24]
+205 uext 18 35 1
+206 uext 18 6 2
+207 add 18 205 206 ; @[CircularPointerFifo.scala 30:18]
+208 slice 13 207 1 0 ; @[CircularPointerFifo.scala 30:18]
+209 uext 18 36 1
+210 uext 18 200 2
+211 add 18 209 210 ; @[CircularPointerFifo.scala 33:18]
+212 slice 13 211 1 0 ; @[CircularPointerFifo.scala 33:18]
+213 zero 1
+214 uext 18 213 2
+215 eq 1 34 214 ; @[CircularPointerFifo.scala 35:19] @[CircularPointerFifo.scala 43:17]
+216 one 1
+217 one 1
+218 one 1
+219 one 1 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedTop.scala 33:21]
+220 ite 7 6 11 192 ; @[ArbitratedTop.scala 39:12]
+221 uext 47 37 1
+222 uext 47 200 3
+223 add 47 221 222 ; @[ArbitratedTop.scala 74:22]
+224 slice 18 223 2 0 ; @[ArbitratedTop.scala 74:22] @[ArbitratedTop.scala 40:12]
+225 uext 47 224 1
+226 uext 47 6 3
+227 sub 47 225 226 ; @[ArbitratedTop.scala 74:28]
+228 slice 18 227 2 0 ; @[ArbitratedTop.scala 74:28]
+229 const 18 100
+230 neq 1 37 229 ; @[ArbitratedTop.scala 78:18]
+231 not 1 200 ; @[ArbitratedTop.scala 78:38]
+232 or 1 230 231 ; @[ArbitratedTop.scala 78:35]
+233 not 1 2 ; @[ArbitratedTop.scala 78:9]
+234 not 1 232 ; @[ArbitratedTop.scala 78:9]
+235 zero 1
+236 uext 18 235 2
+237 ugt 1 37 236 ; @[ArbitratedTop.scala 75:26]
+238 implies 1 233 232
+239 constraint 238 ; dut_cc_3_assume @[ArbitratedTop.scala 78:9] @[ArbitratedTop.scala 23:27 36:23]
+240 zero 1
+241 uext 7 240 7
+242 ite 7 55 46 241 ; @[Mux.scala 27:73] @[ArbitratedTop.scala 23:27 36:23]
+243 zero 1
+244 uext 7 243 7
+245 ite 7 104 96 244 ; @[Mux.scala 27:73] @[ArbitratedTop.scala 23:27 36:23]
+246 zero 1
+247 uext 7 246 7
+248 ite 7 152 145 247 ; @[Mux.scala 27:73] @[ArbitratedTop.scala 23:27 36:23]
+249 zero 1
+250 uext 7 249 7
+251 ite 7 200 193 250 ; @[Mux.scala 27:73]
+252 or 7 242 245 ; @[Mux.scala 27:73]
+253 or 7 252 248 ; @[Mux.scala 27:73]
+254 not 1 3 ; @[ArbitratedTop.scala 54:30] @[ArbitratedTop.scala 41:20]
+255 or 1 92 254 ; @[ArbitratedTop.scala 54:27]
+256 not 1 2 ; @[ArbitratedTop.scala 54:11]
+257 not 1 255 ; @[ArbitratedTop.scala 54:11] @[ArbitratedTop.scala 34:15]
+258 not 1 70 ; @[ArbitratedTop.scala 56:12]
+259 not 1 55 ; @[ArbitratedTop.scala 56:26]
+260 or 1 258 259 ; @[ArbitratedTop.scala 56:23]
+261 not 1 260 ; @[ArbitratedTop.scala 56:11]
+262 not 1 4 ; @[ArbitratedTop.scala 54:30] @[ArbitratedTop.scala 41:20]
+263 or 1 141 262 ; @[ArbitratedTop.scala 54:27]
+264 not 1 263 ; @[ArbitratedTop.scala 54:11] @[ArbitratedTop.scala 34:15]
+265 not 1 119 ; @[ArbitratedTop.scala 56:12]
+266 not 1 104 ; @[ArbitratedTop.scala 56:26]
+267 or 1 265 266 ; @[ArbitratedTop.scala 56:23]
+268 not 1 267 ; @[ArbitratedTop.scala 56:11]
+269 not 1 5 ; @[ArbitratedTop.scala 54:30] @[ArbitratedTop.scala 41:20]
+270 or 1 189 269 ; @[ArbitratedTop.scala 54:27]
+271 not 1 270 ; @[ArbitratedTop.scala 54:11] @[ArbitratedTop.scala 34:15]
+272 not 1 167 ; @[ArbitratedTop.scala 56:12]
+273 not 1 152 ; @[ArbitratedTop.scala 56:26]
+274 or 1 272 273 ; @[ArbitratedTop.scala 56:23]
+275 not 1 274 ; @[ArbitratedTop.scala 56:11]
+276 not 1 6 ; @[ArbitratedTop.scala 54:30] @[ArbitratedTop.scala 41:20]
+277 or 1 237 276 ; @[ArbitratedTop.scala 54:27]
+278 not 1 277 ; @[ArbitratedTop.scala 54:11] @[ArbitratedTop.scala 34:15]
+279 not 1 215 ; @[ArbitratedTop.scala 56:12]
+280 not 1 200 ; @[ArbitratedTop.scala 56:26]
+281 or 1 279 280 ; @[ArbitratedTop.scala 56:23]
+282 not 1 281 ; @[ArbitratedTop.scala 56:11]
+283 or 7 253 251 ; @[Mux.scala 27:73]
+284 implies 1 256 255
+285 constraint 284 ; dut_assume @[ArbitratedTop.scala 54:11]
+286 implies 1 256 260
+287 constraint 286 ; dut_assume_1 @[ArbitratedTop.scala 56:11]
+288 implies 1 256 263
+289 constraint 288 ; dut_assume_2 @[ArbitratedTop.scala 54:11]
+290 implies 1 256 267
+291 constraint 290 ; dut_assume_3 @[ArbitratedTop.scala 56:11]
+292 implies 1 256 270
+293 constraint 292 ; dut_assume_4 @[ArbitratedTop.scala 54:11]
+294 implies 1 256 274
+295 constraint 294 ; dut_assume_5 @[ArbitratedTop.scala 56:11]
+296 implies 1 256 277
+297 constraint 296 ; dut_assume_6 @[ArbitratedTop.scala 54:11]
+298 implies 1 256 281
+299 constraint 298 ; dut_assume_7 @[ArbitratedTop.scala 56:11] @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedFormalHarness.scala 16:17 19:13]
+300 not 1 55 ; @[MagicPacketTracker.scala 47:17] @[ArbitratedFormalHarness.scala 15:17 17:13]
+301 and 1 3 300 ; @[MagicPacketTracker.scala 47:14]
+302 uext 47 38 1
+303 one 1
+304 uext 47 303 3
+305 add 47 302 304 ; @[MagicPacketTracker.scala 48:18]
+306 slice 18 305 2 0 ; @[MagicPacketTracker.scala 48:18]
+307 not 1 3 ; @[MagicPacketTracker.scala 49:9]
+308 and 1 307 55 ; @[MagicPacketTracker.scala 49:19]
+309 uext 47 38 1
+310 one 1
+311 uext 47 310 3
+312 sub 47 309 311 ; @[MagicPacketTracker.scala 49:45]
+313 slice 18 312 2 0 ; @[MagicPacketTracker.scala 49:45]
+314 ite 18 308 313 38 ; @[MagicPacketTracker.scala 49:8]
+315 ite 18 301 306 314 ; @[MagicPacketTracker.scala 46:29]
+316 not 1 39 ; @[MagicPacketTracker.scala 59:8]
+317 and 1 316 3 ; @[MagicPacketTracker.scala 59:18] @[MagicPacketTracker.scala 22:27]
+318 and 1 317 15 ; @[MagicPacketTracker.scala 59:30]
+319 zero 1
+320 uext 18 319 2
+321 eq 1 38 320 ; @[MagicPacketTracker.scala 60:35]
+322 and 1 55 321 ; @[MagicPacketTracker.scala 60:19] @[ArbitratedFormalHarness.scala 15:17 18:12] @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedFormalHarness.scala 16:17 20:12]
+323 eq 1 8 283 ; @[MagicPacketTracker.scala 62:25]
+324 not 1 2 ; @[MagicPacketTracker.scala 61:13]
+325 not 1 323 ; @[MagicPacketTracker.scala 61:13]
+326 one 1
+327 ite 1 322 39 326 ; @[MagicPacketTracker.scala 55:25 60:44 68:16]
+328 ite 7 322 40 8 ; @[MagicPacketTracker.scala 56:24 60:44 69:19]
+329 ite 18 322 41 315 ; @[MagicPacketTracker.scala 57:24 60:44 70:19]
+330 ite 1 318 327 39 ; @[MagicPacketTracker.scala 55:25 59:48]
+331 ite 18 318 329 41 ; @[MagicPacketTracker.scala 57:24 59:48]
+332 and 1 39 55 ; @[MagicPacketTracker.scala 74:17]
+333 uext 47 41 1
+334 one 1
+335 uext 47 334 3
+336 sub 47 333 335 ; @[MagicPacketTracker.scala 75:32]
+337 slice 18 336 2 0 ; @[MagicPacketTracker.scala 75:32]
+338 one 1
+339 uext 18 338 2
+340 eq 1 41 339 ; @[MagicPacketTracker.scala 76:22]
+341 eq 1 40 283 ; @[MagicPacketTracker.scala 78:28]
+342 not 1 341 ; @[MagicPacketTracker.scala 77:13]
+343 zero 1
+344 ite 1 340 343 330 ; @[MagicPacketTracker.scala 76:31 83:16]
+345 ite 1 332 344 330 ; @[MagicPacketTracker.scala 74:30]
+346 const 18 110
+347 eq 1 38 346 ; @[MagicPacketTracker.scala 88:21]
+348 not 1 301 ; @[MagicPacketTracker.scala 91:7]
+349 not 1 348 ; @[MagicPacketTracker.scala 90:11]
+350 and 1 318 322
+351 and 1 350 324
+352 implies 1 351 323
+353 not 1 352
+354 bad 353 ; tracker_assert @[MagicPacketTracker.scala 61:13]
+355 and 1 332 340
+356 and 1 355 324
+357 implies 1 356 341
+358 not 1 357
+359 bad 358 ; tracker_assert_1 @[MagicPacketTracker.scala 77:13]
+360 and 1 347 324
+361 implies 1 360 348
+362 not 1 361
+363 bad 362 ; tracker_assert_2 @[MagicPacketTracker.scala 90:11]
+364 one 1
+365 ugte 1 43 364
+366 not 1 365 ; @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedFormalHarness.scala 11:6] @[ArbitratedFormalHarness.scala 11:6]
+367 implies 1 366 2
+368 constraint 367 ; _resetActive
+; dut_fifo_entries.next
+369 and 1 73 74
+370 write 16 17 20 75
+371 ite 16 369 370 17
+372 next 16 17 371
+; dut_fifo_cnt.next
+373 zero 18
+374 ite 18 2 373 59
+375 next 18 19 374
+; dut_fifo_wrPtr.next
+376 zero 13
+377 ite 13 2 376 63
+378 next 13 20 377
+; dut_fifo_rdPtr.next
+379 zero 13
+380 ite 13 2 379 67
+381 next 13 21 380
+; dut_cc_credits.next
+382 const 18 101
+383 ite 18 2 382 83
+384 next 18 22 383
+; dut_fifo_1_entries.next
+385 and 1 122 123
+386 write 16 23 25 124
+387 ite 16 385 386 23
+388 next 16 23 387
+; dut_fifo_1_cnt.next
+389 zero 18
+390 ite 18 2 389 108
+391 next 18 24 390
+; dut_fifo_1_wrPtr.next
+392 zero 13
+393 ite 13 2 392 112
+394 next 13 25 393
+; dut_fifo_1_rdPtr.next
+395 zero 13
+396 ite 13 2 395 116
+397 next 13 26 396
+; dut_cc_1_credits.next
+398 const 18 101
+399 ite 18 2 398 132
+400 next 18 27 399
+; dut_fifo_2_entries.next
+401 and 1 170 171
+402 write 16 28 30 172
+403 ite 16 401 402 28
+404 next 16 28 403
+; dut_fifo_2_cnt.next
+405 zero 18
+406 ite 18 2 405 156
+407 next 18 29 406
+; dut_fifo_2_wrPtr.next
+408 zero 13
+409 ite 13 2 408 160
+410 next 13 30 409
+; dut_fifo_2_rdPtr.next
+411 zero 13
+412 ite 13 2 411 164
+413 next 13 31 412
+; dut_cc_2_credits.next
+414 const 18 101
+415 ite 18 2 414 180
+416 next 18 32 415
+; dut_fifo_3_entries.next
+417 and 1 218 219
+418 write 16 33 35 220
+419 ite 16 417 418 33
+420 next 16 33 419
+; dut_fifo_3_cnt.next
+421 zero 18
+422 ite 18 2 421 204
+423 next 18 34 422
+; dut_fifo_3_wrPtr.next
+424 zero 13
+425 ite 13 2 424 208
+426 next 13 35 425
+; dut_fifo_3_rdPtr.next
+427 zero 13
+428 ite 13 2 427 212
+429 next 13 36 428
+; dut_cc_3_credits.next
+430 const 18 101
+431 ite 18 2 430 228
+432 next 18 37 431
+; tracker_elementCount.next
+433 zero 18
+434 ite 18 2 433 315
+435 next 18 38 434
+; tracker_isActive.next
+436 zero 1
+437 ite 1 2 436 345
+438 next 1 39 437
+; tracker_packetValue.next
+439 ite 7 318 328 40
+440 next 7 40 439
+; tracker_packetCount.next
+441 ite 18 332 337 331
+442 next 18 41 441
+; _resetCount.next
+443 uext 13 43 1
+444 one 1
+445 uext 13 444 1
+446 add 13 443 445
+447 slice 1 446 0 0
+448 ite 1 366 447 43
+449 next 1 43 448

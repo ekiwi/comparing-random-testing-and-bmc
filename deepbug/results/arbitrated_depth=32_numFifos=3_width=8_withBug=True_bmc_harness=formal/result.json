@@ -1,0 +1,1 @@
+{"conf":{"design":"arbitrated","designParams":{"depth":"32","width":"8","withBug":"True","numFifos":"3"},"method":"bmc","harness":"formal","timeout":900},"res":{"averageInputLength":35,"successRate":1,"averageTime":695598089491}}

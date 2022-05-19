@@ -1,0 +1,108 @@
+FifoFormalHarness
+input reset : bv<1>
+input enq_valid : bv<1>
+input enq_bits : bv<64>
+input deq_ready : bv<1>
+input startTracking : bv<1>
+input dut_entries_input_data_MPORT_rand_data : bv<64>
+input dut_entries_io_data_out_MPORT_rand_data : bv<64>
+node dut_entries.input_data_MPORT.addr : bv<4> = dut_wrPtr
+node dut_entries.input_data_MPORT.data : bv<64> = dut_entries[dut_entries.input_data_MPORT.addr]
+node dut_entries.io_data_out_MPORT.addr : bv<4> = dut_rdPtr
+node dut_entries.io_data_out_MPORT.data : bv<64> = dut_entries[dut_entries.io_data_out_MPORT.addr]
+node dut_entries_input_data_MPORT_addr : bv<4> = dut_wrPtr
+node dut_entries_input_data_MPORT_oob : bv<1> = not(ugt(4'b1001, dut_entries_input_data_MPORT_addr))
+output dut_entries_input_data_MPORT_rand_data.en : bv<1> = dut_entries_input_data_MPORT_oob
+node dut_entries_io_data_out_MPORT_addr : bv<4> = dut_rdPtr
+node dut_entries_io_data_out_MPORT_oob : bv<1> = not(ugt(4'b1001, dut_entries_io_data_out_MPORT_addr))
+output dut_entries_io_data_out_MPORT_rand_data.en : bv<1> = dut_entries_io_data_out_MPORT_oob
+node dut_io_full : bv<1> = eq(dut_cnt, zext(4'b1001, 1))
+output enq_ready : bv<1> = not(dut_io_full)
+node dut_io_push : bv<1> = and(enq_ready, enq_valid)
+node dut__cnt_T : bv<6> = add(zext(dut_cnt, 1), zext(dut_io_push, 5))
+node dut__cnt_T_1 : bv<5> = dut__cnt_T[4:0]
+node dut_io_empty : bv<1> = eq(dut_cnt, zext(1'b0, 4))
+output deq_valid : bv<1> = not(dut_io_empty)
+node dut_io_pop : bv<1> = and(deq_ready, deq_valid)
+node dut__cnt_T_2 : bv<6> = sub(zext(dut__cnt_T_1, 1), zext(dut_io_pop, 5))
+node dut__cnt_T_3 : bv<5> = dut__cnt_T_2[4:0]
+node dut__wrPtr_T : bv<5> = add(zext(dut_wrPtr, 1), zext(dut_io_push, 4))
+node dut__wrPtr_T_1 : bv<4> = dut__wrPtr_T[3:0]
+node dut__rdPtr_T : bv<5> = add(zext(dut_rdPtr, 1), zext(dut_io_pop, 4))
+node dut__rdPtr_T_1 : bv<4> = dut__rdPtr_T[3:0]
+node dut_entries_input_data_MPORT_data : bv<64> = ite(dut_entries_input_data_MPORT_oob, dut_entries_input_data_MPORT_rand_data, dut_entries.input_data_MPORT.data)
+node dut_entries_io_data_out_MPORT_data : bv<64> = ite(dut_entries_io_data_out_MPORT_oob, dut_entries_io_data_out_MPORT_rand_data, dut_entries.io_data_out_MPORT.data)
+node dut_io_data_out : bv<64> = dut_entries_io_data_out_MPORT_data
+node dut_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_entries.MPORT.en : bv<1> = 1'b1
+node dut_entries.MPORT.addr : bv<4> = dut_wrPtr
+node dut_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in : bv<64> = enq_bits
+node dut_entries.MPORT.data : bv<64> = ite(dut_io_push, dut_io_data_in, dut_entries_input_data_MPORT_data)
+node tracker_deq_valid : bv<1> = and(deq_ready, deq_valid)
+node tracker__nextElementCount_T : bv<1> = not(tracker_deq_valid)
+node tracker_enq_valid : bv<1> = and(enq_ready, enq_valid)
+node tracker__nextElementCount_T_1 : bv<1> = and(tracker_enq_valid, tracker__nextElementCount_T)
+node tracker__nextElementCount_T_2 : bv<6> = add(zext(tracker_elementCount, 1), zext(1'b1, 5))
+node tracker__nextElementCount_T_3 : bv<5> = tracker__nextElementCount_T_2[4:0]
+node tracker__nextElementCount_T_4 : bv<1> = not(tracker_enq_valid)
+node tracker__nextElementCount_T_5 : bv<1> = and(tracker__nextElementCount_T_4, tracker_deq_valid)
+node tracker__nextElementCount_T_6 : bv<6> = sub(zext(tracker_elementCount, 1), zext(1'b1, 5))
+node tracker__nextElementCount_T_7 : bv<5> = tracker__nextElementCount_T_6[4:0]
+node tracker__nextElementCount_T_8 : bv<5> = ite(tracker__nextElementCount_T_5, tracker__nextElementCount_T_7, tracker_elementCount)
+node tracker_nextElementCount : bv<5> = ite(tracker__nextElementCount_T_1, tracker__nextElementCount_T_3, tracker__nextElementCount_T_8)
+node tracker__T : bv<1> = not(tracker_isActive)
+node tracker__T_1 : bv<1> = and(tracker__T, tracker_enq_valid)
+node tracker_startTracking : bv<1> = startTracking
+node tracker__T_2 : bv<1> = and(tracker__T_1, tracker_startTracking)
+node tracker__T_3 : bv<1> = eq(tracker_elementCount, zext(1'b0, 4))
+node tracker__T_4 : bv<1> = and(tracker_deq_valid, tracker__T_3)
+node tracker_enq_bits : bv<64> = enq_bits
+output deq_bits : bv<64> = dut_io_data_out
+node tracker_deq_bits : bv<64> = deq_bits
+node tracker__T_5 : bv<1> = eq(tracker_enq_bits, tracker_deq_bits)
+node tracker_reset : bv<1> = reset
+node tracker__T_7 : bv<1> = not(tracker_reset)
+node tracker__T_8 : bv<1> = not(tracker__T_5)
+node tracker__GEN_0 : bv<1> = ite(tracker__T_4, tracker_isActive, 1'b1)
+node tracker__GEN_1 : bv<64> = ite(tracker__T_4, tracker_packetValue, tracker_enq_bits)
+node tracker__GEN_2 : bv<5> = ite(tracker__T_4, tracker_packetCount, tracker_nextElementCount)
+node tracker__GEN_3 : bv<1> = ite(tracker__T_2, tracker__GEN_0, tracker_isActive)
+node tracker__GEN_5 : bv<5> = ite(tracker__T_2, tracker__GEN_2, tracker_packetCount)
+node tracker__T_9 : bv<1> = and(tracker_isActive, tracker_deq_valid)
+node tracker__packetCount_T : bv<6> = sub(zext(tracker_packetCount, 1), zext(1'b1, 5))
+node tracker__packetCount_T_1 : bv<5> = tracker__packetCount_T[4:0]
+node tracker__T_10 : bv<1> = eq(tracker_packetCount, zext(1'b1, 4))
+node tracker__T_11 : bv<1> = eq(tracker_packetValue, tracker_deq_bits)
+node tracker__T_14 : bv<1> = not(tracker__T_11)
+node tracker__GEN_6 : bv<1> = ite(tracker__T_10, 1'b0, tracker__GEN_3)
+node tracker__GEN_8 : bv<1> = ite(tracker__T_9, tracker__GEN_6, tracker__GEN_3)
+node tracker__T_15 : bv<1> = eq(tracker_elementCount, 5'b10000)
+node tracker__T_16 : bv<1> = not(tracker__nextElementCount_T_1)
+node tracker__T_19 : bv<1> = not(tracker__T_16)
+bad tracker_assert : bv<1> = not(implies(and(and(tracker__T_2, tracker__T_4), tracker__T_7), tracker__T_5))
+bad tracker_assert_1 : bv<1> = not(implies(and(and(tracker__T_9, tracker__T_10), tracker__T_7), tracker__T_11))
+bad tracker_assert_2 : bv<1> = not(implies(and(tracker__T_15, tracker__T_7), tracker__T_16))
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+node dut_reset : bv<1> = reset
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+state dut_entries : bv<4> -> bv<64>
+  [next] ite(and(dut_entries.MPORT.en, dut_entries.MPORT.mask), dut_entries[dut_entries.MPORT.addr := dut_entries.MPORT.data], dut_entries)
+state dut_wrPtr : bv<4>
+  [next] ite(dut_reset, 4'b0, dut__wrPtr_T_1)
+state dut_rdPtr : bv<4>
+  [next] ite(dut_reset, 4'b0, dut__rdPtr_T_1)
+state dut_cnt : bv<5>
+  [next] ite(dut_reset, 5'b0, dut__cnt_T_3)
+state tracker_elementCount : bv<5>
+  [next] ite(tracker_reset, 5'b0, tracker_nextElementCount)
+state tracker_isActive : bv<1>
+  [next] ite(tracker_reset, 1'b0, tracker__GEN_8)
+state tracker_packetValue : bv<64>
+  [next] ite(tracker__T_2, tracker__GEN_1, tracker_packetValue)
+state tracker_packetCount : bv<5>
+  [next] ite(tracker__T_9, tracker__packetCount_T_1, tracker__GEN_5)
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)

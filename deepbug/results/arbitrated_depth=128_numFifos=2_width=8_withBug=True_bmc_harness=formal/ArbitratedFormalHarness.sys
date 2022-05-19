@@ -1,0 +1,202 @@
+ArbitratedFormalHarness
+input reset : bv<1>
+input io_push_0 : bv<1>
+input io_push_1 : bv<1>
+input io_data_in_0 : bv<8>
+input io_data_in_1 : bv<8>
+input io_req : bv<1>
+input io_gnt_sel : bv<1>
+input startTracking : bv<1>
+node dut_fifo_entries.input_data_MPORT.addr : bv<7> = dut_fifo_wrPtr
+node dut_fifo_entries.input_data_MPORT.data : bv<8> = dut_fifo_entries[dut_fifo_entries.input_data_MPORT.addr]
+node dut_fifo_entries.io_data_out_MPORT.addr : bv<7> = dut_fifo_rdPtr
+node dut_fifo_entries.io_data_out_MPORT.data : bv<8> = dut_fifo_entries[dut_fifo_entries.io_data_out_MPORT.addr]
+node dut_io_push_0 : bv<1> = io_push_0
+node dut_fifo_io_push : bv<1> = dut_io_push_0
+node dut_fifo__cnt_T : bv<9> = add(zext(dut_fifo_cnt, 1), zext(dut_fifo_io_push, 8))
+node dut_fifo__cnt_T_1 : bv<8> = dut_fifo__cnt_T[7:0]
+node dut_io_req : bv<1> = io_req
+node dut_io_gnt_sel : bv<1> = io_gnt_sel
+node dut__io_gnt_0_T : bv<1> = not(dut_io_gnt_sel)
+node dut_io_gnt_0 : bv<1> = and(dut_io_req, dut__io_gnt_0_T)
+node dut_fifo_io_pop : bv<1> = dut_io_gnt_0
+node dut_fifo__cnt_T_2 : bv<9> = sub(zext(dut_fifo__cnt_T_1, 1), zext(dut_fifo_io_pop, 8))
+node dut_fifo__cnt_T_3 : bv<8> = dut_fifo__cnt_T_2[7:0]
+node dut_fifo__wrPtr_T : bv<8> = add(zext(dut_fifo_wrPtr, 1), zext(dut_fifo_io_push, 7))
+node dut_fifo__wrPtr_T_1 : bv<7> = dut_fifo__wrPtr_T[6:0]
+node dut_fifo__rdPtr_T : bv<8> = add(zext(dut_fifo_rdPtr, 1), zext(dut_fifo_io_pop, 7))
+node dut_fifo__rdPtr_T_1 : bv<7> = dut_fifo__rdPtr_T[6:0]
+node dut_fifo_io_empty : bv<1> = eq(dut_fifo_cnt, zext(1'b0, 7))
+node dut_fifo_io_data_out : bv<8> = dut_fifo_entries.io_data_out_MPORT.data
+node dut_fifo_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.MPORT.en : bv<1> = 1'b1
+node dut_fifo_entries.MPORT.addr : bv<7> = dut_fifo_wrPtr
+node dut_fifo_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in_0 : bv<8> = io_data_in_0
+node dut_fifo_io_data_in : bv<8> = dut_io_data_in_0
+node dut_fifo_entries.MPORT.data : bv<8> = ite(dut_fifo_io_push, dut_fifo_io_data_in, dut_fifo_entries.input_data_MPORT.data)
+node dut_cc_inc : bv<1> = dut_io_gnt_0
+node dut_cc__credits_T : bv<9> = add(zext(dut_cc_credits, 1), zext(dut_cc_inc, 8))
+node dut_cc__credits_T_1 : bv<8> = dut_cc__credits_T[7:0]
+node dut_cc_dec : bv<1> = dut_io_push_0
+node dut_cc__credits_T_2 : bv<9> = sub(zext(dut_cc__credits_T_1, 1), zext(dut_cc_dec, 8))
+node dut_cc__credits_T_3 : bv<8> = dut_cc__credits_T_2[7:0]
+node dut_cc__T : bv<1> = not(eq(dut_cc_credits, 8'b10000000))
+node dut_cc__T_1 : bv<1> = not(dut_cc_inc)
+node dut_cc__T_2 : bv<1> = or(dut_cc__T, dut_cc__T_1)
+node dut_reset : bv<1> = reset
+node dut_cc_reset : bv<1> = dut_reset
+node dut_cc__T_4 : bv<1> = not(dut_cc_reset)
+node dut_cc__T_5 : bv<1> = not(dut_cc__T_2)
+node dut_cc_has_credits : bv<1> = ugt(dut_cc_credits, zext(1'b0, 7))
+constraint dut_cc_assume : bv<1> = implies(dut_cc__T_4, dut_cc__T_2)
+node dut_fifo_1_entries.input_data_MPORT.addr : bv<7> = dut_fifo_1_wrPtr
+node dut_fifo_1_entries.input_data_MPORT.data : bv<8> = dut_fifo_1_entries[dut_fifo_1_entries.input_data_MPORT.addr]
+node dut_fifo_1_entries.io_data_out_MPORT.addr : bv<7> = dut_fifo_1_rdPtr
+node dut_fifo_1_entries.io_data_out_MPORT.data : bv<8> = dut_fifo_1_entries[dut_fifo_1_entries.io_data_out_MPORT.addr]
+node dut_io_push_1 : bv<1> = io_push_1
+node dut_fifo_1_io_push : bv<1> = dut_io_push_1
+node dut_fifo_1__cnt_T : bv<9> = add(zext(dut_fifo_1_cnt, 1), zext(dut_fifo_1_io_push, 8))
+node dut_fifo_1__cnt_T_1 : bv<8> = dut_fifo_1__cnt_T[7:0]
+node dut_io_gnt_1 : bv<1> = and(dut_io_req, dut_io_gnt_sel)
+node dut_fifo_1_io_pop : bv<1> = dut_io_gnt_1
+node dut_fifo_1__cnt_T_2 : bv<9> = sub(zext(dut_fifo_1__cnt_T_1, 1), zext(dut_fifo_1_io_pop, 8))
+node dut_fifo_1__cnt_T_3 : bv<8> = dut_fifo_1__cnt_T_2[7:0]
+node dut_fifo_1__wrPtr_T : bv<8> = add(zext(dut_fifo_1_wrPtr, 1), zext(dut_fifo_1_io_push, 7))
+node dut_fifo_1__wrPtr_T_1 : bv<7> = dut_fifo_1__wrPtr_T[6:0]
+node dut_fifo_1__rdPtr_T : bv<8> = add(zext(dut_fifo_1_rdPtr, 1), zext(dut_fifo_1_io_pop, 7))
+node dut_fifo_1__rdPtr_T_1 : bv<7> = dut_fifo_1__rdPtr_T[6:0]
+node dut_fifo_1_io_empty : bv<1> = eq(dut_fifo_1_cnt, zext(1'b0, 7))
+node dut_fifo_1_io_data_out : bv<8> = dut_fifo_1_entries.io_data_out_MPORT.data
+node dut_fifo_1_entries.input_data_MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.io_data_out_MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.MPORT.en : bv<1> = 1'b1
+node dut_fifo_1_entries.MPORT.addr : bv<7> = dut_fifo_1_wrPtr
+node dut_fifo_1_entries.MPORT.mask : bv<1> = 1'b1
+node dut_io_data_in_1 : bv<8> = io_data_in_1
+node dut_fifo_1_io_data_in : bv<8> = dut_io_data_in_1
+node dut_fifo_1_entries.MPORT.data : bv<8> = ite(dut_fifo_1_io_push, dut_fifo_1_io_data_in, dut_fifo_1_entries.input_data_MPORT.data)
+node dut_cc_1_inc : bv<1> = dut_io_gnt_1
+node dut_cc_1__credits_T : bv<9> = add(zext(dut_cc_1_credits, 1), zext(dut_cc_1_inc, 8))
+node dut_cc_1__credits_T_1 : bv<8> = dut_cc_1__credits_T[7:0]
+node dut_cc_1_dec : bv<1> = dut_io_push_1
+node dut_cc_1__credits_T_2 : bv<9> = sub(zext(dut_cc_1__credits_T_1, 1), zext(dut_cc_1_dec, 8))
+node dut_cc_1__credits_T_3 : bv<8> = dut_cc_1__credits_T_2[7:0]
+node dut_cc_1__T : bv<1> = not(eq(dut_cc_1_credits, 8'b10000000))
+node dut_cc_1__T_1 : bv<1> = not(dut_cc_1_inc)
+node dut_cc_1__T_2 : bv<1> = or(dut_cc_1__T, dut_cc_1__T_1)
+node dut_cc_1_reset : bv<1> = dut_reset
+node dut_cc_1__T_4 : bv<1> = not(dut_cc_1_reset)
+node dut_cc_1__T_5 : bv<1> = not(dut_cc_1__T_2)
+node dut_cc_1_has_credits : bv<1> = ugt(dut_cc_1_credits, zext(1'b0, 7))
+constraint dut_cc_1_assume : bv<1> = implies(dut_cc_1__T_4, dut_cc_1__T_2)
+node dut_fifo_data_out_0 : bv<8> = dut_fifo_io_data_out
+node dut__io_data_out_T : bv<8> = ite(dut_io_gnt_0, dut_fifo_data_out_0, zext(1'b0, 7))
+node dut_fifo_data_out_1 : bv<8> = dut_fifo_1_io_data_out
+node dut__io_data_out_T_1 : bv<8> = ite(dut_io_gnt_1, dut_fifo_data_out_1, zext(1'b0, 7))
+node dut__T : bv<1> = not(dut_io_push_0)
+node dut_has_credit_0 : bv<1> = dut_cc_has_credits
+node dut__T_1 : bv<1> = or(dut_has_credit_0, dut__T)
+node dut__T_3 : bv<1> = not(dut_reset)
+node dut__T_4 : bv<1> = not(dut__T_1)
+node dut_empty_0 : bv<1> = dut_fifo_io_empty
+node dut__T_5 : bv<1> = not(dut_empty_0)
+node dut__T_6 : bv<1> = not(dut_io_gnt_0)
+node dut__T_7 : bv<1> = or(dut__T_5, dut__T_6)
+node dut__T_10 : bv<1> = not(dut__T_7)
+node dut__T_11 : bv<1> = not(dut_io_push_1)
+node dut_has_credit_1 : bv<1> = dut_cc_1_has_credits
+node dut__T_12 : bv<1> = or(dut_has_credit_1, dut__T_11)
+node dut__T_15 : bv<1> = not(dut__T_12)
+node dut_empty_1 : bv<1> = dut_fifo_1_io_empty
+node dut__T_16 : bv<1> = not(dut_empty_1)
+node dut__T_17 : bv<1> = not(dut_io_gnt_1)
+node dut__T_18 : bv<1> = or(dut__T_16, dut__T_17)
+node dut__T_21 : bv<1> = not(dut__T_18)
+node dut_io_data_out : bv<8> = or(dut__io_data_out_T, dut__io_data_out_T_1)
+node dut_fifo_reset : bv<1> = dut_reset
+node dut_fifo_1_reset : bv<1> = dut_reset
+constraint dut_assume : bv<1> = implies(dut__T_3, dut__T_1)
+constraint dut_assume_1 : bv<1> = implies(dut__T_3, dut__T_7)
+constraint dut_assume_2 : bv<1> = implies(dut__T_3, dut__T_12)
+constraint dut_assume_3 : bv<1> = implies(dut__T_3, dut__T_18)
+output io_gnt_0 : bv<1> = dut_io_gnt_0
+node tracker_deq_valid : bv<1> = io_gnt_0
+node tracker__nextElementCount_T : bv<1> = not(tracker_deq_valid)
+node tracker_enq_valid : bv<1> = io_push_0
+node tracker__nextElementCount_T_1 : bv<1> = and(tracker_enq_valid, tracker__nextElementCount_T)
+node tracker__nextElementCount_T_2 : bv<9> = add(zext(tracker_elementCount, 1), zext(1'b1, 8))
+node tracker__nextElementCount_T_3 : bv<8> = tracker__nextElementCount_T_2[7:0]
+node tracker__nextElementCount_T_4 : bv<1> = not(tracker_enq_valid)
+node tracker__nextElementCount_T_5 : bv<1> = and(tracker__nextElementCount_T_4, tracker_deq_valid)
+node tracker__nextElementCount_T_6 : bv<9> = sub(zext(tracker_elementCount, 1), zext(1'b1, 8))
+node tracker__nextElementCount_T_7 : bv<8> = tracker__nextElementCount_T_6[7:0]
+node tracker__nextElementCount_T_8 : bv<8> = ite(tracker__nextElementCount_T_5, tracker__nextElementCount_T_7, tracker_elementCount)
+node tracker_nextElementCount : bv<8> = ite(tracker__nextElementCount_T_1, tracker__nextElementCount_T_3, tracker__nextElementCount_T_8)
+node tracker__T : bv<1> = not(tracker_isActive)
+node tracker__T_1 : bv<1> = and(tracker__T, tracker_enq_valid)
+node tracker_startTracking : bv<1> = startTracking
+node tracker__T_2 : bv<1> = and(tracker__T_1, tracker_startTracking)
+node tracker__T_3 : bv<1> = eq(tracker_elementCount, zext(1'b0, 7))
+node tracker__T_4 : bv<1> = and(tracker_deq_valid, tracker__T_3)
+node tracker_enq_bits : bv<8> = io_data_in_0
+output io_data_out : bv<8> = dut_io_data_out
+node tracker_deq_bits : bv<8> = io_data_out
+node tracker__T_5 : bv<1> = eq(tracker_enq_bits, tracker_deq_bits)
+node tracker_reset : bv<1> = reset
+node tracker__T_7 : bv<1> = not(tracker_reset)
+node tracker__T_8 : bv<1> = not(tracker__T_5)
+node tracker__GEN_0 : bv<1> = ite(tracker__T_4, tracker_isActive, 1'b1)
+node tracker__GEN_1 : bv<8> = ite(tracker__T_4, tracker_packetValue, tracker_enq_bits)
+node tracker__GEN_2 : bv<8> = ite(tracker__T_4, tracker_packetCount, tracker_nextElementCount)
+node tracker__GEN_3 : bv<1> = ite(tracker__T_2, tracker__GEN_0, tracker_isActive)
+node tracker__GEN_5 : bv<8> = ite(tracker__T_2, tracker__GEN_2, tracker_packetCount)
+node tracker__T_9 : bv<1> = and(tracker_isActive, tracker_deq_valid)
+node tracker__packetCount_T : bv<9> = sub(zext(tracker_packetCount, 1), zext(1'b1, 8))
+node tracker__packetCount_T_1 : bv<8> = tracker__packetCount_T[7:0]
+node tracker__T_10 : bv<1> = eq(tracker_packetCount, zext(1'b1, 7))
+node tracker__T_11 : bv<1> = eq(tracker_packetValue, tracker_deq_bits)
+node tracker__T_14 : bv<1> = not(tracker__T_11)
+node tracker__GEN_6 : bv<1> = ite(tracker__T_10, 1'b0, tracker__GEN_3)
+node tracker__GEN_8 : bv<1> = ite(tracker__T_9, tracker__GEN_6, tracker__GEN_3)
+node tracker__T_15 : bv<1> = eq(tracker_elementCount, 8'b10000010)
+node tracker__T_16 : bv<1> = not(tracker__nextElementCount_T_1)
+node tracker__T_19 : bv<1> = not(tracker__T_16)
+bad tracker_assert : bv<1> = not(implies(and(and(tracker__T_2, tracker__T_4), tracker__T_7), tracker__T_5))
+bad tracker_assert_1 : bv<1> = not(implies(and(and(tracker__T_9, tracker__T_10), tracker__T_7), tracker__T_11))
+bad tracker_assert_2 : bv<1> = not(implies(and(tracker__T_15, tracker__T_7), tracker__T_16))
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+output io_gnt_1 : bv<1> = dut_io_gnt_1
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+state dut_fifo_entries : bv<7> -> bv<8>
+  [next] ite(and(dut_fifo_entries.MPORT.en, dut_fifo_entries.MPORT.mask), dut_fifo_entries[dut_fifo_entries.MPORT.addr := dut_fifo_entries.MPORT.data], dut_fifo_entries)
+state dut_fifo_cnt : bv<8>
+  [next] ite(dut_fifo_reset, 8'b0, dut_fifo__cnt_T_3)
+state dut_fifo_wrPtr : bv<7>
+  [next] ite(dut_fifo_reset, 7'b0, dut_fifo__wrPtr_T_1)
+state dut_fifo_rdPtr : bv<7>
+  [next] ite(dut_fifo_reset, 7'b0, dut_fifo__rdPtr_T_1)
+state dut_cc_credits : bv<8>
+  [next] ite(dut_cc_reset, 8'b10000001, dut_cc__credits_T_3)
+state dut_fifo_1_entries : bv<7> -> bv<8>
+  [next] ite(and(dut_fifo_1_entries.MPORT.en, dut_fifo_1_entries.MPORT.mask), dut_fifo_1_entries[dut_fifo_1_entries.MPORT.addr := dut_fifo_1_entries.MPORT.data], dut_fifo_1_entries)
+state dut_fifo_1_cnt : bv<8>
+  [next] ite(dut_fifo_1_reset, 8'b0, dut_fifo_1__cnt_T_3)
+state dut_fifo_1_wrPtr : bv<7>
+  [next] ite(dut_fifo_1_reset, 7'b0, dut_fifo_1__wrPtr_T_1)
+state dut_fifo_1_rdPtr : bv<7>
+  [next] ite(dut_fifo_1_reset, 7'b0, dut_fifo_1__rdPtr_T_1)
+state dut_cc_1_credits : bv<8>
+  [next] ite(dut_cc_1_reset, 8'b10000001, dut_cc_1__credits_T_3)
+state tracker_elementCount : bv<8>
+  [next] ite(tracker_reset, 8'b0, tracker_nextElementCount)
+state tracker_isActive : bv<1>
+  [next] ite(tracker_reset, 1'b0, tracker__GEN_8)
+state tracker_packetValue : bv<8>
+  [next] ite(tracker__T_2, tracker__GEN_1, tracker_packetValue)
+state tracker_packetCount : bv<8>
+  [next] ite(tracker__T_9, tracker__packetCount_T_1, tracker__GEN_5)
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)

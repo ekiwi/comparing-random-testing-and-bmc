@@ -1,0 +1,1 @@
+{"conf":{"design":"circular-fifo","designParams":{"depth":"8","width":"8","withBug":"True"},"method":"bmc","harness":"universal","timeout":900},"res":{"averageInputLength":12,"successRate":1,"averageTime":1672490653}}

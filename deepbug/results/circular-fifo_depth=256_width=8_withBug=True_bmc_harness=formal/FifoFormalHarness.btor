@@ -1,0 +1,177 @@
+1 sort bitvec 1
+2 input 1 reset
+3 input 1 enq_valid
+4 sort bitvec 8
+5 input 4 enq_bits
+6 input 1 deq_ready
+7 input 1 startTracking
+8 input 4 dut_entries_input_data_MPORT_rand_data ; @[CircularPointerFifo.scala 38:20]
+9 input 4 dut_entries_io_data_out_MPORT_rand_data ; @[CircularPointerFifo.scala 38:20]
+10 sort bitvec 9
+11 sort array 10 4
+12 state 11 dut_entries ; @[CircularPointerFifo.scala 38:20]
+13 state 10 dut_wrPtr ; @[CircularPointerFifo.scala 29:22]
+14 state 10 dut_rdPtr ; @[CircularPointerFifo.scala 32:22]
+15 sort bitvec 10
+16 state 15 dut_cnt ; @[CircularPointerFifo.scala 25:20]
+17 state 15 tracker_elementCount ; @[MagicPacketTracker.scala 45:29]
+18 state 1 tracker_isActive ; @[MagicPacketTracker.scala 55:25]
+19 state 4 tracker_packetValue ; @[MagicPacketTracker.scala 56:24]
+20 state 15 tracker_packetCount ; @[MagicPacketTracker.scala 57:24]
+; _resetCount.init
+21 zero 1
+22 state 1 _resetCount
+23 init 1 22 21
+24 read 4 12 13
+25 read 4 12 14 ; @[CircularPointerFifo.scala 38:{20,20}]
+26 const 10 100000001
+27 ugt 1 26 13
+28 not 1 27 ; @[CircularPointerFifo.scala 38:20] @[CircularPointerFifo.scala 38:{20,20}]
+29 const 10 100000001
+30 ugt 1 29 14
+31 not 1 30 ; @[CircularPointerFifo.scala 38:20]
+32 const 10 100000001
+33 uext 15 32 1
+34 eq 1 16 33 ; @[CircularPointerFifo.scala 36:18]
+35 not 1 34 ; @[FifoFormalHarness.scala 12:16]
+36 and 1 35 3 ; @[Decoupled.scala 50:35]
+37 sort bitvec 11
+38 uext 37 16 1
+39 uext 37 36 10
+40 add 37 38 39 ; @[CircularPointerFifo.scala 26:14]
+41 slice 15 40 9 0 ; @[CircularPointerFifo.scala 26:14]
+42 zero 1
+43 uext 15 42 9
+44 eq 1 16 43 ; @[CircularPointerFifo.scala 35:19]
+45 not 1 44 ; @[FifoFormalHarness.scala 16:16]
+46 and 1 6 45 ; @[Decoupled.scala 50:35]
+47 uext 37 41 1
+48 uext 37 46 10
+49 sub 37 47 48 ; @[CircularPointerFifo.scala 26:24]
+50 slice 15 49 9 0 ; @[CircularPointerFifo.scala 26:24]
+51 uext 15 13 1
+52 uext 15 36 9
+53 add 15 51 52 ; @[CircularPointerFifo.scala 30:18]
+54 slice 10 53 8 0 ; @[CircularPointerFifo.scala 30:18]
+55 uext 15 14 1
+56 uext 15 46 9
+57 add 15 55 56 ; @[CircularPointerFifo.scala 33:18]
+58 slice 10 57 8 0 ; @[CircularPointerFifo.scala 33:18]
+59 ite 4 28 8 24 ; @[CircularPointerFifo.scala 38:{20,20}]
+60 ite 4 31 9 25 ; @[CircularPointerFifo.scala 38:{20,20}] @[CircularPointerFifo.scala 43:17]
+61 one 1
+62 one 1
+63 one 1
+64 one 1 ; @[FifoFormalHarness.scala 11:18]
+65 ite 4 36 5 59
+66 and 1 6 45 ; @[Decoupled.scala 50:35]
+67 not 1 66 ; @[MagicPacketTracker.scala 47:17]
+68 and 1 35 3 ; @[Decoupled.scala 50:35]
+69 and 1 68 67 ; @[MagicPacketTracker.scala 47:14]
+70 uext 37 17 1
+71 one 1
+72 uext 37 71 10
+73 add 37 70 72 ; @[MagicPacketTracker.scala 48:18]
+74 slice 15 73 9 0 ; @[MagicPacketTracker.scala 48:18]
+75 not 1 68 ; @[MagicPacketTracker.scala 49:9]
+76 and 1 75 66 ; @[MagicPacketTracker.scala 49:19]
+77 uext 37 17 1
+78 one 1
+79 uext 37 78 10
+80 sub 37 77 79 ; @[MagicPacketTracker.scala 49:45]
+81 slice 15 80 9 0 ; @[MagicPacketTracker.scala 49:45]
+82 ite 15 76 81 17 ; @[MagicPacketTracker.scala 49:8]
+83 ite 15 69 74 82 ; @[MagicPacketTracker.scala 46:29]
+84 not 1 18 ; @[MagicPacketTracker.scala 59:8]
+85 and 1 84 68 ; @[MagicPacketTracker.scala 59:18] @[MagicPacketTracker.scala 22:27]
+86 and 1 85 7 ; @[MagicPacketTracker.scala 59:30]
+87 zero 1
+88 uext 15 87 9
+89 eq 1 17 88 ; @[MagicPacketTracker.scala 60:35]
+90 and 1 66 89 ; @[MagicPacketTracker.scala 60:19] @[MagicPacketTracker.scala 32:23 34:18] @[FifoFormalHarness.scala 15:12] @[MagicPacketTracker.scala 32:23 34:18]
+91 eq 1 5 60 ; @[MagicPacketTracker.scala 62:25]
+92 not 1 2 ; @[MagicPacketTracker.scala 61:13]
+93 not 1 91 ; @[MagicPacketTracker.scala 61:13]
+94 one 1
+95 ite 1 90 18 94 ; @[MagicPacketTracker.scala 55:25 60:44 68:16]
+96 ite 4 90 19 5 ; @[MagicPacketTracker.scala 56:24 60:44 69:19]
+97 ite 15 90 20 83 ; @[MagicPacketTracker.scala 57:24 60:44 70:19]
+98 ite 1 86 95 18 ; @[MagicPacketTracker.scala 55:25 59:48]
+99 ite 15 86 97 20 ; @[MagicPacketTracker.scala 57:24 59:48]
+100 and 1 18 66 ; @[MagicPacketTracker.scala 74:17]
+101 uext 37 20 1
+102 one 1
+103 uext 37 102 10
+104 sub 37 101 103 ; @[MagicPacketTracker.scala 75:32]
+105 slice 15 104 9 0 ; @[MagicPacketTracker.scala 75:32]
+106 one 1
+107 uext 15 106 9
+108 eq 1 20 107 ; @[MagicPacketTracker.scala 76:22]
+109 eq 1 19 60 ; @[MagicPacketTracker.scala 78:28]
+110 not 1 109 ; @[MagicPacketTracker.scala 77:13]
+111 zero 1
+112 ite 1 108 111 98 ; @[MagicPacketTracker.scala 76:31 83:16]
+113 ite 1 100 112 98 ; @[MagicPacketTracker.scala 74:30]
+114 const 15 1000000000
+115 eq 1 17 114 ; @[MagicPacketTracker.scala 88:21]
+116 not 1 69 ; @[MagicPacketTracker.scala 91:7]
+117 not 1 116 ; @[MagicPacketTracker.scala 90:11]
+118 and 1 86 90
+119 and 1 118 92
+120 implies 1 119 91
+121 not 1 120
+122 bad 121 ; tracker_assert @[MagicPacketTracker.scala 61:13]
+123 and 1 100 108
+124 and 1 123 92
+125 implies 1 124 109
+126 not 1 125
+127 bad 126 ; tracker_assert_1 @[MagicPacketTracker.scala 77:13]
+128 and 1 115 92
+129 implies 1 128 116
+130 not 1 129
+131 bad 130 ; tracker_assert_2 @[MagicPacketTracker.scala 90:11]
+132 one 1
+133 ugte 1 22 132
+134 not 1 133
+135 implies 1 134 2
+136 constraint 135 ; _resetActive
+; dut_entries.next
+137 and 1 63 64
+138 write 11 12 13 65
+139 ite 11 137 138 12
+140 next 11 12 139
+; dut_wrPtr.next
+141 zero 10
+142 ite 10 2 141 54
+143 next 10 13 142
+; dut_rdPtr.next
+144 zero 10
+145 ite 10 2 144 58
+146 next 10 14 145
+; dut_cnt.next
+147 zero 15
+148 ite 15 2 147 50
+149 next 15 16 148
+; tracker_elementCount.next
+150 zero 15
+151 ite 15 2 150 83
+152 next 15 17 151
+; tracker_isActive.next
+153 zero 1
+154 ite 1 2 153 113
+155 next 1 18 154
+; tracker_packetValue.next
+156 ite 4 86 96 19
+157 next 4 19 156
+; tracker_packetCount.next
+158 ite 15 100 105 99
+159 next 15 20 158
+; _resetCount.next
+160 sort bitvec 2
+161 uext 160 22 1
+162 one 1
+163 uext 160 162 1
+164 add 160 161 163
+165 slice 1 164 0 0
+166 ite 1 134 165 22
+167 next 1 22 166

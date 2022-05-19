@@ -1,0 +1,71 @@
+DeepBug
+input reset : bv<1>
+input inc_x : bv<1>
+input inc_y : bv<1>
+input _GEN_1_invalid : bv<1>
+input _GEN_4_invalid : bv<1>
+input _GEN_6_invalid : bv<1>
+input _GEN_9_invalid : bv<1>
+input _GEN_10_invalid : bv<1>
+input _GEN_13_invalid : bv<1>
+input _GEN_14_invalid : bv<2>
+node valid.en_x.addr : bv<1> = x
+node valid.en_x.data : bv<1> = valid[valid.en_x.addr]
+node valid.MPORT_3.addr : bv<1> = x
+node valid.MPORT_3.data : bv<1> = valid[valid.MPORT_3.addr]
+node mem.MPORT_2.addr : bv<1> = x
+node mem.MPORT_2.data : bv<2> = mem[mem.MPORT_2.addr]
+node _T : bv<1> = and(inc_x, valid.en_x.data)
+node _x_T : bv<2> = add(zext(x, 1), zext(1'b1, 1))
+node _x_T_1 : bv<1> = _x_T[0]
+node _GEN_0 : bv<1> = ite(_T, _x_T_1, x)
+node _y_T : bv<2> = add(zext(y, 1), zext(1'b1, 1))
+node _y_T_1 : bv<1> = _y_T[0]
+node _T_2 : bv<1> = not(reset)
+output _GEN_1_invalid.en : bv<1> = not(_T_2)
+node _GEN_1 : bv<1> = ite(not(_T_2), _GEN_1_invalid, y)
+output _GEN_4_invalid.en : bv<1> = not(_T_2)
+node _GEN_4 : bv<1> = ite(not(_T_2), _GEN_4_invalid, 1'b1)
+node _data_T_1 : bv<1> = eq(_y_T, zext(1'b0, 1))
+node _data_T_2 : bv<3> = concat(data, 1'b0)
+node _data_T_3 : bv<3> = ite(_data_T_1, zext(1'b1, 2), _data_T_2)
+node _GEN_5 : bv<1> = ite(inc_y, _y_T_1, y)
+output _GEN_6_invalid.en : bv<1> = not(inc_y)
+output _GEN_9_invalid.en : bv<1> = not(inc_y)
+output _GEN_10_invalid.en : bv<1> = not(inc_y)
+output _GEN_13_invalid.en : bv<1> = not(inc_y)
+output _GEN_14_invalid.en : bv<1> = not(inc_y)
+node _GEN_15 : bv<3> = ite(inc_y, _data_T_3, zext(data, 1))
+node _T_3 : bv<2> = logical_shift_left(zext(1'b1, 1), zext(x, 1))
+node _T_4 : bv<1> = eq(mem.MPORT_2.data, _T_3)
+node _T_5 : bv<1> = not(valid.MPORT_3.data)
+node _T_6 : bv<1> = or(_T_4, _T_5)
+node _T_9 : bv<1> = not(_T_6)
+node _resetPhase : bv<1> = not(ugeq(_resetCount, 1'b1))
+bad assert : bv<1> = not(implies(_T_2, _T_6))
+constraint _resetActive : bv<1> = implies(_resetPhase, reset)
+node valid.en_x.en : bv<1> = 1'b1
+node valid.MPORT_3.en : bv<1> = 1'b1
+node valid.MPORT.en : bv<1> = and(inc_y, _T_2)
+node valid.MPORT.addr : bv<1> = ite(not(inc_y), _GEN_6_invalid, _GEN_1)
+node valid.MPORT.mask : bv<1> = ite(not(inc_y), _GEN_9_invalid, _GEN_4)
+node valid.MPORT.data : bv<1> = ite(not(inc_y), _GEN_9_invalid, _GEN_4)
+node mem.MPORT_2.en : bv<1> = 1'b1
+node mem.MPORT_1.en : bv<1> = inc_y
+node mem.MPORT_1.addr : bv<1> = ite(not(inc_y), _GEN_10_invalid, y)
+node mem.MPORT_1.mask : bv<1> = ite(not(inc_y), _GEN_13_invalid, 1'b1)
+node mem.MPORT_1.data : bv<2> = ite(not(inc_y), _GEN_14_invalid, data)
+state valid : bv<1> -> bv<1>
+  [init] ([1'b0] x 2)
+  [next] ite(and(valid.MPORT.en, valid.MPORT.mask), valid[valid.MPORT.addr := valid.MPORT.data], valid)
+state mem : bv<1> -> bv<2>
+  [next] ite(and(mem.MPORT_1.en, mem.MPORT_1.mask), mem[mem.MPORT_1.addr := mem.MPORT_1.data], mem)
+state x : bv<1>
+  [next] ite(reset, 1'b0, _GEN_0)
+state y : bv<1>
+  [next] ite(reset, 1'b0, _GEN_5)
+state data : bv<2>
+  [next] ite(reset, zext(2'b1, 1), _GEN_15)[1:0]
+state _resetCount : bv<1>
+  [init] 1'b0
+  [next] ite(_resetPhase, add(zext(_resetCount, 1), zext(1'b1, 1))[0], _resetCount)
