@@ -1,0 +1,19 @@
+[package]
+name = "invariant-miner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+vcd = "0.6.1"
+itertools = "0.10.2"
+rayon = "1.5.1"
+indicatif = {version = "0.16.2", features = ["rayon"]}
+clap = { version = "3.1.6" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+json_comments = "0.2.0"
+
+[profile.release]
+debug = true

@@ -1,0 +1,1173 @@
+##   0:00:00  Solver: boolector
+##   0:00:12  Checking cover reachability in step 0..
+##   0:00:13  Checking cover reachability in step 1..
+##   0:00:13  Checking cover reachability in step 2..
+##   0:00:13  Reached cover statement at SignalTracker.sv:1001.22-1002.37 ($cover$SignalTracker.sv:1001$3775) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1007.22-1008.37 ($cover$SignalTracker.sv:1007$3777) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1010.22-1011.37 ($cover$SignalTracker.sv:1010$3778) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1013.22-1014.37 ($cover$SignalTracker.sv:1013$3779) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1016.22-1017.37 ($cover$SignalTracker.sv:1016$3780) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1019.22-1020.37 ($cover$SignalTracker.sv:1019$3781) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1022.22-1023.36 ($cover$SignalTracker.sv:1022$3782) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1025.22-1026.37 ($cover$SignalTracker.sv:1025$3783) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1028.22-1029.37 ($cover$SignalTracker.sv:1028$3784) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1031.22-1032.37 ($cover$SignalTracker.sv:1031$3785) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1034.22-1035.37 ($cover$SignalTracker.sv:1034$3786) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1037.22-1038.36 ($cover$SignalTracker.sv:1037$3787) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1040.22-1041.37 ($cover$SignalTracker.sv:1040$3788) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1043.22-1044.36 ($cover$SignalTracker.sv:1043$3789) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1046.22-1047.36 ($cover$SignalTracker.sv:1046$3790) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1049.22-1050.36 ($cover$SignalTracker.sv:1049$3791) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1052.22-1053.36 ($cover$SignalTracker.sv:1052$3792) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1058.22-1059.54 ($cover$SignalTracker.sv:1058$3794) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1067.22-1068.43 ($cover$SignalTracker.sv:1067$3797) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1073.22-1074.40 ($cover$SignalTracker.sv:1073$3799) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1082.22-1083.35 ($cover$SignalTracker.sv:1082$3802) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1085.22-1086.48 ($cover$SignalTracker.sv:1085$3803) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1091.22-1092.40 ($cover$SignalTracker.sv:1091$3805) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1094.22-1095.44 ($cover$SignalTracker.sv:1094$3806) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1100.22-1101.39 ($cover$SignalTracker.sv:1100$3808) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1103.22-1104.40 ($cover$SignalTracker.sv:1103$3809) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1106.22-1107.42 ($cover$SignalTracker.sv:1106$3810) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1109.22-1110.45 ($cover$SignalTracker.sv:1109$3811) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1112.22-1113.35 ($cover$SignalTracker.sv:1112$3812) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1115.22-1116.39 ($cover$SignalTracker.sv:1115$3813) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1118.22-1119.35 ($cover$SignalTracker.sv:1118$3814) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1121.22-1122.43 ($cover$SignalTracker.sv:1121$3815) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1124.22-1125.46 ($cover$SignalTracker.sv:1124$3816) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1127.22-1128.34 ($cover$SignalTracker.sv:1127$3817) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1130.22-1131.37 ($cover$SignalTracker.sv:1130$3818) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1133.22-1134.37 ($cover$SignalTracker.sv:1133$3819) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1136.22-1137.37 ($cover$SignalTracker.sv:1136$3820) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1139.22-1140.37 ($cover$SignalTracker.sv:1139$3821) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1142.22-1143.37 ($cover$SignalTracker.sv:1142$3822) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1145.22-1146.37 ($cover$SignalTracker.sv:1145$3823) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1148.22-1149.37 ($cover$SignalTracker.sv:1148$3824) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1151.22-1152.37 ($cover$SignalTracker.sv:1151$3825) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1154.22-1155.37 ($cover$SignalTracker.sv:1154$3826) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1157.22-1158.37 ($cover$SignalTracker.sv:1157$3827) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1163.22-1164.37 ($cover$SignalTracker.sv:1163$3829) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1166.22-1167.37 ($cover$SignalTracker.sv:1166$3830) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1169.22-1170.37 ($cover$SignalTracker.sv:1169$3831) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1172.22-1173.36 ($cover$SignalTracker.sv:1172$3832) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1175.22-1176.37 ($cover$SignalTracker.sv:1175$3833) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1178.22-1179.37 ($cover$SignalTracker.sv:1178$3834) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1181.22-1182.37 ($cover$SignalTracker.sv:1181$3835) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1184.22-1185.36 ($cover$SignalTracker.sv:1184$3836) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1187.22-1188.37 ($cover$SignalTracker.sv:1187$3837) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1190.22-1191.36 ($cover$SignalTracker.sv:1190$3838) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1193.22-1194.36 ($cover$SignalTracker.sv:1193$3839) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1196.22-1197.36 ($cover$SignalTracker.sv:1196$3840) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1199.22-1200.36 ($cover$SignalTracker.sv:1199$3841) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1208.22-1209.43 ($cover$SignalTracker.sv:1208$3844) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1214.22-1215.38 ($cover$SignalTracker.sv:1214$3846) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1220.22-1221.35 ($cover$SignalTracker.sv:1220$3848) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1229.22-1230.40 ($cover$SignalTracker.sv:1229$3851) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1232.22-1233.44 ($cover$SignalTracker.sv:1232$3852) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1238.22-1239.39 ($cover$SignalTracker.sv:1238$3854) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1241.22-1242.40 ($cover$SignalTracker.sv:1241$3855) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1244.22-1245.42 ($cover$SignalTracker.sv:1244$3856) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1247.22-1248.45 ($cover$SignalTracker.sv:1247$3857) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1256.22-1257.35 ($cover$SignalTracker.sv:1256$3860) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1277.22-1278.34 ($cover$SignalTracker.sv:1277$3867) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1298.22-1299.51 ($cover$SignalTracker.sv:1298$3874) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1304.22-1305.52 ($cover$SignalTracker.sv:1304$3876) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1307.22-1308.50 ($cover$SignalTracker.sv:1307$3877) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1358.22-1359.54 ($cover$SignalTracker.sv:1358$3894) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1466.22-1467.42 ($cover$SignalTracker.sv:1466$3930) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1469.22-1470.42 ($cover$SignalTracker.sv:1469$3931) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1475.22-1476.47 ($cover$SignalTracker.sv:1475$3933) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1487.22-1488.60 ($cover$SignalTracker.sv:1487$3937) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1523.22-1524.44 ($cover$SignalTracker.sv:1523$3949) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1529.22-1530.52 ($cover$SignalTracker.sv:1529$3951) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1535.22-1536.52 ($cover$SignalTracker.sv:1535$3953) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1544.22-1545.51 ($cover$SignalTracker.sv:1544$3956) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1550.22-1551.49 ($cover$SignalTracker.sv:1550$3958) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1568.22-1569.51 ($cover$SignalTracker.sv:1568$3964) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1616.22-1617.48 ($cover$SignalTracker.sv:1616$3980) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1619.22-1620.48 ($cover$SignalTracker.sv:1619$3981) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1622.22-1623.49 ($cover$SignalTracker.sv:1622$3982) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1625.22-1626.56 ($cover$SignalTracker.sv:1625$3983) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1700.22-1701.55 ($cover$SignalTracker.sv:1700$4008) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1793.22-1794.55 ($cover$SignalTracker.sv:1793$4039) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1796.22-1797.55 ($cover$SignalTracker.sv:1796$4040) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1802.22-1803.57 ($cover$SignalTracker.sv:1802$4042) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1805.22-1806.57 ($cover$SignalTracker.sv:1805$4043) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1862.22-1863.52 ($cover$SignalTracker.sv:1862$4062) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1877.22-1878.57 ($cover$SignalTracker.sv:1877$4067) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1889.22-1890.51 ($cover$SignalTracker.sv:1889$4071) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1943.22-1944.38 ($cover$SignalTracker.sv:1943$4089) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:1994.22-1995.41 ($cover$SignalTracker.sv:1994$4106) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2000.22-2001.55 ($cover$SignalTracker.sv:2000$4108) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2003.22-2004.53 ($cover$SignalTracker.sv:2003$4109) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2009.22-2010.39 ($cover$SignalTracker.sv:2009$4111) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2015.22-2016.41 ($cover$SignalTracker.sv:2015$4113) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2018.22-2019.41 ($cover$SignalTracker.sv:2018$4114) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2027.22-2028.50 ($cover$SignalTracker.sv:2027$4117) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2036.22-2037.40 ($cover$SignalTracker.sv:2036$4120) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2099.22-2100.38 ($cover$SignalTracker.sv:2099$4141) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2141.22-2142.41 ($cover$SignalTracker.sv:2141$4155) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2144.22-2145.53 ($cover$SignalTracker.sv:2144$4156) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2150.22-2151.39 ($cover$SignalTracker.sv:2150$4158) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2156.22-2157.41 ($cover$SignalTracker.sv:2156$4160) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2162.22-2163.49 ($cover$SignalTracker.sv:2162$4162) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2165.22-2166.50 ($cover$SignalTracker.sv:2165$4163) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2174.22-2175.40 ($cover$SignalTracker.sv:2174$4166) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2189.22-2190.36 ($cover$SignalTracker.sv:2189$4171) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:2192.22-2193.40 ($cover$SignalTracker.sv:2192$4172) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:320.22-321.34 ($cover$SignalTracker.sv:320$3548) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:323.22-324.34 ($cover$SignalTracker.sv:323$3549) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:326.22-327.34 ($cover$SignalTracker.sv:326$3550) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:329.22-330.34 ($cover$SignalTracker.sv:329$3551) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:332.22-333.34 ($cover$SignalTracker.sv:332$3552) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:335.22-336.34 ($cover$SignalTracker.sv:335$3553) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:341.22-342.33 ($cover$SignalTracker.sv:341$3555) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:344.22-345.33 ($cover$SignalTracker.sv:344$3556) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:347.22-348.33 ($cover$SignalTracker.sv:347$3557) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:350.22-351.33 ($cover$SignalTracker.sv:350$3558) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:353.22-354.49 ($cover$SignalTracker.sv:353$3559) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:356.22-357.49 ($cover$SignalTracker.sv:356$3560) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:362.22-363.49 ($cover$SignalTracker.sv:362$3562) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:371.22-372.48 ($cover$SignalTracker.sv:371$3565) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:374.22-375.47 ($cover$SignalTracker.sv:374$3566) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:377.22-378.53 ($cover$SignalTracker.sv:377$3567) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:380.22-381.53 ($cover$SignalTracker.sv:380$3568) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:383.22-384.53 ($cover$SignalTracker.sv:383$3569) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:386.22-387.53 ($cover$SignalTracker.sv:386$3570) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:389.22-390.53 ($cover$SignalTracker.sv:389$3571) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:392.22-393.52 ($cover$SignalTracker.sv:392$3572) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:395.22-396.53 ($cover$SignalTracker.sv:395$3573) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:398.22-399.53 ($cover$SignalTracker.sv:398$3574) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:401.22-402.53 ($cover$SignalTracker.sv:401$3575) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:404.22-405.53 ($cover$SignalTracker.sv:404$3576) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:407.22-408.53 ($cover$SignalTracker.sv:407$3577) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:410.22-411.53 ($cover$SignalTracker.sv:410$3578) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:413.22-414.53 ($cover$SignalTracker.sv:413$3579) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:416.22-417.53 ($cover$SignalTracker.sv:416$3580) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:422.22-423.53 ($cover$SignalTracker.sv:422$3582) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:425.22-426.52 ($cover$SignalTracker.sv:425$3583) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:428.22-429.53 ($cover$SignalTracker.sv:428$3584) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:431.22-432.53 ($cover$SignalTracker.sv:431$3585) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:434.22-435.53 ($cover$SignalTracker.sv:434$3586) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:437.22-438.53 ($cover$SignalTracker.sv:437$3587) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:440.22-441.53 ($cover$SignalTracker.sv:440$3588) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:443.22-444.53 ($cover$SignalTracker.sv:443$3589) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:446.22-447.53 ($cover$SignalTracker.sv:446$3590) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:449.22-450.53 ($cover$SignalTracker.sv:449$3591) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:452.22-453.53 ($cover$SignalTracker.sv:452$3592) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:455.22-456.53 ($cover$SignalTracker.sv:455$3593) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:458.22-459.52 ($cover$SignalTracker.sv:458$3594) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:461.22-462.53 ($cover$SignalTracker.sv:461$3595) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:464.22-465.53 ($cover$SignalTracker.sv:464$3596) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:467.22-468.53 ($cover$SignalTracker.sv:467$3597) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:470.22-471.53 ($cover$SignalTracker.sv:470$3598) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:473.22-474.53 ($cover$SignalTracker.sv:473$3599) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:476.22-477.53 ($cover$SignalTracker.sv:476$3600) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:479.22-480.53 ($cover$SignalTracker.sv:479$3601) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:482.22-483.53 ($cover$SignalTracker.sv:482$3602) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:485.22-486.53 ($cover$SignalTracker.sv:485$3603) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:488.22-489.53 ($cover$SignalTracker.sv:488$3604) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:491.22-492.52 ($cover$SignalTracker.sv:491$3605) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:494.22-495.53 ($cover$SignalTracker.sv:494$3606) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:497.22-498.53 ($cover$SignalTracker.sv:497$3607) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:500.22-501.53 ($cover$SignalTracker.sv:500$3608) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:503.22-504.53 ($cover$SignalTracker.sv:503$3609) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:506.22-507.53 ($cover$SignalTracker.sv:506$3610) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:509.22-510.53 ($cover$SignalTracker.sv:509$3611) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:512.22-513.53 ($cover$SignalTracker.sv:512$3612) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:515.22-516.53 ($cover$SignalTracker.sv:515$3613) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:518.22-519.53 ($cover$SignalTracker.sv:518$3614) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:521.22-522.52 ($cover$SignalTracker.sv:521$3615) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:524.22-525.41 ($cover$SignalTracker.sv:524$3616) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:533.22-534.46 ($cover$SignalTracker.sv:533$3619) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:539.22-540.65 ($cover$SignalTracker.sv:539$3621) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:542.22-543.65 ($cover$SignalTracker.sv:542$3622) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:545.22-546.65 ($cover$SignalTracker.sv:545$3623) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:551.22-552.47 ($cover$SignalTracker.sv:551$3625) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:554.22-555.47 ($cover$SignalTracker.sv:554$3626) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:557.22-558.47 ($cover$SignalTracker.sv:557$3627) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:560.22-561.46 ($cover$SignalTracker.sv:560$3628) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:563.22-564.43 ($cover$SignalTracker.sv:563$3629) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:566.22-567.45 ($cover$SignalTracker.sv:566$3630) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:569.22-570.45 ($cover$SignalTracker.sv:569$3631) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:572.22-573.45 ($cover$SignalTracker.sv:572$3632) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:575.22-576.50 ($cover$SignalTracker.sv:575$3633) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:578.22-579.50 ($cover$SignalTracker.sv:578$3634) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:581.22-582.50 ($cover$SignalTracker.sv:581$3635) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:587.22-588.45 ($cover$SignalTracker.sv:587$3637) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:593.22-594.45 ($cover$SignalTracker.sv:593$3639) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:599.22-600.45 ($cover$SignalTracker.sv:599$3641) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:602.22-603.47 ($cover$SignalTracker.sv:602$3642) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:608.22-609.50 ($cover$SignalTracker.sv:608$3644) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:614.22-615.51 ($cover$SignalTracker.sv:614$3646) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:617.22-618.51 ($cover$SignalTracker.sv:617$3647) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:620.22-621.51 ($cover$SignalTracker.sv:620$3648) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:623.22-624.51 ($cover$SignalTracker.sv:623$3649) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:626.22-627.50 ($cover$SignalTracker.sv:626$3650) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:632.22-633.50 ($cover$SignalTracker.sv:632$3652) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:635.22-636.50 ($cover$SignalTracker.sv:635$3653) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:638.22-639.50 ($cover$SignalTracker.sv:638$3654) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:641.22-642.50 ($cover$SignalTracker.sv:641$3655) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:644.22-645.50 ($cover$SignalTracker.sv:644$3656) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:647.22-648.50 ($cover$SignalTracker.sv:647$3657) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:650.22-651.50 ($cover$SignalTracker.sv:650$3658) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:653.22-654.49 ($cover$SignalTracker.sv:653$3659) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:656.22-657.48 ($cover$SignalTracker.sv:656$3660) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:659.22-660.56 ($cover$SignalTracker.sv:659$3661) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:662.22-663.59 ($cover$SignalTracker.sv:662$3662) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:665.22-666.59 ($cover$SignalTracker.sv:665$3663) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:668.22-669.58 ($cover$SignalTracker.sv:668$3664) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:671.22-672.58 ($cover$SignalTracker.sv:671$3665) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:674.22-675.58 ($cover$SignalTracker.sv:674$3666) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:689.22-690.44 ($cover$SignalTracker.sv:689$3671) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:692.22-693.47 ($cover$SignalTracker.sv:692$3672) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:695.22-696.47 ($cover$SignalTracker.sv:695$3673) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:698.22-699.47 ($cover$SignalTracker.sv:698$3674) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:701.22-702.47 ($cover$SignalTracker.sv:701$3675) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:704.22-705.47 ($cover$SignalTracker.sv:704$3676) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:707.22-708.47 ($cover$SignalTracker.sv:707$3677) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:710.22-711.47 ($cover$SignalTracker.sv:710$3678) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:713.22-714.47 ($cover$SignalTracker.sv:713$3679) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:716.22-717.47 ($cover$SignalTracker.sv:716$3680) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:719.22-720.47 ($cover$SignalTracker.sv:719$3681) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:722.22-723.46 ($cover$SignalTracker.sv:722$3682) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:725.22-726.47 ($cover$SignalTracker.sv:725$3683) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:728.22-729.47 ($cover$SignalTracker.sv:728$3684) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:731.22-732.47 ($cover$SignalTracker.sv:731$3685) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:734.22-735.47 ($cover$SignalTracker.sv:734$3686) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:737.22-738.47 ($cover$SignalTracker.sv:737$3687) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:740.22-741.46 ($cover$SignalTracker.sv:740$3688) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:743.22-744.46 ($cover$SignalTracker.sv:743$3689) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:746.22-747.46 ($cover$SignalTracker.sv:746$3690) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:749.22-750.46 ($cover$SignalTracker.sv:749$3691) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:752.22-753.46 ($cover$SignalTracker.sv:752$3692) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:755.22-756.52 ($cover$SignalTracker.sv:755$3693) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:758.22-759.52 ($cover$SignalTracker.sv:758$3694) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:764.22-765.54 ($cover$SignalTracker.sv:764$3696) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:767.22-768.54 ($cover$SignalTracker.sv:767$3697) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:770.22-771.54 ($cover$SignalTracker.sv:770$3698) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:773.22-774.54 ($cover$SignalTracker.sv:773$3699) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:776.22-777.54 ($cover$SignalTracker.sv:776$3700) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:779.22-780.54 ($cover$SignalTracker.sv:779$3701) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:782.22-783.53 ($cover$SignalTracker.sv:782$3702) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:785.22-786.54 ($cover$SignalTracker.sv:785$3703) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:788.22-789.54 ($cover$SignalTracker.sv:788$3704) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:791.22-792.54 ($cover$SignalTracker.sv:791$3705) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:794.22-795.54 ($cover$SignalTracker.sv:794$3706) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:797.22-798.54 ($cover$SignalTracker.sv:797$3707) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:800.22-801.54 ($cover$SignalTracker.sv:800$3708) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:803.22-804.54 ($cover$SignalTracker.sv:803$3709) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:806.22-807.54 ($cover$SignalTracker.sv:806$3710) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:809.22-810.54 ($cover$SignalTracker.sv:809$3711) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:812.22-813.54 ($cover$SignalTracker.sv:812$3712) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:815.22-816.53 ($cover$SignalTracker.sv:815$3713) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:818.22-819.54 ($cover$SignalTracker.sv:818$3714) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:821.22-822.54 ($cover$SignalTracker.sv:821$3715) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:824.22-825.54 ($cover$SignalTracker.sv:824$3716) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:827.22-828.54 ($cover$SignalTracker.sv:827$3717) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:830.22-831.54 ($cover$SignalTracker.sv:830$3718) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:833.22-834.54 ($cover$SignalTracker.sv:833$3719) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:836.22-837.54 ($cover$SignalTracker.sv:836$3720) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:839.22-840.54 ($cover$SignalTracker.sv:839$3721) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:842.22-843.54 ($cover$SignalTracker.sv:842$3722) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:845.22-846.53 ($cover$SignalTracker.sv:845$3723) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:848.22-849.53 ($cover$SignalTracker.sv:848$3724) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:851.22-852.53 ($cover$SignalTracker.sv:851$3725) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:860.22-861.54 ($cover$SignalTracker.sv:860$3728) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:869.22-870.59 ($cover$SignalTracker.sv:869$3731) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:872.22-873.59 ($cover$SignalTracker.sv:872$3732) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:875.22-876.59 ($cover$SignalTracker.sv:875$3733) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:878.22-879.59 ($cover$SignalTracker.sv:878$3734) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:881.22-882.59 ($cover$SignalTracker.sv:881$3735) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:884.22-885.52 ($cover$SignalTracker.sv:884$3736) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:887.22-888.52 ($cover$SignalTracker.sv:887$3737) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:890.22-891.52 ($cover$SignalTracker.sv:890$3738) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:893.22-894.48 ($cover$SignalTracker.sv:893$3739) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:896.22-897.54 ($cover$SignalTracker.sv:896$3740) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:899.22-900.47 ($cover$SignalTracker.sv:899$3741) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:902.22-903.49 ($cover$SignalTracker.sv:902$3742) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:905.22-906.50 ($cover$SignalTracker.sv:905$3743) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:908.22-909.49 ($cover$SignalTracker.sv:908$3744) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:911.22-912.48 ($cover$SignalTracker.sv:911$3745) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:914.22-915.51 ($cover$SignalTracker.sv:914$3746) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:917.22-918.54 ($cover$SignalTracker.sv:917$3747) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:920.22-921.50 ($cover$SignalTracker.sv:920$3748) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:926.22-927.54 ($cover$SignalTracker.sv:926$3750) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:929.22-930.45 ($cover$SignalTracker.sv:929$3751) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:932.22-933.57 ($cover$SignalTracker.sv:932$3752) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:935.22-936.57 ($cover$SignalTracker.sv:935$3753) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:941.22-942.56 ($cover$SignalTracker.sv:941$3755) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:944.22-945.56 ($cover$SignalTracker.sv:944$3756) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:947.22-948.56 ($cover$SignalTracker.sv:947$3757) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:953.22-954.50 ($cover$SignalTracker.sv:953$3759) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:956.22-957.50 ($cover$SignalTracker.sv:956$3760) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:959.22-960.58 ($cover$SignalTracker.sv:959$3761) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:962.22-963.58 ($cover$SignalTracker.sv:962$3762) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:965.22-966.42 ($cover$SignalTracker.sv:965$3763) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:968.22-969.34 ($cover$SignalTracker.sv:968$3764) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:971.22-972.37 ($cover$SignalTracker.sv:971$3765) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:974.22-975.37 ($cover$SignalTracker.sv:974$3766) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:977.22-978.37 ($cover$SignalTracker.sv:977$3767) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:980.22-981.37 ($cover$SignalTracker.sv:980$3768) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:983.22-984.37 ($cover$SignalTracker.sv:983$3769) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:986.22-987.37 ($cover$SignalTracker.sv:986$3770) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:989.22-990.37 ($cover$SignalTracker.sv:989$3771) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:992.22-993.37 ($cover$SignalTracker.sv:992$3772) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:995.22-996.36 ($cover$SignalTracker.sv:995$3773) in step 2.
+##   0:00:13  Reached cover statement at SignalTracker.sv:998.22-999.37 ($cover$SignalTracker.sv:998$3774) in step 2.
+##   0:00:13  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:18  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:18  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:19  Checking cover reachability in step 2..
+##   0:00:19  Checking cover reachability in step 3..
+##   0:00:19  Reached cover statement at SignalTracker.sv:1160.22-1161.37 ($cover$SignalTracker.sv:1160$3828) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1223.22-1224.48 ($cover$SignalTracker.sv:1223$3849) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1226.22-1227.49 ($cover$SignalTracker.sv:1226$3850) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1235.22-1236.39 ($cover$SignalTracker.sv:1235$3853) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1250.22-1251.35 ($cover$SignalTracker.sv:1250$3858) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1286.22-1287.34 ($cover$SignalTracker.sv:1286$3870) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1538.22-1539.46 ($cover$SignalTracker.sv:1538$3954) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:1904.22-1905.43 ($cover$SignalTracker.sv:1904$4076) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:2102.22-2103.38 ($cover$SignalTracker.sv:2102$4142) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:2105.22-2106.38 ($cover$SignalTracker.sv:2105$4143) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:2177.22-2178.40 ($cover$SignalTracker.sv:2177$4167) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:530.22-531.41 ($cover$SignalTracker.sv:530$3618) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:536.22-537.46 ($cover$SignalTracker.sv:536$3620) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:548.22-549.59 ($cover$SignalTracker.sv:548$3624) in step 3.
+##   0:00:19  Reached cover statement at SignalTracker.sv:866.22-867.56 ($cover$SignalTracker.sv:866$3730) in step 3.
+##   0:00:19  Writing trace to VCD file: engine_0/trace1.vcd
+##   0:00:23  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+##   0:00:23  Writing trace to constraints file: engine_0/trace1.smtc
+##   0:00:23  Checking cover reachability in step 3..
+##   0:00:23  Checking cover reachability in step 4..
+##   0:00:23  Reached cover statement at SignalTracker.sv:1253.22-1254.39 ($cover$SignalTracker.sv:1253$3859) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:1289.22-1290.34 ($cover$SignalTracker.sv:1289$3871) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:1301.22-1302.50 ($cover$SignalTracker.sv:1301$3875) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:2066.22-2067.35 ($cover$SignalTracker.sv:2066$4130) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:2126.22-2127.38 ($cover$SignalTracker.sv:2126$4150) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:2147.22-2148.44 ($cover$SignalTracker.sv:2147$4157) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:338.22-339.33 ($cover$SignalTracker.sv:338$3554) in step 4.
+##   0:00:23  Reached cover statement at SignalTracker.sv:368.22-369.49 ($cover$SignalTracker.sv:368$3564) in step 4.
+##   0:00:23  Writing trace to VCD file: engine_0/trace2.vcd
+##   0:00:29  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+##   0:00:30  Writing trace to constraints file: engine_0/trace2.smtc
+##   0:00:30  Checking cover reachability in step 4..
+##   0:00:30  Checking cover reachability in step 5..
+##   0:00:30  Reached cover statement at SignalTracker.sv:1211.22-1212.38 ($cover$SignalTracker.sv:1211$3845) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:1217.22-1218.40 ($cover$SignalTracker.sv:1217$3847) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:1259.22-1260.35 ($cover$SignalTracker.sv:1259$3861) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2069.22-2070.38 ($cover$SignalTracker.sv:2069$4131) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2072.22-2073.38 ($cover$SignalTracker.sv:2072$4132) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2075.22-2076.38 ($cover$SignalTracker.sv:2075$4133) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2078.22-2079.38 ($cover$SignalTracker.sv:2078$4134) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2081.22-2082.38 ($cover$SignalTracker.sv:2081$4135) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2084.22-2085.38 ($cover$SignalTracker.sv:2084$4136) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2087.22-2088.38 ($cover$SignalTracker.sv:2087$4137) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2090.22-2091.38 ($cover$SignalTracker.sv:2090$4138) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2093.22-2094.38 ($cover$SignalTracker.sv:2093$4139) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2096.22-2097.38 ($cover$SignalTracker.sv:2096$4140) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2111.22-2112.37 ($cover$SignalTracker.sv:2111$4145) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2123.22-2124.37 ($cover$SignalTracker.sv:2123$4149) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2129.22-2130.37 ($cover$SignalTracker.sv:2129$4151) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2132.22-2133.37 ($cover$SignalTracker.sv:2132$4152) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2135.22-2136.37 ($cover$SignalTracker.sv:2135$4153) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2138.22-2139.37 ($cover$SignalTracker.sv:2138$4154) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2168.22-2169.41 ($cover$SignalTracker.sv:2168$4164) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2183.22-2184.43 ($cover$SignalTracker.sv:2183$4169) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2186.22-2187.46 ($cover$SignalTracker.sv:2186$4170) in step 5.
+##   0:00:30  Reached cover statement at SignalTracker.sv:2195.22-2196.36 ($cover$SignalTracker.sv:2195$4173) in step 5.
+##   0:00:30  Writing trace to VCD file: engine_0/trace3.vcd
+##   0:00:34  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+##   0:00:35  Writing trace to constraints file: engine_0/trace3.smtc
+##   0:00:35  Checking cover reachability in step 5..
+##   0:00:35  Checking cover reachability in step 6..
+##   0:00:35  Reached cover statement at SignalTracker.sv:2153.22-2154.39 ($cover$SignalTracker.sv:2153$4159) in step 6.
+##   0:00:35  Reached cover statement at SignalTracker.sv:2159.22-2160.36 ($cover$SignalTracker.sv:2159$4161) in step 6.
+##   0:00:35  Reached cover statement at SignalTracker.sv:2171.22-2172.45 ($cover$SignalTracker.sv:2171$4165) in step 6.
+##   0:00:35  Writing trace to VCD file: engine_0/trace4.vcd
+##   0:00:42  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+##   0:00:42  Writing trace to constraints file: engine_0/trace4.smtc
+##   0:00:42  Checking cover reachability in step 6..
+##   0:00:42  Checking cover reachability in step 7..
+##   0:00:42  Reached cover statement at SignalTracker.sv:1547.22-1548.51 ($cover$SignalTracker.sv:1547$3957) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:1592.22-1593.50 ($cover$SignalTracker.sv:1592$3972) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:1595.22-1596.49 ($cover$SignalTracker.sv:1595$3973) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:1898.22-1899.59 ($cover$SignalTracker.sv:1898$4074) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:1901.22-1902.59 ($cover$SignalTracker.sv:1901$4075) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:419.22-420.53 ($cover$SignalTracker.sv:419$3581) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:590.22-591.51 ($cover$SignalTracker.sv:590$3638) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:596.22-597.51 ($cover$SignalTracker.sv:596$3640) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:605.22-606.50 ($cover$SignalTracker.sv:605$3643) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:611.22-612.48 ($cover$SignalTracker.sv:611$3645) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:629.22-630.50 ($cover$SignalTracker.sv:629$3651) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:938.22-939.56 ($cover$SignalTracker.sv:938$3754) in step 7.
+##   0:00:42  Reached cover statement at SignalTracker.sv:950.22-951.50 ($cover$SignalTracker.sv:950$3758) in step 7.
+##   0:00:42  Writing trace to VCD file: engine_0/trace5.vcd
+##   0:00:49  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+##   0:00:49  Writing trace to constraints file: engine_0/trace5.smtc
+##   0:00:50  Checking cover reachability in step 7..
+##   0:00:50  Reached cover statement at SignalTracker.sv:1445.22-1446.54 ($cover$SignalTracker.sv:1445$3923) in step 7.
+##   0:00:50  Reached cover statement at SignalTracker.sv:1472.22-1473.47 ($cover$SignalTracker.sv:1472$3932) in step 7.
+##   0:00:50  Reached cover statement at SignalTracker.sv:1511.22-1512.46 ($cover$SignalTracker.sv:1511$3945) in step 7.
+##   0:00:50  Reached cover statement at SignalTracker.sv:1874.22-1875.58 ($cover$SignalTracker.sv:1874$4066) in step 7.
+##   0:00:50  Writing trace to VCD file: engine_0/trace6.vcd
+##   0:00:56  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+##   0:00:56  Writing trace to constraints file: engine_0/trace6.smtc
+##   0:00:56  Checking cover reachability in step 7..
+##   0:00:56  Reached cover statement at SignalTracker.sv:1382.22-1383.54 ($cover$SignalTracker.sv:1382$3902) in step 7.
+##   0:00:56  Reached cover statement at SignalTracker.sv:1583.22-1584.51 ($cover$SignalTracker.sv:1583$3969) in step 7.
+##   0:00:56  Reached cover statement at SignalTracker.sv:1586.22-1587.51 ($cover$SignalTracker.sv:1586$3970) in step 7.
+##   0:00:56  Writing trace to VCD file: engine_0/trace7.vcd
+##   0:01:03  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+##   0:01:03  Writing trace to constraints file: engine_0/trace7.smtc
+##   0:01:04  Checking cover reachability in step 7..
+##   0:01:04  Reached cover statement at SignalTracker.sv:1460.22-1461.53 ($cover$SignalTracker.sv:1460$3928) in step 7.
+##   0:01:04  Reached cover statement at SignalTracker.sv:1508.22-1509.46 ($cover$SignalTracker.sv:1508$3944) in step 7.
+##   0:01:04  Reached cover statement at SignalTracker.sv:1598.22-1599.57 ($cover$SignalTracker.sv:1598$3974) in step 7.
+##   0:01:04  Reached cover statement at SignalTracker.sv:1883.22-1884.57 ($cover$SignalTracker.sv:1883$4069) in step 7.
+##   0:01:04  Writing trace to VCD file: engine_0/trace8.vcd
+##   0:01:10  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+##   0:01:11  Writing trace to constraints file: engine_0/trace8.smtc
+##   0:01:11  Checking cover reachability in step 7..
+##   0:01:11  Reached cover statement at SignalTracker.sv:1457.22-1458.54 ($cover$SignalTracker.sv:1457$3927) in step 7.
+##   0:01:11  Writing trace to VCD file: engine_0/trace9.vcd
+##   0:01:17  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+##   0:01:17  Writing trace to constraints file: engine_0/trace9.smtc
+##   0:01:17  Checking cover reachability in step 7..
+##   0:01:17  Reached cover statement at SignalTracker.sv:1454.22-1455.54 ($cover$SignalTracker.sv:1454$3926) in step 7.
+##   0:01:17  Reached cover statement at SignalTracker.sv:1502.22-1503.44 ($cover$SignalTracker.sv:1502$3942) in step 7.
+##   0:01:17  Writing trace to VCD file: engine_0/trace10.vcd
+##   0:01:23  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+##   0:01:24  Writing trace to constraints file: engine_0/trace10.smtc
+##   0:01:24  Checking cover reachability in step 7..
+##   0:01:24  Reached cover statement at SignalTracker.sv:1451.22-1452.54 ($cover$SignalTracker.sv:1451$3925) in step 7.
+##   0:01:24  Writing trace to VCD file: engine_0/trace11.vcd
+##   0:01:30  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+##   0:01:30  Writing trace to constraints file: engine_0/trace11.smtc
+##   0:01:30  Checking cover reachability in step 7..
+##   0:01:30  Reached cover statement at SignalTracker.sv:1448.22-1449.54 ($cover$SignalTracker.sv:1448$3924) in step 7.
+##   0:01:30  Writing trace to VCD file: engine_0/trace12.vcd
+##   0:01:37  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+##   0:01:37  Writing trace to constraints file: engine_0/trace12.smtc
+##   0:01:37  Checking cover reachability in step 7..
+##   0:01:37  Reached cover statement at SignalTracker.sv:1442.22-1443.54 ($cover$SignalTracker.sv:1442$3922) in step 7.
+##   0:01:37  Writing trace to VCD file: engine_0/trace13.vcd
+##   0:01:43  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+##   0:01:43  Writing trace to constraints file: engine_0/trace13.smtc
+##   0:01:43  Checking cover reachability in step 7..
+##   0:01:44  Reached cover statement at SignalTracker.sv:1439.22-1440.54 ($cover$SignalTracker.sv:1439$3921) in step 7.
+##   0:01:44  Writing trace to VCD file: engine_0/trace14.vcd
+##   0:01:50  Writing trace to Verilog testbench: engine_0/trace14_tb.v
+##   0:01:50  Writing trace to constraints file: engine_0/trace14.smtc
+##   0:01:50  Checking cover reachability in step 7..
+##   0:01:50  Reached cover statement at SignalTracker.sv:1436.22-1437.54 ($cover$SignalTracker.sv:1436$3920) in step 7.
+##   0:01:50  Reached cover statement at SignalTracker.sv:1562.22-1563.52 ($cover$SignalTracker.sv:1562$3962) in step 7.
+##   0:01:50  Writing trace to VCD file: engine_0/trace15.vcd
+##   0:01:57  Writing trace to Verilog testbench: engine_0/trace15_tb.v
+##   0:01:57  Writing trace to constraints file: engine_0/trace15.smtc
+##   0:01:57  Checking cover reachability in step 7..
+##   0:01:58  Reached cover statement at SignalTracker.sv:1433.22-1434.54 ($cover$SignalTracker.sv:1433$3919) in step 7.
+##   0:01:58  Writing trace to VCD file: engine_0/trace16.vcd
+##   0:02:04  Writing trace to Verilog testbench: engine_0/trace16_tb.v
+##   0:02:04  Writing trace to constraints file: engine_0/trace16.smtc
+##   0:02:04  Checking cover reachability in step 7..
+##   0:02:04  Reached cover statement at SignalTracker.sv:1430.22-1431.53 ($cover$SignalTracker.sv:1430$3918) in step 7.
+##   0:02:04  Reached cover statement at SignalTracker.sv:1505.22-1506.46 ($cover$SignalTracker.sv:1505$3943) in step 7.
+##   0:02:04  Writing trace to VCD file: engine_0/trace17.vcd
+##   0:02:10  Writing trace to Verilog testbench: engine_0/trace17_tb.v
+##   0:02:10  Writing trace to constraints file: engine_0/trace17.smtc
+##   0:02:10  Checking cover reachability in step 7..
+##   0:02:10  Reached cover statement at SignalTracker.sv:1427.22-1428.54 ($cover$SignalTracker.sv:1427$3917) in step 7.
+##   0:02:10  Writing trace to VCD file: engine_0/trace18.vcd
+##   0:02:17  Writing trace to Verilog testbench: engine_0/trace18_tb.v
+##   0:02:17  Writing trace to constraints file: engine_0/trace18.smtc
+##   0:02:17  Checking cover reachability in step 7..
+##   0:02:17  Reached cover statement at SignalTracker.sv:1424.22-1425.54 ($cover$SignalTracker.sv:1424$3916) in step 7.
+##   0:02:17  Writing trace to VCD file: engine_0/trace19.vcd
+##   0:02:24  Writing trace to Verilog testbench: engine_0/trace19_tb.v
+##   0:02:25  Writing trace to constraints file: engine_0/trace19.smtc
+##   0:02:25  Checking cover reachability in step 7..
+##   0:02:25  Reached cover statement at SignalTracker.sv:1421.22-1422.54 ($cover$SignalTracker.sv:1421$3915) in step 7.
+##   0:02:25  Writing trace to VCD file: engine_0/trace20.vcd
+##   0:02:32  Writing trace to Verilog testbench: engine_0/trace20_tb.v
+##   0:02:32  Writing trace to constraints file: engine_0/trace20.smtc
+##   0:02:32  Checking cover reachability in step 7..
+##   0:02:32  Reached cover statement at SignalTracker.sv:1418.22-1419.54 ($cover$SignalTracker.sv:1418$3914) in step 7.
+##   0:02:32  Reached cover statement at SignalTracker.sv:1553.22-1554.52 ($cover$SignalTracker.sv:1553$3959) in step 7.
+##   0:02:32  Reached cover statement at SignalTracker.sv:1892.22-1893.51 ($cover$SignalTracker.sv:1892$4072) in step 7.
+##   0:02:32  Writing trace to VCD file: engine_0/trace21.vcd
+##   0:02:40  Writing trace to Verilog testbench: engine_0/trace21_tb.v
+##   0:02:41  Writing trace to constraints file: engine_0/trace21.smtc
+##   0:02:41  Checking cover reachability in step 7..
+##   0:02:41  Reached cover statement at SignalTracker.sv:1415.22-1416.54 ($cover$SignalTracker.sv:1415$3913) in step 7.
+##   0:02:41  Reached cover statement at SignalTracker.sv:1556.22-1557.52 ($cover$SignalTracker.sv:1556$3960) in step 7.
+##   0:02:41  Writing trace to VCD file: engine_0/trace22.vcd
+##   0:02:52  Writing trace to Verilog testbench: engine_0/trace22_tb.v
+##   0:02:52  Writing trace to constraints file: engine_0/trace22.smtc
+##   0:02:52  Checking cover reachability in step 7..
+##   0:02:53  Reached cover statement at SignalTracker.sv:1412.22-1413.54 ($cover$SignalTracker.sv:1412$3912) in step 7.
+##   0:02:53  Reached cover statement at SignalTracker.sv:1580.22-1581.51 ($cover$SignalTracker.sv:1580$3968) in step 7.
+##   0:02:53  Writing trace to VCD file: engine_0/trace23.vcd
+##   0:03:02  Writing trace to Verilog testbench: engine_0/trace23_tb.v
+##   0:03:02  Writing trace to constraints file: engine_0/trace23.smtc
+##   0:03:03  Checking cover reachability in step 7..
+##   0:03:03  Reached cover statement at SignalTracker.sv:1409.22-1410.54 ($cover$SignalTracker.sv:1409$3911) in step 7.
+##   0:03:03  Writing trace to VCD file: engine_0/trace24.vcd
+##   0:03:12  Writing trace to Verilog testbench: engine_0/trace24_tb.v
+##   0:03:12  Writing trace to constraints file: engine_0/trace24.smtc
+##   0:03:12  Checking cover reachability in step 7..
+##   0:03:12  Reached cover statement at SignalTracker.sv:1406.22-1407.54 ($cover$SignalTracker.sv:1406$3910) in step 7.
+##   0:03:12  Reached cover statement at SignalTracker.sv:1559.22-1560.52 ($cover$SignalTracker.sv:1559$3961) in step 7.
+##   0:03:12  Writing trace to VCD file: engine_0/trace25.vcd
+##   0:03:22  Writing trace to Verilog testbench: engine_0/trace25_tb.v
+##   0:03:22  Writing trace to constraints file: engine_0/trace25.smtc
+##   0:03:22  Checking cover reachability in step 7..
+##   0:03:22  Reached cover statement at SignalTracker.sv:1403.22-1404.54 ($cover$SignalTracker.sv:1403$3909) in step 7.
+##   0:03:22  Reached cover statement at SignalTracker.sv:1574.22-1575.51 ($cover$SignalTracker.sv:1574$3966) in step 7.
+##   0:03:22  Reached cover statement at SignalTracker.sv:1577.22-1578.51 ($cover$SignalTracker.sv:1577$3967) in step 7.
+##   0:03:22  Writing trace to VCD file: engine_0/trace26.vcd
+##   0:03:31  Writing trace to Verilog testbench: engine_0/trace26_tb.v
+##   0:03:31  Writing trace to constraints file: engine_0/trace26.smtc
+##   0:03:31  Checking cover reachability in step 7..
+##   0:03:31  Reached cover statement at SignalTracker.sv:1400.22-1401.54 ($cover$SignalTracker.sv:1400$3908) in step 7.
+##   0:03:31  Reached cover statement at SignalTracker.sv:1571.22-1572.51 ($cover$SignalTracker.sv:1571$3965) in step 7.
+##   0:03:31  Writing trace to VCD file: engine_0/trace27.vcd
+##   0:03:40  Writing trace to Verilog testbench: engine_0/trace27_tb.v
+##   0:03:40  Writing trace to constraints file: engine_0/trace27.smtc
+##   0:03:40  Checking cover reachability in step 7..
+##   0:03:40  Reached cover statement at SignalTracker.sv:1397.22-1398.53 ($cover$SignalTracker.sv:1397$3907) in step 7.
+##   0:03:40  Reached cover statement at SignalTracker.sv:1871.22-1872.58 ($cover$SignalTracker.sv:1871$4065) in step 7.
+##   0:03:40  Writing trace to VCD file: engine_0/trace28.vcd
+##   0:03:47  Writing trace to Verilog testbench: engine_0/trace28_tb.v
+##   0:03:47  Writing trace to constraints file: engine_0/trace28.smtc
+##   0:03:47  Checking cover reachability in step 7..
+##   0:03:48  Reached cover statement at SignalTracker.sv:1394.22-1395.54 ($cover$SignalTracker.sv:1394$3906) in step 7.
+##   0:03:48  Reached cover statement at SignalTracker.sv:1589.22-1590.51 ($cover$SignalTracker.sv:1589$3971) in step 7.
+##   0:03:48  Writing trace to VCD file: engine_0/trace29.vcd
+##   0:03:55  Writing trace to Verilog testbench: engine_0/trace29_tb.v
+##   0:03:55  Writing trace to constraints file: engine_0/trace29.smtc
+##   0:03:55  Checking cover reachability in step 7..
+##   0:03:55  Reached cover statement at SignalTracker.sv:1391.22-1392.54 ($cover$SignalTracker.sv:1391$3905) in step 7.
+##   0:03:55  Reached cover statement at SignalTracker.sv:1565.22-1566.51 ($cover$SignalTracker.sv:1565$3963) in step 7.
+##   0:03:55  Writing trace to VCD file: engine_0/trace30.vcd
+##   0:04:03  Writing trace to Verilog testbench: engine_0/trace30_tb.v
+##   0:04:03  Writing trace to constraints file: engine_0/trace30.smtc
+##   0:04:03  Checking cover reachability in step 7..
+##   0:04:03  Reached cover statement at SignalTracker.sv:1388.22-1389.54 ($cover$SignalTracker.sv:1388$3904) in step 7.
+##   0:04:03  Writing trace to VCD file: engine_0/trace31.vcd
+##   0:04:10  Writing trace to Verilog testbench: engine_0/trace31_tb.v
+##   0:04:10  Writing trace to constraints file: engine_0/trace31.smtc
+##   0:04:10  Checking cover reachability in step 7..
+##   0:04:10  Reached cover statement at SignalTracker.sv:1385.22-1386.54 ($cover$SignalTracker.sv:1385$3903) in step 7.
+##   0:04:10  Writing trace to VCD file: engine_0/trace32.vcd
+##   0:04:17  Writing trace to Verilog testbench: engine_0/trace32_tb.v
+##   0:04:17  Writing trace to constraints file: engine_0/trace32.smtc
+##   0:04:17  Checking cover reachability in step 7..
+##   0:04:17  Reached cover statement at SignalTracker.sv:1379.22-1380.54 ($cover$SignalTracker.sv:1379$3901) in step 7.
+##   0:04:17  Writing trace to VCD file: engine_0/trace33.vcd
+##   0:04:24  Writing trace to Verilog testbench: engine_0/trace33_tb.v
+##   0:04:24  Writing trace to constraints file: engine_0/trace33.smtc
+##   0:04:24  Checking cover reachability in step 7..
+##   0:04:24  Reached cover statement at SignalTracker.sv:1376.22-1377.54 ($cover$SignalTracker.sv:1376$3900) in step 7.
+##   0:04:24  Writing trace to VCD file: engine_0/trace34.vcd
+##   0:04:30  Writing trace to Verilog testbench: engine_0/trace34_tb.v
+##   0:04:30  Writing trace to constraints file: engine_0/trace34.smtc
+##   0:04:30  Checking cover reachability in step 7..
+##   0:04:31  Reached cover statement at SignalTracker.sv:1373.22-1374.54 ($cover$SignalTracker.sv:1373$3899) in step 7.
+##   0:04:31  Writing trace to VCD file: engine_0/trace35.vcd
+##   0:04:37  Writing trace to Verilog testbench: engine_0/trace35_tb.v
+##   0:04:37  Writing trace to constraints file: engine_0/trace35.smtc
+##   0:04:37  Checking cover reachability in step 7..
+##   0:04:37  Reached cover statement at SignalTracker.sv:1370.22-1371.54 ($cover$SignalTracker.sv:1370$3898) in step 7.
+##   0:04:37  Writing trace to VCD file: engine_0/trace36.vcd
+##   0:04:43  Writing trace to Verilog testbench: engine_0/trace36_tb.v
+##   0:04:43  Writing trace to constraints file: engine_0/trace36.smtc
+##   0:04:43  Checking cover reachability in step 7..
+##   0:04:44  Reached cover statement at SignalTracker.sv:1367.22-1368.54 ($cover$SignalTracker.sv:1367$3897) in step 7.
+##   0:04:44  Writing trace to VCD file: engine_0/trace37.vcd
+##   0:04:51  Writing trace to Verilog testbench: engine_0/trace37_tb.v
+##   0:04:52  Writing trace to constraints file: engine_0/trace37.smtc
+##   0:04:52  Checking cover reachability in step 7..
+##   0:04:52  Reached cover statement at SignalTracker.sv:1364.22-1365.53 ($cover$SignalTracker.sv:1364$3896) in step 7.
+##   0:04:52  Reached cover statement at SignalTracker.sv:1886.22-1887.57 ($cover$SignalTracker.sv:1886$4070) in step 7.
+##   0:04:52  Writing trace to VCD file: engine_0/trace38.vcd
+##   0:04:59  Writing trace to Verilog testbench: engine_0/trace38_tb.v
+##   0:04:59  Writing trace to constraints file: engine_0/trace38.smtc
+##   0:04:59  Checking cover reachability in step 7..
+##   0:04:59  Reached cover statement at SignalTracker.sv:1361.22-1362.54 ($cover$SignalTracker.sv:1361$3895) in step 7.
+##   0:04:59  Writing trace to VCD file: engine_0/trace39.vcd
+##   0:05:06  Writing trace to Verilog testbench: engine_0/trace39_tb.v
+##   0:05:07  Writing trace to constraints file: engine_0/trace39.smtc
+##   0:05:07  Checking cover reachability in step 7..
+##   0:05:07  Reached cover statement at SignalTracker.sv:1346.22-1347.54 ($cover$SignalTracker.sv:1346$3890) in step 7.
+##   0:05:07  Reached cover statement at SignalTracker.sv:2024.22-2025.49 ($cover$SignalTracker.sv:2024$4116) in step 7.
+##   0:05:07  Reached cover statement at SignalTracker.sv:2051.22-2052.36 ($cover$SignalTracker.sv:2051$4125) in step 7.
+##   0:05:07  Writing trace to VCD file: engine_0/trace40.vcd
+##   0:05:19  Writing trace to Verilog testbench: engine_0/trace40_tb.v
+##   0:05:19  Writing trace to constraints file: engine_0/trace40.smtc
+##   0:05:19  Checking cover reachability in step 7..
+##   0:05:19  Reached cover statement at SignalTracker.sv:1343.22-1344.54 ($cover$SignalTracker.sv:1343$3889) in step 7.
+##   0:05:19  Writing trace to VCD file: engine_0/trace41.vcd
+##   0:05:27  Writing trace to Verilog testbench: engine_0/trace41_tb.v
+##   0:05:27  Writing trace to constraints file: engine_0/trace41.smtc
+##   0:05:27  Checking cover reachability in step 7..
+##   0:05:28  Reached cover statement at SignalTracker.sv:1340.22-1341.54 ($cover$SignalTracker.sv:1340$3888) in step 7.
+##   0:05:28  Writing trace to VCD file: engine_0/trace42.vcd
+##   0:05:34  Writing trace to Verilog testbench: engine_0/trace42_tb.v
+##   0:05:35  Writing trace to constraints file: engine_0/trace42.smtc
+##   0:05:35  Checking cover reachability in step 7..
+##   0:05:35  Reached cover statement at SignalTracker.sv:1337.22-1338.54 ($cover$SignalTracker.sv:1337$3887) in step 7.
+##   0:05:35  Writing trace to VCD file: engine_0/trace43.vcd
+##   0:05:41  Writing trace to Verilog testbench: engine_0/trace43_tb.v
+##   0:05:41  Writing trace to constraints file: engine_0/trace43.smtc
+##   0:05:41  Checking cover reachability in step 7..
+##   0:05:41  Reached cover statement at SignalTracker.sv:1334.22-1335.54 ($cover$SignalTracker.sv:1334$3886) in step 7.
+##   0:05:41  Writing trace to VCD file: engine_0/trace44.vcd
+##   0:05:48  Writing trace to Verilog testbench: engine_0/trace44_tb.v
+##   0:05:48  Writing trace to constraints file: engine_0/trace44.smtc
+##   0:05:48  Checking cover reachability in step 7..
+##   0:05:48  Reached cover statement at SignalTracker.sv:1325.22-1326.54 ($cover$SignalTracker.sv:1325$3883) in step 7.
+##   0:05:48  Reached cover statement at SignalTracker.sv:1601.22-1602.60 ($cover$SignalTracker.sv:1601$3975) in step 7.
+##   0:05:48  Writing trace to VCD file: engine_0/trace45.vcd
+##   0:05:55  Writing trace to Verilog testbench: engine_0/trace45_tb.v
+##   0:05:55  Writing trace to constraints file: engine_0/trace45.smtc
+##   0:05:55  Checking cover reachability in step 7..
+##   0:05:55  Reached cover statement at SignalTracker.sv:1328.22-1329.54 ($cover$SignalTracker.sv:1328$3884) in step 7.
+##   0:05:55  Reached cover statement at SignalTracker.sv:1604.22-1605.60 ($cover$SignalTracker.sv:1604$3976) in step 7.
+##   0:05:55  Writing trace to VCD file: engine_0/trace46.vcd
+##   0:06:01  Writing trace to Verilog testbench: engine_0/trace46_tb.v
+##   0:06:01  Writing trace to constraints file: engine_0/trace46.smtc
+##   0:06:02  Checking cover reachability in step 7..
+##   0:06:02  Reached cover statement at SignalTracker.sv:1316.22-1317.54 ($cover$SignalTracker.sv:1316$3880) in step 7.
+##   0:06:02  Reached cover statement at SignalTracker.sv:1607.22-1608.59 ($cover$SignalTracker.sv:1607$3977) in step 7.
+##   0:06:02  Writing trace to VCD file: engine_0/trace47.vcd
+##   0:06:08  Writing trace to Verilog testbench: engine_0/trace47_tb.v
+##   0:06:08  Writing trace to constraints file: engine_0/trace47.smtc
+##   0:06:08  Checking cover reachability in step 7..
+##   0:06:08  Reached cover statement at SignalTracker.sv:1319.22-1320.54 ($cover$SignalTracker.sv:1319$3881) in step 7.
+##   0:06:08  Reached cover statement at SignalTracker.sv:1610.22-1611.59 ($cover$SignalTracker.sv:1610$3978) in step 7.
+##   0:06:08  Writing trace to VCD file: engine_0/trace48.vcd
+##   0:06:14  Writing trace to Verilog testbench: engine_0/trace48_tb.v
+##   0:06:15  Writing trace to constraints file: engine_0/trace48.smtc
+##   0:06:15  Checking cover reachability in step 7..
+##   0:06:15  Reached cover statement at SignalTracker.sv:1322.22-1323.54 ($cover$SignalTracker.sv:1322$3882) in step 7.
+##   0:06:15  Reached cover statement at SignalTracker.sv:1613.22-1614.59 ($cover$SignalTracker.sv:1613$3979) in step 7.
+##   0:06:15  Writing trace to VCD file: engine_0/trace49.vcd
+##   0:06:21  Writing trace to Verilog testbench: engine_0/trace49_tb.v
+##   0:06:21  Writing trace to constraints file: engine_0/trace49.smtc
+##   0:06:21  Checking cover reachability in step 7..
+##   0:06:21  Reached cover statement at SignalTracker.sv:1331.22-1332.53 ($cover$SignalTracker.sv:1331$3885) in step 7.
+##   0:06:21  Writing trace to VCD file: engine_0/trace50.vcd
+##   0:06:27  Writing trace to Verilog testbench: engine_0/trace50_tb.v
+##   0:06:27  Writing trace to constraints file: engine_0/trace50.smtc
+##   0:06:27  Checking cover reachability in step 7..
+##   0:06:28  Reached cover statement at SignalTracker.sv:1349.22-1350.54 ($cover$SignalTracker.sv:1349$3891) in step 7.
+##   0:06:28  Reached cover statement at SignalTracker.sv:1484.22-1485.66 ($cover$SignalTracker.sv:1484$3936) in step 7.
+##   0:06:28  Reached cover statement at SignalTracker.sv:1880.22-1881.57 ($cover$SignalTracker.sv:1880$4068) in step 7.
+##   0:06:28  Reached cover statement at SignalTracker.sv:2012.22-2013.41 ($cover$SignalTracker.sv:2012$4112) in step 7.
+##   0:06:28  Writing trace to VCD file: engine_0/trace51.vcd
+##   0:06:33  Writing trace to Verilog testbench: engine_0/trace51_tb.v
+##   0:06:33  Writing trace to constraints file: engine_0/trace51.smtc
+##   0:06:34  Checking cover reachability in step 7..
+##   0:06:34  Reached cover statement at SignalTracker.sv:1355.22-1356.54 ($cover$SignalTracker.sv:1355$3893) in step 7.
+##   0:06:34  Reached cover statement at SignalTracker.sv:1478.22-1479.66 ($cover$SignalTracker.sv:1478$3934) in step 7.
+##   0:06:34  Writing trace to VCD file: engine_0/trace52.vcd
+##   0:06:39  Writing trace to Verilog testbench: engine_0/trace52_tb.v
+##   0:06:39  Writing trace to constraints file: engine_0/trace52.smtc
+##   0:06:39  Checking cover reachability in step 7..
+##   0:06:40  Reached cover statement at SignalTracker.sv:1352.22-1353.54 ($cover$SignalTracker.sv:1352$3892) in step 7.
+##   0:06:40  Reached cover statement at SignalTracker.sv:1481.22-1482.66 ($cover$SignalTracker.sv:1481$3935) in step 7.
+##   0:06:40  Writing trace to VCD file: engine_0/trace53.vcd
+##   0:06:46  Writing trace to Verilog testbench: engine_0/trace53_tb.v
+##   0:06:46  Writing trace to constraints file: engine_0/trace53.smtc
+##   0:06:46  Checking cover reachability in step 7..
+##   0:06:46  Checking cover reachability in step 8..
+##   0:06:47  Reached cover statement at SignalTracker.sv:1517.22-1518.51 ($cover$SignalTracker.sv:1517$3947) in step 8.
+##   0:06:47  Reached cover statement at SignalTracker.sv:1799.22-1800.55 ($cover$SignalTracker.sv:1799$4041) in step 8.
+##   0:06:47  Reached cover statement at SignalTracker.sv:584.22-585.43 ($cover$SignalTracker.sv:584$3636) in step 8.
+##   0:06:47  Writing trace to VCD file: engine_0/trace54.vcd
+##   0:06:53  Writing trace to Verilog testbench: engine_0/trace54_tb.v
+##   0:06:54  Writing trace to constraints file: engine_0/trace54.smtc
+##   0:06:54  Checking cover reachability in step 8..
+##   0:06:54  Reached cover statement at SignalTracker.sv:1055.22-1056.40 ($cover$SignalTracker.sv:1055$3793) in step 8.
+##   0:06:54  Reached cover statement at SignalTracker.sv:1853.22-1854.52 ($cover$SignalTracker.sv:1853$4059) in step 8.
+##   0:06:54  Reached cover statement at SignalTracker.sv:857.22-858.54 ($cover$SignalTracker.sv:857$3727) in step 8.
+##   0:06:54  Writing trace to VCD file: engine_0/trace55.vcd
+##   0:07:01  Writing trace to Verilog testbench: engine_0/trace55_tb.v
+##   0:07:01  Writing trace to constraints file: engine_0/trace55.smtc
+##   0:07:01  Checking cover reachability in step 8..
+##   0:07:01  Reached cover statement at SignalTracker.sv:854.22-855.54 ($cover$SignalTracker.sv:854$3726) in step 8.
+##   0:07:01  Writing trace to VCD file: engine_0/trace56.vcd
+##   0:07:08  Writing trace to Verilog testbench: engine_0/trace56_tb.v
+##   0:07:08  Writing trace to constraints file: engine_0/trace56.smtc
+##   0:07:08  Checking cover reachability in step 8..
+##   0:07:08  Reached cover statement at SignalTracker.sv:1532.22-1533.46 ($cover$SignalTracker.sv:1532$3952) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:1721.22-1722.54 ($cover$SignalTracker.sv:1721$4015) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:1895.22-1896.51 ($cover$SignalTracker.sv:1895$4073) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:677.22-678.47 ($cover$SignalTracker.sv:677$3667) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:683.22-684.48 ($cover$SignalTracker.sv:683$3669) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:686.22-687.55 ($cover$SignalTracker.sv:686$3670) in step 8.
+##   0:07:08  Reached cover statement at SignalTracker.sv:761.22-762.54 ($cover$SignalTracker.sv:761$3695) in step 8.
+##   0:07:08  Writing trace to VCD file: engine_0/trace57.vcd
+##   0:07:15  Writing trace to Verilog testbench: engine_0/trace57_tb.v
+##   0:07:15  Writing trace to constraints file: engine_0/trace57.smtc
+##   0:07:15  Checking cover reachability in step 8..
+##   0:07:15  Reached cover statement at SignalTracker.sv:1202.22-1203.40 ($cover$SignalTracker.sv:1202$3842) in step 8.
+##   0:07:15  Writing trace to VCD file: engine_0/trace58.vcd
+##   0:07:22  Writing trace to Verilog testbench: engine_0/trace58_tb.v
+##   0:07:22  Writing trace to constraints file: engine_0/trace58.smtc
+##   0:07:22  Checking cover reachability in step 8..
+##   0:07:23  Reached cover statement at SignalTracker.sv:680.22-681.47 ($cover$SignalTracker.sv:680$3668) in step 8.
+##   0:07:23  Writing trace to VCD file: engine_0/trace59.vcd
+##   0:07:29  Writing trace to Verilog testbench: engine_0/trace59_tb.v
+##   0:07:29  Writing trace to constraints file: engine_0/trace59.smtc
+##   0:07:29  Checking cover reachability in step 8..
+##   0:07:30  Reached cover statement at SignalTracker.sv:1004.22-1005.37 ($cover$SignalTracker.sv:1004$3776) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1076.22-1077.40 ($cover$SignalTracker.sv:1076$3800) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1088.22-1089.49 ($cover$SignalTracker.sv:1088$3804) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1097.22-1098.39 ($cover$SignalTracker.sv:1097$3807) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1283.22-1284.34 ($cover$SignalTracker.sv:1283$3869) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1313.22-1314.48 ($cover$SignalTracker.sv:1313$3879) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1514.22-1515.51 ($cover$SignalTracker.sv:1514$3946) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1541.22-1542.48 ($cover$SignalTracker.sv:1541$3955) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1682.22-1683.47 ($cover$SignalTracker.sv:1682$4002) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1808.22-1809.60 ($cover$SignalTracker.sv:1808$4044) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1838.22-1839.48 ($cover$SignalTracker.sv:1838$4054) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1841.22-1842.50 ($cover$SignalTracker.sv:1841$4055) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1856.22-1857.55 ($cover$SignalTracker.sv:1856$4060) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1946.22-1947.38 ($cover$SignalTracker.sv:1946$4090) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1952.22-1953.38 ($cover$SignalTracker.sv:1952$4092) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:1958.22-1959.38 ($cover$SignalTracker.sv:1958$4094) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:2039.22-2040.40 ($cover$SignalTracker.sv:2039$4121) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:2054.22-2055.40 ($cover$SignalTracker.sv:2054$4126) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:359.22-360.50 ($cover$SignalTracker.sv:359$3561) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:527.22-528.41 ($cover$SignalTracker.sv:527$3617) in step 8.
+##   0:07:30  Reached cover statement at SignalTracker.sv:863.22-864.56 ($cover$SignalTracker.sv:863$3729) in step 8.
+##   0:07:30  Writing trace to VCD file: engine_0/trace60.vcd
+##   0:07:36  Writing trace to Verilog testbench: engine_0/trace60_tb.v
+##   0:07:36  Writing trace to constraints file: engine_0/trace60.smtc
+##   0:07:37  Checking cover reachability in step 8..
+##   0:07:37  Reached cover statement at SignalTracker.sv:1835.22-1836.55 ($cover$SignalTracker.sv:1835$4053) in step 8.
+##   0:07:37  Writing trace to VCD file: engine_0/trace61.vcd
+##   0:07:44  Writing trace to Verilog testbench: engine_0/trace61_tb.v
+##   0:07:44  Writing trace to constraints file: engine_0/trace61.smtc
+##   0:07:44  Checking cover reachability in step 8..
+##   0:07:44  Reached cover statement at SignalTracker.sv:1790.22-1791.54 ($cover$SignalTracker.sv:1790$4038) in step 8.
+##   0:07:44  Writing trace to VCD file: engine_0/trace62.vcd
+##   0:07:51  Writing trace to Verilog testbench: engine_0/trace62_tb.v
+##   0:07:51  Writing trace to constraints file: engine_0/trace62.smtc
+##   0:07:51  Checking cover reachability in step 8..
+##   0:07:51  Reached cover statement at SignalTracker.sv:1526.22-1527.46 ($cover$SignalTracker.sv:1526$3950) in step 8.
+##   0:07:51  Writing trace to VCD file: engine_0/trace63.vcd
+##   0:07:57  Writing trace to Verilog testbench: engine_0/trace63_tb.v
+##   0:07:58  Writing trace to constraints file: engine_0/trace63.smtc
+##   0:07:58  Checking cover reachability in step 8..
+##   0:07:58  Reached cover statement at SignalTracker.sv:1787.22-1788.54 ($cover$SignalTracker.sv:1787$4037) in step 8.
+##   0:07:58  Writing trace to VCD file: engine_0/trace64.vcd
+##   0:08:05  Writing trace to Verilog testbench: engine_0/trace64_tb.v
+##   0:08:05  Writing trace to constraints file: engine_0/trace64.smtc
+##   0:08:05  Checking cover reachability in step 8..
+##   0:08:05  Reached cover statement at SignalTracker.sv:1784.22-1785.54 ($cover$SignalTracker.sv:1784$4036) in step 8.
+##   0:08:05  Writing trace to VCD file: engine_0/trace65.vcd
+##   0:08:12  Writing trace to Verilog testbench: engine_0/trace65_tb.v
+##   0:08:12  Writing trace to constraints file: engine_0/trace65.smtc
+##   0:08:12  Checking cover reachability in step 8..
+##   0:08:12  Reached cover statement at SignalTracker.sv:1463.22-1464.42 ($cover$SignalTracker.sv:1463$3929) in step 8.
+##   0:08:12  Reached cover statement at SignalTracker.sv:1520.22-1521.51 ($cover$SignalTracker.sv:1520$3948) in step 8.
+##   0:08:12  Reached cover statement at SignalTracker.sv:1754.22-1755.54 ($cover$SignalTracker.sv:1754$4026) in step 8.
+##   0:08:12  Reached cover statement at SignalTracker.sv:1826.22-1827.53 ($cover$SignalTracker.sv:1826$4050) in step 8.
+##   0:08:12  Reached cover statement at SignalTracker.sv:1868.22-1869.46 ($cover$SignalTracker.sv:1868$4064) in step 8.
+##   0:08:12  Writing trace to VCD file: engine_0/trace66.vcd
+##   0:08:19  Writing trace to Verilog testbench: engine_0/trace66_tb.v
+##   0:08:19  Writing trace to constraints file: engine_0/trace66.smtc
+##   0:08:19  Checking cover reachability in step 8..
+##   0:08:20  Reached cover statement at SignalTracker.sv:1850.22-1851.49 ($cover$SignalTracker.sv:1850$4058) in step 8.
+##   0:08:20  Reached cover statement at SignalTracker.sv:1859.22-1860.51 ($cover$SignalTracker.sv:1859$4061) in step 8.
+##   0:08:20  Writing trace to VCD file: engine_0/trace67.vcd
+##   0:08:26  Writing trace to Verilog testbench: engine_0/trace67_tb.v
+##   0:08:26  Writing trace to constraints file: engine_0/trace67.smtc
+##   0:08:27  Checking cover reachability in step 8..
+##   0:08:27  Reached cover statement at SignalTracker.sv:1847.22-1848.50 ($cover$SignalTracker.sv:1847$4057) in step 8.
+##   0:08:27  Writing trace to VCD file: engine_0/trace68.vcd
+##   0:08:33  Writing trace to Verilog testbench: engine_0/trace68_tb.v
+##   0:08:34  Writing trace to constraints file: engine_0/trace68.smtc
+##   0:08:34  Checking cover reachability in step 8..
+##   0:08:34  Reached cover statement at SignalTracker.sv:1844.22-1845.51 ($cover$SignalTracker.sv:1844$4056) in step 8.
+##   0:08:34  Writing trace to VCD file: engine_0/trace69.vcd
+##   0:08:40  Writing trace to Verilog testbench: engine_0/trace69_tb.v
+##   0:08:40  Writing trace to constraints file: engine_0/trace69.smtc
+##   0:08:40  Checking cover reachability in step 8..
+##   0:08:41  Reached cover statement at SignalTracker.sv:1829.22-1830.53 ($cover$SignalTracker.sv:1829$4051) in step 8.
+##   0:08:41  Writing trace to VCD file: engine_0/trace70.vcd
+##   0:08:47  Writing trace to Verilog testbench: engine_0/trace70_tb.v
+##   0:08:47  Writing trace to constraints file: engine_0/trace70.smtc
+##   0:08:48  Checking cover reachability in step 8..
+##   0:08:48  Reached cover statement at SignalTracker.sv:1823.22-1824.53 ($cover$SignalTracker.sv:1823$4049) in step 8.
+##   0:08:48  Reached cover statement at SignalTracker.sv:1832.22-1833.49 ($cover$SignalTracker.sv:1832$4052) in step 8.
+##   0:08:48  Writing trace to VCD file: engine_0/trace71.vcd
+##   0:08:54  Writing trace to Verilog testbench: engine_0/trace71_tb.v
+##   0:08:54  Writing trace to constraints file: engine_0/trace71.smtc
+##   0:08:54  Checking cover reachability in step 8..
+##   0:08:55  Reached cover statement at SignalTracker.sv:1061.22-1062.54 ($cover$SignalTracker.sv:1061$3795) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:1820.22-1821.60 ($cover$SignalTracker.sv:1820$4048) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:1955.22-1956.38 ($cover$SignalTracker.sv:1955$4093) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:1988.22-1989.37 ($cover$SignalTracker.sv:1988$4104) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:1991.22-1992.37 ($cover$SignalTracker.sv:1991$4105) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:1997.22-1998.55 ($cover$SignalTracker.sv:1997$4107) in step 8.
+##   0:08:55  Reached cover statement at SignalTracker.sv:2042.22-2043.41 ($cover$SignalTracker.sv:2042$4122) in step 8.
+##   0:08:55  Writing trace to VCD file: engine_0/trace72.vcd
+##   0:09:01  Writing trace to Verilog testbench: engine_0/trace72_tb.v
+##   0:09:01  Writing trace to constraints file: engine_0/trace72.smtc
+##   0:09:01  Checking cover reachability in step 8..
+##   0:09:02  Reached cover statement at SignalTracker.sv:1736.22-1737.55 ($cover$SignalTracker.sv:1736$4020) in step 8.
+##   0:09:02  Writing trace to VCD file: engine_0/trace73.vcd
+##   0:09:08  Writing trace to Verilog testbench: engine_0/trace73_tb.v
+##   0:09:08  Writing trace to constraints file: engine_0/trace73.smtc
+##   0:09:08  Checking cover reachability in step 8..
+##   0:09:09  Reached cover statement at SignalTracker.sv:1985.22-1986.37 ($cover$SignalTracker.sv:1985$4103) in step 8.
+##   0:09:09  Writing trace to VCD file: engine_0/trace74.vcd
+##   0:09:15  Writing trace to Verilog testbench: engine_0/trace74_tb.v
+##   0:09:16  Writing trace to constraints file: engine_0/trace74.smtc
+##   0:09:16  Checking cover reachability in step 8..
+##   0:09:16  Reached cover statement at SignalTracker.sv:1982.22-1983.37 ($cover$SignalTracker.sv:1982$4102) in step 8.
+##   0:09:16  Writing trace to VCD file: engine_0/trace75.vcd
+##   0:09:22  Writing trace to Verilog testbench: engine_0/trace75_tb.v
+##   0:09:23  Writing trace to constraints file: engine_0/trace75.smtc
+##   0:09:23  Checking cover reachability in step 8..
+##   0:09:23  Reached cover statement at SignalTracker.sv:1976.22-1977.37 ($cover$SignalTracker.sv:1976$4100) in step 8.
+##   0:09:23  Writing trace to VCD file: engine_0/trace76.vcd
+##   0:09:30  Writing trace to Verilog testbench: engine_0/trace76_tb.v
+##   0:09:30  Writing trace to constraints file: engine_0/trace76.smtc
+##   0:09:30  Checking cover reachability in step 8..
+##   0:09:30  Reached cover statement at SignalTracker.sv:1961.22-1962.37 ($cover$SignalTracker.sv:1961$4095) in step 8.
+##   0:09:30  Writing trace to VCD file: engine_0/trace77.vcd
+##   0:09:37  Writing trace to Verilog testbench: engine_0/trace77_tb.v
+##   0:09:37  Writing trace to constraints file: engine_0/trace77.smtc
+##   0:09:37  Checking cover reachability in step 8..
+##   0:09:37  Reached cover statement at SignalTracker.sv:1940.22-1941.38 ($cover$SignalTracker.sv:1940$4088) in step 8.
+##   0:09:37  Writing trace to VCD file: engine_0/trace78.vcd
+##   0:09:44  Writing trace to Verilog testbench: engine_0/trace78_tb.v
+##   0:09:44  Writing trace to constraints file: engine_0/trace78.smtc
+##   0:09:44  Checking cover reachability in step 8..
+##   0:09:44  Reached cover statement at SignalTracker.sv:1937.22-1938.38 ($cover$SignalTracker.sv:1937$4087) in step 8.
+##   0:09:44  Writing trace to VCD file: engine_0/trace79.vcd
+##   0:09:51  Writing trace to Verilog testbench: engine_0/trace79_tb.v
+##   0:09:51  Writing trace to constraints file: engine_0/trace79.smtc
+##   0:09:51  Checking cover reachability in step 8..
+##   0:09:52  Reached cover statement at SignalTracker.sv:1931.22-1932.38 ($cover$SignalTracker.sv:1931$4085) in step 8.
+##   0:09:52  Writing trace to VCD file: engine_0/trace80.vcd
+##   0:09:58  Writing trace to Verilog testbench: engine_0/trace80_tb.v
+##   0:09:58  Writing trace to constraints file: engine_0/trace80.smtc
+##   0:09:58  Checking cover reachability in step 8..
+##   0:09:59  Reached cover statement at SignalTracker.sv:1928.22-1929.38 ($cover$SignalTracker.sv:1928$4084) in step 8.
+##   0:09:59  Writing trace to VCD file: engine_0/trace81.vcd
+##   0:10:05  Writing trace to Verilog testbench: engine_0/trace81_tb.v
+##   0:10:05  Writing trace to constraints file: engine_0/trace81.smtc
+##   0:10:06  Checking cover reachability in step 8..
+##   0:10:06  Reached cover statement at SignalTracker.sv:1925.22-1926.38 ($cover$SignalTracker.sv:1925$4083) in step 8.
+##   0:10:06  Writing trace to VCD file: engine_0/trace82.vcd
+##   0:10:12  Writing trace to Verilog testbench: engine_0/trace82_tb.v
+##   0:10:13  Writing trace to constraints file: engine_0/trace82.smtc
+##   0:10:13  Checking cover reachability in step 8..
+##   0:10:13  Reached cover statement at SignalTracker.sv:1922.22-1923.38 ($cover$SignalTracker.sv:1922$4082) in step 8.
+##   0:10:13  Writing trace to VCD file: engine_0/trace83.vcd
+##   0:10:20  Writing trace to Verilog testbench: engine_0/trace83_tb.v
+##   0:10:20  Writing trace to constraints file: engine_0/trace83.smtc
+##   0:10:20  Checking cover reachability in step 8..
+##   0:10:20  Reached cover statement at SignalTracker.sv:1919.22-1920.38 ($cover$SignalTracker.sv:1919$4081) in step 8.
+##   0:10:20  Writing trace to VCD file: engine_0/trace84.vcd
+##   0:10:27  Writing trace to Verilog testbench: engine_0/trace84_tb.v
+##   0:10:27  Writing trace to constraints file: engine_0/trace84.smtc
+##   0:10:27  Checking cover reachability in step 8..
+##   0:10:27  Reached cover statement at SignalTracker.sv:1916.22-1917.38 ($cover$SignalTracker.sv:1916$4080) in step 8.
+##   0:10:27  Writing trace to VCD file: engine_0/trace85.vcd
+##   0:10:34  Writing trace to Verilog testbench: engine_0/trace85_tb.v
+##   0:10:34  Writing trace to constraints file: engine_0/trace85.smtc
+##   0:10:34  Checking cover reachability in step 8..
+##   0:10:34  Reached cover statement at SignalTracker.sv:1913.22-1914.38 ($cover$SignalTracker.sv:1913$4079) in step 8.
+##   0:10:34  Writing trace to VCD file: engine_0/trace86.vcd
+##   0:10:41  Writing trace to Verilog testbench: engine_0/trace86_tb.v
+##   0:10:41  Writing trace to constraints file: engine_0/trace86.smtc
+##   0:10:41  Checking cover reachability in step 8..
+##   0:10:41  Reached cover statement at SignalTracker.sv:1910.22-1911.38 ($cover$SignalTracker.sv:1910$4078) in step 8.
+##   0:10:41  Writing trace to VCD file: engine_0/trace87.vcd
+##   0:10:48  Writing trace to Verilog testbench: engine_0/trace87_tb.v
+##   0:10:48  Writing trace to constraints file: engine_0/trace87.smtc
+##   0:10:48  Checking cover reachability in step 8..
+##   0:10:48  Reached cover statement at SignalTracker.sv:1865.22-1866.55 ($cover$SignalTracker.sv:1865$4063) in step 8.
+##   0:10:48  Writing trace to VCD file: engine_0/trace88.vcd
+##   0:10:55  Writing trace to Verilog testbench: engine_0/trace88_tb.v
+##   0:10:55  Writing trace to constraints file: engine_0/trace88.smtc
+##   0:10:55  Checking cover reachability in step 8..
+##   0:10:56  Reached cover statement at SignalTracker.sv:1817.22-1818.60 ($cover$SignalTracker.sv:1817$4047) in step 8.
+##   0:10:56  Writing trace to VCD file: engine_0/trace89.vcd
+##   0:11:02  Writing trace to Verilog testbench: engine_0/trace89_tb.v
+##   0:11:02  Writing trace to constraints file: engine_0/trace89.smtc
+##   0:11:02  Checking cover reachability in step 8..
+##   0:11:03  Reached cover statement at SignalTracker.sv:1733.22-1734.55 ($cover$SignalTracker.sv:1733$4019) in step 8.
+##   0:11:03  Writing trace to VCD file: engine_0/trace90.vcd
+##   0:11:09  Writing trace to Verilog testbench: engine_0/trace90_tb.v
+##   0:11:09  Writing trace to constraints file: engine_0/trace90.smtc
+##   0:11:10  Checking cover reachability in step 8..
+##   0:11:10  Reached cover statement at SignalTracker.sv:1730.22-1731.55 ($cover$SignalTracker.sv:1730$4018) in step 8.
+##   0:11:10  Writing trace to VCD file: engine_0/trace91.vcd
+##   0:11:17  Writing trace to Verilog testbench: engine_0/trace91_tb.v
+##   0:11:17  Writing trace to constraints file: engine_0/trace91.smtc
+##   0:11:17  Checking cover reachability in step 8..
+##   0:11:17  Reached cover statement at SignalTracker.sv:1706.22-1707.55 ($cover$SignalTracker.sv:1706$4010) in step 8.
+##   0:11:17  Writing trace to VCD file: engine_0/trace92.vcd
+##   0:11:24  Writing trace to Verilog testbench: engine_0/trace92_tb.v
+##   0:11:24  Writing trace to constraints file: engine_0/trace92.smtc
+##   0:11:24  Checking cover reachability in step 8..
+##   0:11:24  Reached cover statement at SignalTracker.sv:1697.22-1698.53 ($cover$SignalTracker.sv:1697$4007) in step 8.
+##   0:11:24  Reached cover statement at SignalTracker.sv:1742.22-1743.55 ($cover$SignalTracker.sv:1742$4022) in step 8.
+##   0:11:24  Writing trace to VCD file: engine_0/trace93.vcd
+##   0:11:31  Writing trace to Verilog testbench: engine_0/trace93_tb.v
+##   0:11:31  Writing trace to constraints file: engine_0/trace93.smtc
+##   0:11:31  Checking cover reachability in step 8..
+##   0:11:32  Reached cover statement at SignalTracker.sv:1694.22-1695.53 ($cover$SignalTracker.sv:1694$4006) in step 8.
+##   0:11:32  Reached cover statement at SignalTracker.sv:1739.22-1740.55 ($cover$SignalTracker.sv:1739$4021) in step 8.
+##   0:11:32  Writing trace to VCD file: engine_0/trace94.vcd
+##   0:11:38  Writing trace to Verilog testbench: engine_0/trace94_tb.v
+##   0:11:38  Writing trace to constraints file: engine_0/trace94.smtc
+##   0:11:38  Checking cover reachability in step 8..
+##   0:11:39  Reached cover statement at SignalTracker.sv:1691.22-1692.47 ($cover$SignalTracker.sv:1691$4005) in step 8.
+##   0:11:39  Reached cover statement at SignalTracker.sv:1745.22-1746.55 ($cover$SignalTracker.sv:1745$4023) in step 8.
+##   0:11:39  Writing trace to VCD file: engine_0/trace95.vcd
+##   0:11:45  Writing trace to Verilog testbench: engine_0/trace95_tb.v
+##   0:11:45  Writing trace to constraints file: engine_0/trace95.smtc
+##   0:11:46  Checking cover reachability in step 8..
+##   0:11:46  Reached cover statement at SignalTracker.sv:1688.22-1689.47 ($cover$SignalTracker.sv:1688$4004) in step 8.
+##   0:11:46  Reached cover statement at SignalTracker.sv:1772.22-1773.55 ($cover$SignalTracker.sv:1772$4032) in step 8.
+##   0:11:46  Writing trace to VCD file: engine_0/trace96.vcd
+##   0:11:53  Writing trace to Verilog testbench: engine_0/trace96_tb.v
+##   0:11:53  Writing trace to constraints file: engine_0/trace96.smtc
+##   0:11:53  Checking cover reachability in step 8..
+##   0:11:53  Reached cover statement at SignalTracker.sv:1685.22-1686.47 ($cover$SignalTracker.sv:1685$4003) in step 8.
+##   0:11:53  Reached cover statement at SignalTracker.sv:1781.22-1782.55 ($cover$SignalTracker.sv:1781$4035) in step 8.
+##   0:11:53  Writing trace to VCD file: engine_0/trace97.vcd
+##   0:12:00  Writing trace to Verilog testbench: engine_0/trace97_tb.v
+##   0:12:00  Writing trace to constraints file: engine_0/trace97.smtc
+##   0:12:00  Checking cover reachability in step 8..
+##   0:12:00  Reached cover statement at SignalTracker.sv:1676.22-1677.48 ($cover$SignalTracker.sv:1676$4000) in step 8.
+##   0:12:00  Reached cover statement at SignalTracker.sv:1727.22-1728.55 ($cover$SignalTracker.sv:1727$4017) in step 8.
+##   0:12:00  Writing trace to VCD file: engine_0/trace98.vcd
+##   0:12:07  Writing trace to Verilog testbench: engine_0/trace98_tb.v
+##   0:12:07  Writing trace to constraints file: engine_0/trace98.smtc
+##   0:12:07  Checking cover reachability in step 8..
+##   0:12:07  Reached cover statement at SignalTracker.sv:1673.22-1674.48 ($cover$SignalTracker.sv:1673$3999) in step 8.
+##   0:12:07  Reached cover statement at SignalTracker.sv:1724.22-1725.55 ($cover$SignalTracker.sv:1724$4016) in step 8.
+##   0:12:07  Writing trace to VCD file: engine_0/trace99.vcd
+##   0:12:14  Writing trace to Verilog testbench: engine_0/trace99_tb.v
+##   0:12:14  Writing trace to constraints file: engine_0/trace99.smtc
+##   0:12:14  Checking cover reachability in step 8..
+##   0:12:15  Reached cover statement at SignalTracker.sv:1670.22-1671.48 ($cover$SignalTracker.sv:1670$3998) in step 8.
+##   0:12:15  Reached cover statement at SignalTracker.sv:1718.22-1719.55 ($cover$SignalTracker.sv:1718$4014) in step 8.
+##   0:12:15  Writing trace to VCD file: engine_0/trace100.vcd
+##   0:12:21  Writing trace to Verilog testbench: engine_0/trace100_tb.v
+##   0:12:21  Writing trace to constraints file: engine_0/trace100.smtc
+##   0:12:21  Checking cover reachability in step 8..
+##   0:12:22  Reached cover statement at SignalTracker.sv:1667.22-1668.48 ($cover$SignalTracker.sv:1667$3997) in step 8.
+##   0:12:22  Reached cover statement at SignalTracker.sv:1715.22-1716.55 ($cover$SignalTracker.sv:1715$4013) in step 8.
+##   0:12:22  Writing trace to VCD file: engine_0/trace101.vcd
+##   0:12:28  Writing trace to Verilog testbench: engine_0/trace101_tb.v
+##   0:12:28  Writing trace to constraints file: engine_0/trace101.smtc
+##   0:12:28  Checking cover reachability in step 8..
+##   0:12:29  Reached cover statement at SignalTracker.sv:1664.22-1665.48 ($cover$SignalTracker.sv:1664$3996) in step 8.
+##   0:12:29  Reached cover statement at SignalTracker.sv:1712.22-1713.55 ($cover$SignalTracker.sv:1712$4012) in step 8.
+##   0:12:29  Writing trace to VCD file: engine_0/trace102.vcd
+##   0:12:35  Writing trace to Verilog testbench: engine_0/trace102_tb.v
+##   0:12:35  Writing trace to constraints file: engine_0/trace102.smtc
+##   0:12:35  Checking cover reachability in step 8..
+##   0:12:36  Reached cover statement at SignalTracker.sv:1658.22-1659.48 ($cover$SignalTracker.sv:1658$3994) in step 8.
+##   0:12:36  Reached cover statement at SignalTracker.sv:1709.22-1710.55 ($cover$SignalTracker.sv:1709$4011) in step 8.
+##   0:12:36  Writing trace to VCD file: engine_0/trace103.vcd
+##   0:12:42  Writing trace to Verilog testbench: engine_0/trace103_tb.v
+##   0:12:42  Writing trace to constraints file: engine_0/trace103.smtc
+##   0:12:42  Checking cover reachability in step 8..
+##   0:12:43  Reached cover statement at SignalTracker.sv:1655.22-1656.48 ($cover$SignalTracker.sv:1655$3993) in step 8.
+##   0:12:43  Reached cover statement at SignalTracker.sv:1778.22-1779.55 ($cover$SignalTracker.sv:1778$4034) in step 8.
+##   0:12:43  Writing trace to VCD file: engine_0/trace104.vcd
+##   0:12:49  Writing trace to Verilog testbench: engine_0/trace104_tb.v
+##   0:12:49  Writing trace to constraints file: engine_0/trace104.smtc
+##   0:12:50  Checking cover reachability in step 8..
+##   0:12:50  Reached cover statement at SignalTracker.sv:1652.22-1653.48 ($cover$SignalTracker.sv:1652$3992) in step 8.
+##   0:12:50  Reached cover statement at SignalTracker.sv:1775.22-1776.55 ($cover$SignalTracker.sv:1775$4033) in step 8.
+##   0:12:50  Writing trace to VCD file: engine_0/trace105.vcd
+##   0:12:57  Writing trace to Verilog testbench: engine_0/trace105_tb.v
+##   0:12:57  Writing trace to constraints file: engine_0/trace105.smtc
+##   0:12:57  Checking cover reachability in step 8..
+##   0:12:57  Reached cover statement at SignalTracker.sv:1649.22-1650.48 ($cover$SignalTracker.sv:1649$3991) in step 8.
+##   0:12:57  Reached cover statement at SignalTracker.sv:1769.22-1770.55 ($cover$SignalTracker.sv:1769$4031) in step 8.
+##   0:12:57  Writing trace to VCD file: engine_0/trace106.vcd
+##   0:13:04  Writing trace to Verilog testbench: engine_0/trace106_tb.v
+##   0:13:04  Writing trace to constraints file: engine_0/trace106.smtc
+##   0:13:04  Checking cover reachability in step 8..
+##   0:13:04  Reached cover statement at SignalTracker.sv:1646.22-1647.48 ($cover$SignalTracker.sv:1646$3990) in step 8.
+##   0:13:04  Reached cover statement at SignalTracker.sv:1766.22-1767.55 ($cover$SignalTracker.sv:1766$4030) in step 8.
+##   0:13:04  Writing trace to VCD file: engine_0/trace107.vcd
+##   0:13:11  Writing trace to Verilog testbench: engine_0/trace107_tb.v
+##   0:13:11  Writing trace to constraints file: engine_0/trace107.smtc
+##   0:13:11  Checking cover reachability in step 8..
+##   0:13:11  Reached cover statement at SignalTracker.sv:1643.22-1644.48 ($cover$SignalTracker.sv:1643$3989) in step 8.
+##   0:13:11  Reached cover statement at SignalTracker.sv:1763.22-1764.55 ($cover$SignalTracker.sv:1763$4029) in step 8.
+##   0:13:11  Writing trace to VCD file: engine_0/trace108.vcd
+##   0:13:18  Writing trace to Verilog testbench: engine_0/trace108_tb.v
+##   0:13:18  Writing trace to constraints file: engine_0/trace108.smtc
+##   0:13:18  Checking cover reachability in step 8..
+##   0:13:19  Reached cover statement at SignalTracker.sv:1640.22-1641.48 ($cover$SignalTracker.sv:1640$3988) in step 8.
+##   0:13:19  Reached cover statement at SignalTracker.sv:1760.22-1761.55 ($cover$SignalTracker.sv:1760$4028) in step 8.
+##   0:13:19  Writing trace to VCD file: engine_0/trace109.vcd
+##   0:13:25  Writing trace to Verilog testbench: engine_0/trace109_tb.v
+##   0:13:26  Writing trace to constraints file: engine_0/trace109.smtc
+##   0:13:26  Checking cover reachability in step 8..
+##   0:13:26  Reached cover statement at SignalTracker.sv:1637.22-1638.48 ($cover$SignalTracker.sv:1637$3987) in step 8.
+##   0:13:26  Reached cover statement at SignalTracker.sv:1748.22-1749.55 ($cover$SignalTracker.sv:1748$4024) in step 8.
+##   0:13:26  Writing trace to VCD file: engine_0/trace110.vcd
+##   0:13:33  Writing trace to Verilog testbench: engine_0/trace110_tb.v
+##   0:13:33  Writing trace to constraints file: engine_0/trace110.smtc
+##   0:13:33  Checking cover reachability in step 8..
+##   0:13:33  Reached cover statement at SignalTracker.sv:1634.22-1635.48 ($cover$SignalTracker.sv:1634$3986) in step 8.
+##   0:13:33  Reached cover statement at SignalTracker.sv:1757.22-1758.55 ($cover$SignalTracker.sv:1757$4027) in step 8.
+##   0:13:33  Writing trace to VCD file: engine_0/trace111.vcd
+##   0:13:40  Writing trace to Verilog testbench: engine_0/trace111_tb.v
+##   0:13:40  Writing trace to constraints file: engine_0/trace111.smtc
+##   0:13:40  Checking cover reachability in step 8..
+##   0:13:40  Reached cover statement at SignalTracker.sv:1631.22-1632.48 ($cover$SignalTracker.sv:1631$3985) in step 8.
+##   0:13:40  Reached cover statement at SignalTracker.sv:1751.22-1752.55 ($cover$SignalTracker.sv:1751$4025) in step 8.
+##   0:13:40  Writing trace to VCD file: engine_0/trace112.vcd
+##   0:13:47  Writing trace to Verilog testbench: engine_0/trace112_tb.v
+##   0:13:47  Writing trace to constraints file: engine_0/trace112.smtc
+##   0:13:47  Checking cover reachability in step 8..
+##   0:13:48  Reached cover statement at SignalTracker.sv:1499.22-1500.47 ($cover$SignalTracker.sv:1499$3941) in step 8.
+##   0:13:48  Reached cover statement at SignalTracker.sv:1811.22-1812.60 ($cover$SignalTracker.sv:1811$4045) in step 8.
+##   0:13:48  Writing trace to VCD file: engine_0/trace113.vcd
+##   0:13:54  Writing trace to Verilog testbench: engine_0/trace113_tb.v
+##   0:13:55  Writing trace to constraints file: engine_0/trace113.smtc
+##   0:13:55  Checking cover reachability in step 8..
+##   0:13:55  Reached cover statement at SignalTracker.sv:1496.22-1497.48 ($cover$SignalTracker.sv:1496$3940) in step 8.
+##   0:13:55  Writing trace to VCD file: engine_0/trace114.vcd
+##   0:14:02  Writing trace to Verilog testbench: engine_0/trace114_tb.v
+##   0:14:02  Writing trace to constraints file: engine_0/trace114.smtc
+##   0:14:02  Checking cover reachability in step 8..
+##   0:14:02  Reached cover statement at SignalTracker.sv:1490.22-1491.48 ($cover$SignalTracker.sv:1490$3938) in step 8.
+##   0:14:02  Writing trace to VCD file: engine_0/trace115.vcd
+##   0:14:09  Writing trace to Verilog testbench: engine_0/trace115_tb.v
+##   0:14:09  Writing trace to constraints file: engine_0/trace115.smtc
+##   0:14:09  Checking cover reachability in step 8..
+##   0:14:10  Reached cover statement at SignalTracker.sv:1493.22-1494.48 ($cover$SignalTracker.sv:1493$3939) in step 8.
+##   0:14:10  Reached cover statement at SignalTracker.sv:1814.22-1815.60 ($cover$SignalTracker.sv:1814$4046) in step 8.
+##   0:14:10  Writing trace to VCD file: engine_0/trace116.vcd
+##   0:14:17  Writing trace to Verilog testbench: engine_0/trace116_tb.v
+##   0:14:17  Writing trace to constraints file: engine_0/trace116.smtc
+##   0:14:17  Checking cover reachability in step 8..
+##   0:14:18  Checking cover reachability in step 9..
+##   0:14:18  Reached cover statement at SignalTracker.sv:1262.22-1263.35 ($cover$SignalTracker.sv:1262$3862) in step 9.
+##   0:14:18  Reached cover statement at SignalTracker.sv:1295.22-1296.50 ($cover$SignalTracker.sv:1295$3873) in step 9.
+##   0:14:18  Reached cover statement at SignalTracker.sv:1907.22-1908.35 ($cover$SignalTracker.sv:1907$4077) in step 9.
+##   0:14:18  Reached cover statement at SignalTracker.sv:1979.22-1980.38 ($cover$SignalTracker.sv:1979$4101) in step 9.
+##   0:14:18  Reached cover statement at SignalTracker.sv:2006.22-2007.44 ($cover$SignalTracker.sv:2006$4110) in step 9.
+##   0:14:18  Writing trace to VCD file: engine_0/trace117.vcd
+##   0:14:26  Writing trace to Verilog testbench: engine_0/trace117_tb.v
+##   0:14:26  Writing trace to constraints file: engine_0/trace117.smtc
+##   0:14:26  Checking cover reachability in step 9..
+##   0:14:27  Checking cover reachability in step 10..
+##   0:14:29  Reached cover statement at SignalTracker.sv:1070.22-1071.38 ($cover$SignalTracker.sv:1070$3798) in step 10.
+##   0:14:29  Reached cover statement at SignalTracker.sv:1079.22-1080.40 ($cover$SignalTracker.sv:1079$3801) in step 10.
+##   0:14:29  Reached cover statement at SignalTracker.sv:2030.22-2031.41 ($cover$SignalTracker.sv:2030$4118) in step 10.
+##   0:14:29  Reached cover statement at SignalTracker.sv:2045.22-2046.43 ($cover$SignalTracker.sv:2045$4123) in step 10.
+##   0:14:29  Reached cover statement at SignalTracker.sv:2048.22-2049.46 ($cover$SignalTracker.sv:2048$4124) in step 10.
+##   0:14:29  Reached cover statement at SignalTracker.sv:2057.22-2058.36 ($cover$SignalTracker.sv:2057$4127) in step 10.
+##   0:14:29  Writing trace to VCD file: engine_0/trace118.vcd
+##   0:14:40  Writing trace to Verilog testbench: engine_0/trace118_tb.v
+##   0:14:40  Writing trace to constraints file: engine_0/trace118.smtc
+##   0:14:40  Checking cover reachability in step 10..
+##   0:14:41  Reached cover statement at SignalTracker.sv:1703.22-1704.55 ($cover$SignalTracker.sv:1703$4009) in step 10.
+##   0:14:41  Reached cover statement at SignalTracker.sv:923.22-924.51 ($cover$SignalTracker.sv:923$3749) in step 10.
+##   0:14:41  Writing trace to VCD file: engine_0/trace119.vcd
+##   0:14:50  Writing trace to Verilog testbench: engine_0/trace119_tb.v
+##   0:14:51  Writing trace to constraints file: engine_0/trace119.smtc
+##   0:14:51  Checking cover reachability in step 10..
+##   0:14:51  Reached cover statement at SignalTracker.sv:1661.22-1662.47 ($cover$SignalTracker.sv:1661$3995) in step 10.
+##   0:14:51  Writing trace to VCD file: engine_0/trace120.vcd
+##   0:15:00  Writing trace to Verilog testbench: engine_0/trace120_tb.v
+##   0:15:00  Writing trace to constraints file: engine_0/trace120.smtc
+##   0:15:01  Checking cover reachability in step 10..
+##   0:15:01  Reached cover statement at SignalTracker.sv:1628.22-1629.45 ($cover$SignalTracker.sv:1628$3984) in step 10.
+##   0:15:01  Writing trace to VCD file: engine_0/trace121.vcd
+##   0:15:10  Writing trace to Verilog testbench: engine_0/trace121_tb.v
+##   0:15:11  Writing trace to constraints file: engine_0/trace121.smtc
+##   0:15:11  Checking cover reachability in step 10..
+##   0:15:11  Checking cover reachability in step 11..
+##   0:15:12  Reached cover statement at SignalTracker.sv:1679.22-1680.47 ($cover$SignalTracker.sv:1679$4001) in step 11.
+##   0:15:12  Writing trace to VCD file: engine_0/trace122.vcd
+##   0:15:23  Writing trace to Verilog testbench: engine_0/trace122_tb.v
+##   0:15:23  Writing trace to constraints file: engine_0/trace122.smtc
+##   0:15:23  Checking cover reachability in step 11..
+##   0:15:24  Reached cover statement at SignalTracker.sv:2021.22-2022.36 ($cover$SignalTracker.sv:2021$4115) in step 11.
+##   0:15:24  Reached cover statement at SignalTracker.sv:2033.22-2034.45 ($cover$SignalTracker.sv:2033$4119) in step 11.
+##   0:15:24  Writing trace to VCD file: engine_0/trace123.vcd
+##   0:15:34  Writing trace to Verilog testbench: engine_0/trace123_tb.v
+##   0:15:34  Writing trace to constraints file: engine_0/trace123.smtc
+##   0:15:34  Checking cover reachability in step 11..
+##   0:15:34  Checking cover reachability in step 12..
+##   0:15:36  Reached cover statement at SignalTracker.sv:1064.22-1065.52 ($cover$SignalTracker.sv:1064$3796) in step 12.
+##   0:15:36  Writing trace to VCD file: engine_0/trace124.vcd
+##   0:15:48  Writing trace to Verilog testbench: engine_0/trace124_tb.v
+##   0:15:48  Writing trace to constraints file: engine_0/trace124.smtc
+##   0:15:48  Checking cover reachability in step 12..
+##   0:15:49  Checking cover reachability in step 13..
+##   0:15:50  Checking cover reachability in step 14..
+##   0:15:56  Reached cover statement at SignalTracker.sv:1280.22-1281.34 ($cover$SignalTracker.sv:1280$3868) in step 14.
+##   0:15:56  Reached cover statement at SignalTracker.sv:1949.22-1950.38 ($cover$SignalTracker.sv:1949$4091) in step 14.
+##   0:15:56  Reached cover statement at SignalTracker.sv:365.22-366.51 ($cover$SignalTracker.sv:365$3563) in step 14.
+##   0:15:56  Writing trace to VCD file: engine_0/trace125.vcd
+##   0:16:10  Writing trace to Verilog testbench: engine_0/trace125_tb.v
+##   0:16:10  Writing trace to constraints file: engine_0/trace125.smtc
+##   0:16:11  Checking cover reachability in step 14..
+##   0:16:11  Checking cover reachability in step 15..
+##   0:16:13  Reached cover statement at SignalTracker.sv:1265.22-1266.35 ($cover$SignalTracker.sv:1265$3863) in step 15.
+##   0:16:13  Reached cover statement at SignalTracker.sv:1310.22-1311.49 ($cover$SignalTracker.sv:1310$3878) in step 15.
+##   0:16:13  Reached cover statement at SignalTracker.sv:1934.22-1935.37 ($cover$SignalTracker.sv:1934$4086) in step 15.
+##   0:16:13  Reached cover statement at SignalTracker.sv:1964.22-1965.38 ($cover$SignalTracker.sv:1964$4096) in step 15.
+##   0:16:13  Writing trace to VCD file: engine_0/trace126.vcd
+##   0:16:28  Writing trace to Verilog testbench: engine_0/trace126_tb.v
+##   0:16:28  Writing trace to constraints file: engine_0/trace126.smtc
+##   0:16:28  Checking cover reachability in step 15..
+##   0:16:29  Checking cover reachability in step 16..
+##   0:16:30  Reached cover statement at SignalTracker.sv:1268.22-1269.35 ($cover$SignalTracker.sv:1268$3864) in step 16.
+##   0:16:30  Reached cover statement at SignalTracker.sv:2060.22-2061.44 ($cover$SignalTracker.sv:2060$4128) in step 16.
+##   0:16:30  Reached cover statement at SignalTracker.sv:2063.22-2064.47 ($cover$SignalTracker.sv:2063$4129) in step 16.
+##   0:16:30  Writing trace to VCD file: engine_0/trace127.vcd
+##   0:16:46  Writing trace to Verilog testbench: engine_0/trace127_tb.v
+##   0:16:46  Writing trace to constraints file: engine_0/trace127.smtc
+##   0:16:46  Checking cover reachability in step 16..
+##   0:16:47  Checking cover reachability in step 17..
+##   0:16:49  Reached cover statement at SignalTracker.sv:1271.22-1272.35 ($cover$SignalTracker.sv:1271$3865) in step 17.
+##   0:16:49  Reached cover statement at SignalTracker.sv:1274.22-1275.35 ($cover$SignalTracker.sv:1274$3866) in step 17.
+##   0:16:49  Reached cover statement at SignalTracker.sv:1292.22-1293.50 ($cover$SignalTracker.sv:1292$3872) in step 17.
+##   0:16:49  Reached cover statement at SignalTracker.sv:1967.22-1968.38 ($cover$SignalTracker.sv:1967$4097) in step 17.
+##   0:16:49  Reached cover statement at SignalTracker.sv:1970.22-1971.38 ($cover$SignalTracker.sv:1970$4098) in step 17.
+##   0:16:49  Writing trace to VCD file: engine_0/trace128.vcd
+##   0:17:05  Writing trace to Verilog testbench: engine_0/trace128_tb.v
+##   0:17:06  Writing trace to constraints file: engine_0/trace128.smtc
+##   0:17:06  Checking cover reachability in step 17..
+##   0:17:06  Checking cover reachability in step 18..
+##   0:17:10  Reached cover statement at SignalTracker.sv:1973.22-1974.38 ($cover$SignalTracker.sv:1973$4099) in step 18.
+##   0:17:10  Writing trace to VCD file: engine_0/trace129.vcd
+##   0:17:27  Writing trace to Verilog testbench: engine_0/trace129_tb.v
+##   0:17:27  Writing trace to constraints file: engine_0/trace129.smtc
+##   0:17:27  Checking cover reachability in step 18..
+##   0:17:28  Checking cover reachability in step 19..
+##   0:17:29  Checking cover reachability in step 20..
+##   0:17:29  Checking cover reachability in step 21..
+##   0:17:30  Checking cover reachability in step 22..
+##   0:17:31  Checking cover reachability in step 23..
+##   0:17:32  Checking cover reachability in step 24..
+##   0:17:32  Unreached cover statement at SignalTracker.sv:1205.22-1206.52 ($cover$SignalTracker.sv:1205$3843).
+##   0:17:32  Unreached cover statement at SignalTracker.sv:2108.22-2109.38 ($cover$SignalTracker.sv:2108$4144).
+##   0:17:32  Unreached cover statement at SignalTracker.sv:2114.22-2115.38 ($cover$SignalTracker.sv:2114$4146).
+##   0:17:32  Unreached cover statement at SignalTracker.sv:2117.22-2118.38 ($cover$SignalTracker.sv:2117$4147).
+##   0:17:32  Unreached cover statement at SignalTracker.sv:2120.22-2121.38 ($cover$SignalTracker.sv:2120$4148).
+##   0:17:32  Unreached cover statement at SignalTracker.sv:2180.22-2181.41 ($cover$SignalTracker.sv:2180$4168).
+##   0:17:33  Status: failed

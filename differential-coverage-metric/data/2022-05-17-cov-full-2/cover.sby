@@ -1,0 +1,15 @@
+[options]
+mode cover
+depth 100
+
+[engines]
+smtbmc boolector
+
+[script]
+read -formal TileAndMemTop.sv
+read -formal SignalTracker.sv
+prep -top TileAndMemTop
+
+[files]
+TileAndMemTop.sv
+SignalTracker.sv

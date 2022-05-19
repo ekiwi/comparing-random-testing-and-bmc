@@ -1,0 +1,913 @@
+SBY  0:06:07 [cover] Copy '/home/kevin/d/bug-mining-data/data/2022-05-17-cov-full-3/TileAndMemTop.sv' to '/home/kevin/d/bug-mining-data/data/2022-05-17-cov-full-3/cover/src/TileAndMemTop.sv'.
+SBY  0:06:07 [cover] Copy '/home/kevin/d/bug-mining-data/data/2022-05-17-cov-full-3/SignalTracker.sv' to '/home/kevin/d/bug-mining-data/data/2022-05-17-cov-full-3/cover/src/SignalTracker.sv'.
+SBY  0:06:07 [cover] engine_0: smtbmc boolector
+SBY  0:06:07 [cover] base: starting process "cd cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY  0:06:25 [cover] base: finished (returncode=0)
+SBY  0:06:26 [cover] smt2: starting process "cd cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY  0:06:35 [cover] smt2: finished (returncode=0)
+SBY  0:06:35 [cover] engine_0: starting process "cd cover; yosys-smtbmc -s boolector --presat --unroll -c --noprogress -t 100  --append 0 --dump-vcd engine_0/trace%.vcd --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY  0:06:35 [cover] engine_0: ##   0:00:00  Solver: boolector
+SBY  0:06:47 [cover] engine_0: ##   0:00:12  Checking cover reachability in step 0..
+SBY  0:06:48 [cover] engine_0: ##   0:00:13  Checking cover reachability in step 1..
+SBY  0:06:49 [cover] engine_0: ##   0:00:13  Checking cover reachability in step 2..
+SBY  0:06:49 [cover] engine_0: ##   0:00:14  Checking cover reachability in step 3..
+SBY  0:06:50 [cover] engine_0: ##   0:00:15  Checking cover reachability in step 4..
+SBY  0:06:50 [cover] engine_0: ##   0:00:15  Checking cover reachability in step 5..
+SBY  0:06:51 [cover] engine_0: ##   0:00:16  Checking cover reachability in step 6..
+SBY  0:06:52 [cover] engine_0: ##   0:00:16  Checking cover reachability in step 7..
+SBY  0:06:53 [cover] engine_0: ##   0:00:17  Checking cover reachability in step 8..
+SBY  0:06:53 [cover] engine_0: ##   0:00:18  Checking cover reachability in step 9..
+SBY  0:06:55 [cover] engine_0: ##   0:00:19  Checking cover reachability in step 10..
+SBY  0:06:56 [cover] engine_0: ##   0:00:21  Checking cover reachability in step 11..
+SBY  0:06:59 [cover] engine_0: ##   0:00:23  Checking cover reachability in step 12..
+SBY  0:07:03 [cover] engine_0: ##   0:00:28  Checking cover reachability in step 13..
+SBY  0:07:07 [cover] engine_0: ##   0:00:32  Reached cover statement at SignalTracker.sv:2096.22-2097.85 ($cover$SignalTracker.sv:2096$9885) in step 13.
+SBY  0:07:07 [cover] engine_0: ##   0:00:32  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  0:07:16 [cover] engine_0: ##   0:00:41  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  0:07:17 [cover] engine_0: ##   0:00:41  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  0:07:17 [cover] engine_0: ##   0:00:42  Checking cover reachability in step 13..
+SBY  0:07:18 [cover] engine_0: ##   0:00:42  Reached cover statement at SignalTracker.sv:2099.22-2100.83 ($cover$SignalTracker.sv:2099$9886) in step 13.
+SBY  0:07:18 [cover] engine_0: ##   0:00:42  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  0:07:27 [cover] engine_0: ##   0:00:52  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  0:07:27 [cover] engine_0: ##   0:00:52  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  0:07:28 [cover] engine_0: ##   0:00:52  Checking cover reachability in step 13..
+SBY  0:07:28 [cover] engine_0: ##   0:00:53  Checking cover reachability in step 14..
+SBY  0:07:32 [cover] engine_0: ##   0:00:57  Reached cover statement at SignalTracker.sv:3242.22-3243.98 ($cover$SignalTracker.sv:3242$10267) in step 14.
+SBY  0:07:32 [cover] engine_0: ##   0:00:57  Writing trace to VCD file: engine_0/trace2.vcd
+SBY  0:07:42 [cover] engine_0: ##   0:01:07  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY  0:07:42 [cover] engine_0: ##   0:01:07  Writing trace to constraints file: engine_0/trace2.smtc
+SBY  0:07:43 [cover] engine_0: ##   0:01:07  Checking cover reachability in step 14..
+SBY  0:07:47 [cover] engine_0: ##   0:01:12  Reached cover statement at SignalTracker.sv:3245.22-3246.98 ($cover$SignalTracker.sv:3245$10268) in step 14.
+SBY  0:07:47 [cover] engine_0: ##   0:01:12  Reached cover statement at SignalTracker.sv:3581.22-3582.76 ($cover$SignalTracker.sv:3581$10380) in step 14.
+SBY  0:07:47 [cover] engine_0: ##   0:01:12  Writing trace to VCD file: engine_0/trace3.vcd
+SBY  0:07:57 [cover] engine_0: ##   0:01:22  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY  0:07:58 [cover] engine_0: ##   0:01:22  Writing trace to constraints file: engine_0/trace3.smtc
+SBY  0:07:58 [cover] engine_0: ##   0:01:23  Checking cover reachability in step 14..
+SBY  0:07:59 [cover] engine_0: ##   0:01:23  Reached cover statement at SignalTracker.sv:3185.22-3186.96 ($cover$SignalTracker.sv:3185$10248) in step 14.
+SBY  0:07:59 [cover] engine_0: ##   0:01:23  Reached cover statement at SignalTracker.sv:440.22-441.92 ($cover$SignalTracker.sv:440$9333) in step 14.
+SBY  0:07:59 [cover] engine_0: ##   0:01:23  Writing trace to VCD file: engine_0/trace4.vcd
+SBY  0:08:09 [cover] engine_0: ##   0:01:34  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY  0:08:09 [cover] engine_0: ##   0:01:34  Writing trace to constraints file: engine_0/trace4.smtc
+SBY  0:08:09 [cover] engine_0: ##   0:01:34  Checking cover reachability in step 14..
+SBY  0:08:10 [cover] engine_0: ##   0:01:35  Reached cover statement at SignalTracker.sv:2111.22-2112.85 ($cover$SignalTracker.sv:2111$9890) in step 14.
+SBY  0:08:10 [cover] engine_0: ##   0:01:35  Reached cover statement at SignalTracker.sv:2132.22-2133.72 ($cover$SignalTracker.sv:2132$9897) in step 14.
+SBY  0:08:10 [cover] engine_0: ##   0:01:35  Reached cover statement at SignalTracker.sv:2150.22-2151.74 ($cover$SignalTracker.sv:2150$9903) in step 14.
+SBY  0:08:10 [cover] engine_0: ##   0:01:35  Writing trace to VCD file: engine_0/trace5.vcd
+SBY  0:08:20 [cover] engine_0: ##   0:01:45  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY  0:08:21 [cover] engine_0: ##   0:01:45  Writing trace to constraints file: engine_0/trace5.smtc
+SBY  0:08:21 [cover] engine_0: ##   0:01:46  Checking cover reachability in step 14..
+SBY  0:08:22 [cover] engine_0: ##   0:01:47  Reached cover statement at SignalTracker.sv:2048.22-2049.87 ($cover$SignalTracker.sv:2048$9869) in step 14.
+SBY  0:08:22 [cover] engine_0: ##   0:01:47  Reached cover statement at SignalTracker.sv:359.22-360.76 ($cover$SignalTracker.sv:359$9306) in step 14.
+SBY  0:08:22 [cover] engine_0: ##   0:01:47  Reached cover statement at SignalTracker.sv:4094.22-4095.91 ($cover$SignalTracker.sv:4094$10551) in step 14.
+SBY  0:08:22 [cover] engine_0: ##   0:01:47  Writing trace to VCD file: engine_0/trace6.vcd
+SBY  0:08:32 [cover] engine_0: ##   0:01:57  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY  0:08:33 [cover] engine_0: ##   0:01:57  Writing trace to constraints file: engine_0/trace6.smtc
+SBY  0:08:33 [cover] engine_0: ##   0:01:58  Checking cover reachability in step 14..
+SBY  0:08:34 [cover] engine_0: ##   0:01:58  Reached cover statement at SignalTracker.sv:2090.22-2091.76 ($cover$SignalTracker.sv:2090$9883) in step 14.
+SBY  0:08:34 [cover] engine_0: ##   0:01:58  Reached cover statement at SignalTracker.sv:2093.22-2094.76 ($cover$SignalTracker.sv:2093$9884) in step 14.
+SBY  0:08:34 [cover] engine_0: ##   0:01:59  Writing trace to VCD file: engine_0/trace7.vcd
+SBY  0:08:44 [cover] engine_0: ##   0:02:09  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY  0:08:44 [cover] engine_0: ##   0:02:09  Writing trace to constraints file: engine_0/trace7.smtc
+SBY  0:08:45 [cover] engine_0: ##   0:02:09  Checking cover reachability in step 14..
+SBY  0:08:45 [cover] engine_0: ##   0:02:10  Reached cover statement at SignalTracker.sv:914.22-915.93 ($cover$SignalTracker.sv:914$9491) in step 14.
+SBY  0:08:45 [cover] engine_0: ##   0:02:10  Writing trace to VCD file: engine_0/trace8.vcd
+SBY  0:08:56 [cover] engine_0: ##   0:02:21  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+SBY  0:08:56 [cover] engine_0: ##   0:02:21  Writing trace to constraints file: engine_0/trace8.smtc
+SBY  0:08:56 [cover] engine_0: ##   0:02:21  Checking cover reachability in step 14..
+SBY  0:08:57 [cover] engine_0: ##   0:02:22  Reached cover statement at SignalTracker.sv:926.22-927.93 ($cover$SignalTracker.sv:926$9495) in step 14.
+SBY  0:08:57 [cover] engine_0: ##   0:02:22  Writing trace to VCD file: engine_0/trace9.vcd
+SBY  0:09:07 [cover] engine_0: ##   0:02:32  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+SBY  0:09:08 [cover] engine_0: ##   0:02:32  Writing trace to constraints file: engine_0/trace9.smtc
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Checking cover reachability in step 14..
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Reached cover statement at SignalTracker.sv:1262.22-1263.105 ($cover$SignalTracker.sv:1262$9607) in step 14.
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Reached cover statement at SignalTracker.sv:1757.22-1758.91 ($cover$SignalTracker.sv:1757$9772) in step 14.
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Reached cover statement at SignalTracker.sv:2390.22-2391.99 ($cover$SignalTracker.sv:2390$9983) in step 14.
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Reached cover statement at SignalTracker.sv:956.22-957.93 ($cover$SignalTracker.sv:956$9505) in step 14.
+SBY  0:09:08 [cover] engine_0: ##   0:02:33  Writing trace to VCD file: engine_0/trace10.vcd
+SBY  0:09:19 [cover] engine_0: ##   0:02:44  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+SBY  0:09:19 [cover] engine_0: ##   0:02:44  Writing trace to constraints file: engine_0/trace10.smtc
+SBY  0:09:19 [cover] engine_0: ##   0:02:44  Checking cover reachability in step 14..
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Reached cover statement at SignalTracker.sv:1256.22-1257.105 ($cover$SignalTracker.sv:1256$9605) in step 14.
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Reached cover statement at SignalTracker.sv:2378.22-2379.99 ($cover$SignalTracker.sv:2378$9979) in step 14.
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Reached cover statement at SignalTracker.sv:3284.22-3285.77 ($cover$SignalTracker.sv:3284$10281) in step 14.
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Reached cover statement at SignalTracker.sv:3293.22-3294.77 ($cover$SignalTracker.sv:3293$10284) in step 14.
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Reached cover statement at SignalTracker.sv:3299.22-3300.77 ($cover$SignalTracker.sv:3299$10286) in step 14.
+SBY  0:09:20 [cover] engine_0: ##   0:02:45  Writing trace to VCD file: engine_0/trace11.vcd
+SBY  0:09:31 [cover] engine_0: ##   0:02:55  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+SBY  0:09:31 [cover] engine_0: ##   0:02:56  Writing trace to constraints file: engine_0/trace11.smtc
+SBY  0:09:31 [cover] engine_0: ##   0:02:56  Checking cover reachability in step 14..
+SBY  0:09:32 [cover] engine_0: ##   0:02:57  Reached cover statement at SignalTracker.sv:2324.22-2325.99 ($cover$SignalTracker.sv:2324$9961) in step 14.
+SBY  0:09:32 [cover] engine_0: ##   0:02:57  Writing trace to VCD file: engine_0/trace12.vcd
+SBY  0:09:43 [cover] engine_0: ##   0:03:07  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+SBY  0:09:43 [cover] engine_0: ##   0:03:08  Writing trace to constraints file: engine_0/trace12.smtc
+SBY  0:09:43 [cover] engine_0: ##   0:03:08  Checking cover reachability in step 14..
+SBY  0:09:44 [cover] engine_0: ##   0:03:09  Reached cover statement at SignalTracker.sv:2312.22-2313.93 ($cover$SignalTracker.sv:2312$9957) in step 14.
+SBY  0:09:44 [cover] engine_0: ##   0:03:09  Writing trace to VCD file: engine_0/trace13.vcd
+SBY  0:09:54 [cover] engine_0: ##   0:03:19  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+SBY  0:09:55 [cover] engine_0: ##   0:03:19  Writing trace to constraints file: engine_0/trace13.smtc
+SBY  0:09:55 [cover] engine_0: ##   0:03:19  Checking cover reachability in step 14..
+SBY  0:09:55 [cover] engine_0: ##   0:03:20  Reached cover statement at SignalTracker.sv:2297.22-2298.93 ($cover$SignalTracker.sv:2297$9952) in step 14.
+SBY  0:09:55 [cover] engine_0: ##   0:03:20  Writing trace to VCD file: engine_0/trace14.vcd
+SBY  0:10:06 [cover] engine_0: ##   0:03:31  Writing trace to Verilog testbench: engine_0/trace14_tb.v
+SBY  0:10:06 [cover] engine_0: ##   0:03:31  Writing trace to constraints file: engine_0/trace14.smtc
+SBY  0:10:06 [cover] engine_0: ##   0:03:31  Checking cover reachability in step 14..
+SBY  0:10:07 [cover] engine_0: ##   0:03:32  Reached cover statement at SignalTracker.sv:2282.22-2283.93 ($cover$SignalTracker.sv:2282$9947) in step 14.
+SBY  0:10:07 [cover] engine_0: ##   0:03:32  Writing trace to VCD file: engine_0/trace15.vcd
+SBY  0:10:17 [cover] engine_0: ##   0:03:42  Writing trace to Verilog testbench: engine_0/trace15_tb.v
+SBY  0:10:18 [cover] engine_0: ##   0:03:42  Writing trace to constraints file: engine_0/trace15.smtc
+SBY  0:10:18 [cover] engine_0: ##   0:03:42  Checking cover reachability in step 14..
+SBY  0:10:18 [cover] engine_0: ##   0:03:43  Reached cover statement at SignalTracker.sv:2270.22-2271.93 ($cover$SignalTracker.sv:2270$9943) in step 14.
+SBY  0:10:18 [cover] engine_0: ##   0:03:43  Writing trace to VCD file: engine_0/trace16.vcd
+SBY  0:10:29 [cover] engine_0: ##   0:03:54  Writing trace to Verilog testbench: engine_0/trace16_tb.v
+SBY  0:10:29 [cover] engine_0: ##   0:03:54  Writing trace to constraints file: engine_0/trace16.smtc
+SBY  0:10:29 [cover] engine_0: ##   0:03:54  Checking cover reachability in step 14..
+SBY  0:10:30 [cover] engine_0: ##   0:03:55  Reached cover statement at SignalTracker.sv:1961.22-1962.87 ($cover$SignalTracker.sv:1961$9840) in step 14.
+SBY  0:10:30 [cover] engine_0: ##   0:03:55  Writing trace to VCD file: engine_0/trace17.vcd
+SBY  0:10:40 [cover] engine_0: ##   0:04:05  Writing trace to Verilog testbench: engine_0/trace17_tb.v
+SBY  0:10:41 [cover] engine_0: ##   0:04:05  Writing trace to constraints file: engine_0/trace17.smtc
+SBY  0:10:41 [cover] engine_0: ##   0:04:06  Checking cover reachability in step 14..
+SBY  0:10:42 [cover] engine_0: ##   0:04:06  Reached cover statement at SignalTracker.sv:1967.22-1968.87 ($cover$SignalTracker.sv:1967$9842) in step 14.
+SBY  0:10:42 [cover] engine_0: ##   0:04:06  Writing trace to VCD file: engine_0/trace18.vcd
+SBY  0:10:52 [cover] engine_0: ##   0:04:17  Writing trace to Verilog testbench: engine_0/trace18_tb.v
+SBY  0:10:52 [cover] engine_0: ##   0:04:17  Writing trace to constraints file: engine_0/trace18.smtc
+SBY  0:10:53 [cover] engine_0: ##   0:04:17  Checking cover reachability in step 14..
+SBY  0:10:54 [cover] engine_0: ##   0:04:18  Reached cover statement at SignalTracker.sv:1973.22-1974.87 ($cover$SignalTracker.sv:1973$9844) in step 14.
+SBY  0:10:54 [cover] engine_0: ##   0:04:18  Writing trace to VCD file: engine_0/trace19.vcd
+SBY  0:11:04 [cover] engine_0: ##   0:04:29  Writing trace to Verilog testbench: engine_0/trace19_tb.v
+SBY  0:11:04 [cover] engine_0: ##   0:04:29  Writing trace to constraints file: engine_0/trace19.smtc
+SBY  0:11:05 [cover] engine_0: ##   0:04:29  Checking cover reachability in step 14..
+SBY  0:11:05 [cover] engine_0: ##   0:04:30  Reached cover statement at SignalTracker.sv:1001.22-1002.93 ($cover$SignalTracker.sv:1001$9520) in step 14.
+SBY  0:11:05 [cover] engine_0: ##   0:04:30  Writing trace to VCD file: engine_0/trace20.vcd
+SBY  0:11:16 [cover] engine_0: ##   0:04:40  Writing trace to Verilog testbench: engine_0/trace20_tb.v
+SBY  0:11:16 [cover] engine_0: ##   0:04:41  Writing trace to constraints file: engine_0/trace20.smtc
+SBY  0:11:16 [cover] engine_0: ##   0:04:41  Checking cover reachability in step 14..
+SBY  0:11:17 [cover] engine_0: ##   0:04:42  Reached cover statement at SignalTracker.sv:1979.22-1980.87 ($cover$SignalTracker.sv:1979$9846) in step 14.
+SBY  0:11:17 [cover] engine_0: ##   0:04:42  Writing trace to VCD file: engine_0/trace21.vcd
+SBY  0:11:27 [cover] engine_0: ##   0:04:52  Writing trace to Verilog testbench: engine_0/trace21_tb.v
+SBY  0:11:27 [cover] engine_0: ##   0:04:52  Writing trace to constraints file: engine_0/trace21.smtc
+SBY  0:11:28 [cover] engine_0: ##   0:04:52  Checking cover reachability in step 14..
+SBY  0:11:28 [cover] engine_0: ##   0:04:53  Reached cover statement at SignalTracker.sv:629.22-630.92 ($cover$SignalTracker.sv:629$9396) in step 14.
+SBY  0:11:28 [cover] engine_0: ##   0:04:53  Writing trace to VCD file: engine_0/trace22.vcd
+SBY  0:11:39 [cover] engine_0: ##   0:05:03  Writing trace to Verilog testbench: engine_0/trace22_tb.v
+SBY  0:11:39 [cover] engine_0: ##   0:05:04  Writing trace to constraints file: engine_0/trace22.smtc
+SBY  0:11:39 [cover] engine_0: ##   0:05:04  Checking cover reachability in step 14..
+SBY  0:11:40 [cover] engine_0: ##   0:05:05  Reached cover statement at SignalTracker.sv:1988.22-1989.87 ($cover$SignalTracker.sv:1988$9849) in step 14.
+SBY  0:11:40 [cover] engine_0: ##   0:05:05  Writing trace to VCD file: engine_0/trace23.vcd
+SBY  0:11:50 [cover] engine_0: ##   0:05:15  Writing trace to Verilog testbench: engine_0/trace23_tb.v
+SBY  0:11:50 [cover] engine_0: ##   0:05:15  Writing trace to constraints file: engine_0/trace23.smtc
+SBY  0:11:51 [cover] engine_0: ##   0:05:15  Checking cover reachability in step 14..
+SBY  0:11:51 [cover] engine_0: ##   0:05:16  Reached cover statement at SignalTracker.sv:1994.22-1995.87 ($cover$SignalTracker.sv:1994$9851) in step 14.
+SBY  0:11:51 [cover] engine_0: ##   0:05:16  Writing trace to VCD file: engine_0/trace24.vcd
+SBY  0:12:01 [cover] engine_0: ##   0:05:26  Writing trace to Verilog testbench: engine_0/trace24_tb.v
+SBY  0:12:02 [cover] engine_0: ##   0:05:26  Writing trace to constraints file: engine_0/trace24.smtc
+SBY  0:12:02 [cover] engine_0: ##   0:05:27  Checking cover reachability in step 14..
+SBY  0:12:03 [cover] engine_0: ##   0:05:27  Reached cover statement at SignalTracker.sv:2003.22-2004.87 ($cover$SignalTracker.sv:2003$9854) in step 14.
+SBY  0:12:03 [cover] engine_0: ##   0:05:27  Writing trace to VCD file: engine_0/trace25.vcd
+SBY  0:12:13 [cover] engine_0: ##   0:05:38  Writing trace to Verilog testbench: engine_0/trace25_tb.v
+SBY  0:12:13 [cover] engine_0: ##   0:05:38  Writing trace to constraints file: engine_0/trace25.smtc
+SBY  0:12:13 [cover] engine_0: ##   0:05:38  Checking cover reachability in step 14..
+SBY  0:12:14 [cover] engine_0: ##   0:05:39  Reached cover statement at SignalTracker.sv:2009.22-2010.87 ($cover$SignalTracker.sv:2009$9856) in step 14.
+SBY  0:12:14 [cover] engine_0: ##   0:05:39  Writing trace to VCD file: engine_0/trace26.vcd
+SBY  0:12:24 [cover] engine_0: ##   0:05:49  Writing trace to Verilog testbench: engine_0/trace26_tb.v
+SBY  0:12:25 [cover] engine_0: ##   0:05:49  Writing trace to constraints file: engine_0/trace26.smtc
+SBY  0:12:25 [cover] engine_0: ##   0:05:50  Checking cover reachability in step 14..
+SBY  0:12:26 [cover] engine_0: ##   0:05:50  Reached cover statement at SignalTracker.sv:2018.22-2019.87 ($cover$SignalTracker.sv:2018$9859) in step 14.
+SBY  0:12:26 [cover] engine_0: ##   0:05:50  Writing trace to VCD file: engine_0/trace27.vcd
+SBY  0:12:36 [cover] engine_0: ##   0:06:01  Writing trace to Verilog testbench: engine_0/trace27_tb.v
+SBY  0:12:36 [cover] engine_0: ##   0:06:01  Writing trace to constraints file: engine_0/trace27.smtc
+SBY  0:12:36 [cover] engine_0: ##   0:06:01  Checking cover reachability in step 14..
+SBY  0:12:37 [cover] engine_0: ##   0:06:02  Reached cover statement at SignalTracker.sv:2024.22-2025.87 ($cover$SignalTracker.sv:2024$9861) in step 14.
+SBY  0:12:37 [cover] engine_0: ##   0:06:02  Writing trace to VCD file: engine_0/trace28.vcd
+SBY  0:12:47 [cover] engine_0: ##   0:06:12  Writing trace to Verilog testbench: engine_0/trace28_tb.v
+SBY  0:12:48 [cover] engine_0: ##   0:06:13  Writing trace to constraints file: engine_0/trace28.smtc
+SBY  0:12:48 [cover] engine_0: ##   0:06:13  Checking cover reachability in step 14..
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:2153.22-2154.86 ($cover$SignalTracker.sv:2153$9904) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:2717.22-2718.87 ($cover$SignalTracker.sv:2717$10092) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:2936.22-2937.94 ($cover$SignalTracker.sv:2936$10165) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:3401.22-3402.77 ($cover$SignalTracker.sv:3401$10320) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:341.22-342.63 ($cover$SignalTracker.sv:341$9300) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Reached cover statement at SignalTracker.sv:4076.22-4077.78 ($cover$SignalTracker.sv:4076$10545) in step 14.
+SBY  0:12:49 [cover] engine_0: ##   0:06:14  Writing trace to VCD file: engine_0/trace29.vcd
+SBY  0:12:59 [cover] engine_0: ##   0:06:24  Writing trace to Verilog testbench: engine_0/trace29_tb.v
+SBY  0:12:59 [cover] engine_0: ##   0:06:24  Writing trace to constraints file: engine_0/trace29.smtc
+SBY  0:13:00 [cover] engine_0: ##   0:06:24  Checking cover reachability in step 14..
+SBY  0:13:00 [cover] engine_0: ##   0:06:25  Reached cover statement at SignalTracker.sv:3248.22-3249.77 ($cover$SignalTracker.sv:3248$10269) in step 14.
+SBY  0:13:00 [cover] engine_0: ##   0:06:25  Writing trace to VCD file: engine_0/trace30.vcd
+SBY  0:13:11 [cover] engine_0: ##   0:06:36  Writing trace to Verilog testbench: engine_0/trace30_tb.v
+SBY  0:13:11 [cover] engine_0: ##   0:06:36  Writing trace to constraints file: engine_0/trace30.smtc
+SBY  0:13:11 [cover] engine_0: ##   0:06:36  Checking cover reachability in step 14..
+SBY  0:13:12 [cover] engine_0: ##   0:06:37  Reached cover statement at SignalTracker.sv:1271.22-1272.87 ($cover$SignalTracker.sv:1271$9610) in step 14.
+SBY  0:13:12 [cover] engine_0: ##   0:06:37  Writing trace to VCD file: engine_0/trace31.vcd
+SBY  0:13:23 [cover] engine_0: ##   0:06:47  Writing trace to Verilog testbench: engine_0/trace31_tb.v
+SBY  0:13:23 [cover] engine_0: ##   0:06:48  Writing trace to constraints file: engine_0/trace31.smtc
+SBY  0:13:23 [cover] engine_0: ##   0:06:48  Checking cover reachability in step 14..
+SBY  0:13:24 [cover] engine_0: ##   0:06:49  Reached cover statement at SignalTracker.sv:2261.22-2262.94 ($cover$SignalTracker.sv:2261$9940) in step 14.
+SBY  0:13:24 [cover] engine_0: ##   0:06:49  Writing trace to VCD file: engine_0/trace32.vcd
+SBY  0:13:34 [cover] engine_0: ##   0:06:59  Writing trace to Verilog testbench: engine_0/trace32_tb.v
+SBY  0:13:35 [cover] engine_0: ##   0:06:59  Writing trace to constraints file: engine_0/trace32.smtc
+SBY  0:13:35 [cover] engine_0: ##   0:07:00  Checking cover reachability in step 14..
+SBY  0:13:36 [cover] engine_0: ##   0:07:01  Reached cover statement at SignalTracker.sv:3272.22-3273.77 ($cover$SignalTracker.sv:3272$10277) in step 14.
+SBY  0:13:36 [cover] engine_0: ##   0:07:01  Reached cover statement at SignalTracker.sv:3278.22-3279.77 ($cover$SignalTracker.sv:3278$10279) in step 14.
+SBY  0:13:36 [cover] engine_0: ##   0:07:01  Writing trace to VCD file: engine_0/trace33.vcd
+SBY  0:13:47 [cover] engine_0: ##   0:07:11  Writing trace to Verilog testbench: engine_0/trace33_tb.v
+SBY  0:13:47 [cover] engine_0: ##   0:07:12  Writing trace to constraints file: engine_0/trace33.smtc
+SBY  0:13:47 [cover] engine_0: ##   0:07:12  Checking cover reachability in step 14..
+SBY  0:13:48 [cover] engine_0: ##   0:07:13  Reached cover statement at SignalTracker.sv:3188.22-3189.90 ($cover$SignalTracker.sv:3188$10249) in step 14.
+SBY  0:13:48 [cover] engine_0: ##   0:07:13  Reached cover statement at SignalTracker.sv:761.22-762.93 ($cover$SignalTracker.sv:761$9440) in step 14.
+SBY  0:13:48 [cover] engine_0: ##   0:07:13  Writing trace to VCD file: engine_0/trace34.vcd
+SBY  0:13:58 [cover] engine_0: ##   0:07:23  Writing trace to Verilog testbench: engine_0/trace34_tb.v
+SBY  0:13:59 [cover] engine_0: ##   0:07:23  Writing trace to constraints file: engine_0/trace34.smtc
+SBY  0:13:59 [cover] engine_0: ##   0:07:24  Checking cover reachability in step 14..
+SBY  0:14:00 [cover] engine_0: ##   0:07:24  Reached cover statement at SignalTracker.sv:1802.22-1803.90 ($cover$SignalTracker.sv:1802$9787) in step 14.
+SBY  0:14:00 [cover] engine_0: ##   0:07:24  Reached cover statement at SignalTracker.sv:1817.22-1818.90 ($cover$SignalTracker.sv:1817$9792) in step 14.
+SBY  0:14:00 [cover] engine_0: ##   0:07:24  Reached cover statement at SignalTracker.sv:809.22-810.93 ($cover$SignalTracker.sv:809$9456) in step 14.
+SBY  0:14:00 [cover] engine_0: ##   0:07:25  Writing trace to VCD file: engine_0/trace35.vcd
+SBY  0:14:10 [cover] engine_0: ##   0:07:35  Writing trace to Verilog testbench: engine_0/trace35_tb.v
+SBY  0:14:10 [cover] engine_0: ##   0:07:35  Writing trace to constraints file: engine_0/trace35.smtc
+SBY  0:14:11 [cover] engine_0: ##   0:07:35  Checking cover reachability in step 14..
+SBY  0:14:12 [cover] engine_0: ##   0:07:36  Reached cover statement at SignalTracker.sv:3371.22-3372.66 ($cover$SignalTracker.sv:3371$10310) in step 14.
+SBY  0:14:12 [cover] engine_0: ##   0:07:36  Writing trace to VCD file: engine_0/trace36.vcd
+SBY  0:14:22 [cover] engine_0: ##   0:07:47  Writing trace to Verilog testbench: engine_0/trace36_tb.v
+SBY  0:14:22 [cover] engine_0: ##   0:07:47  Writing trace to constraints file: engine_0/trace36.smtc
+SBY  0:14:23 [cover] engine_0: ##   0:07:47  Checking cover reachability in step 14..
+SBY  0:14:23 [cover] engine_0: ##   0:07:48  Reached cover statement at SignalTracker.sv:2042.22-2043.87 ($cover$SignalTracker.sv:2042$9867) in step 14.
+SBY  0:14:23 [cover] engine_0: ##   0:07:48  Writing trace to VCD file: engine_0/trace37.vcd
+SBY  0:14:34 [cover] engine_0: ##   0:07:59  Writing trace to Verilog testbench: engine_0/trace37_tb.v
+SBY  0:14:34 [cover] engine_0: ##   0:07:59  Writing trace to constraints file: engine_0/trace37.smtc
+SBY  0:14:34 [cover] engine_0: ##   0:07:59  Checking cover reachability in step 14..
+SBY  0:14:35 [cover] engine_0: ##   0:08:00  Reached cover statement at SignalTracker.sv:2255.22-2256.94 ($cover$SignalTracker.sv:2255$9938) in step 14.
+SBY  0:14:35 [cover] engine_0: ##   0:08:00  Writing trace to VCD file: engine_0/trace38.vcd
+SBY  0:14:45 [cover] engine_0: ##   0:08:10  Writing trace to Verilog testbench: engine_0/trace38_tb.v
+SBY  0:14:46 [cover] engine_0: ##   0:08:11  Writing trace to constraints file: engine_0/trace38.smtc
+SBY  0:14:46 [cover] engine_0: ##   0:08:11  Checking cover reachability in step 14..
+SBY  0:14:47 [cover] engine_0: ##   0:08:11  Reached cover statement at SignalTracker.sv:2246.22-2247.94 ($cover$SignalTracker.sv:2246$9935) in step 14.
+SBY  0:14:47 [cover] engine_0: ##   0:08:11  Writing trace to VCD file: engine_0/trace39.vcd
+SBY  0:14:57 [cover] engine_0: ##   0:08:22  Writing trace to Verilog testbench: engine_0/trace39_tb.v
+SBY  0:14:57 [cover] engine_0: ##   0:08:22  Writing trace to constraints file: engine_0/trace39.smtc
+SBY  0:14:58 [cover] engine_0: ##   0:08:22  Checking cover reachability in step 14..
+SBY  0:14:58 [cover] engine_0: ##   0:08:23  Reached cover statement at SignalTracker.sv:2057.22-2058.87 ($cover$SignalTracker.sv:2057$9872) in step 14.
+SBY  0:14:58 [cover] engine_0: ##   0:08:23  Writing trace to VCD file: engine_0/trace40.vcd
+SBY  0:15:09 [cover] engine_0: ##   0:08:34  Writing trace to Verilog testbench: engine_0/trace40_tb.v
+SBY  0:15:09 [cover] engine_0: ##   0:08:34  Writing trace to constraints file: engine_0/trace40.smtc
+SBY  0:15:09 [cover] engine_0: ##   0:08:34  Checking cover reachability in step 14..
+SBY  0:15:10 [cover] engine_0: ##   0:08:35  Reached cover statement at SignalTracker.sv:2066.22-2067.87 ($cover$SignalTracker.sv:2066$9875) in step 14.
+SBY  0:15:10 [cover] engine_0: ##   0:08:35  Writing trace to VCD file: engine_0/trace41.vcd
+SBY  0:15:20 [cover] engine_0: ##   0:08:45  Writing trace to Verilog testbench: engine_0/trace41_tb.v
+SBY  0:15:21 [cover] engine_0: ##   0:08:46  Writing trace to constraints file: engine_0/trace41.smtc
+SBY  0:15:21 [cover] engine_0: ##   0:08:46  Checking cover reachability in step 14..
+SBY  0:15:22 [cover] engine_0: ##   0:08:46  Reached cover statement at SignalTracker.sv:2072.22-2073.87 ($cover$SignalTracker.sv:2072$9877) in step 14.
+SBY  0:15:22 [cover] engine_0: ##   0:08:46  Writing trace to VCD file: engine_0/trace42.vcd
+SBY  0:15:32 [cover] engine_0: ##   0:08:57  Writing trace to Verilog testbench: engine_0/trace42_tb.v
+SBY  0:15:32 [cover] engine_0: ##   0:08:57  Writing trace to constraints file: engine_0/trace42.smtc
+SBY  0:15:32 [cover] engine_0: ##   0:08:57  Checking cover reachability in step 14..
+SBY  0:15:33 [cover] engine_0: ##   0:08:58  Reached cover statement at SignalTracker.sv:2231.22-2232.93 ($cover$SignalTracker.sv:2231$9930) in step 14.
+SBY  0:15:33 [cover] engine_0: ##   0:08:58  Writing trace to VCD file: engine_0/trace43.vcd
+SBY  0:15:44 [cover] engine_0: ##   0:09:08  Writing trace to Verilog testbench: engine_0/trace43_tb.v
+SBY  0:15:44 [cover] engine_0: ##   0:09:09  Writing trace to constraints file: engine_0/trace43.smtc
+SBY  0:15:44 [cover] engine_0: ##   0:09:09  Checking cover reachability in step 14..
+SBY  0:15:45 [cover] engine_0: ##   0:09:10  Reached cover statement at SignalTracker.sv:3254.22-3255.77 ($cover$SignalTracker.sv:3254$10271) in step 14.
+SBY  0:15:45 [cover] engine_0: ##   0:09:10  Writing trace to VCD file: engine_0/trace44.vcd
+SBY  0:15:55 [cover] engine_0: ##   0:09:20  Writing trace to Verilog testbench: engine_0/trace44_tb.v
+SBY  0:15:55 [cover] engine_0: ##   0:09:20  Writing trace to constraints file: engine_0/trace44.smtc
+SBY  0:15:56 [cover] engine_0: ##   0:09:20  Checking cover reachability in step 14..
+SBY  0:15:57 [cover] engine_0: ##   0:09:21  Reached cover statement at SignalTracker.sv:2168.22-2169.86 ($cover$SignalTracker.sv:2168$9909) in step 14.
+SBY  0:15:57 [cover] engine_0: ##   0:09:21  Writing trace to VCD file: engine_0/trace45.vcd
+SBY  0:16:07 [cover] engine_0: ##   0:09:32  Writing trace to Verilog testbench: engine_0/trace45_tb.v
+SBY  0:16:07 [cover] engine_0: ##   0:09:32  Writing trace to constraints file: engine_0/trace45.smtc
+SBY  0:16:07 [cover] engine_0: ##   0:09:32  Checking cover reachability in step 14..
+SBY  0:16:08 [cover] engine_0: ##   0:09:33  Reached cover statement at SignalTracker.sv:1862.22-1863.90 ($cover$SignalTracker.sv:1862$9807) in step 14.
+SBY  0:16:08 [cover] engine_0: ##   0:09:33  Reached cover statement at SignalTracker.sv:776.22-777.93 ($cover$SignalTracker.sv:776$9445) in step 14.
+SBY  0:16:08 [cover] engine_0: ##   0:09:33  Writing trace to VCD file: engine_0/trace46.vcd
+SBY  0:16:18 [cover] engine_0: ##   0:09:43  Writing trace to Verilog testbench: engine_0/trace46_tb.v
+SBY  0:16:19 [cover] engine_0: ##   0:09:43  Writing trace to constraints file: engine_0/trace46.smtc
+SBY  0:16:19 [cover] engine_0: ##   0:09:44  Checking cover reachability in step 14..
+SBY  0:16:20 [cover] engine_0: ##   0:09:44  Reached cover statement at SignalTracker.sv:2177.22-2178.86 ($cover$SignalTracker.sv:2177$9912) in step 14.
+SBY  0:16:20 [cover] engine_0: ##   0:09:44  Reached cover statement at SignalTracker.sv:3404.22-3405.76 ($cover$SignalTracker.sv:3404$10321) in step 14.
+SBY  0:16:20 [cover] engine_0: ##   0:09:44  Writing trace to VCD file: engine_0/trace47.vcd
+SBY  0:16:30 [cover] engine_0: ##   0:09:55  Writing trace to Verilog testbench: engine_0/trace47_tb.v
+SBY  0:16:30 [cover] engine_0: ##   0:09:55  Writing trace to constraints file: engine_0/trace47.smtc
+SBY  0:16:30 [cover] engine_0: ##   0:09:55  Checking cover reachability in step 14..
+SBY  0:16:31 [cover] engine_0: ##   0:09:56  Reached cover statement at SignalTracker.sv:2186.22-2187.86 ($cover$SignalTracker.sv:2186$9915) in step 14.
+SBY  0:16:31 [cover] engine_0: ##   0:09:56  Writing trace to VCD file: engine_0/trace48.vcd
+SBY  0:16:42 [cover] engine_0: ##   0:10:06  Writing trace to Verilog testbench: engine_0/trace48_tb.v
+SBY  0:16:42 [cover] engine_0: ##   0:10:07  Writing trace to constraints file: engine_0/trace48.smtc
+SBY  0:16:42 [cover] engine_0: ##   0:10:07  Checking cover reachability in step 14..
+SBY  0:16:43 [cover] engine_0: ##   0:10:08  Reached cover statement at SignalTracker.sv:2195.22-2196.92 ($cover$SignalTracker.sv:2195$9918) in step 14.
+SBY  0:16:43 [cover] engine_0: ##   0:10:08  Writing trace to VCD file: engine_0/trace49.vcd
+SBY  0:16:53 [cover] engine_0: ##   0:10:18  Writing trace to Verilog testbench: engine_0/trace49_tb.v
+SBY  0:16:54 [cover] engine_0: ##   0:10:18  Writing trace to constraints file: engine_0/trace49.smtc
+SBY  0:16:54 [cover] engine_0: ##   0:10:19  Checking cover reachability in step 14..
+SBY  0:16:55 [cover] engine_0: ##   0:10:19  Reached cover statement at SignalTracker.sv:2201.22-2202.92 ($cover$SignalTracker.sv:2201$9920) in step 14.
+SBY  0:16:55 [cover] engine_0: ##   0:10:19  Writing trace to VCD file: engine_0/trace50.vcd
+SBY  0:17:05 [cover] engine_0: ##   0:10:30  Writing trace to Verilog testbench: engine_0/trace50_tb.v
+SBY  0:17:05 [cover] engine_0: ##   0:10:30  Writing trace to constraints file: engine_0/trace50.smtc
+SBY  0:17:06 [cover] engine_0: ##   0:10:30  Checking cover reachability in step 14..
+SBY  0:17:06 [cover] engine_0: ##   0:10:31  Reached cover statement at SignalTracker.sv:3260.22-3261.77 ($cover$SignalTracker.sv:3260$10273) in step 14.
+SBY  0:17:06 [cover] engine_0: ##   0:10:31  Writing trace to VCD file: engine_0/trace51.vcd
+SBY  0:17:17 [cover] engine_0: ##   0:10:41  Writing trace to Verilog testbench: engine_0/trace51_tb.v
+SBY  0:17:17 [cover] engine_0: ##   0:10:42  Writing trace to constraints file: engine_0/trace51.smtc
+SBY  0:17:17 [cover] engine_0: ##   0:10:42  Checking cover reachability in step 14..
+SBY  0:17:18 [cover] engine_0: ##   0:10:43  Reached cover statement at SignalTracker.sv:641.22-642.93 ($cover$SignalTracker.sv:641$9400) in step 14.
+SBY  0:17:18 [cover] engine_0: ##   0:10:43  Writing trace to VCD file: engine_0/trace52.vcd
+SBY  0:17:28 [cover] engine_0: ##   0:10:53  Writing trace to Verilog testbench: engine_0/trace52_tb.v
+SBY  0:17:29 [cover] engine_0: ##   0:10:53  Writing trace to constraints file: engine_0/trace52.smtc
+SBY  0:17:29 [cover] engine_0: ##   0:10:54  Checking cover reachability in step 14..
+SBY  0:17:30 [cover] engine_0: ##   0:10:55  Reached cover statement at SignalTracker.sv:1022.22-1023.93 ($cover$SignalTracker.sv:1022$9527) in step 14.
+SBY  0:17:30 [cover] engine_0: ##   0:10:55  Writing trace to VCD file: engine_0/trace53.vcd
+SBY  0:17:40 [cover] engine_0: ##   0:11:05  Writing trace to Verilog testbench: engine_0/trace53_tb.v
+SBY  0:17:41 [cover] engine_0: ##   0:11:05  Writing trace to constraints file: engine_0/trace53.smtc
+SBY  0:17:41 [cover] engine_0: ##   0:11:06  Checking cover reachability in step 14..
+SBY  0:17:42 [cover] engine_0: ##   0:11:06  Reached cover statement at SignalTracker.sv:3266.22-3267.77 ($cover$SignalTracker.sv:3266$10275) in step 14.
+SBY  0:17:42 [cover] engine_0: ##   0:11:06  Writing trace to VCD file: engine_0/trace54.vcd
+SBY  0:17:52 [cover] engine_0: ##   0:11:17  Writing trace to Verilog testbench: engine_0/trace54_tb.v
+SBY  0:17:52 [cover] engine_0: ##   0:11:17  Writing trace to constraints file: engine_0/trace54.smtc
+SBY  0:17:53 [cover] engine_0: ##   0:11:17  Checking cover reachability in step 14..
+SBY  0:17:53 [cover] engine_0: ##   0:11:18  Reached cover statement at SignalTracker.sv:1514.22-1515.85 ($cover$SignalTracker.sv:1514$9691) in step 14.
+SBY  0:17:53 [cover] engine_0: ##   0:11:18  Reached cover statement at SignalTracker.sv:1529.22-1530.85 ($cover$SignalTracker.sv:1529$9696) in step 14.
+SBY  0:17:53 [cover] engine_0: ##   0:11:18  Reached cover statement at SignalTracker.sv:3146.22-3147.97 ($cover$SignalTracker.sv:3146$10235) in step 14.
+SBY  0:17:53 [cover] engine_0: ##   0:11:18  Writing trace to VCD file: engine_0/trace55.vcd
+SBY  0:18:04 [cover] engine_0: ##   0:11:28  Writing trace to Verilog testbench: engine_0/trace55_tb.v
+SBY  0:18:04 [cover] engine_0: ##   0:11:29  Writing trace to constraints file: engine_0/trace55.smtc
+SBY  0:18:04 [cover] engine_0: ##   0:11:29  Checking cover reachability in step 14..
+SBY  0:18:05 [cover] engine_0: ##   0:11:30  Reached cover statement at SignalTracker.sv:977.22-978.92 ($cover$SignalTracker.sv:977$9512) in step 14.
+SBY  0:18:05 [cover] engine_0: ##   0:11:30  Writing trace to VCD file: engine_0/trace56.vcd
+SBY  0:18:15 [cover] engine_0: ##   0:11:40  Writing trace to Verilog testbench: engine_0/trace56_tb.v
+SBY  0:18:16 [cover] engine_0: ##   0:11:41  Writing trace to constraints file: engine_0/trace56.smtc
+SBY  0:18:16 [cover] engine_0: ##   0:11:41  Checking cover reachability in step 14..
+SBY  0:18:17 [cover] engine_0: ##   0:11:42  Reached cover statement at SignalTracker.sv:1841.22-1842.90 ($cover$SignalTracker.sv:1841$9800) in step 14.
+SBY  0:18:17 [cover] engine_0: ##   0:11:42  Reached cover statement at SignalTracker.sv:1853.22-1854.90 ($cover$SignalTracker.sv:1853$9804) in step 14.
+SBY  0:18:17 [cover] engine_0: ##   0:11:42  Reached cover statement at SignalTracker.sv:842.22-843.93 ($cover$SignalTracker.sv:842$9467) in step 14.
+SBY  0:18:17 [cover] engine_0: ##   0:11:42  Writing trace to VCD file: engine_0/trace57.vcd
+SBY  0:18:27 [cover] engine_0: ##   0:11:52  Writing trace to Verilog testbench: engine_0/trace57_tb.v
+SBY  0:18:28 [cover] engine_0: ##   0:11:52  Writing trace to constraints file: engine_0/trace57.smtc
+SBY  0:18:28 [cover] engine_0: ##   0:11:53  Checking cover reachability in step 14..
+SBY  0:18:29 [cover] engine_0: ##   0:11:53  Reached cover statement at SignalTracker.sv:2216.22-2217.94 ($cover$SignalTracker.sv:2216$9925) in step 14.
+SBY  0:18:29 [cover] engine_0: ##   0:11:53  Writing trace to VCD file: engine_0/trace58.vcd
+SBY  0:18:39 [cover] engine_0: ##   0:12:04  Writing trace to Verilog testbench: engine_0/trace58_tb.v
+SBY  0:18:39 [cover] engine_0: ##   0:12:04  Writing trace to constraints file: engine_0/trace58.smtc
+SBY  0:18:40 [cover] engine_0: ##   0:12:04  Checking cover reachability in step 14..
+SBY  0:18:40 [cover] engine_0: ##   0:12:05  Reached cover statement at SignalTracker.sv:1106.22-1107.93 ($cover$SignalTracker.sv:1106$9555) in step 14.
+SBY  0:18:40 [cover] engine_0: ##   0:12:05  Writing trace to VCD file: engine_0/trace59.vcd
+SBY  0:18:51 [cover] engine_0: ##   0:12:15  Writing trace to Verilog testbench: engine_0/trace59_tb.v
+SBY  0:18:51 [cover] engine_0: ##   0:12:16  Writing trace to constraints file: engine_0/trace59.smtc
+SBY  0:18:51 [cover] engine_0: ##   0:12:16  Checking cover reachability in step 14..
+SBY  0:18:52 [cover] engine_0: ##   0:12:17  Reached cover statement at SignalTracker.sv:1085.22-1086.93 ($cover$SignalTracker.sv:1085$9548) in step 14.
+SBY  0:18:52 [cover] engine_0: ##   0:12:17  Reached cover statement at SignalTracker.sv:1238.22-1239.86 ($cover$SignalTracker.sv:1238$9599) in step 14.
+SBY  0:18:52 [cover] engine_0: ##   0:12:17  Writing trace to VCD file: engine_0/trace60.vcd
+SBY  0:19:02 [cover] engine_0: ##   0:12:27  Writing trace to Verilog testbench: engine_0/trace60_tb.v
+SBY  0:19:03 [cover] engine_0: ##   0:12:27  Writing trace to constraints file: engine_0/trace60.smtc
+SBY  0:19:03 [cover] engine_0: ##   0:12:28  Checking cover reachability in step 14..
+SBY  0:19:04 [cover] engine_0: ##   0:12:29  Reached cover statement at SignalTracker.sv:1826.22-1827.90 ($cover$SignalTracker.sv:1826$9795) in step 14.
+SBY  0:19:04 [cover] engine_0: ##   0:12:29  Reached cover statement at SignalTracker.sv:740.22-741.93 ($cover$SignalTracker.sv:740$9433) in step 14.
+SBY  0:19:04 [cover] engine_0: ##   0:12:29  Writing trace to VCD file: engine_0/trace61.vcd
+SBY  0:19:14 [cover] engine_0: ##   0:12:39  Writing trace to Verilog testbench: engine_0/trace61_tb.v
+SBY  0:19:15 [cover] engine_0: ##   0:12:39  Writing trace to constraints file: engine_0/trace61.smtc
+SBY  0:19:15 [cover] engine_0: ##   0:12:40  Checking cover reachability in step 14..
+SBY  0:19:16 [cover] engine_0: ##   0:12:40  Reached cover statement at SignalTracker.sv:3587.22-3588.76 ($cover$SignalTracker.sv:3587$10382) in step 14.
+SBY  0:19:16 [cover] engine_0: ##   0:12:40  Writing trace to VCD file: engine_0/trace62.vcd
+SBY  0:19:26 [cover] engine_0: ##   0:12:51  Writing trace to Verilog testbench: engine_0/trace62_tb.v
+SBY  0:19:26 [cover] engine_0: ##   0:12:51  Writing trace to constraints file: engine_0/trace62.smtc
+SBY  0:19:26 [cover] engine_0: ##   0:12:51  Checking cover reachability in step 14..
+SBY  0:19:29 [cover] engine_0: ##   0:12:54  Reached cover statement at SignalTracker.sv:1379.22-1380.87 ($cover$SignalTracker.sv:1379$9646) in step 14.
+SBY  0:19:29 [cover] engine_0: ##   0:12:54  Writing trace to VCD file: engine_0/trace63.vcd
+SBY  0:19:39 [cover] engine_0: ##   0:13:04  Writing trace to Verilog testbench: engine_0/trace63_tb.v
+SBY  0:19:40 [cover] engine_0: ##   0:13:04  Writing trace to constraints file: engine_0/trace63.smtc
+SBY  0:19:40 [cover] engine_0: ##   0:13:05  Checking cover reachability in step 14..
+SBY  0:19:41 [cover] engine_0: ##   0:13:05  Reached cover statement at SignalTracker.sv:1790.22-1791.90 ($cover$SignalTracker.sv:1790$9783) in step 14.
+SBY  0:19:41 [cover] engine_0: ##   0:13:05  Reached cover statement at SignalTracker.sv:791.22-792.93 ($cover$SignalTracker.sv:791$9450) in step 14.
+SBY  0:19:41 [cover] engine_0: ##   0:13:06  Writing trace to VCD file: engine_0/trace64.vcd
+SBY  0:19:51 [cover] engine_0: ##   0:13:16  Writing trace to Verilog testbench: engine_0/trace64_tb.v
+SBY  0:19:51 [cover] engine_0: ##   0:13:16  Writing trace to constraints file: engine_0/trace64.smtc
+SBY  0:19:51 [cover] engine_0: ##   0:13:16  Checking cover reachability in step 14..
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:347.22-348.69 ($cover$SignalTracker.sv:347$9302) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:350.22-351.69 ($cover$SignalTracker.sv:350$9303) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:353.22-354.70 ($cover$SignalTracker.sv:353$9304) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:4082.22-4083.84 ($cover$SignalTracker.sv:4082$10547) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:4085.22-4086.84 ($cover$SignalTracker.sv:4085$10548) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Reached cover statement at SignalTracker.sv:4088.22-4089.85 ($cover$SignalTracker.sv:4088$10549) in step 14.
+SBY  0:19:52 [cover] engine_0: ##   0:13:17  Writing trace to VCD file: engine_0/trace65.vcd
+SBY  0:20:03 [cover] engine_0: ##   0:13:27  Writing trace to Verilog testbench: engine_0/trace65_tb.v
+SBY  0:20:03 [cover] engine_0: ##   0:13:28  Writing trace to constraints file: engine_0/trace65.smtc
+SBY  0:20:03 [cover] engine_0: ##   0:13:28  Checking cover reachability in step 14..
+SBY  0:20:04 [cover] engine_0: ##   0:13:29  Reached cover statement at SignalTracker.sv:1130.22-1131.93 ($cover$SignalTracker.sv:1130$9563) in step 14.
+SBY  0:20:04 [cover] engine_0: ##   0:13:29  Writing trace to VCD file: engine_0/trace66.vcd
+SBY  0:20:14 [cover] engine_0: ##   0:13:39  Writing trace to Verilog testbench: engine_0/trace66_tb.v
+SBY  0:20:15 [cover] engine_0: ##   0:13:39  Writing trace to constraints file: engine_0/trace66.smtc
+SBY  0:20:15 [cover] engine_0: ##   0:13:40  Checking cover reachability in step 14..
+SBY  0:20:16 [cover] engine_0: ##   0:13:41  Reached cover statement at SignalTracker.sv:860.22-861.93 ($cover$SignalTracker.sv:860$9473) in step 14.
+SBY  0:20:16 [cover] engine_0: ##   0:13:41  Writing trace to VCD file: engine_0/trace67.vcd
+SBY  0:20:26 [cover] engine_0: ##   0:13:51  Writing trace to Verilog testbench: engine_0/trace67_tb.v
+SBY  0:20:27 [cover] engine_0: ##   0:13:51  Writing trace to constraints file: engine_0/trace67.smtc
+SBY  0:20:27 [cover] engine_0: ##   0:13:52  Checking cover reachability in step 14..
+SBY  0:20:28 [cover] engine_0: ##   0:13:52  Reached cover statement at SignalTracker.sv:3593.22-3594.76 ($cover$SignalTracker.sv:3593$10384) in step 14.
+SBY  0:20:28 [cover] engine_0: ##   0:13:52  Writing trace to VCD file: engine_0/trace68.vcd
+SBY  0:20:38 [cover] engine_0: ##   0:14:03  Writing trace to Verilog testbench: engine_0/trace68_tb.v
+SBY  0:20:38 [cover] engine_0: ##   0:14:03  Writing trace to constraints file: engine_0/trace68.smtc
+SBY  0:20:39 [cover] engine_0: ##   0:14:03  Checking cover reachability in step 14..
+SBY  0:20:40 [cover] engine_0: ##   0:14:04  Reached cover statement at SignalTracker.sv:356.22-357.77 ($cover$SignalTracker.sv:356$9305) in step 14.
+SBY  0:20:40 [cover] engine_0: ##   0:14:04  Reached cover statement at SignalTracker.sv:4091.22-4092.92 ($cover$SignalTracker.sv:4091$10550) in step 14.
+SBY  0:20:40 [cover] engine_0: ##   0:14:04  Writing trace to VCD file: engine_0/trace69.vcd
+SBY  0:20:50 [cover] engine_0: ##   0:14:15  Writing trace to Verilog testbench: engine_0/trace69_tb.v
+SBY  0:20:50 [cover] engine_0: ##   0:14:15  Writing trace to constraints file: engine_0/trace69.smtc
+SBY  0:20:50 [cover] engine_0: ##   0:14:15  Checking cover reachability in step 14..
+SBY  0:20:51 [cover] engine_0: ##   0:14:16  Reached cover statement at SignalTracker.sv:1739.22-1740.91 ($cover$SignalTracker.sv:1739$9766) in step 14.
+SBY  0:20:51 [cover] engine_0: ##   0:14:16  Reached cover statement at SignalTracker.sv:674.22-675.93 ($cover$SignalTracker.sv:674$9411) in step 14.
+SBY  0:20:51 [cover] engine_0: ##   0:14:16  Writing trace to VCD file: engine_0/trace70.vcd
+SBY  0:21:02 [cover] engine_0: ##   0:14:26  Writing trace to Verilog testbench: engine_0/trace70_tb.v
+SBY  0:21:02 [cover] engine_0: ##   0:14:27  Writing trace to constraints file: engine_0/trace70.smtc
+SBY  0:21:02 [cover] engine_0: ##   0:14:27  Checking cover reachability in step 14..
+SBY  0:21:03 [cover] engine_0: ##   0:14:28  Reached cover statement at SignalTracker.sv:1730.22-1731.91 ($cover$SignalTracker.sv:1730$9763) in step 14.
+SBY  0:21:03 [cover] engine_0: ##   0:14:28  Reached cover statement at SignalTracker.sv:692.22-693.93 ($cover$SignalTracker.sv:692$9417) in step 14.
+SBY  0:21:03 [cover] engine_0: ##   0:14:28  Writing trace to VCD file: engine_0/trace71.vcd
+SBY  0:21:13 [cover] engine_0: ##   0:14:38  Writing trace to Verilog testbench: engine_0/trace71_tb.v
+SBY  0:21:14 [cover] engine_0: ##   0:14:38  Writing trace to constraints file: engine_0/trace71.smtc
+SBY  0:21:14 [cover] engine_0: ##   0:14:39  Checking cover reachability in step 14..
+SBY  0:21:15 [cover] engine_0: ##   0:14:39  Reached cover statement at SignalTracker.sv:1751.22-1752.91 ($cover$SignalTracker.sv:1751$9770) in step 14.
+SBY  0:21:15 [cover] engine_0: ##   0:14:39  Reached cover statement at SignalTracker.sv:662.22-663.93 ($cover$SignalTracker.sv:662$9407) in step 14.
+SBY  0:21:15 [cover] engine_0: ##   0:14:39  Writing trace to VCD file: engine_0/trace72.vcd
+SBY  0:21:25 [cover] engine_0: ##   0:14:50  Writing trace to Verilog testbench: engine_0/trace72_tb.v
+SBY  0:21:25 [cover] engine_0: ##   0:14:50  Writing trace to constraints file: engine_0/trace72.smtc
+SBY  0:21:25 [cover] engine_0: ##   0:14:50  Checking cover reachability in step 14..
+SBY  0:21:26 [cover] engine_0: ##   0:14:51  Reached cover statement at SignalTracker.sv:707.22-708.93 ($cover$SignalTracker.sv:707$9422) in step 14.
+SBY  0:21:26 [cover] engine_0: ##   0:14:51  Writing trace to VCD file: engine_0/trace73.vcd
+SBY  0:21:37 [cover] engine_0: ##   0:15:01  Writing trace to Verilog testbench: engine_0/trace73_tb.v
+SBY  0:21:37 [cover] engine_0: ##   0:15:02  Writing trace to constraints file: engine_0/trace73.smtc
+SBY  0:21:37 [cover] engine_0: ##   0:15:02  Checking cover reachability in step 14..
+SBY  0:21:38 [cover] engine_0: ##   0:15:03  Reached cover statement at SignalTracker.sv:1775.22-1776.90 ($cover$SignalTracker.sv:1775$9778) in step 14.
+SBY  0:21:38 [cover] engine_0: ##   0:15:03  Writing trace to VCD file: engine_0/trace74.vcd
+SBY  0:21:49 [cover] engine_0: ##   0:15:13  Writing trace to Verilog testbench: engine_0/trace74_tb.v
+SBY  0:21:49 [cover] engine_0: ##   0:15:14  Writing trace to constraints file: engine_0/trace74.smtc
+SBY  0:21:49 [cover] engine_0: ##   0:15:14  Checking cover reachability in step 14..
+SBY  0:21:50 [cover] engine_0: ##   0:15:15  Reached cover statement at SignalTracker.sv:899.22-900.93 ($cover$SignalTracker.sv:899$9486) in step 14.
+SBY  0:21:50 [cover] engine_0: ##   0:15:15  Writing trace to VCD file: engine_0/trace75.vcd
+SBY  0:22:00 [cover] engine_0: ##   0:15:25  Writing trace to Verilog testbench: engine_0/trace75_tb.v
+SBY  0:22:00 [cover] engine_0: ##   0:15:25  Writing trace to constraints file: engine_0/trace75.smtc
+SBY  0:22:01 [cover] engine_0: ##   0:15:25  Checking cover reachability in step 14..
+SBY  0:22:02 [cover] engine_0: ##   0:15:26  Reached cover statement at SignalTracker.sv:1043.22-1044.93 ($cover$SignalTracker.sv:1043$9534) in step 14.
+SBY  0:22:02 [cover] engine_0: ##   0:15:26  Writing trace to VCD file: engine_0/trace76.vcd
+SBY  0:22:12 [cover] engine_0: ##   0:15:37  Writing trace to Verilog testbench: engine_0/trace76_tb.v
+SBY  0:22:12 [cover] engine_0: ##   0:15:37  Writing trace to constraints file: engine_0/trace76.smtc
+SBY  0:22:12 [cover] engine_0: ##   0:15:37  Checking cover reachability in step 14..
+SBY  0:22:13 [cover] engine_0: ##   0:15:38  Reached cover statement at SignalTracker.sv:1487.22-1488.83 ($cover$SignalTracker.sv:1487$9682) in step 14.
+SBY  0:22:13 [cover] engine_0: ##   0:15:38  Writing trace to VCD file: engine_0/trace77.vcd
+SBY  0:22:24 [cover] engine_0: ##   0:15:48  Writing trace to Verilog testbench: engine_0/trace77_tb.v
+SBY  0:22:24 [cover] engine_0: ##   0:15:49  Writing trace to constraints file: engine_0/trace77.smtc
+SBY  0:22:24 [cover] engine_0: ##   0:15:49  Checking cover reachability in step 14..
+SBY  0:22:25 [cover] engine_0: ##   0:15:50  Reached cover statement at SignalTracker.sv:1145.22-1146.93 ($cover$SignalTracker.sv:1145$9568) in step 14.
+SBY  0:22:25 [cover] engine_0: ##   0:15:50  Writing trace to VCD file: engine_0/trace78.vcd
+SBY  0:22:35 [cover] engine_0: ##   0:16:00  Writing trace to Verilog testbench: engine_0/trace78_tb.v
+SBY  0:22:36 [cover] engine_0: ##   0:16:00  Writing trace to constraints file: engine_0/trace78.smtc
+SBY  0:22:36 [cover] engine_0: ##   0:16:00  Checking cover reachability in step 14..
+SBY  0:22:37 [cover] engine_0: ##   0:16:01  Reached cover statement at SignalTracker.sv:1064.22-1065.93 ($cover$SignalTracker.sv:1064$9541) in step 14.
+SBY  0:22:37 [cover] engine_0: ##   0:16:01  Writing trace to VCD file: engine_0/trace79.vcd
+SBY  0:22:47 [cover] engine_0: ##   0:16:12  Writing trace to Verilog testbench: engine_0/trace79_tb.v
+SBY  0:22:47 [cover] engine_0: ##   0:16:12  Writing trace to constraints file: engine_0/trace79.smtc
+SBY  0:22:47 [cover] engine_0: ##   0:16:12  Checking cover reachability in step 14..
+SBY  0:22:48 [cover] engine_0: ##   0:16:13  Reached cover statement at SignalTracker.sv:881.22-882.93 ($cover$SignalTracker.sv:881$9480) in step 14.
+SBY  0:22:48 [cover] engine_0: ##   0:16:13  Writing trace to VCD file: engine_0/trace80.vcd
+SBY  0:22:58 [cover] engine_0: ##   0:16:23  Writing trace to Verilog testbench: engine_0/trace80_tb.v
+SBY  0:22:59 [cover] engine_0: ##   0:16:24  Writing trace to constraints file: engine_0/trace80.smtc
+SBY  0:22:59 [cover] engine_0: ##   0:16:24  Checking cover reachability in step 14..
+SBY  0:23:00 [cover] engine_0: ##   0:16:25  Reached cover statement at SignalTracker.sv:584.22-585.93 ($cover$SignalTracker.sv:584$9381) in step 14.
+SBY  0:23:00 [cover] engine_0: ##   0:16:25  Writing trace to VCD file: engine_0/trace81.vcd
+SBY  0:23:10 [cover] engine_0: ##   0:16:35  Writing trace to Verilog testbench: engine_0/trace81_tb.v
+SBY  0:23:10 [cover] engine_0: ##   0:16:35  Writing trace to constraints file: engine_0/trace81.smtc
+SBY  0:23:11 [cover] engine_0: ##   0:16:35  Checking cover reachability in step 14..
+SBY  0:23:12 [cover] engine_0: ##   0:16:36  Reached cover statement at SignalTracker.sv:569.22-570.93 ($cover$SignalTracker.sv:569$9376) in step 14.
+SBY  0:23:12 [cover] engine_0: ##   0:16:36  Writing trace to VCD file: engine_0/trace82.vcd
+SBY  0:23:22 [cover] engine_0: ##   0:16:47  Writing trace to Verilog testbench: engine_0/trace82_tb.v
+SBY  0:23:22 [cover] engine_0: ##   0:16:47  Writing trace to constraints file: engine_0/trace82.smtc
+SBY  0:23:22 [cover] engine_0: ##   0:16:47  Checking cover reachability in step 14..
+SBY  0:23:23 [cover] engine_0: ##   0:16:48  Reached cover statement at SignalTracker.sv:830.22-831.93 ($cover$SignalTracker.sv:830$9463) in step 14.
+SBY  0:23:23 [cover] engine_0: ##   0:16:48  Writing trace to VCD file: engine_0/trace83.vcd
+SBY  0:23:34 [cover] engine_0: ##   0:16:58  Writing trace to Verilog testbench: engine_0/trace83_tb.v
+SBY  0:23:34 [cover] engine_0: ##   0:16:59  Writing trace to constraints file: engine_0/trace83.smtc
+SBY  0:23:34 [cover] engine_0: ##   0:16:59  Checking cover reachability in step 14..
+SBY  0:23:35 [cover] engine_0: ##   0:17:00  Reached cover statement at SignalTracker.sv:611.22-612.93 ($cover$SignalTracker.sv:611$9390) in step 14.
+SBY  0:23:35 [cover] engine_0: ##   0:17:00  Writing trace to VCD file: engine_0/trace84.vcd
+SBY  0:23:45 [cover] engine_0: ##   0:17:10  Writing trace to Verilog testbench: engine_0/trace84_tb.v
+SBY  0:23:46 [cover] engine_0: ##   0:17:11  Writing trace to constraints file: engine_0/trace84.smtc
+SBY  0:23:46 [cover] engine_0: ##   0:17:11  Checking cover reachability in step 14..
+SBY  0:23:47 [cover] engine_0: ##   0:17:12  Reached cover statement at SignalTracker.sv:515.22-516.93 ($cover$SignalTracker.sv:515$9358) in step 14.
+SBY  0:23:47 [cover] engine_0: ##   0:17:12  Writing trace to VCD file: engine_0/trace85.vcd
+SBY  0:23:57 [cover] engine_0: ##   0:17:22  Writing trace to Verilog testbench: engine_0/trace85_tb.v
+SBY  0:23:57 [cover] engine_0: ##   0:17:22  Writing trace to constraints file: engine_0/trace85.smtc
+SBY  0:23:58 [cover] engine_0: ##   0:17:22  Checking cover reachability in step 14..
+SBY  0:23:59 [cover] engine_0: ##   0:17:23  Reached cover statement at SignalTracker.sv:473.22-474.93 ($cover$SignalTracker.sv:473$9344) in step 14.
+SBY  0:23:59 [cover] engine_0: ##   0:17:23  Writing trace to VCD file: engine_0/trace86.vcd
+SBY  0:24:09 [cover] engine_0: ##   0:17:34  Writing trace to Verilog testbench: engine_0/trace86_tb.v
+SBY  0:24:09 [cover] engine_0: ##   0:17:34  Writing trace to constraints file: engine_0/trace86.smtc
+SBY  0:24:09 [cover] engine_0: ##   0:17:34  Checking cover reachability in step 14..
+SBY  0:24:10 [cover] engine_0: ##   0:17:35  Reached cover statement at SignalTracker.sv:1919.22-1920.98 ($cover$SignalTracker.sv:1919$9826) in step 14.
+SBY  0:24:10 [cover] engine_0: ##   0:17:35  Reached cover statement at SignalTracker.sv:3176.22-3177.96 ($cover$SignalTracker.sv:3176$10245) in step 14.
+SBY  0:24:10 [cover] engine_0: ##   0:17:35  Writing trace to VCD file: engine_0/trace87.vcd
+SBY  0:24:21 [cover] engine_0: ##   0:17:45  Writing trace to Verilog testbench: engine_0/trace87_tb.v
+SBY  0:24:21 [cover] engine_0: ##   0:17:46  Writing trace to constraints file: engine_0/trace87.smtc
+SBY  0:24:21 [cover] engine_0: ##   0:17:46  Checking cover reachability in step 14..
+SBY  0:24:22 [cover] engine_0: ##   0:17:47  Reached cover statement at SignalTracker.sv:1871.22-1872.96 ($cover$SignalTracker.sv:1871$9810) in step 14.
+SBY  0:24:22 [cover] engine_0: ##   0:17:47  Writing trace to VCD file: engine_0/trace88.vcd
+SBY  0:24:32 [cover] engine_0: ##   0:17:57  Writing trace to Verilog testbench: engine_0/trace88_tb.v
+SBY  0:24:33 [cover] engine_0: ##   0:17:57  Writing trace to constraints file: engine_0/trace88.smtc
+SBY  0:24:33 [cover] engine_0: ##   0:17:58  Checking cover reachability in step 14..
+SBY  0:24:34 [cover] engine_0: ##   0:17:58  Reached cover statement at SignalTracker.sv:1883.22-1884.99 ($cover$SignalTracker.sv:1883$9814) in step 14.
+SBY  0:24:34 [cover] engine_0: ##   0:17:58  Writing trace to VCD file: engine_0/trace89.vcd
+SBY  0:24:44 [cover] engine_0: ##   0:18:09  Writing trace to Verilog testbench: engine_0/trace89_tb.v
+SBY  0:24:44 [cover] engine_0: ##   0:18:09  Writing trace to constraints file: engine_0/trace89.smtc
+SBY  0:24:44 [cover] engine_0: ##   0:18:09  Checking cover reachability in step 14..
+SBY  0:24:45 [cover] engine_0: ##   0:18:10  Reached cover statement at SignalTracker.sv:1895.22-1896.99 ($cover$SignalTracker.sv:1895$9818) in step 14.
+SBY  0:24:45 [cover] engine_0: ##   0:18:10  Writing trace to VCD file: engine_0/trace90.vcd
+SBY  0:24:56 [cover] engine_0: ##   0:18:20  Writing trace to Verilog testbench: engine_0/trace90_tb.v
+SBY  0:24:56 [cover] engine_0: ##   0:18:21  Writing trace to constraints file: engine_0/trace90.smtc
+SBY  0:24:56 [cover] engine_0: ##   0:18:21  Checking cover reachability in step 14..
+SBY  0:24:57 [cover] engine_0: ##   0:18:22  Reached cover statement at SignalTracker.sv:494.22-495.93 ($cover$SignalTracker.sv:494$9351) in step 14.
+SBY  0:24:57 [cover] engine_0: ##   0:18:22  Writing trace to VCD file: engine_0/trace91.vcd
+SBY  0:25:07 [cover] engine_0: ##   0:18:32  Writing trace to Verilog testbench: engine_0/trace91_tb.v
+SBY  0:25:08 [cover] engine_0: ##   0:18:32  Writing trace to constraints file: engine_0/trace91.smtc
+SBY  0:25:08 [cover] engine_0: ##   0:18:33  Checking cover reachability in step 14..
+SBY  0:25:09 [cover] engine_0: ##   0:18:34  Reached cover statement at SignalTracker.sv:1907.22-1908.98 ($cover$SignalTracker.sv:1907$9822) in step 14.
+SBY  0:25:09 [cover] engine_0: ##   0:18:34  Writing trace to VCD file: engine_0/trace92.vcd
+SBY  0:25:19 [cover] engine_0: ##   0:18:44  Writing trace to Verilog testbench: engine_0/trace92_tb.v
+SBY  0:25:19 [cover] engine_0: ##   0:18:44  Writing trace to constraints file: engine_0/trace92.smtc
+SBY  0:25:20 [cover] engine_0: ##   0:18:44  Checking cover reachability in step 14..
+SBY  0:25:21 [cover] engine_0: ##   0:18:45  Reached cover statement at SignalTracker.sv:1931.22-1932.98 ($cover$SignalTracker.sv:1931$9830) in step 14.
+SBY  0:25:21 [cover] engine_0: ##   0:18:45  Writing trace to VCD file: engine_0/trace93.vcd
+SBY  0:25:31 [cover] engine_0: ##   0:18:56  Writing trace to Verilog testbench: engine_0/trace93_tb.v
+SBY  0:25:31 [cover] engine_0: ##   0:18:56  Writing trace to constraints file: engine_0/trace93.smtc
+SBY  0:25:32 [cover] engine_0: ##   0:18:56  Checking cover reachability in step 14..
+SBY  0:25:32 [cover] engine_0: ##   0:18:57  Reached cover statement at SignalTracker.sv:722.22-723.93 ($cover$SignalTracker.sv:722$9427) in step 14.
+SBY  0:25:32 [cover] engine_0: ##   0:18:57  Writing trace to VCD file: engine_0/trace94.vcd
+SBY  0:25:43 [cover] engine_0: ##   0:19:07  Writing trace to Verilog testbench: engine_0/trace94_tb.v
+SBY  0:25:43 [cover] engine_0: ##   0:19:08  Writing trace to constraints file: engine_0/trace94.smtc
+SBY  0:25:43 [cover] engine_0: ##   0:19:08  Checking cover reachability in step 14..
+SBY  0:25:44 [cover] engine_0: ##   0:19:09  Reached cover statement at SignalTracker.sv:536.22-537.93 ($cover$SignalTracker.sv:536$9365) in step 14.
+SBY  0:25:44 [cover] engine_0: ##   0:19:09  Writing trace to VCD file: engine_0/trace95.vcd
+SBY  0:25:55 [cover] engine_0: ##   0:19:19  Writing trace to Verilog testbench: engine_0/trace95_tb.v
+SBY  0:25:55 [cover] engine_0: ##   0:19:20  Writing trace to constraints file: engine_0/trace95.smtc
+SBY  0:25:55 [cover] engine_0: ##   0:19:20  Checking cover reachability in step 14..
+SBY  0:25:56 [cover] engine_0: ##   0:19:21  Checking cover reachability in step 15..
+SBY  0:26:04 [cover] engine_0: ##   0:19:28  Reached cover statement at SignalTracker.sv:2114.22-2115.72 ($cover$SignalTracker.sv:2114$9891) in step 15.
+SBY  0:26:04 [cover] engine_0: ##   0:19:28  Writing trace to VCD file: engine_0/trace96.vcd
+SBY  0:26:15 [cover] engine_0: ##   0:19:40  Writing trace to Verilog testbench: engine_0/trace96_tb.v
+SBY  0:26:15 [cover] engine_0: ##   0:19:40  Writing trace to constraints file: engine_0/trace96.smtc
+SBY  0:26:15 [cover] engine_0: ##   0:19:40  Checking cover reachability in step 15..
+SBY  0:26:18 [cover] engine_0: ##   0:19:42  Reached cover statement at SignalTracker.sv:1958.22-1959.85 ($cover$SignalTracker.sv:1958$9839) in step 15.
+SBY  0:26:18 [cover] engine_0: ##   0:19:42  Writing trace to VCD file: engine_0/trace97.vcd
+SBY  0:26:29 [cover] engine_0: ##   0:19:53  Writing trace to Verilog testbench: engine_0/trace97_tb.v
+SBY  0:26:29 [cover] engine_0: ##   0:19:54  Writing trace to constraints file: engine_0/trace97.smtc
+SBY  0:26:29 [cover] engine_0: ##   0:19:54  Checking cover reachability in step 15..
+SBY  0:26:31 [cover] engine_0: ##   0:19:55  Reached cover statement at SignalTracker.sv:2039.22-2040.87 ($cover$SignalTracker.sv:2039$9866) in step 15.
+SBY  0:26:31 [cover] engine_0: ##   0:19:56  Writing trace to VCD file: engine_0/trace98.vcd
+SBY  0:26:42 [cover] engine_0: ##   0:20:06  Writing trace to Verilog testbench: engine_0/trace98_tb.v
+SBY  0:26:42 [cover] engine_0: ##   0:20:07  Writing trace to constraints file: engine_0/trace98.smtc
+SBY  0:26:42 [cover] engine_0: ##   0:20:07  Checking cover reachability in step 15..
+SBY  0:26:45 [cover] engine_0: ##   0:20:10  Reached cover statement at SignalTracker.sv:3434.22-3435.80 ($cover$SignalTracker.sv:3434$10331) in step 15.
+SBY  0:26:45 [cover] engine_0: ##   0:20:10  Writing trace to VCD file: engine_0/trace99.vcd
+SBY  0:26:56 [cover] engine_0: ##   0:20:21  Writing trace to Verilog testbench: engine_0/trace99_tb.v
+SBY  0:26:56 [cover] engine_0: ##   0:20:21  Writing trace to constraints file: engine_0/trace99.smtc
+SBY  0:26:56 [cover] engine_0: ##   0:20:21  Checking cover reachability in step 15..
+SBY  0:26:58 [cover] engine_0: ##   0:20:23  Reached cover statement at SignalTracker.sv:2210.22-2211.94 ($cover$SignalTracker.sv:2210$9923) in step 15.
+SBY  0:26:58 [cover] engine_0: ##   0:20:23  Reached cover statement at SignalTracker.sv:365.22-366.73 ($cover$SignalTracker.sv:365$9308) in step 15.
+SBY  0:26:58 [cover] engine_0: ##   0:20:23  Reached cover statement at SignalTracker.sv:4100.22-4101.88 ($cover$SignalTracker.sv:4100$10553) in step 15.
+SBY  0:26:58 [cover] engine_0: ##   0:20:23  Writing trace to VCD file: engine_0/trace100.vcd
+SBY  0:27:09 [cover] engine_0: ##   0:20:34  Writing trace to Verilog testbench: engine_0/trace100_tb.v
+SBY  0:27:09 [cover] engine_0: ##   0:20:34  Writing trace to constraints file: engine_0/trace100.smtc
+SBY  0:27:09 [cover] engine_0: ##   0:20:34  Checking cover reachability in step 15..
+SBY  0:27:11 [cover] engine_0: ##   0:20:36  Reached cover statement at SignalTracker.sv:3422.22-3423.73 ($cover$SignalTracker.sv:3422$10327) in step 15.
+SBY  0:27:11 [cover] engine_0: ##   0:20:36  Writing trace to VCD file: engine_0/trace101.vcd
+SBY  0:27:22 [cover] engine_0: ##   0:20:47  Writing trace to Verilog testbench: engine_0/trace101_tb.v
+SBY  0:27:22 [cover] engine_0: ##   0:20:47  Writing trace to constraints file: engine_0/trace101.smtc
+SBY  0:27:22 [cover] engine_0: ##   0:20:47  Checking cover reachability in step 15..
+SBY  0:27:24 [cover] engine_0: ##   0:20:48  Reached cover statement at SignalTracker.sv:3425.22-3426.73 ($cover$SignalTracker.sv:3425$10328) in step 15.
+SBY  0:27:24 [cover] engine_0: ##   0:20:48  Reached cover statement at SignalTracker.sv:3428.22-3429.74 ($cover$SignalTracker.sv:3428$10329) in step 15.
+SBY  0:27:24 [cover] engine_0: ##   0:20:48  Writing trace to VCD file: engine_0/trace102.vcd
+SBY  0:27:35 [cover] engine_0: ##   0:20:59  Writing trace to Verilog testbench: engine_0/trace102_tb.v
+SBY  0:27:35 [cover] engine_0: ##   0:21:00  Writing trace to constraints file: engine_0/trace102.smtc
+SBY  0:27:35 [cover] engine_0: ##   0:21:00  Checking cover reachability in step 15..
+SBY  0:27:36 [cover] engine_0: ##   0:21:01  Reached cover statement at SignalTracker.sv:3431.22-3432.81 ($cover$SignalTracker.sv:3431$10330) in step 15.
+SBY  0:27:36 [cover] engine_0: ##   0:21:01  Writing trace to VCD file: engine_0/trace103.vcd
+SBY  0:27:47 [cover] engine_0: ##   0:21:12  Writing trace to Verilog testbench: engine_0/trace103_tb.v
+SBY  0:27:48 [cover] engine_0: ##   0:21:12  Writing trace to constraints file: engine_0/trace103.smtc
+SBY  0:27:48 [cover] engine_0: ##   0:21:13  Checking cover reachability in step 15..
+SBY  0:27:49 [cover] engine_0: ##   0:21:14  Reached cover statement at SignalTracker.sv:3416.22-3417.67 ($cover$SignalTracker.sv:3416$10325) in step 15.
+SBY  0:27:49 [cover] engine_0: ##   0:21:14  Writing trace to VCD file: engine_0/trace104.vcd
+SBY  0:28:00 [cover] engine_0: ##   0:21:25  Writing trace to Verilog testbench: engine_0/trace104_tb.v
+SBY  0:28:00 [cover] engine_0: ##   0:21:25  Writing trace to constraints file: engine_0/trace104.smtc
+SBY  0:28:01 [cover] engine_0: ##   0:21:25  Checking cover reachability in step 15..
+SBY  0:28:02 [cover] engine_0: ##   0:21:26  Checking cover reachability in step 16..
+SBY  0:28:09 [cover] engine_0: ##   0:21:34  Reached cover statement at SignalTracker.sv:3836.22-3837.82 ($cover$SignalTracker.sv:3836$10465) in step 16.
+SBY  0:28:09 [cover] engine_0: ##   0:21:34  Reached cover statement at SignalTracker.sv:3842.22-3843.83 ($cover$SignalTracker.sv:3842$10467) in step 16.
+SBY  0:28:09 [cover] engine_0: ##   0:21:34  Reached cover statement at SignalTracker.sv:3845.22-3846.90 ($cover$SignalTracker.sv:3845$10468) in step 16.
+SBY  0:28:09 [cover] engine_0: ##   0:21:34  Writing trace to VCD file: engine_0/trace105.vcd
+SBY  0:28:21 [cover] engine_0: ##   0:21:45  Writing trace to Verilog testbench: engine_0/trace105_tb.v
+SBY  0:28:21 [cover] engine_0: ##   0:21:46  Writing trace to constraints file: engine_0/trace105.smtc
+SBY  0:28:21 [cover] engine_0: ##   0:21:46  Checking cover reachability in step 16..
+SBY  0:28:24 [cover] engine_0: ##   0:21:49  Reached cover statement at SignalTracker.sv:3440.22-3441.77 ($cover$SignalTracker.sv:3440$10333) in step 16.
+SBY  0:28:24 [cover] engine_0: ##   0:21:49  Writing trace to VCD file: engine_0/trace106.vcd
+SBY  0:28:36 [cover] engine_0: ##   0:22:00  Writing trace to Verilog testbench: engine_0/trace106_tb.v
+SBY  0:28:36 [cover] engine_0: ##   0:22:01  Writing trace to constraints file: engine_0/trace106.smtc
+SBY  0:28:36 [cover] engine_0: ##   0:22:01  Checking cover reachability in step 16..
+SBY  0:28:42 [cover] engine_0: ##   0:22:06  Reached cover statement at SignalTracker.sv:3830.22-3831.76 ($cover$SignalTracker.sv:3830$10463) in step 16.
+SBY  0:28:42 [cover] engine_0: ##   0:22:06  Writing trace to VCD file: engine_0/trace107.vcd
+SBY  0:28:53 [cover] engine_0: ##   0:22:18  Writing trace to Verilog testbench: engine_0/trace107_tb.v
+SBY  0:28:54 [cover] engine_0: ##   0:22:19  Writing trace to constraints file: engine_0/trace107.smtc
+SBY  0:28:54 [cover] engine_0: ##   0:22:19  Checking cover reachability in step 16..
+SBY  0:28:56 [cover] engine_0: ##   0:22:21  Reached cover statement at SignalTracker.sv:3848.22-3849.89 ($cover$SignalTracker.sv:3848$10469) in step 16.
+SBY  0:28:56 [cover] engine_0: ##   0:22:21  Writing trace to VCD file: engine_0/trace108.vcd
+SBY  0:29:08 [cover] engine_0: ##   0:22:33  Writing trace to Verilog testbench: engine_0/trace108_tb.v
+SBY  0:29:08 [cover] engine_0: ##   0:22:33  Writing trace to constraints file: engine_0/trace108.smtc
+SBY  0:29:08 [cover] engine_0: ##   0:22:33  Checking cover reachability in step 16..
+SBY  0:29:13 [cover] engine_0: ##   0:22:38  Reached cover statement at SignalTracker.sv:2036.22-2037.86 ($cover$SignalTracker.sv:2036$9865) in step 16.
+SBY  0:29:13 [cover] engine_0: ##   0:22:38  Writing trace to VCD file: engine_0/trace109.vcd
+SBY  0:29:25 [cover] engine_0: ##   0:22:49  Writing trace to Verilog testbench: engine_0/trace109_tb.v
+SBY  0:29:25 [cover] engine_0: ##   0:22:50  Writing trace to constraints file: engine_0/trace109.smtc
+SBY  0:29:25 [cover] engine_0: ##   0:22:50  Checking cover reachability in step 16..
+SBY  0:29:26 [cover] engine_0: ##   0:22:51  Reached cover statement at SignalTracker.sv:1955.22-1956.84 ($cover$SignalTracker.sv:1955$9838) in step 16.
+SBY  0:29:26 [cover] engine_0: ##   0:22:51  Writing trace to VCD file: engine_0/trace110.vcd
+SBY  0:29:38 [cover] engine_0: ##   0:23:03  Writing trace to Verilog testbench: engine_0/trace110_tb.v
+SBY  0:29:39 [cover] engine_0: ##   0:23:03  Writing trace to constraints file: engine_0/trace110.smtc
+SBY  0:29:39 [cover] engine_0: ##   0:23:03  Checking cover reachability in step 16..
+SBY  0:29:40 [cover] engine_0: ##   0:23:05  Reached cover statement at SignalTracker.sv:3839.22-3840.82 ($cover$SignalTracker.sv:3839$10466) in step 16.
+SBY  0:29:40 [cover] engine_0: ##   0:23:05  Writing trace to VCD file: engine_0/trace111.vcd
+SBY  0:29:52 [cover] engine_0: ##   0:23:17  Writing trace to Verilog testbench: engine_0/trace111_tb.v
+SBY  0:29:52 [cover] engine_0: ##   0:23:17  Writing trace to constraints file: engine_0/trace111.smtc
+SBY  0:29:53 [cover] engine_0: ##   0:23:17  Checking cover reachability in step 16..
+SBY  0:29:54 [cover] engine_0: ##   0:23:19  Reached cover statement at SignalTracker.sv:2108.22-2109.86 ($cover$SignalTracker.sv:2108$9889) in step 16.
+SBY  0:29:54 [cover] engine_0: ##   0:23:19  Writing trace to VCD file: engine_0/trace112.vcd
+SBY  0:30:06 [cover] engine_0: ##   0:23:31  Writing trace to Verilog testbench: engine_0/trace112_tb.v
+SBY  0:30:06 [cover] engine_0: ##   0:23:31  Writing trace to constraints file: engine_0/trace112.smtc
+SBY  0:30:07 [cover] engine_0: ##   0:23:31  Checking cover reachability in step 16..
+SBY  0:30:08 [cover] engine_0: ##   0:23:32  Checking cover reachability in step 17..
+SBY  0:30:14 [cover] engine_0: ##   0:23:39  Reached cover statement at SignalTracker.sv:3464.22-3465.67 ($cover$SignalTracker.sv:3464$10341) in step 17.
+SBY  0:30:14 [cover] engine_0: ##   0:23:39  Writing trace to VCD file: engine_0/trace113.vcd
+SBY  0:30:27 [cover] engine_0: ##   0:23:52  Writing trace to Verilog testbench: engine_0/trace113_tb.v
+SBY  0:30:27 [cover] engine_0: ##   0:23:52  Writing trace to constraints file: engine_0/trace113.smtc
+SBY  0:30:28 [cover] engine_0: ##   0:23:52  Checking cover reachability in step 17..
+SBY  0:30:32 [cover] engine_0: ##   0:23:57  Reached cover statement at SignalTracker.sv:2117.22-2118.89 ($cover$SignalTracker.sv:2117$9892) in step 17.
+SBY  0:30:32 [cover] engine_0: ##   0:23:57  Reached cover statement at SignalTracker.sv:2120.22-2121.87 ($cover$SignalTracker.sv:2120$9893) in step 17.
+SBY  0:30:32 [cover] engine_0: ##   0:23:57  Writing trace to VCD file: engine_0/trace114.vcd
+SBY  0:30:45 [cover] engine_0: ##   0:24:09  Writing trace to Verilog testbench: engine_0/trace114_tb.v
+SBY  0:30:45 [cover] engine_0: ##   0:24:10  Writing trace to constraints file: engine_0/trace114.smtc
+SBY  0:30:45 [cover] engine_0: ##   0:24:10  Checking cover reachability in step 17..
+SBY  0:30:49 [cover] engine_0: ##   0:24:14  Reached cover statement at SignalTracker.sv:3482.22-3483.80 ($cover$SignalTracker.sv:3482$10347) in step 17.
+SBY  0:30:49 [cover] engine_0: ##   0:24:14  Writing trace to VCD file: engine_0/trace115.vcd
+SBY  0:31:01 [cover] engine_0: ##   0:24:26  Writing trace to Verilog testbench: engine_0/trace115_tb.v
+SBY  0:31:02 [cover] engine_0: ##   0:24:26  Writing trace to constraints file: engine_0/trace115.smtc
+SBY  0:31:02 [cover] engine_0: ##   0:24:27  Checking cover reachability in step 17..
+SBY  0:31:04 [cover] engine_0: ##   0:24:29  Reached cover statement at SignalTracker.sv:3470.22-3471.73 ($cover$SignalTracker.sv:3470$10343) in step 17.
+SBY  0:31:04 [cover] engine_0: ##   0:24:29  Reached cover statement at SignalTracker.sv:3476.22-3477.74 ($cover$SignalTracker.sv:3476$10345) in step 17.
+SBY  0:31:04 [cover] engine_0: ##   0:24:29  Reached cover statement at SignalTracker.sv:3479.22-3480.81 ($cover$SignalTracker.sv:3479$10346) in step 17.
+SBY  0:31:04 [cover] engine_0: ##   0:24:29  Writing trace to VCD file: engine_0/trace116.vcd
+SBY  0:31:16 [cover] engine_0: ##   0:24:41  Writing trace to Verilog testbench: engine_0/trace116_tb.v
+SBY  0:31:17 [cover] engine_0: ##   0:24:41  Writing trace to constraints file: engine_0/trace116.smtc
+SBY  0:31:17 [cover] engine_0: ##   0:24:41  Checking cover reachability in step 17..
+SBY  0:31:18 [cover] engine_0: ##   0:24:43  Reached cover statement at SignalTracker.sv:3854.22-3855.86 ($cover$SignalTracker.sv:3854$10471) in step 17.
+SBY  0:31:18 [cover] engine_0: ##   0:24:43  Writing trace to VCD file: engine_0/trace117.vcd
+SBY  0:31:30 [cover] engine_0: ##   0:24:55  Writing trace to Verilog testbench: engine_0/trace117_tb.v
+SBY  0:31:31 [cover] engine_0: ##   0:24:56  Writing trace to constraints file: engine_0/trace117.smtc
+SBY  0:31:31 [cover] engine_0: ##   0:24:56  Checking cover reachability in step 17..
+SBY  0:31:33 [cover] engine_0: ##   0:24:57  Reached cover statement at SignalTracker.sv:1580.22-1581.79 ($cover$SignalTracker.sv:1580$9713) in step 17.
+SBY  0:31:33 [cover] engine_0: ##   0:24:57  Writing trace to VCD file: engine_0/trace118.vcd
+SBY  0:31:45 [cover] engine_0: ##   0:25:10  Writing trace to Verilog testbench: engine_0/trace118_tb.v
+SBY  0:31:45 [cover] engine_0: ##   0:25:10  Writing trace to constraints file: engine_0/trace118.smtc
+SBY  0:31:45 [cover] engine_0: ##   0:25:10  Checking cover reachability in step 17..
+SBY  0:31:47 [cover] engine_0: ##   0:25:12  Reached cover statement at SignalTracker.sv:3473.22-3474.73 ($cover$SignalTracker.sv:3473$10344) in step 17.
+SBY  0:31:47 [cover] engine_0: ##   0:25:12  Writing trace to VCD file: engine_0/trace119.vcd
+SBY  0:31:59 [cover] engine_0: ##   0:25:24  Writing trace to Verilog testbench: engine_0/trace119_tb.v
+SBY  0:32:00 [cover] engine_0: ##   0:25:24  Writing trace to constraints file: engine_0/trace119.smtc
+SBY  0:32:00 [cover] engine_0: ##   0:25:25  Checking cover reachability in step 17..
+SBY  0:32:01 [cover] engine_0: ##   0:25:26  Checking cover reachability in step 18..
+SBY  0:32:15 [cover] engine_0: ##   0:25:40  Reached cover statement at SignalTracker.sv:3488.22-3489.77 ($cover$SignalTracker.sv:3488$10349) in step 18.
+SBY  0:32:15 [cover] engine_0: ##   0:25:40  Writing trace to VCD file: engine_0/trace120.vcd
+SBY  0:32:28 [cover] engine_0: ##   0:25:53  Writing trace to Verilog testbench: engine_0/trace120_tb.v
+SBY  0:32:28 [cover] engine_0: ##   0:25:53  Writing trace to constraints file: engine_0/trace120.smtc
+SBY  0:32:29 [cover] engine_0: ##   0:25:53  Checking cover reachability in step 18..
+SBY  0:32:31 [cover] engine_0: ##   0:25:55  Reached cover statement at SignalTracker.sv:3515.22-3516.67 ($cover$SignalTracker.sv:3515$10358) in step 18.
+SBY  0:32:31 [cover] engine_0: ##   0:25:55  Writing trace to VCD file: engine_0/trace121.vcd
+SBY  0:32:44 [cover] engine_0: ##   0:26:08  Writing trace to Verilog testbench: engine_0/trace121_tb.v
+SBY  0:32:44 [cover] engine_0: ##   0:26:09  Writing trace to constraints file: engine_0/trace121.smtc
+SBY  0:32:44 [cover] engine_0: ##   0:26:09  Checking cover reachability in step 18..
+SBY  0:32:46 [cover] engine_0: ##   0:26:10  Reached cover statement at SignalTracker.sv:3533.22-3534.80 ($cover$SignalTracker.sv:3533$10364) in step 18.
+SBY  0:32:46 [cover] engine_0: ##   0:26:10  Writing trace to VCD file: engine_0/trace122.vcd
+SBY  0:32:59 [cover] engine_0: ##   0:26:23  Writing trace to Verilog testbench: engine_0/trace122_tb.v
+SBY  0:32:59 [cover] engine_0: ##   0:26:24  Writing trace to constraints file: engine_0/trace122.smtc
+SBY  0:32:59 [cover] engine_0: ##   0:26:24  Checking cover reachability in step 18..
+SBY  0:33:01 [cover] engine_0: ##   0:26:26  Reached cover statement at SignalTracker.sv:3521.22-3522.73 ($cover$SignalTracker.sv:3521$10360) in step 18.
+SBY  0:33:01 [cover] engine_0: ##   0:26:26  Writing trace to VCD file: engine_0/trace123.vcd
+SBY  0:33:14 [cover] engine_0: ##   0:26:39  Writing trace to Verilog testbench: engine_0/trace123_tb.v
+SBY  0:33:14 [cover] engine_0: ##   0:26:39  Writing trace to constraints file: engine_0/trace123.smtc
+SBY  0:33:15 [cover] engine_0: ##   0:26:39  Checking cover reachability in step 18..
+SBY  0:33:16 [cover] engine_0: ##   0:26:41  Reached cover statement at SignalTracker.sv:3524.22-3525.73 ($cover$SignalTracker.sv:3524$10361) in step 18.
+SBY  0:33:16 [cover] engine_0: ##   0:26:41  Reached cover statement at SignalTracker.sv:3527.22-3528.74 ($cover$SignalTracker.sv:3527$10362) in step 18.
+SBY  0:33:16 [cover] engine_0: ##   0:26:41  Writing trace to VCD file: engine_0/trace124.vcd
+SBY  0:33:29 [cover] engine_0: ##   0:26:54  Writing trace to Verilog testbench: engine_0/trace124_tb.v
+SBY  0:33:29 [cover] engine_0: ##   0:26:54  Writing trace to constraints file: engine_0/trace124.smtc
+SBY  0:33:30 [cover] engine_0: ##   0:26:54  Checking cover reachability in step 18..
+SBY  0:33:32 [cover] engine_0: ##   0:26:56  Reached cover statement at SignalTracker.sv:3530.22-3531.81 ($cover$SignalTracker.sv:3530$10363) in step 18.
+SBY  0:33:32 [cover] engine_0: ##   0:26:56  Writing trace to VCD file: engine_0/trace125.vcd
+SBY  0:33:45 [cover] engine_0: ##   0:27:10  Writing trace to Verilog testbench: engine_0/trace125_tb.v
+SBY  0:33:45 [cover] engine_0: ##   0:27:10  Writing trace to constraints file: engine_0/trace125.smtc
+SBY  0:33:45 [cover] engine_0: ##   0:27:10  Checking cover reachability in step 18..
+SBY  0:33:50 [cover] engine_0: ##   0:27:14  Reached cover statement at SignalTracker.sv:1637.22-1638.90 ($cover$SignalTracker.sv:1637$9732) in step 18.
+SBY  0:33:50 [cover] engine_0: ##   0:27:14  Writing trace to VCD file: engine_0/trace126.vcd
+SBY  0:34:03 [cover] engine_0: ##   0:27:27  Writing trace to Verilog testbench: engine_0/trace126_tb.v
+SBY  0:34:03 [cover] engine_0: ##   0:27:28  Writing trace to constraints file: engine_0/trace126.smtc
+SBY  0:34:03 [cover] engine_0: ##   0:27:28  Checking cover reachability in step 18..
+SBY  0:34:06 [cover] engine_0: ##   0:27:31  Reached cover statement at SignalTracker.sv:383.22-384.62 ($cover$SignalTracker.sv:383$9314) in step 18.
+SBY  0:34:06 [cover] engine_0: ##   0:27:31  Reached cover statement at SignalTracker.sv:4118.22-4119.77 ($cover$SignalTracker.sv:4118$10559) in step 18.
+SBY  0:34:06 [cover] engine_0: ##   0:27:31  Writing trace to VCD file: engine_0/trace127.vcd
+SBY  0:34:19 [cover] engine_0: ##   0:27:44  Writing trace to Verilog testbench: engine_0/trace127_tb.v
+SBY  0:34:19 [cover] engine_0: ##   0:27:44  Writing trace to constraints file: engine_0/trace127.smtc
+SBY  0:34:20 [cover] engine_0: ##   0:27:44  Checking cover reachability in step 18..
+SBY  0:34:21 [cover] engine_0: ##   0:27:46  Reached cover statement at SignalTracker.sv:2033.22-2034.86 ($cover$SignalTracker.sv:2033$9864) in step 18.
+SBY  0:34:21 [cover] engine_0: ##   0:27:46  Writing trace to VCD file: engine_0/trace128.vcd
+SBY  0:34:34 [cover] engine_0: ##   0:27:59  Writing trace to Verilog testbench: engine_0/trace128_tb.v
+SBY  0:34:35 [cover] engine_0: ##   0:28:00  Writing trace to constraints file: engine_0/trace128.smtc
+SBY  0:34:35 [cover] engine_0: ##   0:28:00  Checking cover reachability in step 18..
+SBY  0:34:36 [cover] engine_0: ##   0:28:01  Reached cover statement at SignalTracker.sv:1952.22-1953.84 ($cover$SignalTracker.sv:1952$9837) in step 18.
+SBY  0:34:36 [cover] engine_0: ##   0:28:01  Writing trace to VCD file: engine_0/trace129.vcd
+SBY  0:34:49 [cover] engine_0: ##   0:28:14  Writing trace to Verilog testbench: engine_0/trace129_tb.v
+SBY  0:34:50 [cover] engine_0: ##   0:28:14  Writing trace to constraints file: engine_0/trace129.smtc
+SBY  0:34:50 [cover] engine_0: ##   0:28:15  Checking cover reachability in step 18..
+SBY  0:34:51 [cover] engine_0: ##   0:28:16  Checking cover reachability in step 19..
+SBY  0:35:02 [cover] engine_0: ##   0:28:27  Reached cover statement at SignalTracker.sv:3452.22-3453.66 ($cover$SignalTracker.sv:3452$10337) in step 19.
+SBY  0:35:02 [cover] engine_0: ##   0:28:27  Writing trace to VCD file: engine_0/trace130.vcd
+SBY  0:35:16 [cover] engine_0: ##   0:28:40  Writing trace to Verilog testbench: engine_0/trace130_tb.v
+SBY  0:35:16 [cover] engine_0: ##   0:28:41  Writing trace to constraints file: engine_0/trace130.smtc
+SBY  0:35:16 [cover] engine_0: ##   0:28:41  Checking cover reachability in step 19..
+SBY  0:35:19 [cover] engine_0: ##   0:28:43  Reached cover statement at SignalTracker.sv:3539.22-3540.77 ($cover$SignalTracker.sv:3539$10366) in step 19.
+SBY  0:35:19 [cover] engine_0: ##   0:28:43  Writing trace to VCD file: engine_0/trace131.vcd
+SBY  0:35:32 [cover] engine_0: ##   0:28:57  Writing trace to Verilog testbench: engine_0/trace131_tb.v
+SBY  0:35:33 [cover] engine_0: ##   0:28:57  Writing trace to constraints file: engine_0/trace131.smtc
+SBY  0:35:33 [cover] engine_0: ##   0:28:58  Checking cover reachability in step 19..
+SBY  0:35:34 [cover] engine_0: ##   0:28:59  Checking cover reachability in step 20..
+SBY  0:35:43 [cover] engine_0: ##   0:29:08  Reached cover statement at SignalTracker.sv:3869.22-3870.75 ($cover$SignalTracker.sv:3869$10476) in step 20.
+SBY  0:35:43 [cover] engine_0: ##   0:29:08  Writing trace to VCD file: engine_0/trace132.vcd
+SBY  0:35:58 [cover] engine_0: ##   0:29:22  Writing trace to Verilog testbench: engine_0/trace132_tb.v
+SBY  0:35:58 [cover] engine_0: ##   0:29:23  Writing trace to constraints file: engine_0/trace132.smtc
+SBY  0:35:58 [cover] engine_0: ##   0:29:23  Checking cover reachability in step 20..
+SBY  0:36:04 [cover] engine_0: ##   0:29:29  Checking cover reachability in step 21..
+SBY  0:36:17 [cover] engine_0: ##   0:29:41  Reached cover statement at SignalTracker.sv:3500.22-3501.66 ($cover$SignalTracker.sv:3500$10353) in step 21.
+SBY  0:36:17 [cover] engine_0: ##   0:29:41  Writing trace to VCD file: engine_0/trace133.vcd
+SBY  0:36:32 [cover] engine_0: ##   0:29:56  Writing trace to Verilog testbench: engine_0/trace133_tb.v
+SBY  0:36:32 [cover] engine_0: ##   0:29:57  Writing trace to constraints file: engine_0/trace133.smtc
+SBY  0:36:32 [cover] engine_0: ##   0:29:57  Checking cover reachability in step 21..
+SBY  0:36:33 [cover] engine_0: ##   0:29:58  Checking cover reachability in step 22..
+SBY  0:36:52 [cover] engine_0: ##   0:30:17  Reached cover statement at SignalTracker.sv:3551.22-3552.66 ($cover$SignalTracker.sv:3551$10370) in step 22.
+SBY  0:36:52 [cover] engine_0: ##   0:30:17  Writing trace to VCD file: engine_0/trace134.vcd
+SBY  0:37:08 [cover] engine_0: ##   0:30:32  Writing trace to Verilog testbench: engine_0/trace134_tb.v
+SBY  0:37:08 [cover] engine_0: ##   0:30:33  Writing trace to constraints file: engine_0/trace134.smtc
+SBY  0:37:08 [cover] engine_0: ##   0:30:33  Checking cover reachability in step 22..
+SBY  0:37:10 [cover] engine_0: ##   0:30:34  Checking cover reachability in step 23..
+SBY  0:37:30 [cover] engine_0: ##   0:30:54  Checking cover reachability in step 24..
+SBY  0:37:40 [cover] engine_0: ##   0:31:05  Checking cover reachability in step 25..
+SBY  0:37:53 [cover] engine_0: ##   0:31:18  Checking cover reachability in step 26..
+SBY  0:38:31 [cover] engine_0: ##   0:31:56  Checking cover reachability in step 27..
+SBY  0:38:53 [cover] engine_0: ##   0:32:18  Checking cover reachability in step 28..
+SBY  0:39:37 [cover] engine_0: ##   0:33:02  Checking cover reachability in step 29..
+SBY  0:40:09 [cover] engine_0: ##   0:33:34  Checking cover reachability in step 30..
+SBY  0:40:41 [cover] engine_0: ##   0:34:06  Checking cover reachability in step 31..
+SBY  0:41:41 [cover] engine_0: ##   0:35:06  Checking cover reachability in step 32..
+SBY  0:42:42 [cover] engine_0: ##   0:36:06  waiting for solver (1 minute)
+SBY  0:43:27 [cover] engine_0: ##   0:36:52  Checking cover reachability in step 33..
+SBY  0:44:21 [cover] engine_0: ##   0:37:46  Checking cover reachability in step 34..
+SBY  0:45:21 [cover] engine_0: ##   0:38:46  waiting for solver (1 minute)
+SBY  0:47:04 [cover] engine_0: ##   0:40:28  Checking cover reachability in step 35..
+SBY  0:48:04 [cover] engine_0: ##   0:41:29  waiting for solver (1 minute)
+SBY  0:48:12 [cover] engine_0: ##   0:41:37  Checking cover reachability in step 36..
+SBY  0:49:12 [cover] engine_0: ##   0:42:37  waiting for solver (1 minute)
+SBY  0:50:02 [cover] engine_0: ##   0:43:27  Checking cover reachability in step 37..
+SBY  0:51:02 [cover] engine_0: ##   0:44:27  waiting for solver (1 minute)
+SBY  0:51:21 [cover] engine_0: ##   0:44:45  Checking cover reachability in step 38..
+SBY  0:52:21 [cover] engine_0: ##   0:45:46  waiting for solver (1 minute)
+SBY  0:56:14 [cover] engine_0: ##   0:49:39  Checking cover reachability in step 39..
+SBY  0:57:14 [cover] engine_0: ##   0:50:39  waiting for solver (1 minute)
+SBY  0:59:07 [cover] engine_0: ##   0:52:32  Checking cover reachability in step 40..
+SBY  1:00:07 [cover] engine_0: ##   0:53:32  waiting for solver (1 minute)
+SBY  1:01:49 [cover] engine_0: ##   0:55:14  Checking cover reachability in step 41..
+SBY  1:02:50 [cover] engine_0: ##   0:56:14  waiting for solver (1 minute)
+SBY  1:06:50 [cover] engine_0: ##   1:00:14  waiting for solver (5 minutes)
+SBY  1:08:30 [cover] engine_0: ##   1:01:55  Checking cover reachability in step 42..
+SBY  1:09:30 [cover] engine_0: ##   1:02:55  waiting for solver (1 minute)
+SBY  1:13:30 [cover] engine_0: ##   1:06:55  waiting for solver (5 minutes)
+SBY  1:13:51 [cover] engine_0: ##   1:07:16  Checking cover reachability in step 43..
+SBY  1:14:52 [cover] engine_0: ##   1:08:16  waiting for solver (1 minute)
+SBY  1:18:52 [cover] engine_0: ##   1:12:16  waiting for solver (5 minutes)
+SBY  1:23:52 [cover] engine_0: ##   1:17:16  waiting for solver (10 minutes)
+SBY  1:25:29 [cover] engine_0: ##   1:18:54  Checking cover reachability in step 44..
+SBY  1:26:30 [cover] engine_0: ##   1:19:55  waiting for solver (1 minute)
+SBY  1:30:30 [cover] engine_0: ##   1:23:55  waiting for solver (5 minutes)
+SBY  1:35:30 [cover] engine_0: ##   1:28:55  waiting for solver (10 minutes)
+SBY  1:37:32 [cover] engine_0: ##   1:30:57  Checking cover reachability in step 45..
+SBY  1:38:32 [cover] engine_0: ##   1:31:57  waiting for solver (1 minute)
+SBY  1:42:32 [cover] engine_0: ##   1:35:57  waiting for solver (5 minutes)
+SBY  1:47:32 [cover] engine_0: ##   1:40:57  waiting for solver (10 minutes)
+SBY  1:52:32 [cover] engine_0: ##   1:45:57  waiting for solver (15 minutes)
+SBY  1:53:03 [cover] engine_0: ##   1:46:28  Checking cover reachability in step 46..
+SBY  1:54:04 [cover] engine_0: ##   1:47:28  waiting for solver (1 minute)
+SBY  1:58:04 [cover] engine_0: ##   1:51:28  waiting for solver (5 minutes)
+SBY  2:03:04 [cover] engine_0: ##   1:56:28  waiting for solver (10 minutes)
+SBY  2:08:04 [cover] engine_0: ##   2:01:28  waiting for solver (15 minutes)
+SBY  2:11:55 [cover] engine_0: ##   2:05:20  Checking cover reachability in step 47..
+SBY  2:12:55 [cover] engine_0: ##   2:06:20  waiting for solver (1 minute)
+SBY  2:16:55 [cover] engine_0: ##   2:10:20  waiting for solver (5 minutes)
+SBY  2:21:55 [cover] engine_0: ##   2:15:20  waiting for solver (10 minutes)
+SBY  2:22:08 [cover] engine_0: ##   2:15:33  Checking cover reachability in step 48..
+SBY  2:23:09 [cover] engine_0: ##   2:16:33  waiting for solver (1 minute)
+SBY  2:27:09 [cover] engine_0: ##   2:20:33  waiting for solver (5 minutes)
+SBY  2:32:09 [cover] engine_0: ##   2:25:33  waiting for solver (10 minutes)
+SBY  2:37:09 [cover] engine_0: ##   2:30:33  waiting for solver (15 minutes)
+SBY  2:37:50 [cover] engine_0: ##   2:31:14  Checking cover reachability in step 49..
+SBY  2:38:50 [cover] engine_0: ##   2:32:15  waiting for solver (1 minute)
+SBY  2:42:50 [cover] engine_0: ##   2:36:15  waiting for solver (5 minutes)
+SBY  2:47:50 [cover] engine_0: ##   2:41:15  waiting for solver (10 minutes)
+SBY  2:52:50 [cover] engine_0: ##   2:46:15  waiting for solver (15 minutes)
+SBY  3:07:50 [cover] engine_0: ##   3:01:15  waiting for solver (30 minutes)
+SBY  3:12:04 [cover] engine_0: ##   3:05:29  Checking cover reachability in step 50..
+SBY  3:13:05 [cover] engine_0: ##   3:06:29  waiting for solver (1 minute)
+SBY  3:17:05 [cover] engine_0: ##   3:10:29  waiting for solver (5 minutes)
+SBY  3:22:05 [cover] engine_0: ##   3:15:29  waiting for solver (10 minutes)
+SBY  3:27:05 [cover] engine_0: ##   3:20:29  waiting for solver (15 minutes)
+SBY  3:36:48 [cover] engine_0: ##   3:30:13  Checking cover reachability in step 51..
+SBY  3:37:48 [cover] engine_0: ##   3:31:13  waiting for solver (1 minute)
+SBY  3:41:48 [cover] engine_0: ##   3:35:13  waiting for solver (5 minutes)
+SBY  3:46:48 [cover] engine_0: ##   3:40:13  waiting for solver (10 minutes)
+SBY  3:51:48 [cover] engine_0: ##   3:45:13  waiting for solver (15 minutes)
+SBY  4:06:48 [cover] engine_0: ##   4:00:13  waiting for solver (30 minutes)
+SBY  4:31:49 [cover] engine_0: ##   4:25:14  Checking cover reachability in step 52..
+SBY  4:32:49 [cover] engine_0: ##   4:26:14  waiting for solver (1 minute)
+SBY  4:36:49 [cover] engine_0: ##   4:30:14  waiting for solver (5 minutes)
+SBY  4:41:49 [cover] engine_0: ##   4:35:14  waiting for solver (10 minutes)
+SBY  4:45:50 [cover] engine_0: ##   4:39:14  Checking cover reachability in step 53..
+SBY  4:46:50 [cover] engine_0: ##   4:40:15  waiting for solver (1 minute)
+SBY  4:50:50 [cover] engine_0: ##   4:44:15  waiting for solver (5 minutes)
+SBY  4:55:50 [cover] engine_0: ##   4:49:15  waiting for solver (10 minutes)
+SBY  5:00:50 [cover] engine_0: ##   4:54:15  waiting for solver (15 minutes)
+SBY  5:15:50 [cover] engine_0: ##   5:09:15  waiting for solver (30 minutes)
+SBY  5:45:50 [cover] engine_0: ##   5:39:15  waiting for solver (1 hour)
+SBY  5:59:58 [cover] engine_0: ##   5:53:23  Checking cover reachability in step 54..
+SBY  6:00:58 [cover] engine_0: ##   5:54:23  waiting for solver (1 minute)
+SBY  6:04:58 [cover] engine_0: ##   5:58:23  waiting for solver (5 minutes)
+SBY  6:09:58 [cover] engine_0: ##   6:03:23  waiting for solver (10 minutes)
+SBY  6:14:58 [cover] engine_0: ##   6:08:23  waiting for solver (15 minutes)
+SBY  6:29:58 [cover] engine_0: ##   6:23:23  waiting for solver (30 minutes)
+SBY  6:36:01 [cover] engine_0: ##   6:29:26  Checking cover reachability in step 55..
+SBY  6:37:02 [cover] engine_0: ##   6:30:27  waiting for solver (1 minute)
+SBY  6:41:02 [cover] engine_0: ##   6:34:27  waiting for solver (5 minutes)
+SBY  6:46:02 [cover] engine_0: ##   6:39:27  waiting for solver (10 minutes)
+SBY  6:51:02 [cover] engine_0: ##   6:44:27  waiting for solver (15 minutes)
+SBY  7:06:02 [cover] engine_0: ##   6:59:27  waiting for solver (30 minutes)
+SBY  7:18:54 [cover] engine_0: ##   7:12:18  Checking cover reachability in step 56..
+SBY  7:19:54 [cover] engine_0: ##   7:13:19  waiting for solver (1 minute)
+SBY  7:23:54 [cover] engine_0: ##   7:17:19  waiting for solver (5 minutes)
+SBY  7:28:54 [cover] engine_0: ##   7:22:19  waiting for solver (10 minutes)
+SBY  7:33:54 [cover] engine_0: ##   7:27:19  waiting for solver (15 minutes)
+SBY  7:48:54 [cover] engine_0: ##   7:42:19  waiting for solver (30 minutes)
+SBY  8:18:54 [cover] engine_0: ##   8:12:19  waiting for solver (1 hour)
+SBY  9:18:54 [cover] engine_0: ##   9:12:19  waiting for solver (2 hours)
+SBY  9:47:27 [cover] engine_0: ##   9:40:52  Checking cover reachability in step 57..
+SBY  9:48:28 [cover] engine_0: ##   9:41:53  waiting for solver (1 minute)
+SBY  9:52:28 [cover] engine_0: ##   9:45:53  waiting for solver (5 minutes)
+SBY  9:57:28 [cover] engine_0: ##   9:50:53  waiting for solver (10 minutes)
+SBY 10:02:28 [cover] engine_0: ##   9:55:53  waiting for solver (15 minutes)
+SBY 10:17:28 [cover] engine_0: ##  10:10:53  waiting for solver (30 minutes)
+SBY 10:24:28 [cover] engine_0: ##  10:17:53  Checking cover reachability in step 58..
+SBY 10:25:28 [cover] engine_0: ##  10:18:53  waiting for solver (1 minute)
+SBY 10:29:28 [cover] engine_0: ##  10:22:53  waiting for solver (5 minutes)
+SBY 10:34:28 [cover] engine_0: ##  10:27:53  waiting for solver (10 minutes)
+SBY 10:39:28 [cover] engine_0: ##  10:32:53  waiting for solver (15 minutes)
+SBY 10:54:28 [cover] engine_0: ##  10:47:53  waiting for solver (30 minutes)
+SBY 11:24:28 [cover] engine_0: ##  11:17:53  waiting for solver (1 hour)
+SBY 12:24:28 [cover] engine_0: ##  12:17:53  waiting for solver (2 hours)
+SBY 12:41:13 [cover] engine_0: ##  12:34:38  Checking cover reachability in step 59..
+SBY 12:42:13 [cover] engine_0: ##  12:35:38  waiting for solver (1 minute)
+SBY 12:46:13 [cover] engine_0: ##  12:39:38  waiting for solver (5 minutes)
+SBY 12:51:13 [cover] engine_0: ##  12:44:38  waiting for solver (10 minutes)
+SBY 12:56:13 [cover] engine_0: ##  12:49:38  waiting for solver (15 minutes)
+SBY 13:11:13 [cover] engine_0: ##  13:04:38  waiting for solver (30 minutes)
+SBY 13:41:13 [cover] engine_0: ##  13:34:38  waiting for solver (1 hour)
+SBY 14:41:13 [cover] engine_0: ##  14:34:38  waiting for solver (2 hours)
+SBY 14:48:08 [cover] engine_0: ##  14:41:33  Checking cover reachability in step 60..
+SBY 14:49:08 [cover] engine_0: ##  14:42:33  waiting for solver (1 minute)
+SBY 14:53:08 [cover] engine_0: ##  14:46:33  waiting for solver (5 minutes)
+SBY 14:58:08 [cover] engine_0: ##  14:51:33  waiting for solver (10 minutes)
+SBY 15:03:08 [cover] engine_0: ##  14:56:33  waiting for solver (15 minutes)
+SBY 15:18:08 [cover] engine_0: ##  15:11:33  waiting for solver (30 minutes)
+SBY 15:48:08 [cover] engine_0: ##  15:41:33  waiting for solver (1 hour)
+SBY 16:48:09 [cover] engine_0: ##  16:41:33  waiting for solver (2 hours)
+SBY 17:48:09 [cover] engine_0: ##  17:41:33  waiting for solver (3 hours)
+SBY 18:01:34 [cover] engine_0: ##  17:54:58  Checking cover reachability in step 61..
+SBY 18:02:34 [cover] engine_0: ##  17:55:59  waiting for solver (1 minute)
+SBY 18:06:34 [cover] engine_0: ##  17:59:59  waiting for solver (5 minutes)
+SBY 18:11:34 [cover] engine_0: ##  18:04:59  waiting for solver (10 minutes)
+SBY 18:16:34 [cover] engine_0: ##  18:09:59  waiting for solver (15 minutes)
+SBY 18:31:34 [cover] engine_0: ##  18:24:59  waiting for solver (30 minutes)
+SBY 19:01:34 [cover] engine_0: ##  18:54:59  waiting for solver (1 hour)
+SBY 20:01:34 [cover] engine_0: ##  19:54:59  waiting for solver (2 hours)
+SBY 21:01:34 [cover] engine_0: ##  20:54:59  waiting for solver (3 hours)
+SBY 21:47:24 [cover] engine_0: ##  21:40:49  Checking cover reachability in step 62..
+SBY 21:48:25 [cover] engine_0: ##  21:41:49  waiting for solver (1 minute)
+SBY 21:52:25 [cover] engine_0: ##  21:45:49  waiting for solver (5 minutes)
+SBY 21:57:25 [cover] engine_0: ##  21:50:49  waiting for solver (10 minutes)
+SBY 22:02:25 [cover] engine_0: ##  21:55:49  waiting for solver (15 minutes)
+SBY 22:17:25 [cover] engine_0: ##  22:10:49  waiting for solver (30 minutes)
+SBY 22:47:25 [cover] engine_0: ##  22:40:49  waiting for solver (1 hour)

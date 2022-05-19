@@ -1,0 +1,12 @@
+.idea/
+.bsp/
+target/
+
+verilated/
+*.vcd
+coverage.dat
+*results/
+out/
+queue/
+__pycache__/
+test_run_dir/

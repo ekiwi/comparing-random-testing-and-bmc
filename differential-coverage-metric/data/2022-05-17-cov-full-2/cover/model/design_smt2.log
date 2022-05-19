@@ -1,0 +1,706 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.16+63 (git sha1 11e75bc27, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TileAndMemTop..
+Finding unused cells or wires in module \Tile..
+Finding unused cells or wires in module \SignalTracker..
+Finding unused cells or wires in module \RegFile..
+Finding unused cells or wires in module \MemArbiter..
+Finding unused cells or wires in module \ImmGenWire..
+Finding unused cells or wires in module \Datapath..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \Control..
+Finding unused cells or wires in module \Cache_1..
+Finding unused cells or wires in module \Cache..
+Finding unused cells or wires in module \CSR..
+Finding unused cells or wires in module \BrCondArea..
+Finding unused cells or wires in module \AluArea..
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AluArea.
+Optimizing module BrCondArea.
+Optimizing module CSR.
+Optimizing module Cache.
+Optimizing module Cache_1.
+Optimizing module Control.
+Optimizing module Core.
+Optimizing module Datapath.
+Optimizing module ImmGenWire.
+Optimizing module MemArbiter.
+Optimizing module RegFile.
+Optimizing module SignalTracker.
+Optimizing module Tile.
+Optimizing module TileAndMemTop.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AluArea'.
+Finding identical cells in module `\BrCondArea'.
+Finding identical cells in module `\CSR'.
+Finding identical cells in module `\Cache'.
+Finding identical cells in module `\Cache_1'.
+Finding identical cells in module `\Control'.
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\Datapath'.
+Finding identical cells in module `\ImmGenWire'.
+Finding identical cells in module `\MemArbiter'.
+Finding identical cells in module `\RegFile'.
+Finding identical cells in module `\SignalTracker'.
+Finding identical cells in module `\Tile'.
+Finding identical cells in module `\TileAndMemTop'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$51093 ($dff) from module CSR (D = \wdata, Q = \mfromhost).
+Adding SRST signal on $procdff$51092 ($dff) from module CSR (D = $procmux$44107_Y, Q = \mtohost, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$57902 ($sdff) from module CSR (D = \wdata, Q = \mtohost).
+Adding EN signal on $procdff$51091 ($dff) from module CSR (D = $procmux$44119_Y, Q = \mbadaddr).
+Adding EN signal on $procdff$51090 ($dff) from module CSR (D = $procmux$44128_Y, Q = \mcause).
+Adding SRST signal on $auto$ff.cc:262:slice$57963 ($dffe) from module CSR (D = $procmux$44125_Y [31:4], Q = \mcause [31:4], rval = 28'0000000000000000000000000000).
+Adding EN signal on $procdff$51089 ($dff) from module CSR (D = \_GEN_218, Q = \mepc).
+Adding SRST signal on $auto$ff.cc:262:slice$57992 ($dffe) from module CSR (D = \_GEN_209 [1:0], Q = \mepc [1:0], rval = 2'00).
+Adding EN signal on $procdff$51088 ($dff) from module CSR (D = \wdata, Q = \mscratch).
+Adding EN signal on $procdff$51087 ($dff) from module CSR (D = \wdata, Q = \mtimecmp).
+Adding SRST signal on $procdff$51086 ($dff) from module CSR (D = $procmux$44152_Y, Q = \MSIE, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58059 ($sdff) from module CSR (D = \wdata [3], Q = \MSIE).
+Adding SRST signal on $procdff$51085 ($dff) from module CSR (D = $procmux$44161_Y, Q = \MSIP, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58073 ($sdff) from module CSR (D = \wdata [3], Q = \MSIP).
+Adding SRST signal on $procdff$51084 ($dff) from module CSR (D = $procmux$44170_Y, Q = \MTIE, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58085 ($sdff) from module CSR (D = \wdata [7], Q = \MTIE).
+Adding SRST signal on $procdff$51083 ($dff) from module CSR (D = $procmux$44179_Y, Q = \MTIP, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58099 ($sdff) from module CSR (D = \wdata [7], Q = \MTIP).
+Adding SRST signal on $procdff$51082 ($dff) from module CSR (D = $procmux$44187_Y, Q = \IE1, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58111 ($sdff) from module CSR (D = $procmux$44185_Y, Q = \IE1).
+Adding SRST signal on $procdff$51081 ($dff) from module CSR (D = $procmux$44198_Y, Q = \IE, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58113 ($sdff) from module CSR (D = $procmux$44196_Y, Q = \IE).
+Adding SRST signal on $procdff$51080 ($dff) from module CSR (D = $procmux$44209_Y, Q = \PRV1, rval = 2'11).
+Adding EN signal on $auto$ff.cc:262:slice$58123 ($sdff) from module CSR (D = $procmux$44207_Y, Q = \PRV1).
+Adding SRST signal on $procdff$51079 ($dff) from module CSR (D = $procmux$44220_Y, Q = \PRV, rval = 2'11).
+Adding EN signal on $auto$ff.cc:262:slice$58133 ($sdff) from module CSR (D = $procmux$44218_Y, Q = \PRV).
+Adding SRST signal on $procdff$51078 ($dff) from module CSR (D = $procmux$44030_Y, Q = \instreth, rval = 0).
+Adding SRST signal on $procdff$51077 ($dff) from module CSR (D = $procmux$44042_Y, Q = \instret, rval = 0).
+Adding SRST signal on $procdff$51076 ($dff) from module CSR (D = $procmux$44054_Y, Q = \cycleh, rval = 0).
+Adding SRST signal on $procdff$51075 ($dff) from module CSR (D = $procmux$44066_Y, Q = \cycle, rval = 0).
+Adding SRST signal on $procdff$51074 ($dff) from module CSR (D = $procmux$44078_Y, Q = \timeh, rval = 0).
+Adding SRST signal on $procdff$51073 ($dff) from module CSR (D = $procmux$44090_Y, Q = \time_, rval = 0).
+Adding EN signal on $procdff$51155 ($dff) from module Cache (D = \io_nasti_r_bits_data, Q = \refill_buf_1).
+Adding EN signal on $procdff$51154 ($dff) from module Cache (D = \io_nasti_r_bits_data, Q = \refill_buf_0).
+Adding SRST signal on $procdff$51150 ($dff) from module Cache (D = $procmux$44477_Y, Q = \read_count, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58157 ($sdff) from module Cache (D = $add$TileAndMemTop.sv:5917$33692_Y, Q = \read_count).
+Adding EN signal on $procdff$51149 ($dff) from module Cache (D = \io_cpu_req_bits_addr, Q = \addr_reg).
+Adding SRST signal on $procdff$51148 ($dff) from module Cache (D = $procmux$44487_Y, Q = \d, rval = 256'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$58160 ($sdff) from module Cache (D = $procmux$44485_Y, Q = \d).
+Adding SRST signal on $procdff$51147 ($dff) from module Cache (D = $procmux$44492_Y, Q = \v, rval = 256'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$58162 ($sdff) from module Cache (D = \_v_T_1, Q = \v).
+Adding EN signal on $procdff$51146 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_3_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51144 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_2_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51142 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_1_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51140 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_0_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51138 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_3_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51136 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_2_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51134 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_1_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51132 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_0_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51130 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_3_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51128 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_2_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51126 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_1_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51124 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_0_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51122 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_3_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51120 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_2_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51118 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_1_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51116 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_0_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51114 ($dff) from module Cache (D = \io_cpu_req_bits_addr [11:4], Q = \metaMem_tag_rmeta_addr_pipe_0).
+Adding SRST signal on $procdff$51112 ($dff) from module Cache (D = $procmux$44543_Y, Q = \state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$58181 ($sdff) from module Cache (D = $procmux$44543_Y, Q = \state).
+Adding EN signal on $procdff$51253 ($dff) from module Cache_1 (D = \io_nasti_r_bits_data, Q = \refill_buf_1).
+Adding EN signal on $procdff$51252 ($dff) from module Cache_1 (D = \io_nasti_r_bits_data, Q = \refill_buf_0).
+Adding SRST signal on $procdff$51248 ($dff) from module Cache_1 (D = $procmux$44711_Y, Q = \write_count, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58203 ($sdff) from module Cache_1 (D = $add$TileAndMemTop.sv:6721$20286_Y, Q = \write_count).
+Adding SRST signal on $procdff$51247 ($dff) from module Cache_1 (D = $procmux$44716_Y, Q = \read_count, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58205 ($sdff) from module Cache_1 (D = $add$TileAndMemTop.sv:6716$20285_Y, Q = \read_count).
+Adding EN signal on $procdff$51246 ($dff) from module Cache_1 (D = \io_cpu_req_bits_mask, Q = \cpu_mask).
+Adding EN signal on $procdff$51245 ($dff) from module Cache_1 (D = \io_cpu_req_bits_data, Q = \cpu_data).
+Adding EN signal on $procdff$51244 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr, Q = \addr_reg).
+Adding SRST signal on $procdff$51243 ($dff) from module Cache_1 (D = $procmux$44730_Y, Q = \d, rval = 256'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$58210 ($sdff) from module Cache_1 (D = $procmux$44728_Y, Q = \d).
+Adding SRST signal on $procdff$51242 ($dff) from module Cache_1 (D = $procmux$44735_Y, Q = \v, rval = 256'0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$58212 ($sdff) from module Cache_1 (D = \_v_T_1, Q = \v).
+Adding EN signal on $procdff$51241 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_3_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51239 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_2_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51237 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_1_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51235 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_3_0_rdata_MPORT_3_addr_pipe_0).
+Adding EN signal on $procdff$51233 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_3_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51231 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_2_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51229 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_1_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51227 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_2_0_rdata_MPORT_2_addr_pipe_0).
+Adding EN signal on $procdff$51225 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_3_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51223 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_2_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51221 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_1_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51219 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_1_0_rdata_MPORT_1_addr_pipe_0).
+Adding EN signal on $procdff$51217 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_3_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51215 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_2_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51213 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_1_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51211 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \dataMem_0_0_rdata_MPORT_addr_pipe_0).
+Adding EN signal on $procdff$51209 ($dff) from module Cache_1 (D = \io_cpu_req_bits_addr [11:4], Q = \metaMem_tag_rmeta_addr_pipe_0).
+Adding SRST signal on $procdff$51207 ($dff) from module Cache_1 (D = $procmux$44786_Y, Q = \state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$58231 ($sdff) from module Cache_1 (D = $procmux$44786_Y, Q = \state).
+Adding SRST signal on $procdff$51111 ($dff) from module Datapath (D = \npc, Q = \pc, rval = 33'000000000000000000000000111111100).
+Adding EN signal on $auto$ff.cc:262:slice$58245 ($sdff) from module Datapath (D = \_npc_T_11 [32], Q = \pc [32]).
+Adding SRST signal on $procdff$51109 ($dff) from module Datapath (D = $procmux$44245_Y, Q = \pc_check, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58254 ($sdff) from module Datapath (D = \_npc_T_1_0, Q = \pc_check).
+Adding SRST signal on $procdff$51108 ($dff) from module Datapath (D = $procmux$44250_Y, Q = \illegal, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58256 ($sdff) from module Datapath (D = \io_ctrl_illegal, Q = \illegal).
+Adding SRST signal on $procdff$51107 ($dff) from module Datapath (D = $procmux$44255_Y, Q = \csr_cmd, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$58258 ($sdff) from module Datapath (D = \io_ctrl_csr_cmd, Q = \csr_cmd).
+Adding SRST signal on $procdff$51106 ($dff) from module Datapath (D = $procmux$44260_Y, Q = \wb_en, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$58260 ($sdff) from module Datapath (D = \io_ctrl_wb_en, Q = \wb_en).
+Adding EN signal on $procdff$51105 ($dff) from module Datapath (D = \io_ctrl_wb_sel, Q = \wb_sel).
+Adding SRST signal on $procdff$51104 ($dff) from module Datapath (D = $procmux$44269_Y, Q = \ld_type, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$58267 ($sdff) from module Datapath (D = \io_ctrl_ld_type, Q = \ld_type).
+Adding SRST signal on $procdff$51103 ($dff) from module Datapath (D = $procmux$44274_Y, Q = \st_type, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$58269 ($sdff) from module Datapath (D = \io_ctrl_st_type, Q = \st_type).
+Adding EN signal on $procdff$51102 ($dff) from module Datapath (D = $procmux$44283_Y, Q = \csr_in).
+Adding EN signal on $procdff$51101 ($dff) from module Datapath (D = \alu_io_out, Q = \ew_alu).
+Adding EN signal on $procdff$51100 ($dff) from module Datapath (D = \fe_pc, Q = \ew_pc).
+Adding SRST signal on $procdff$51099 ($dff) from module Datapath (D = $procmux$44299_Y, Q = \ew_inst, rval = 19).
+Adding EN signal on $auto$ff.cc:262:slice$58286 ($sdff) from module Datapath (D = \fe_inst, Q = \ew_inst).
+Adding EN signal on $procdff$51098 ($dff) from module Datapath (D = \pc, Q = \fe_pc).
+Adding SRST signal on $procdff$51097 ($dff) from module Datapath (D = $procmux$44309_Y, Q = \fe_inst, rval = 19).
+Adding EN signal on $auto$ff.cc:262:slice$58293 ($sdff) from module Datapath (D = $procmux$44307_Y, Q = \fe_inst).
+Adding SRST signal on $procdff$51305 ($dff) from module MemArbiter (D = $procmux$44804_Y, Q = \state, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$58295 ($sdff) from module MemArbiter (D = $procmux$44804_Y, Q = \state).
+Adding EN signal on $procdff$54413 ($dff) from module TileAndMemTop (D = $0\off[7:0], Q = \off).
+Adding EN signal on $procdff$54412 ($dff) from module TileAndMemTop (D = $procmux$51048_Y, Q = \addr).
+Adding SRST signal on $procdff$54411 ($dff) from module TileAndMemTop (D = $procmux$51066_Y, Q = \state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$58325 ($sdff) from module TileAndMemTop (D = $procmux$51066_Y, Q = \state).
+Adding EN signal on $procdff$54410 ($dff) from module TileAndMemTop (D = \_GEN_0, Q = \_resetCount).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AluArea..
+Finding unused cells or wires in module \BrCondArea..
+Finding unused cells or wires in module \CSR..
+Finding unused cells or wires in module \Cache..
+Finding unused cells or wires in module \Cache_1..
+Finding unused cells or wires in module \Control..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \Datapath..
+Finding unused cells or wires in module \ImmGenWire..
+Finding unused cells or wires in module \MemArbiter..
+Finding unused cells or wires in module \RegFile..
+Finding unused cells or wires in module \SignalTracker..
+Finding unused cells or wires in module \Tile..
+Finding unused cells or wires in module \TileAndMemTop..
+Removed 197 unused cells and 198 unused wires.
+<suppressed ~255 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AluArea.
+Optimizing module BrCondArea.
+Optimizing module CSR.
+<suppressed ~6 debug messages>
+Optimizing module Cache.
+<suppressed ~1 debug messages>
+Optimizing module Cache_1.
+<suppressed ~1 debug messages>
+Optimizing module Control.
+Optimizing module Core.
+Optimizing module Datapath.
+Optimizing module ImmGenWire.
+Optimizing module MemArbiter.
+<suppressed ~1 debug messages>
+Optimizing module RegFile.
+Optimizing module SignalTracker.
+Optimizing module Tile.
+Optimizing module TileAndMemTop.
+<suppressed ~3 debug messages>
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AluArea'.
+Finding identical cells in module `\BrCondArea'.
+Finding identical cells in module `\CSR'.
+<suppressed ~252 debug messages>
+Finding identical cells in module `\Cache'.
+<suppressed ~48 debug messages>
+Finding identical cells in module `\Cache_1'.
+<suppressed ~48 debug messages>
+Finding identical cells in module `\Control'.
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\Datapath'.
+<suppressed ~27 debug messages>
+Finding identical cells in module `\ImmGenWire'.
+Finding identical cells in module `\MemArbiter'.
+Finding identical cells in module `\RegFile'.
+Finding identical cells in module `\SignalTracker'.
+Finding identical cells in module `\Tile'.
+Finding identical cells in module `\TileAndMemTop'.
+<suppressed ~12 debug messages>
+Removed a total of 129 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AluArea..
+Finding unused cells or wires in module \BrCondArea..
+Finding unused cells or wires in module \CSR..
+Finding unused cells or wires in module \Cache..
+Finding unused cells or wires in module \Cache_1..
+Finding unused cells or wires in module \Control..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \Datapath..
+Finding unused cells or wires in module \ImmGenWire..
+Finding unused cells or wires in module \MemArbiter..
+Finding unused cells or wires in module \RegFile..
+Finding unused cells or wires in module \SignalTracker..
+Finding unused cells or wires in module \Tile..
+Finding unused cells or wires in module \TileAndMemTop..
+Removed 0 unused cells and 97 unused wires.
+<suppressed ~3 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module AluArea...
+Checking module BrCondArea...
+Checking module CSR...
+Checking module Cache...
+Checking module Cache_1...
+Checking module Control...
+Checking module Core...
+Checking module Datapath...
+Checking module ImmGenWire...
+Checking module MemArbiter...
+Checking module RegFile...
+Checking module SignalTracker...
+Checking module Tile...
+Checking module TileAndMemTop...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \TileAndMemTop
+Used module:     \Tile
+Used module:         \MemArbiter
+Used module:         \Core
+Used module:             \Control
+Used module:             \Datapath
+Used module:                 \AluArea
+Used module:                 \BrCondArea
+Used module:                 \CSR
+Used module:                 \ImmGenWire
+Used module:                 \RegFile
+Used module:         \Cache_1
+Used module:         \Cache
+Used module:     \SignalTracker
+
+8.2. Analyzing design hierarchy..
+Top module:  \TileAndMemTop
+Used module:     \Tile
+Used module:         \MemArbiter
+Used module:         \Core
+Used module:             \Control
+Used module:             \Datapath
+Used module:                 \AluArea
+Used module:                 \BrCondArea
+Used module:                 \CSR
+Used module:                 \ImmGenWire
+Used module:                 \RegFile
+Used module:         \Cache_1
+Used module:         \Cache
+Used module:     \SignalTracker
+Removed 0 unused modules.
+Module SignalTracker directly or indirectly contains formal properties -> setting "keep" attribute.
+Module TileAndMemTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Printing statistics.
+
+=== AluArea ===
+
+   Number of wires:                109
+   Number of wire bits:           2154
+   Number of public wires:         109
+   Number of public wire bits:    2154
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 64
+     $add                            1
+     $and                           22
+     $eq                            11
+     $logic_not                      1
+     $mux                           12
+     $or                            14
+     $sshr                           1
+     $sub                            1
+     $xor                            1
+
+=== BrCondArea ===
+
+   Number of wires:                 38
+   Number of wire bits:            133
+   Number of public wires:          37
+   Number of public wire bits:     132
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 25
+     $and                            6
+     $eq                             7
+     $mux                            2
+     $not                            3
+     $or                             5
+     $reduce_or                      1
+     $sub                            1
+
+=== CSR ===
+
+   Number of wires:                557
+   Number of wire bits:           8011
+   Number of public wires:         406
+   Number of public wire bits:    6617
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                454
+     $add                            8
+     $and                           17
+     $dff                           23
+     $eq                            59
+     $le                             1
+     $mux                          247
+     $ne                            16
+     $not                           19
+     $or                            46
+     $reduce_and                    14
+     $reduce_bool                    1
+     $reduce_or                      3
+
+=== Cache ===
+
+   Number of wires:                406
+   Number of wire bits:           6814
+   Number of public wires:         253
+   Number of public wire bits:    4450
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                238
+     $add                            1
+     $and                           27
+     $anyseq                        51
+     $dff                           11
+     $eq                            13
+     $logic_not                      1
+     $mem_v2                        17
+     $mux                           91
+     $ne                             4
+     $not                            6
+     $or                             8
+     $reduce_and                     3
+     $reduce_bool                    1
+     $shl                            2
+     $shr                            2
+
+=== Cache_1 ===
+
+   Number of wires:                465
+   Number of wire bits:           7257
+   Number of public wires:         305
+   Number of public wire bits:    4852
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                275
+     $add                            2
+     $and                           34
+     $anyseq                        51
+     $dff                           14
+     $eq                            13
+     $logic_not                      1
+     $mem_v2                        17
+     $mux                          112
+     $ne                             4
+     $not                            8
+     $or                             9
+     $reduce_and                     3
+     $reduce_bool                    1
+     $reduce_or                      2
+     $shl                            2
+     $shr                            2
+
+=== Control ===
+
+   Number of wires:                593
+   Number of wire bits:           1217
+   Number of public wires:         508
+   Number of public wire bits:    1132
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                543
+     $and                            4
+     $eq                            49
+     $mux                          404
+     $or                            86
+
+=== Core ===
+
+   Number of wires:                448
+   Number of wire bits:            854
+   Number of public wires:         448
+   Number of public wire bits:     854
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     Control                         1
+     Datapath                        1
+
+=== Datapath ===
+
+   Number of wires:                468
+   Number of wire bits:           3449
+   Number of public wires:         427
+   Number of public wire bits:    3054
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                123
+     $add                            2
+     $and                           11
+     $dff                           16
+     $eq                            16
+     $logic_not                      1
+     $mux                           47
+     $ne                             1
+     $not                            5
+     $or                             9
+     $reduce_and                     2
+     $reduce_or                      4
+     $shl                            3
+     $shr                            1
+     AluArea                         1
+     BrCondArea                      1
+     CSR                             1
+     ImmGenWire                      1
+     RegFile                         1
+
+=== ImmGenWire ===
+
+   Number of wires:                 27
+   Number of wire bits:            287
+   Number of public wires:          27
+   Number of public wire bits:     287
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     $and                            1
+     $eq                             6
+     $mux                            6
+
+=== MemArbiter ===
+
+   Number of wires:                101
+   Number of wire bits:            599
+   Number of public wires:          86
+   Number of public wire bits:     570
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 56
+     $and                           23
+     $dff                            1
+     $eq                             8
+     $logic_not                      1
+     $mux                           14
+     $ne                             3
+     $not                            2
+     $or                             2
+     $reduce_and                     1
+     $reduce_bool                    1
+
+=== RegFile ===
+
+   Number of wires:                 32
+   Number of wire bits:            375
+   Number of public wires:          26
+   Number of public wire bits:     267
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 13
+     $and                            1
+     $anyseq                         3
+     $mem_v2                         1
+     $mux                            5
+     $reduce_or                      3
+
+=== SignalTracker ===
+
+   Number of wires:               8268
+   Number of wire bits:           8268
+   Number of public wires:         315
+   Number of public wire bits:     315
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               9505
+     $anyseq                      1552
+     $cover                       1552
+     $dff                         1553
+     $mux                         1553
+     $not                         1743
+     $or                          1552
+
+=== Tile ===
+
+   Number of wires:                730
+   Number of wire bits:           1986
+   Number of public wires:         730
+   Number of public wire bits:    1986
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     Cache                           1
+     Cache_1                         1
+     Core                            1
+     MemArbiter                      1
+
+=== TileAndMemTop ===
+
+   Number of wires:                762
+   Number of wire bits:           3114
+   Number of public wires:         721
+   Number of public wire bits:    2689
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 77
+     $add                            3
+     $and                            3
+     $anyseq                         3
+     $dff                            4
+     $div                            2
+     $eq                             7
+     $logic_not                      1
+     $lt                             1
+     $mem_v2                         1
+     $mux                           31
+     $ne                             7
+     $or                             7
+     $reduce_and                     3
+     $reduce_bool                    2
+     SignalTracker                   1
+     Tile                            1
+
+=== design hierarchy ===
+
+   TileAndMemTop                     1
+     SignalTracker                   1
+     Tile                            1
+       Cache                         1
+       Cache_1                       1
+       Core                          1
+         Control                     1
+         Datapath                    1
+           AluArea                   1
+           BrCondArea                1
+           CSR                       1
+           ImmGenWire                1
+           RegFile                   1
+       MemArbiter                    1
+
+   Number of wires:              13004
+   Number of wire bits:          44518
+   Number of public wires:        4398
+   Number of public wire bits:   29359
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11379
+     $add                           17
+     $and                          149
+     $anyseq                      1660
+     $cover                       1552
+     $dff                         1622
+     $div                            2
+     $eq                           189
+     $le                             1
+     $logic_not                      6
+     $lt                             1
+     $mem_v2                        36
+     $mux                         2524
+     $ne                            35
+     $not                         1786
+     $or                          1738
+     $reduce_and                    26
+     $reduce_bool                    6
+     $reduce_or                     13
+     $shl                            7
+     $shr                            5
+     $sshr                           1
+     $sub                            2
+     $xor                            1
+
+11. Executing SMT2 backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module AluArea.
+Creating SMT-LIBv2 representation of module BrCondArea.
+Creating SMT-LIBv2 representation of module CSR.
+Creating SMT-LIBv2 representation of module Cache.
+Creating SMT-LIBv2 representation of module Cache_1.
+Creating SMT-LIBv2 representation of module Control.
+Creating SMT-LIBv2 representation of module ImmGenWire.
+Creating SMT-LIBv2 representation of module MemArbiter.
+Creating SMT-LIBv2 representation of module RegFile.
+Creating SMT-LIBv2 representation of module SignalTracker.
+Creating SMT-LIBv2 representation of module Datapath.
+Creating SMT-LIBv2 representation of module Core.
+Creating SMT-LIBv2 representation of module Tile.
+Creating SMT-LIBv2 representation of module TileAndMemTop.
+
+End of script. Logfile hash: cf1074952f, CPU: user 10.26s system 0.89s, MEM: 2145.05 MB peak
+Yosys 0.16+63 (git sha1 11e75bc27, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 41% 2x read_ilang (4 sec), 22% 2x opt_merge (2 sec), ...

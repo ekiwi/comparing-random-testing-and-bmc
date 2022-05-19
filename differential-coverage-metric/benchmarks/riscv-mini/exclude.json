@@ -1,0 +1,38 @@
+[
+
+# redundant signal sin the VCD
+"dut__core__dpath__csr___wen_T_0", "dut__core__dpath__csr___io_out_T_57_0", "dut__arb___io_icache_r_valid_T_0", "dut__icache___T_30_0", "dut__arb___io_nasti_aw_valid_T_0", "dut__core__dpath__csr___io_out_T_19_0", "dut__arb___io_dcache_r_valid_T_0", "dut__core__dpath__csr___io_out_T_53_0", "dut__core__dpath__csr___io_out_T_13_0", "dut__core__dpath__csr___io_out_T_41_0", "dut__icache__is_read_0", "dut__core__dpath__csr___io_out_T_21_0", "dut__core__dpath__csr___io_out_T_35_0", "dut__dcache___is_alloc_T_0", "dut__icache__is_idle_0", "dut__core__dpath__csr___io_out_T_15_0", "dut__core__dpath__csr___isInstRet_T_1_0", "dut__dcache___wen_T_2_0", "dut__icache___is_alloc_T_0", "dut__core__dpath__csr___io_out_T_51_0", "dut__core__dpath__csr___io_out_T_37_0", "dut__core__dpath__csr___io_out_T_39_0", "dut__arb___io_nasti_w_valid_T_0", "dut__core__dpath__csr___laddrInvalid_T_6_0", "dut__core__dpath__immGen___io_out_T_12_0", "dut__dcache__is_read_0", "dut__core__dpath__csr___io_out_T_47_0", "dut__core__dpath__csr___laddrInvalid_T_8_0", "dut__core__dpath__csr___io_out_T_23_0", "dut__dcache__is_write_0", "dut__core__dpath__csr___io_out_T_45_0", "dut__icache__is_write_0", "dut__core__dpath__csr___io_out_T_31_0", "dut__dcache___T_30_0", "dut__icache__io_cpu_req_valid_0", "dut__dcache__is_idle_0", "dut__core__dpath__csr___io_out_T_49_0", "dut__arb___io_dcache_b_valid_T_0", "dut__core__dpath__csr___io_out_T_55_0", "dut__core__dpath__csr__io_expt_0", "dut__core__dpath__csr___io_out_T_43_0", "dut__core__dpath__csr___io_out_T_17_0", "dut__core__dpath__csr___io_out_T_33_0", "dut__dcache___T_29_0",
+
+
+
+# stuck at true
+"dut__icache___io_nasti_ar_valid_T_0",
+# stuck at false
+"dut__icache___T_33_0", "dut__icache___T_40_0", "dut__icache___T_43_0", "dut__icache___T_47_0",
+
+# equivalent signals
+"dut__arb___T_13_0", "dut__dcache___T_0", #"dut__dcache___T_51_0"]
+"dut__arb___T_18_0", "dut__dcache___T_1_0", #"dut__dcache___T_40_0"]
+"dut__arb___T_20_0", "dut__dcache__write_count_0", #"dut__dcache__write_wrap_out_0"]
+"dut__arb___T_23_0", "dut__arb___T_24_0", "dut__dcache___T_43_0", #"dut__dcache___T_44_0"]
+"dut__arb___T_4_0", #"dut__arb__io_dcache_ar_valid_0"]
+"dut__arb___T_8_0", "dut__icache___T_0", #"dut__icache___T_51_0"]
+"dut__core__ctrl___ctrlSignals_T_11_0", #"dut__core__dpath__brCond___io_taken_T_2_0"]
+"dut__core__ctrl___ctrlSignals_T_13_0", #"dut__core__dpath__brCond___io_taken_T_5_0"]
+"dut__core__ctrl___ctrlSignals_T_15_0", #"dut__core__dpath__brCond___io_taken_T_8_0"]
+"dut__core__ctrl___ctrlSignals_T_17_0", #"dut__core__dpath__brCond___io_taken_T_11_0"]
+"dut__core__ctrl___ctrlSignals_T_19_0", #"dut__core__dpath__brCond___io_taken_T_14_0"]
+"dut__core__ctrl___ctrlSignals_T_57_0", #"dut__core__dpath__alu___out_T_1_0"]
+"dut__core__ctrl___ctrlSignals_T_5_0", #"dut__core__dpath__immGen___io_out_T_10_0"]
+"dut__core__ctrl___ctrlSignals_T_95_0", #"dut__core__dpath___npc_T_0"]
+"dut__core__ctrl___ctrlSignals_T_9_0", #"dut__core__dpath__brCond___io_taken_T_0"]
+"dut__core__dpath___io_icache_req_valid_T_0", "dut__core__dpath__csr___isInstRet_T_5_0", #"dut__icache__ren_0"]
+"dut__dcache__io_cpu_req_valid_0", #"dut__dcache__ren_0"]
+"dut__dcache__is_alloc_0", "dut__dcache__read_count_0", #"dut__dcache__read_wrap_out_0"]
+"dut__icache___T_10_0", "dut__icache___T_11_0", "dut__icache___T_13_0", "dut__icache___T_14_0", "dut__icache___T_15_0", "dut__icache___T_16_0", "dut__icache___T_18_0", "dut__icache___T_19_0", "dut__icache___T_20_0", "dut__icache___T_21_0", "dut__icache___T_3_0", "dut__icache___T_4_0", "dut__icache___T_5_0", "dut__icache___T_6_0", "dut__icache___T_8_0", "dut__icache___T_9_0", "dut__icache__is_alloc_0", "dut__icache__read_count_0", "dut__icache__read_wrap_out_0", #"dut__icache__wen_0"]
+"dut__icache___T_33_0", "dut__icache___T_40_0", "dut__icache___T_43_0", #"dut__icache___T_47_0"]
+"dut__icache___ren_T_0", #"dut__icache___wmask_T_0"]
+"dut__icache___wen_T_0" # "dut__icache__hit_0"]
+
+
+]

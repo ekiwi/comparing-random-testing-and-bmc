@@ -1,0 +1,12 @@
+# rust
+/target
+
+# IDE
+/.vscode/
+/.idea/
+
+# example VCDs in top level dir
+/*.vcd
+/*.json
+/*.v
+/*.json2

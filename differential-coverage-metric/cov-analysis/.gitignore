@@ -1,0 +1,4 @@
+verilated/
+*.vcd
+coverage.dat
+*results/

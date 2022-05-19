@@ -1,0 +1,8 @@
+{
+  "name": "riscv-mini",
+  "testbench": ["top.cpp", "verilator_conf.vlt"],
+  "verilog": ["instrumented/TileAndMemTop.sv"],
+  "signals": "instrumented/TileAndMemTop.inst.json",
+  "convert-formal": "convert.py",
+  "seeds": "seeds"
+}
