@@ -50,4 +50,18 @@ The results of our other formal runs can be found in:
 - `data/2022-05-17-cov-full-3`
 
 
-## 
+## Fuzzing
+
+To use the fuzzer you need to clone and compile the AFL++ fuzzer: https://github.com/AFLplusplus/AFLplusplus
+
+The you can generate all the fuzzer files in a folder named `fuzz` like:
+```
+./scripts/fuzz.py --benchmark benchmarks/riscv-mini/RiscvMini.json --afl=../../AFLplusplus/ fuzz
+``` 
+
+To run the fuzzer, in the `fuzz` directory execute:
+```
+timeout 24h afl-fuzz -i seeds -o out ./verilated/Vtop
+```
+
+Our fuzzing results can be found in `data/2022-05-16-riscv-mini-24h-fuzzing/`
