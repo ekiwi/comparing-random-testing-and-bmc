@@ -1,0 +1,626 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TLSPITop..
+Finding unused cells or wires in module \TLSPI..
+Finding unused cells or wires in module \TLMonitor_66..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \SPIPhysical_1..
+Finding unused cells or wires in module \SPIMedia_1..
+Finding unused cells or wires in module \SPIFIFO_1..
+Finding unused cells or wires in module \Queue_19..
+Finding unused cells or wires in module \Queue_18..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Queue_18.
+Optimizing module Queue_19.
+Optimizing module SPIFIFO_1.
+Optimizing module SPIMedia_1.
+Optimizing module SPIPhysical_1.
+Optimizing module SparseMem.
+Optimizing module TLMonitor_66.
+Optimizing module TLSPI.
+Optimizing module TLSPITop.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Queue_18'.
+Finding identical cells in module `\Queue_19'.
+Finding identical cells in module `\SPIFIFO_1'.
+Finding identical cells in module `\SPIMedia_1'.
+Finding identical cells in module `\SPIPhysical_1'.
+Finding identical cells in module `\SparseMem'.
+Finding identical cells in module `\TLMonitor_66'.
+Finding identical cells in module `\TLSPI'.
+Finding identical cells in module `\TLSPITop'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$4001 ($dff) from module Queue_18 (D = $procmux$2645_Y, Q = \maybe_full, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$4944 ($sdff) from module Queue_18 (D = \do_enq, Q = \maybe_full).
+Adding SRST signal on $procdff$4000 ($dff) from module Queue_18 (D = $procmux$2653_Y, Q = \value_1, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$4948 ($sdff) from module Queue_18 (D = \_T_57, Q = \value_1).
+Adding SRST signal on $procdff$3999 ($dff) from module Queue_18 (D = $procmux$2661_Y, Q = \value, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$4952 ($sdff) from module Queue_18 (D = \_T_53, Q = \value).
+Adding SRST signal on $procdff$4004 ($dff) from module Queue_19 (D = $procmux$2669_Y, Q = \maybe_full, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$4956 ($sdff) from module Queue_19 (D = \do_enq, Q = \maybe_full).
+Adding SRST signal on $procdff$4003 ($dff) from module Queue_19 (D = $procmux$2677_Y, Q = \value_1, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$4960 ($sdff) from module Queue_19 (D = \_T_57, Q = \value_1).
+Adding SRST signal on $procdff$4002 ($dff) from module Queue_19 (D = $procmux$2685_Y, Q = \value, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$4964 ($sdff) from module Queue_19 (D = \_T_53, Q = \value).
+Adding SRST signal on $procdff$4019 ($dff) from module SPIFIFO_1 (D = \io_ctrl_cs_mode, Q = \cs_mode, rval = 2'00).
+Adding SRST signal on $procdff$4018 ($dff) from module SPIFIFO_1 (D = $procmux$2792_Y, Q = \rxen, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$4971 ($sdff) from module SPIFIFO_1 (D = $procmux$2792_Y, Q = \rxen).
+Adding SRST signal on $procdff$4028 ($dff) from module SPIMedia_1 (D = $procmux$2834_Y, Q = \state, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$4977 ($sdff) from module SPIMedia_1 (D = $procmux$2834_Y, Q = \state).
+Adding SRST signal on $procdff$4027 ($dff) from module SPIMedia_1 (D = $procmux$2851_Y, Q = \cs_assert, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$4995 ($sdff) from module SPIMedia_1 (D = $procmux$2851_Y, Q = \cs_assert).
+Adding SRST signal on $procdff$4026 ($dff) from module SPIMedia_1 (D = $procmux$2807_Y, Q = \clear, rval = 1'0).
+Adding SRST signal on $procdff$4025 ($dff) from module SPIMedia_1 (D = $procmux$2865_Y, Q = \cs_set, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5008 ($sdff) from module SPIMedia_1 (D = \io_link_cs_set, Q = \cs_set).
+Adding SRST signal on $procdff$4024 ($dff) from module SPIMedia_1 (D = $procmux$2884_Y, Q = \cs_dflt_3, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5014 ($sdff) from module SPIMedia_1 (D = $procmux$2884_Y, Q = \cs_dflt_3).
+Adding SRST signal on $procdff$4023 ($dff) from module SPIMedia_1 (D = $procmux$2903_Y, Q = \cs_dflt_2, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5028 ($sdff) from module SPIMedia_1 (D = $procmux$2903_Y, Q = \cs_dflt_2).
+Adding SRST signal on $procdff$4022 ($dff) from module SPIMedia_1 (D = $procmux$2922_Y, Q = \cs_dflt_1, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5042 ($sdff) from module SPIMedia_1 (D = $procmux$2922_Y, Q = \cs_dflt_1).
+Adding SRST signal on $procdff$4021 ($dff) from module SPIMedia_1 (D = $procmux$2941_Y, Q = \cs_dflt_0, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5056 ($sdff) from module SPIMedia_1 (D = $procmux$2941_Y, Q = \cs_dflt_0).
+Adding SRST signal on $procdff$4020 ($dff) from module SPIMedia_1 (D = $procmux$2950_Y, Q = \cs_id, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5070 ($sdff) from module SPIMedia_1 (D = \io_ctrl_cs_id, Q = \cs_id).
+Adding SRST signal on $procdff$3998 ($dff) from module SPIPhysical_1 (D = $procmux$2500_Y, Q = \xfr, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5078 ($sdff) from module SPIPhysical_1 (D = \_T_202, Q = \xfr).
+Adding SRST signal on $procdff$3997 ($dff) from module SPIPhysical_1 (D = $or$TLSPI.v:4667$2168_Y, Q = \done, rval = 1'0).
+Adding SRST signal on $procdff$3996 ($dff) from module SPIPhysical_1 (D = $procmux$2505_Y, Q = \txd, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$5083 ($sdff) from module SPIPhysical_1 (D = \_T_133, Q = \txd).
+Adding SRST signal on $procdff$3995 ($dff) from module SPIPhysical_1 (D = $procmux$2406_Y, Q = \buffer, rval = 8'00000000).
+Adding SRST signal on $procdff$3994 ($dff) from module SPIPhysical_1 (D = $or$TLSPI.v:4636$2167_Y, Q = \cref, rval = 1'0).
+Adding SRST signal on $procdff$3993 ($dff) from module SPIPhysical_1 (D = $procmux$2574_Y, Q = \sck, rval = 1'0).
+Adding SRST signal on $procdff$3992 ($dff) from module SPIPhysical_1 (D = $procmux$2415_Y, Q = \tcnt, rval = 12'000000000000).
+Adding SRST signal on $procdff$3991 ($dff) from module SPIPhysical_1 (D = \_GEN_56, Q = \scnt, rval = 8'00000000).
+Adding SRST signal on $procdff$3990 ($dff) from module SPIPhysical_1 (D = \_T_54, Q = \last_d, rval = 1'0).
+Adding SRST signal on $procdff$3989 ($dff) from module SPIPhysical_1 (D = \_T_53, Q = \_T_54, rval = 1'0).
+Adding SRST signal on $procdff$3988 ($dff) from module SPIPhysical_1 (D = \_T_51, Q = \sample_d, rval = 1'0).
+Adding SRST signal on $procdff$3987 ($dff) from module SPIPhysical_1 (D = \setup, Q = \setup_d, rval = 1'0).
+Adding SRST signal on $procdff$3986 ($dff) from module SPIPhysical_1 (D = \last, Q = \_T_53, rval = 1'0).
+Adding SRST signal on $procdff$3985 ($dff) from module SPIPhysical_1 (D = \_T_50, Q = \_T_51, rval = 1'0).
+Adding SRST signal on $procdff$3984 ($dff) from module SPIPhysical_1 (D = \_GEN_7, Q = \_T_50, rval = 1'0).
+Adding SRST signal on $procdff$3983 ($dff) from module SPIPhysical_1 (D = $procmux$2587_Y, Q = \ctrl_sck_pha, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5113 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_sck_pha, Q = \ctrl_sck_pha).
+Adding SRST signal on $procdff$3982 ($dff) from module SPIPhysical_1 (D = $procmux$2600_Y, Q = \ctrl_sck_pol, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5117 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_sck_pol, Q = \ctrl_sck_pol).
+Adding SRST signal on $procdff$3981 ($dff) from module SPIPhysical_1 (D = $procmux$2613_Y, Q = \ctrl_sck_div, rval = 12'000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$5121 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_sck_div, Q = \ctrl_sck_div).
+Adding SRST signal on $procdff$3980 ($dff) from module SPIPhysical_1 (D = $procmux$2622_Y, Q = \ctrl_fmt_iodir, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5125 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_fmt_iodir, Q = \ctrl_fmt_iodir).
+Adding SRST signal on $procdff$3979 ($dff) from module SPIPhysical_1 (D = $procmux$2631_Y, Q = \ctrl_fmt_endian, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5129 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_fmt_endian, Q = \ctrl_fmt_endian).
+Adding SRST signal on $procdff$3978 ($dff) from module SPIPhysical_1 (D = $procmux$2640_Y, Q = \ctrl_fmt_proto, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5133 ($sdff) from module SPIPhysical_1 (D = \io_ctrl_fmt_proto, Q = \ctrl_fmt_proto).
+Adding SRST signal on $procdff$3974 ($dff) from module SparseMem (D = $procmux$2265_Y, Q = \nextAddr, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$5137 ($sdff) from module SparseMem (D = \_T_50, Q = \nextAddr).
+Adding SRST signal on $procdff$3973 ($dff) from module SparseMem (D = $procmux$2275_Y, Q = \addresses_7_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5141 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_7_bits).
+Adding SRST signal on $procdff$3972 ($dff) from module SparseMem (D = $procmux$2280_Y, Q = \addresses_7_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5145 ($sdff) from module SparseMem (D = \_GEN_7, Q = \addresses_7_valid).
+Adding SRST signal on $procdff$3971 ($dff) from module SparseMem (D = $procmux$2290_Y, Q = \addresses_6_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5149 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_6_bits).
+Adding SRST signal on $procdff$3970 ($dff) from module SparseMem (D = $procmux$2295_Y, Q = \addresses_6_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5153 ($sdff) from module SparseMem (D = \_GEN_6, Q = \addresses_6_valid).
+Adding SRST signal on $procdff$3969 ($dff) from module SparseMem (D = $procmux$2305_Y, Q = \addresses_5_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5157 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_5_bits).
+Adding SRST signal on $procdff$3968 ($dff) from module SparseMem (D = $procmux$2310_Y, Q = \addresses_5_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5161 ($sdff) from module SparseMem (D = \_GEN_5, Q = \addresses_5_valid).
+Adding SRST signal on $procdff$3967 ($dff) from module SparseMem (D = $procmux$2320_Y, Q = \addresses_4_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5165 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_4_bits).
+Adding SRST signal on $procdff$3966 ($dff) from module SparseMem (D = $procmux$2325_Y, Q = \addresses_4_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5169 ($sdff) from module SparseMem (D = \_GEN_4, Q = \addresses_4_valid).
+Adding SRST signal on $procdff$3965 ($dff) from module SparseMem (D = $procmux$2335_Y, Q = \addresses_3_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5173 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_3_bits).
+Adding SRST signal on $procdff$3964 ($dff) from module SparseMem (D = $procmux$2340_Y, Q = \addresses_3_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5177 ($sdff) from module SparseMem (D = \_GEN_3, Q = \addresses_3_valid).
+Adding SRST signal on $procdff$3963 ($dff) from module SparseMem (D = $procmux$2350_Y, Q = \addresses_2_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5181 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_2_bits).
+Adding SRST signal on $procdff$3962 ($dff) from module SparseMem (D = $procmux$2355_Y, Q = \addresses_2_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5185 ($sdff) from module SparseMem (D = \_GEN_2, Q = \addresses_2_valid).
+Adding SRST signal on $procdff$3961 ($dff) from module SparseMem (D = $procmux$2365_Y, Q = \addresses_1_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5189 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_1_bits).
+Adding SRST signal on $procdff$3960 ($dff) from module SparseMem (D = $procmux$2370_Y, Q = \addresses_1_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5193 ($sdff) from module SparseMem (D = \_GEN_1, Q = \addresses_1_valid).
+Adding SRST signal on $procdff$3959 ($dff) from module SparseMem (D = $procmux$2380_Y, Q = \addresses_0_bits, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5197 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_0_bits).
+Adding SRST signal on $procdff$3958 ($dff) from module SparseMem (D = $procmux$2385_Y, Q = \addresses_0_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5201 ($sdff) from module SparseMem (D = \_GEN_0, Q = \addresses_0_valid).
+Adding SRST signal on $procdff$4017 ($dff) from module TLMonitor_66 (D = $procmux$2702_Y, Q = \_T_792, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5205 ($sdff) from module TLMonitor_66 (D = $procmux$2700_Y, Q = \_T_792).
+Adding SRST signal on $procdff$4016 ($dff) from module TLMonitor_66 (D = $procmux$2713_Y, Q = \_T_764, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5209 ($sdff) from module TLMonitor_66 (D = $procmux$2711_Y, Q = \_T_764).
+Adding SRST signal on $procdff$4015 ($dff) from module TLMonitor_66 (D = \_T_848, Q = \_T_749, rval = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding SRST signal on $procdff$4014 ($dff) from module TLMonitor_66 (D = $procmux$2721_Y, Q = \_T_704, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$5216 ($sdff) from module TLMonitor_66 (D = \io_in_d_bits_source, Q = \_T_704).
+Adding SRST signal on $procdff$4013 ($dff) from module TLMonitor_66 (D = $procmux$2726_Y, Q = \_T_702, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5218 ($sdff) from module TLMonitor_66 (D = \io_in_d_bits_size, Q = \_T_702).
+Adding SRST signal on $procdff$4012 ($dff) from module TLMonitor_66 (D = $procmux$2731_Y, Q = \_T_698, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5220 ($sdff) from module TLMonitor_66 (D = \io_in_d_bits_opcode, Q = \_T_698).
+Adding SRST signal on $procdff$4011 ($dff) from module TLMonitor_66 (D = $procmux$2736_Y, Q = \_T_638, rval = 29'00000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$5222 ($sdff) from module TLMonitor_66 (D = \io_in_a_bits_address, Q = \_T_638).
+Adding SRST signal on $procdff$4010 ($dff) from module TLMonitor_66 (D = $procmux$2741_Y, Q = \_T_636, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$5224 ($sdff) from module TLMonitor_66 (D = \io_in_a_bits_source, Q = \_T_636).
+Adding SRST signal on $procdff$4009 ($dff) from module TLMonitor_66 (D = $procmux$2746_Y, Q = \_T_634, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5226 ($sdff) from module TLMonitor_66 (D = \io_in_a_bits_size, Q = \_T_634).
+Adding SRST signal on $procdff$4008 ($dff) from module TLMonitor_66 (D = $procmux$2751_Y, Q = \_T_632, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5228 ($sdff) from module TLMonitor_66 (D = \io_in_a_bits_param, Q = \_T_632).
+Adding SRST signal on $procdff$4007 ($dff) from module TLMonitor_66 (D = $procmux$2756_Y, Q = \_T_630, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5230 ($sdff) from module TLMonitor_66 (D = \io_in_a_bits_opcode, Q = \_T_630).
+Adding SRST signal on $procdff$4006 ($dff) from module TLMonitor_66 (D = $procmux$2764_Y, Q = \_T_613, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5232 ($sdff) from module TLMonitor_66 (D = $procmux$2762_Y, Q = \_T_613).
+Adding SRST signal on $procdff$4005 ($dff) from module TLMonitor_66 (D = $procmux$2775_Y, Q = \_T_681, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5236 ($sdff) from module TLMonitor_66 (D = $procmux$2773_Y, Q = \_T_681).
+Adding SRST signal on $procdff$4049 ($dff) from module TLSPI (D = $procmux$2967_Y, Q = \ie_rxwm, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5240 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [1], Q = \ie_rxwm).
+Adding SRST signal on $procdff$4048 ($dff) from module TLSPI (D = $procmux$2975_Y, Q = \ie_txwm, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5244 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [0], Q = \ie_txwm).
+Adding SRST signal on $procdff$4047 ($dff) from module TLSPI (D = $procmux$2983_Y, Q = \ctrl_wm_rx, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$5248 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [3:0], Q = \ctrl_wm_rx).
+Adding SRST signal on $procdff$4046 ($dff) from module TLSPI (D = $procmux$2991_Y, Q = \ctrl_wm_tx, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$5252 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [3:0], Q = \ctrl_wm_tx).
+Adding SRST signal on $procdff$4045 ($dff) from module TLSPI (D = $procmux$2999_Y, Q = \ctrl_dla_interxfr, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$5256 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [23:16], Q = \ctrl_dla_interxfr).
+Adding SRST signal on $procdff$4044 ($dff) from module TLSPI (D = $procmux$3010_Y [0], Q = \ctrl_dla_intercs [0], rval = 1'0).
+Adding SRST signal on $procdff$4044 ($dff) from module TLSPI (D = $procmux$3007_Y [7:1], Q = \ctrl_dla_intercs [7:1], rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$5261 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [7:1], Q = \ctrl_dla_intercs [7:1]).
+Adding EN signal on $auto$ff.cc:262:slice$5260 ($sdff) from module TLSPI (D = $procmux$3010_Y [0], Q = \ctrl_dla_intercs [0]).
+Adding SRST signal on $procdff$4043 ($dff) from module TLSPI (D = $procmux$3018_Y [0], Q = \ctrl_dla_sckcs [0], rval = 1'0).
+Adding SRST signal on $procdff$4043 ($dff) from module TLSPI (D = $procmux$3015_Y [7:1], Q = \ctrl_dla_sckcs [7:1], rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$5269 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [23:17], Q = \ctrl_dla_sckcs [7:1]).
+Adding EN signal on $auto$ff.cc:262:slice$5268 ($sdff) from module TLSPI (D = $procmux$3018_Y [0], Q = \ctrl_dla_sckcs [0]).
+Adding SRST signal on $procdff$4042 ($dff) from module TLSPI (D = $procmux$3026_Y [0], Q = \ctrl_dla_cssck [0], rval = 1'0).
+Adding SRST signal on $procdff$4042 ($dff) from module TLSPI (D = $procmux$3023_Y [7:1], Q = \ctrl_dla_cssck [7:1], rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$5277 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [7:1], Q = \ctrl_dla_cssck [7:1]).
+Adding EN signal on $auto$ff.cc:262:slice$5276 ($sdff) from module TLSPI (D = $procmux$3026_Y [0], Q = \ctrl_dla_cssck [0]).
+Adding SRST signal on $procdff$4041 ($dff) from module TLSPI (D = $procmux$3031_Y, Q = \ctrl_cs_mode, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5284 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [1:0], Q = \ctrl_cs_mode).
+Adding SRST signal on $procdff$4040 ($dff) from module TLSPI (D = $or$TLSPI.v:1620$1644_Y, Q = \ctrl_cs_dflt_3, rval = 1'0).
+Adding SRST signal on $procdff$4039 ($dff) from module TLSPI (D = $or$TLSPI.v:1615$1643_Y, Q = \ctrl_cs_dflt_2, rval = 1'0).
+Adding SRST signal on $procdff$4038 ($dff) from module TLSPI (D = $or$TLSPI.v:1610$1642_Y, Q = \ctrl_cs_dflt_1, rval = 1'0).
+Adding SRST signal on $procdff$4037 ($dff) from module TLSPI (D = $or$TLSPI.v:1605$1641_Y, Q = \ctrl_cs_dflt_0, rval = 1'0).
+Adding SRST signal on $procdff$4036 ($dff) from module TLSPI (D = $procmux$3039_Y, Q = \ctrl_cs_id, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5292 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [1:0], Q = \ctrl_cs_id).
+Adding SRST signal on $procdff$4035 ($dff) from module TLSPI (D = $procmux$3047_Y, Q = \ctrl_sck_pha, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5296 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [0], Q = \ctrl_sck_pha).
+Adding SRST signal on $procdff$4034 ($dff) from module TLSPI (D = $procmux$3055_Y, Q = \ctrl_sck_pol, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5300 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [1], Q = \ctrl_sck_pol).
+Adding SRST signal on $procdff$4033 ($dff) from module TLSPI (D = $procmux$3066_Y [1:0], Q = \ctrl_sck_div [1:0], rval = 2'00).
+Adding SRST signal on $procdff$4033 ($dff) from module TLSPI (D = $procmux$3063_Y [11:2], Q = \ctrl_sck_div [11:2], rval = 10'0000000000).
+Adding EN signal on $auto$ff.cc:262:slice$5305 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [11:2], Q = \ctrl_sck_div [11:2]).
+Adding EN signal on $auto$ff.cc:262:slice$5304 ($sdff) from module TLSPI (D = $procmux$3066_Y [1:0], Q = \ctrl_sck_div [1:0]).
+Adding SRST signal on $procdff$4032 ($dff) from module TLSPI (D = $procmux$3074_Y [3], Q = \ctrl_fmt_len [3], rval = 1'0).
+Adding SRST signal on $procdff$4032 ($dff) from module TLSPI (D = $procmux$3071_Y [2:0], Q = \ctrl_fmt_len [2:0], rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$5313 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [18:16], Q = \ctrl_fmt_len [2:0]).
+Adding EN signal on $auto$ff.cc:262:slice$5312 ($sdff) from module TLSPI (D = $procmux$3074_Y [3], Q = \ctrl_fmt_len [3]).
+Adding SRST signal on $procdff$4031 ($dff) from module TLSPI (D = $procmux$3079_Y, Q = \ctrl_fmt_iodir, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5320 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [3], Q = \ctrl_fmt_iodir).
+Adding SRST signal on $procdff$4030 ($dff) from module TLSPI (D = $procmux$3087_Y, Q = \ctrl_fmt_endian, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$5324 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [2], Q = \ctrl_fmt_endian).
+Adding SRST signal on $procdff$4029 ($dff) from module TLSPI (D = $procmux$3095_Y, Q = \ctrl_fmt_proto, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$5328 ($sdff) from module TLSPI (D = \auto_r_in_a_bits_data [1:0], Q = \ctrl_fmt_proto).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Queue_18..
+Finding unused cells or wires in module \Queue_19..
+Finding unused cells or wires in module \SPIFIFO_1..
+Finding unused cells or wires in module \SPIMedia_1..
+Finding unused cells or wires in module \SPIPhysical_1..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \TLMonitor_66..
+Finding unused cells or wires in module \TLSPI..
+Finding unused cells or wires in module \TLSPITop..
+Removed 223 unused cells and 223 unused wires.
+<suppressed ~231 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Queue_18.
+Optimizing module Queue_19.
+Optimizing module SPIFIFO_1.
+<suppressed ~1 debug messages>
+Optimizing module SPIMedia_1.
+<suppressed ~6 debug messages>
+Optimizing module SPIPhysical_1.
+Optimizing module SparseMem.
+Optimizing module TLMonitor_66.
+Optimizing module TLSPI.
+<suppressed ~5 debug messages>
+Optimizing module TLSPITop.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Queue_18'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\Queue_19'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\SPIFIFO_1'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\SPIMedia_1'.
+<suppressed ~75 debug messages>
+Finding identical cells in module `\SPIPhysical_1'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\SparseMem'.
+<suppressed ~24 debug messages>
+Finding identical cells in module `\TLMonitor_66'.
+<suppressed ~12 debug messages>
+Finding identical cells in module `\TLSPI'.
+<suppressed ~48 debug messages>
+Finding identical cells in module `\TLSPITop'.
+Removed a total of 68 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Queue_18..
+Finding unused cells or wires in module \Queue_19..
+Finding unused cells or wires in module \SPIFIFO_1..
+Finding unused cells or wires in module \SPIMedia_1..
+Finding unused cells or wires in module \SPIPhysical_1..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \TLMonitor_66..
+Finding unused cells or wires in module \TLSPI..
+Finding unused cells or wires in module \TLSPITop..
+Removed 0 unused cells and 68 unused wires.
+<suppressed ~8 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module Queue_18...
+Checking module Queue_19...
+Checking module SPIFIFO_1...
+Checking module SPIMedia_1...
+Checking module SPIPhysical_1...
+Checking module SparseMem...
+Checking module TLMonitor_66...
+Checking module TLSPI...
+Checking module TLSPITop...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \TLSPITop
+Used module:     \TLSPI
+Used module:         \TLMonitor_66
+Used module:         \SPIFIFO_1
+Used module:             \Queue_19
+Used module:                 \SparseMem
+Used module:             \Queue_18
+Used module:         \SPIMedia_1
+Used module:             \SPIPhysical_1
+
+8.2. Analyzing design hierarchy..
+Top module:  \TLSPITop
+Used module:     \TLSPI
+Used module:         \TLMonitor_66
+Used module:         \SPIFIFO_1
+Used module:             \Queue_19
+Used module:                 \SparseMem
+Used module:             \Queue_18
+Used module:         \SPIMedia_1
+Used module:             \SPIPhysical_1
+Removed 0 unused modules.
+Module TLSPITop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Printing statistics.
+
+=== Queue_18 ===
+
+   Number of wires:                 45
+   Number of wire bits:             98
+   Number of public wires:          38
+   Number of public wire bits:      83
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 23
+     $add                            2
+     $and                            4
+     $dff                            3
+     $eq                             1
+     $mux                            6
+     $ne                             1
+     $not                            3
+     $reduce_or                      1
+     $sub                            1
+     SparseMem                       1
+
+=== Queue_19 ===
+
+   Number of wires:                 45
+   Number of wire bits:             98
+   Number of public wires:          38
+   Number of public wire bits:      83
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 23
+     $add                            2
+     $and                            4
+     $dff                            3
+     $eq                             1
+     $mux                            6
+     $ne                             1
+     $not                            3
+     $reduce_or                      1
+     $sub                            1
+     SparseMem                       1
+
+=== SPIFIFO_1 ===
+
+   Number of wires:                113
+   Number of wire bits:            220
+   Number of public wires:         106
+   Number of public wire bits:     212
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 37
+     $add                            1
+     $and                            5
+     $dff                            2
+     $eq                             4
+     $gt                             1
+     $logic_not                      1
+     $lt                             1
+     $mux                            8
+     $ne                             1
+     $not                            3
+     $or                             5
+     $reduce_bool                    2
+     $reduce_or                      1
+     Queue_18                        1
+     Queue_19                        1
+
+=== SPIMedia_1 ===
+
+   Number of wires:                439
+   Number of wire bits:            611
+   Number of public wires:         360
+   Number of public wire bits:     519
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                125
+     $and                            4
+     $dff                            9
+     $eq                             2
+     $logic_not                      2
+     $mux                           79
+     $ne                             9
+     $not                            3
+     $or                             5
+     $reduce_and                     5
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shl                            2
+     $xor                            2
+     SPIPhysical_1                   1
+
+=== SPIPhysical_1 ===
+
+   Number of wires:                264
+   Number of wire bits:            597
+   Number of public wires:         218
+   Number of public wire bits:     464
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                143
+     $and                           13
+     $dff                           21
+     $eq                             5
+     $logic_not                      5
+     $mux                           74
+     $not                            4
+     $or                            13
+     $reduce_and                     3
+     $reduce_or                      2
+     $sub                            1
+     $xor                            2
+
+=== SparseMem ===
+
+   Number of wires:                146
+   Number of wire bits:            295
+   Number of public wires:          97
+   Number of public wire bits:     183
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                130
+     $add                            1
+     $and                           17
+     $anyseq                         3
+     $dff                           17
+     $eq                            23
+     $logic_not                      1
+     $mem_v2                         1
+     $mux                           39
+     $not                            1
+     $or                            12
+     $reduce_and                     8
+     $reduce_bool                    2
+     $reduce_or                      5
+
+=== TLMonitor_66 ===
+
+   Number of wires:                294
+   Number of wire bits:           1917
+   Number of public wires:         264
+   Number of public wire bits:    1664
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                245
+     $and                           83
+     $dff                           13
+     $eq                            19
+     $ge                             2
+     $le                             5
+     $logic_not                      6
+     $mux                           31
+     $not                           40
+     $or                            33
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shl                            4
+     $shr                            2
+     $sub                            4
+     $xor                            1
+
+=== TLSPI ===
+
+   Number of wires:               1057
+   Number of wire bits:           8805
+   Number of public wires:         989
+   Number of public wire bits:    8575
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                329
+     $and                           71
+     $dff                           26
+     $eq                            32
+     $logic_not                     20
+     $mux                          111
+     $not                           10
+     $or                            35
+     $reduce_bool                    6
+     $reduce_or                      1
+     $shl                            1
+     $xor                           13
+     SPIFIFO_1                       1
+     SPIMedia_1                      1
+     TLMonitor_66                    1
+
+=== TLSPITop ===
+
+   Number of wires:                888
+   Number of wire bits:           1531
+   Number of public wires:         136
+   Number of public wire bits:     779
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                968
+     $anyseq                       213
+     $assume                         1
+     $cover                        212
+     $dff                          215
+     $logic_and                      1
+     $logic_not                    109
+     $mux                          215
+     $or                             1
+     TLSPI                           1
+
+=== design hierarchy ===
+
+   TLSPITop                          1
+     TLSPI                           1
+       SPIFIFO_1                     1
+         Queue_18                    1
+           SparseMem                 1
+         Queue_19                    1
+           SparseMem                 1
+       SPIMedia_1                    1
+         SPIPhysical_1               1
+       TLMonitor_66                  1
+
+   Number of wires:               3437
+   Number of wire bits:          14467
+   Number of public wires:        2343
+   Number of public wire bits:   12745
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2144
+     $add                            7
+     $and                          218
+     $anyseq                       219
+     $assume                         1
+     $cover                        212
+     $dff                          326
+     $eq                           110
+     $ge                             2
+     $gt                             1
+     $le                             5
+     $logic_and                      1
+     $logic_not                    145
+     $lt                             1
+     $mem_v2                         2
+     $mux                          608
+     $ne                            12
+     $not                           68
+     $or                           116
+     $reduce_and                    24
+     $reduce_bool                   14
+     $reduce_or                     18
+     $shl                            7
+     $shr                            2
+     $sub                            7
+     $xor                           18
+
+11. Executing SMT2 backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module SPIPhysical_1.
+Creating SMT-LIBv2 representation of module SparseMem.
+Creating SMT-LIBv2 representation of module TLMonitor_66.
+Creating SMT-LIBv2 representation of module Queue_18.
+Creating SMT-LIBv2 representation of module Queue_19.
+Creating SMT-LIBv2 representation of module SPIMedia_1.
+Creating SMT-LIBv2 representation of module SPIFIFO_1.
+Creating SMT-LIBv2 representation of module TLSPI.
+Creating SMT-LIBv2 representation of module TLSPITop.
+
+End of script. Logfile hash: f200950957, CPU: user 0.38s system 0.01s, MEM: 20.47 MB peak
+Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 28% 3x opt_clean (0 sec), 15% 2x write_smt2 (0 sec), ...

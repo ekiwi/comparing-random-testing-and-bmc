@@ -1,0 +1,8 @@
+# running in cover_btormc/src/
+read -formal FFTSmall.v
+read -formal FFTSmall_formal.sv
+prep -top FFTSmallTop
+
+hierarchy -simcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

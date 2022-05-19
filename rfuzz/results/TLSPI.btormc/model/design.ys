@@ -1,0 +1,8 @@
+# running in cover_btormc/src/
+read -formal TLSPI.v
+read -formal TLSPI_formal.sv
+prep -top TLSPITop
+
+hierarchy -simcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

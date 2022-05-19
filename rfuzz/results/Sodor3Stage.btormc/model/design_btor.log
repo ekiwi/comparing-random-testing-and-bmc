@@ -1,0 +1,1172 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_btor.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SyncScratchPadMemory..
+Finding unused cells or wires in module \SyncMem..
+Finding unused cells or wires in module \SparseMem_0..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \Sodor3StageTop..
+Finding unused cells or wires in module \Sodor3Stage..
+Finding unused cells or wires in module \FrontEnd..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \ALU..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+Optimizing module CSRFile.
+Optimizing module Core.
+Optimizing module CtlPath.
+Optimizing module DatPath.
+Optimizing module FrontEnd.
+Optimizing module Sodor3Stage.
+Optimizing module Sodor3StageTop.
+Optimizing module SparseMem.
+Optimizing module SparseMem_0.
+Optimizing module SyncMem.
+Optimizing module SyncScratchPadMemory.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Finding identical cells in module `\CSRFile'.
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\CtlPath'.
+Finding identical cells in module `\DatPath'.
+Finding identical cells in module `\FrontEnd'.
+Finding identical cells in module `\Sodor3Stage'.
+Finding identical cells in module `\Sodor3StageTop'.
+Finding identical cells in module `\SparseMem'.
+Finding identical cells in module `\SparseMem_0'.
+Finding identical cells in module `\SyncMem'.
+Finding identical cells in module `\SyncScratchPadMemory'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$7799 ($dff) from module CSRFile (D = $procmux$5675_Y, Q = \reg_dcsr_step, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$9711 ($sdff) from module CSRFile (D = \_GEN_233 [2], Q = \reg_dcsr_step).
+Adding SRST signal on $procdff$7798 ($dff) from module CSRFile (D = $procmux$5685_Y, Q = \reg_dcsr_ebreakm, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$9717 ($sdff) from module CSRFile (D = \_GEN_233 [15], Q = \reg_dcsr_ebreakm).
+Adding SRST signal on $procdff$7797 ($dff) from module CSRFile (D = $procmux$5695_Y, Q = \reg_dscratch, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$9723 ($sdff) from module CSRFile (D = { \_GEN_233 [31:2] \_T_1270 [1:0] }, Q = \reg_dscratch).
+Adding SRST signal on $procdff$7796 ($dff) from module CSRFile (D = $procmux$5702_Y, Q = \reg_dpc, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$9727 ($sdff) from module CSRFile (D = { \_GEN_233 [31:2] \_T_1270 [1:0] }, Q = \reg_dpc).
+Adding SRST signal on $procdff$7795 ($dff) from module CSRFile (D = \_GEN_138, Q = \_T_284, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9731 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_284 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9731 ($sdff) from module CSRFile (D = \_GEN_81 [31:0], Q = \_T_284 [31:0]).
+Adding SRST signal on $procdff$7794 ($dff) from module CSRFile (D = \_GEN_136, Q = \_T_278, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9744 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_278 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9744 ($sdff) from module CSRFile (D = \_GEN_77 [31:0], Q = \_T_278 [31:0]).
+Adding SRST signal on $procdff$7793 ($dff) from module CSRFile (D = \_GEN_135, Q = \_T_275, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9757 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_275 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9757 ($sdff) from module CSRFile (D = \_GEN_75 [31:0], Q = \_T_275 [31:0]).
+Adding SRST signal on $procdff$7792 ($dff) from module CSRFile (D = \_GEN_130, Q = \_T_260, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9770 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_260 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9770 ($sdff) from module CSRFile (D = \_GEN_65 [31:0], Q = \_T_260 [31:0]).
+Adding SRST signal on $procdff$7791 ($dff) from module CSRFile (D = \_GEN_124, Q = \_T_242, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9783 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_242 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9783 ($sdff) from module CSRFile (D = \_GEN_53 [31:0], Q = \_T_242 [31:0]).
+Adding SRST signal on $procdff$7790 ($dff) from module CSRFile (D = \_GEN_123, Q = \_T_239, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9796 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_239 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9796 ($sdff) from module CSRFile (D = \_GEN_51 [31:0], Q = \_T_239 [31:0]).
+Adding SRST signal on $procdff$7789 ($dff) from module CSRFile (D = \_GEN_122, Q = \_T_236, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9809 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_236 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9809 ($sdff) from module CSRFile (D = \_GEN_49 [31:0], Q = \_T_236 [31:0]).
+Adding SRST signal on $procdff$7788 ($dff) from module CSRFile (D = \_GEN_119, Q = \_T_227, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9822 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_227 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9822 ($sdff) from module CSRFile (D = \_GEN_43 [31:0], Q = \_T_227 [31:0]).
+Adding SRST signal on $procdff$7787 ($dff) from module CSRFile (D = \_GEN_114, Q = \_T_212, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9835 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_212 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9835 ($sdff) from module CSRFile (D = \_GEN_33 [31:0], Q = \_T_212 [31:0]).
+Adding SRST signal on $procdff$7786 ($dff) from module CSRFile (D = \_GEN_112, Q = \_T_206, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9848 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_206 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9848 ($sdff) from module CSRFile (D = \_GEN_29 [31:0], Q = \_T_206 [31:0]).
+Adding SRST signal on $procdff$7785 ($dff) from module CSRFile (D = \_GEN_110, Q = \_T_200, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9861 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_200 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9861 ($sdff) from module CSRFile (D = \_GEN_25 [31:0], Q = \_T_200 [31:0]).
+Adding SRST signal on $procdff$7784 ($dff) from module CSRFile (D = $procmux$5718_Y, Q = \_T_192, rval = 58'0000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9874 ($sdff) from module CSRFile (D = $procmux$5718_Y [25:0], Q = \_T_192 [25:0]).
+Adding EN signal on $auto$ff.cc:262:slice$9874 ($sdff) from module CSRFile (D = $procmux$5718_Y [57:26], Q = \_T_192 [57:26]).
+Adding SRST signal on $procdff$7783 ($dff) from module CSRFile (D = \_GEN_144 [5:0], Q = \_T_188, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$9883 ($sdff) from module CSRFile (D = \_GEN_144 [5:0], Q = \_T_188).
+Adding SRST signal on $procdff$7782 ($dff) from module CSRFile (D = $procmux$5737_Y, Q = \_T_180, rval = 58'0000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9889 ($sdff) from module CSRFile (D = $procmux$5737_Y [25:0], Q = \_T_180 [25:0]).
+Adding EN signal on $auto$ff.cc:262:slice$9889 ($sdff) from module CSRFile (D = $procmux$5737_Y [57:26], Q = \_T_180 [57:26]).
+Adding SRST signal on $procdff$7781 ($dff) from module CSRFile (D = \_GEN_142, Q = \_T_176, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$9898 ($sdff) from module CSRFile (D = \_GEN_142, Q = \_T_176).
+Adding SRST signal on $procdff$7780 ($dff) from module CSRFile (D = $procmux$5747_Y, Q = \reg_mie_msip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$9904 ($sdff) from module CSRFile (D = \_GEN_233 [3], Q = \reg_mie_msip).
+Adding SRST signal on $procdff$7779 ($dff) from module CSRFile (D = $procmux$5757_Y, Q = \reg_mie_mtip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$9910 ($sdff) from module CSRFile (D = \_GEN_233 [7], Q = \reg_mie_mtip).
+Adding SRST signal on $procdff$7778 ($dff) from module CSRFile (D = $procmux$5767_Y, Q = \reg_mip_msip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$9916 ($sdff) from module CSRFile (D = \_GEN_233 [3], Q = \reg_mip_msip).
+Adding SRST signal on $procdff$7777 ($dff) from module CSRFile (D = $procmux$5653_Y, Q = \reg_mip_mtip, rval = 1'0).
+Adding SRST signal on $procdff$7776 ($dff) from module CSRFile (D = $procmux$5777_Y, Q = \reg_medeleg, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$9923 ($sdff) from module CSRFile (D = { \_GEN_233 [31:2] \_T_1270 [1:0] }, Q = \reg_medeleg).
+Adding SRST signal on $procdff$7775 ($dff) from module CSRFile (D = $procmux$5784_Y, Q = \reg_mscratch, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$9927 ($sdff) from module CSRFile (D = { \_GEN_233 [31:2] \_T_1270 [1:0] }, Q = \reg_mscratch).
+Adding SRST signal on $procdff$7774 ($dff) from module CSRFile (D = $procmux$5791_Y, Q = \reg_mtval, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$9931 ($sdff) from module CSRFile (D = { \_GEN_233 [31:2] \_T_1270 [1:0] }, Q = \reg_mtval).
+Adding SRST signal on $procdff$7773 ($dff) from module CSRFile (D = $procmux$5816_Y, Q = \reg_mcause, rval = 0).
+Adding SRST signal on $procdff$7772 ($dff) from module CSRFile (D = \_GEN_148, Q = \reg_mepc, rval = 0).
+Adding SRST signal on $procdff$7771 ($dff) from module CSRFile (D = $procmux$5829_Y, Q = \reg_mstatus_mie, rval = 1'0).
+Adding SRST signal on $procdff$7770 ($dff) from module CSRFile (D = $procmux$5665_Y, Q = \reg_mstatus_mpie, rval = 1'0).
+Adding SRST signal on $procdff$7769 ($dff) from module CSRFile (D = \_GEN_134, Q = \_T_272, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9943 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_272 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9943 ($sdff) from module CSRFile (D = \_GEN_73 [31:0], Q = \_T_272 [31:0]).
+Adding SRST signal on $procdff$7768 ($dff) from module CSRFile (D = \_GEN_131, Q = \_T_263, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9956 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_263 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9956 ($sdff) from module CSRFile (D = \_GEN_67 [31:0], Q = \_T_263 [31:0]).
+Adding SRST signal on $procdff$7767 ($dff) from module CSRFile (D = \_GEN_128, Q = \_T_254, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9969 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_254 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9969 ($sdff) from module CSRFile (D = \_GEN_61 [31:0], Q = \_T_254 [31:0]).
+Adding SRST signal on $procdff$7766 ($dff) from module CSRFile (D = \_GEN_127, Q = \_T_251, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9982 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_251 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9982 ($sdff) from module CSRFile (D = \_GEN_59 [31:0], Q = \_T_251 [31:0]).
+Adding SRST signal on $procdff$7765 ($dff) from module CSRFile (D = \_GEN_115, Q = \_T_215, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$9995 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_215 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$9995 ($sdff) from module CSRFile (D = \_GEN_35 [31:0], Q = \_T_215 [31:0]).
+Adding SRST signal on $procdff$7764 ($dff) from module CSRFile (D = \_GEN_141, Q = \_T_293, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10008 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_293 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10008 ($sdff) from module CSRFile (D = \_GEN_87 [31:0], Q = \_T_293 [31:0]).
+Adding SRST signal on $procdff$7763 ($dff) from module CSRFile (D = \_GEN_140, Q = \_T_290, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10021 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_290 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10021 ($sdff) from module CSRFile (D = \_GEN_85 [31:0], Q = \_T_290 [31:0]).
+Adding SRST signal on $procdff$7762 ($dff) from module CSRFile (D = \_GEN_139 [39:0], Q = \_T_287, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10034 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_287 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10034 ($sdff) from module CSRFile (D = \_GEN_83 [31:0], Q = \_T_287 [31:0]).
+Adding SRST signal on $procdff$7761 ($dff) from module CSRFile (D = \_GEN_137, Q = \_T_281, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10047 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_281 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10047 ($sdff) from module CSRFile (D = \_GEN_79 [31:0], Q = \_T_281 [31:0]).
+Adding SRST signal on $procdff$7760 ($dff) from module CSRFile (D = \_GEN_133 [39:0], Q = \_T_269, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10060 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_269 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10060 ($sdff) from module CSRFile (D = \_GEN_71 [31:0], Q = \_T_269 [31:0]).
+Adding SRST signal on $procdff$7759 ($dff) from module CSRFile (D = \_GEN_125, Q = \_T_245, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10073 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_245 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10073 ($sdff) from module CSRFile (D = \_GEN_55 [31:0], Q = \_T_245 [31:0]).
+Adding SRST signal on $procdff$7758 ($dff) from module CSRFile (D = \_GEN_113, Q = \_T_209, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10086 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_209 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10086 ($sdff) from module CSRFile (D = \_GEN_31 [31:0], Q = \_T_209 [31:0]).
+Adding SRST signal on $procdff$7757 ($dff) from module CSRFile (D = \_GEN_120, Q = \_T_230, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10099 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_230 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10099 ($sdff) from module CSRFile (D = \_GEN_45 [31:0], Q = \_T_230 [31:0]).
+Adding SRST signal on $procdff$7756 ($dff) from module CSRFile (D = \_GEN_118, Q = \_T_224, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10112 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_224 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10112 ($sdff) from module CSRFile (D = \_GEN_41 [31:0], Q = \_T_224 [31:0]).
+Adding SRST signal on $procdff$7755 ($dff) from module CSRFile (D = \_GEN_117, Q = \_T_221, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10125 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_221 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10125 ($sdff) from module CSRFile (D = \_GEN_39 [31:0], Q = \_T_221 [31:0]).
+Adding SRST signal on $procdff$7754 ($dff) from module CSRFile (D = \_GEN_116, Q = \_T_218, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10138 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_218 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10138 ($sdff) from module CSRFile (D = \_GEN_37 [31:0], Q = \_T_218 [31:0]).
+Adding SRST signal on $procdff$7753 ($dff) from module CSRFile (D = \_GEN_111, Q = \_T_203, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10151 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_203 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10151 ($sdff) from module CSRFile (D = \_GEN_27 [31:0], Q = \_T_203 [31:0]).
+Adding SRST signal on $procdff$7752 ($dff) from module CSRFile (D = \_GEN_132 [39:0], Q = \_T_266, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10164 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_266 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10164 ($sdff) from module CSRFile (D = \_GEN_69 [31:0], Q = \_T_266 [31:0]).
+Adding SRST signal on $procdff$7751 ($dff) from module CSRFile (D = \_GEN_129, Q = \_T_257, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10177 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_257 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10177 ($sdff) from module CSRFile (D = \_GEN_63 [31:0], Q = \_T_257 [31:0]).
+Adding SRST signal on $procdff$7750 ($dff) from module CSRFile (D = \_GEN_126, Q = \_T_248, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10190 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_248 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10190 ($sdff) from module CSRFile (D = \_GEN_57 [31:0], Q = \_T_248 [31:0]).
+Adding SRST signal on $procdff$7749 ($dff) from module CSRFile (D = \_GEN_121, Q = \_T_233, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10203 ($sdff) from module CSRFile (D = { \_GEN_233 [7:2] \_T_1270 [1:0] }, Q = \_T_233 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10203 ($sdff) from module CSRFile (D = \_GEN_47 [31:0], Q = \_T_233 [31:0]).
+Adding SRST signal on $procdff$7848 ($dff) from module CtlPath (D = \io_ctl_exception, Q = \_T_1028, rval = 1'0).
+Adding SRST signal on $procdff$7857 ($dff) from module DatPath (D = \io_imem_resp_bits_inst [11:7], Q = \wb_reg_wbaddr, rval = 5'00000).
+Adding SRST signal on $procdff$7856 ($dff) from module DatPath (D = \io_imem_resp_bits_inst [31:20], Q = \wb_reg_csr_addr, rval = 12'000000000000).
+Adding SRST signal on $procdff$7855 ($dff) from module DatPath (D = \alu_io_out, Q = \wb_reg_alu, rval = 0).
+Adding SRST signal on $procdff$7854 ($dff) from module DatPath (D = \io_ctl_csr_cmd, Q = \wb_reg_ctrl_csr_cmd, rval = 3'000).
+Adding SRST signal on $procdff$7853 ($dff) from module DatPath (D = \io_ctl_bypassable, Q = \wb_reg_ctrl_bypassable, rval = 1'0).
+Adding SRST signal on $procdff$7852 ($dff) from module DatPath (D = \io_ctl_rf_wen, Q = \wb_reg_ctrl_rf_wen, rval = 1'0).
+Adding SRST signal on $procdff$7851 ($dff) from module DatPath (D = \io_ctl_wb_sel, Q = \wb_reg_ctrl_wb_sel, rval = 2'00).
+Adding SRST signal on $procdff$7850 ($dff) from module DatPath (D = \_T_244, Q = \wb_reg_valid, rval = 1'0).
+Adding SRST signal on $procdff$7849 ($dff) from module DatPath (D = \io_ctl_exception, Q = \_T_246, rval = 1'0).
+Adding SRST signal on $procdff$7847 ($dff) from module FrontEnd (D = $procmux$6102_Y, Q = \exe_reg_inst, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10232 ($sdff) from module FrontEnd (D = \io_imem_resp_bits_data, Q = \exe_reg_inst).
+Adding SRST signal on $procdff$7846 ($dff) from module FrontEnd (D = $procmux$6107_Y, Q = \exe_reg_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10234 ($sdff) from module FrontEnd (D = \if_reg_pc, Q = \exe_reg_pc).
+Adding SRST signal on $procdff$7845 ($dff) from module FrontEnd (D = $procmux$6112_Y, Q = \exe_reg_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10236 ($sdff) from module FrontEnd (D = \_T_145, Q = \exe_reg_valid).
+Adding SRST signal on $procdff$7844 ($dff) from module FrontEnd (D = $procmux$6128_Y [30:2], Q = \if_reg_pc [30:2], rval = 29'00000000000000000000000000000).
+Adding SRST signal on $procdff$7844 ($dff) from module FrontEnd (D = { \io_imem_req_bits_addr [31] \io_imem_req_bits_addr [1:0] }, Q = { \if_reg_pc [31] \if_reg_pc [1:0] }, rval = 3'000).
+Adding SRST signal on $procdff$7843 ($dff) from module FrontEnd (D = \_GEN_3, Q = \if_reg_valid, rval = 1'0).
+Adding SRST signal on $procdff$7742 ($dff) from module SparseMem (D = $procmux$4812_Y, Q = \addresses_31_valid, rval = 1'0).
+Adding SRST signal on $procdff$7741 ($dff) from module SparseMem (D = $procmux$4821_Y, Q = \addresses_30_valid, rval = 1'0).
+Adding SRST signal on $procdff$7740 ($dff) from module SparseMem (D = $procmux$4830_Y, Q = \addresses_29_valid, rval = 1'0).
+Adding SRST signal on $procdff$7739 ($dff) from module SparseMem (D = $procmux$4839_Y, Q = \addresses_28_valid, rval = 1'0).
+Adding SRST signal on $procdff$7738 ($dff) from module SparseMem (D = $procmux$4848_Y, Q = \addresses_27_valid, rval = 1'0).
+Adding SRST signal on $procdff$7737 ($dff) from module SparseMem (D = $procmux$4857_Y, Q = \addresses_26_valid, rval = 1'0).
+Adding SRST signal on $procdff$7736 ($dff) from module SparseMem (D = $procmux$4866_Y, Q = \addresses_25_valid, rval = 1'0).
+Adding SRST signal on $procdff$7735 ($dff) from module SparseMem (D = $procmux$4875_Y, Q = \addresses_24_valid, rval = 1'0).
+Adding SRST signal on $procdff$7734 ($dff) from module SparseMem (D = $procmux$4884_Y, Q = \addresses_23_valid, rval = 1'0).
+Adding SRST signal on $procdff$7733 ($dff) from module SparseMem (D = $procmux$4893_Y, Q = \addresses_22_valid, rval = 1'0).
+Adding SRST signal on $procdff$7732 ($dff) from module SparseMem (D = $procmux$4902_Y, Q = \addresses_21_valid, rval = 1'0).
+Adding SRST signal on $procdff$7731 ($dff) from module SparseMem (D = $procmux$4911_Y, Q = \addresses_20_valid, rval = 1'0).
+Adding SRST signal on $procdff$7730 ($dff) from module SparseMem (D = $procmux$4920_Y, Q = \addresses_19_valid, rval = 1'0).
+Adding SRST signal on $procdff$7729 ($dff) from module SparseMem (D = $procmux$4929_Y, Q = \addresses_18_valid, rval = 1'0).
+Adding SRST signal on $procdff$7728 ($dff) from module SparseMem (D = $procmux$4938_Y, Q = \addresses_17_valid, rval = 1'0).
+Adding SRST signal on $procdff$7727 ($dff) from module SparseMem (D = $procmux$4947_Y, Q = \addresses_16_valid, rval = 1'0).
+Adding SRST signal on $procdff$7726 ($dff) from module SparseMem (D = $procmux$4956_Y, Q = \addresses_15_valid, rval = 1'0).
+Adding SRST signal on $procdff$7725 ($dff) from module SparseMem (D = $procmux$4965_Y, Q = \addresses_14_valid, rval = 1'0).
+Adding SRST signal on $procdff$7724 ($dff) from module SparseMem (D = $procmux$4974_Y, Q = \addresses_13_valid, rval = 1'0).
+Adding SRST signal on $procdff$7723 ($dff) from module SparseMem (D = $procmux$4983_Y, Q = \addresses_12_valid, rval = 1'0).
+Adding SRST signal on $procdff$7722 ($dff) from module SparseMem (D = $procmux$4992_Y, Q = \addresses_11_valid, rval = 1'0).
+Adding SRST signal on $procdff$7721 ($dff) from module SparseMem (D = $procmux$5001_Y, Q = \addresses_10_valid, rval = 1'0).
+Adding SRST signal on $procdff$7720 ($dff) from module SparseMem (D = $procmux$5010_Y, Q = \addresses_9_valid, rval = 1'0).
+Adding SRST signal on $procdff$7719 ($dff) from module SparseMem (D = $procmux$5019_Y, Q = \addresses_8_valid, rval = 1'0).
+Adding SRST signal on $procdff$7718 ($dff) from module SparseMem (D = $procmux$5028_Y, Q = \addresses_7_valid, rval = 1'0).
+Adding SRST signal on $procdff$7717 ($dff) from module SparseMem (D = $procmux$5037_Y, Q = \addresses_6_valid, rval = 1'0).
+Adding SRST signal on $procdff$7716 ($dff) from module SparseMem (D = $procmux$5046_Y, Q = \addresses_5_valid, rval = 1'0).
+Adding SRST signal on $procdff$7715 ($dff) from module SparseMem (D = $procmux$5055_Y, Q = \addresses_4_valid, rval = 1'0).
+Adding SRST signal on $procdff$7714 ($dff) from module SparseMem (D = $procmux$5064_Y, Q = \addresses_3_valid, rval = 1'0).
+Adding SRST signal on $procdff$7713 ($dff) from module SparseMem (D = $procmux$5073_Y, Q = \addresses_2_valid, rval = 1'0).
+Adding SRST signal on $procdff$7712 ($dff) from module SparseMem (D = $procmux$5082_Y, Q = \addresses_1_valid, rval = 1'0).
+Adding SRST signal on $procdff$7711 ($dff) from module SparseMem (D = $procmux$5091_Y, Q = \addresses_0_valid, rval = 1'0).
+Adding SRST signal on $procdff$7710 ($dff) from module SparseMem (D = $procmux$5120_Y, Q = \nextAddr, rval = 6'000000).
+Adding SRST signal on $procdff$7709 ($dff) from module SparseMem (D = $procmux$5136_Y, Q = \addresses_31_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7708 ($dff) from module SparseMem (D = $procmux$5149_Y, Q = \addresses_30_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7707 ($dff) from module SparseMem (D = $procmux$5162_Y, Q = \addresses_29_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7706 ($dff) from module SparseMem (D = $procmux$5175_Y, Q = \addresses_28_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7705 ($dff) from module SparseMem (D = $procmux$5188_Y, Q = \addresses_27_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7704 ($dff) from module SparseMem (D = $procmux$5201_Y, Q = \addresses_26_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7703 ($dff) from module SparseMem (D = $procmux$5214_Y, Q = \addresses_25_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7702 ($dff) from module SparseMem (D = $procmux$5227_Y, Q = \addresses_24_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7701 ($dff) from module SparseMem (D = $procmux$5240_Y, Q = \addresses_23_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7700 ($dff) from module SparseMem (D = $procmux$5253_Y, Q = \addresses_22_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7699 ($dff) from module SparseMem (D = $procmux$5266_Y, Q = \addresses_21_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7698 ($dff) from module SparseMem (D = $procmux$5279_Y, Q = \addresses_20_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7697 ($dff) from module SparseMem (D = $procmux$5292_Y, Q = \addresses_19_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7696 ($dff) from module SparseMem (D = $procmux$5305_Y, Q = \addresses_18_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7695 ($dff) from module SparseMem (D = $procmux$5318_Y, Q = \addresses_17_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7694 ($dff) from module SparseMem (D = $procmux$5331_Y, Q = \addresses_16_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7693 ($dff) from module SparseMem (D = $procmux$5344_Y, Q = \addresses_15_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7692 ($dff) from module SparseMem (D = $procmux$5357_Y, Q = \addresses_14_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7691 ($dff) from module SparseMem (D = $procmux$5370_Y, Q = \addresses_13_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7690 ($dff) from module SparseMem (D = $procmux$5383_Y, Q = \addresses_12_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7689 ($dff) from module SparseMem (D = $procmux$5396_Y, Q = \addresses_11_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7688 ($dff) from module SparseMem (D = $procmux$5409_Y, Q = \addresses_10_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7687 ($dff) from module SparseMem (D = $procmux$5422_Y, Q = \addresses_9_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7686 ($dff) from module SparseMem (D = $procmux$5435_Y, Q = \addresses_8_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7685 ($dff) from module SparseMem (D = $procmux$5448_Y, Q = \addresses_7_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7684 ($dff) from module SparseMem (D = $procmux$5461_Y, Q = \addresses_6_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7683 ($dff) from module SparseMem (D = $procmux$5474_Y, Q = \addresses_5_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7682 ($dff) from module SparseMem (D = $procmux$5487_Y, Q = \addresses_4_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7681 ($dff) from module SparseMem (D = $procmux$5500_Y, Q = \addresses_3_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7680 ($dff) from module SparseMem (D = $procmux$5513_Y, Q = \addresses_2_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7679 ($dff) from module SparseMem (D = $procmux$5526_Y, Q = \addresses_1_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7678 ($dff) from module SparseMem (D = $procmux$5539_Y, Q = \addresses_0_bits, rval = 5'00000).
+Adding SRST signal on $procdff$7832 ($dff) from module SparseMem_0 (D = $procmux$5855_Y, Q = \nextAddr, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$10378 ($sdff) from module SparseMem_0 (D = \_T_400, Q = \nextAddr).
+Adding SRST signal on $procdff$7831 ($dff) from module SparseMem_0 (D = $procmux$5862_Y, Q = \addresses_31_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10380 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_31_bits).
+Adding SRST signal on $procdff$7830 ($dff) from module SparseMem_0 (D = $procmux$5869_Y, Q = \addresses_30_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10384 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_30_bits).
+Adding SRST signal on $procdff$7829 ($dff) from module SparseMem_0 (D = $procmux$5876_Y, Q = \addresses_29_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10388 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_29_bits).
+Adding SRST signal on $procdff$7828 ($dff) from module SparseMem_0 (D = $procmux$5883_Y, Q = \addresses_28_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10392 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_28_bits).
+Adding SRST signal on $procdff$7827 ($dff) from module SparseMem_0 (D = $procmux$5890_Y, Q = \addresses_27_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10396 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_27_bits).
+Adding SRST signal on $procdff$7826 ($dff) from module SparseMem_0 (D = $procmux$5897_Y, Q = \addresses_26_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10400 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_26_bits).
+Adding SRST signal on $procdff$7825 ($dff) from module SparseMem_0 (D = $procmux$5904_Y, Q = \addresses_25_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10404 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_25_bits).
+Adding SRST signal on $procdff$7824 ($dff) from module SparseMem_0 (D = $procmux$5911_Y, Q = \addresses_24_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10408 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_24_bits).
+Adding SRST signal on $procdff$7823 ($dff) from module SparseMem_0 (D = $procmux$5918_Y, Q = \addresses_23_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10412 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_23_bits).
+Adding SRST signal on $procdff$7822 ($dff) from module SparseMem_0 (D = $procmux$5925_Y, Q = \addresses_22_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10416 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_22_bits).
+Adding SRST signal on $procdff$7821 ($dff) from module SparseMem_0 (D = $procmux$5932_Y, Q = \addresses_21_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10420 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_21_bits).
+Adding SRST signal on $procdff$7820 ($dff) from module SparseMem_0 (D = $procmux$5939_Y, Q = \addresses_20_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10424 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_20_bits).
+Adding SRST signal on $procdff$7819 ($dff) from module SparseMem_0 (D = $procmux$5946_Y, Q = \addresses_19_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10428 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_19_bits).
+Adding SRST signal on $procdff$7818 ($dff) from module SparseMem_0 (D = $procmux$5953_Y, Q = \addresses_18_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10432 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_18_bits).
+Adding SRST signal on $procdff$7817 ($dff) from module SparseMem_0 (D = $procmux$5960_Y, Q = \addresses_17_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10436 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_17_bits).
+Adding SRST signal on $procdff$7816 ($dff) from module SparseMem_0 (D = $procmux$5967_Y, Q = \addresses_16_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10440 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_16_bits).
+Adding SRST signal on $procdff$7815 ($dff) from module SparseMem_0 (D = $procmux$5974_Y, Q = \addresses_15_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10444 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_15_bits).
+Adding SRST signal on $procdff$7814 ($dff) from module SparseMem_0 (D = $procmux$5981_Y, Q = \addresses_14_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10448 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_14_bits).
+Adding SRST signal on $procdff$7813 ($dff) from module SparseMem_0 (D = $procmux$5988_Y, Q = \addresses_13_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10452 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_13_bits).
+Adding SRST signal on $procdff$7812 ($dff) from module SparseMem_0 (D = $procmux$5995_Y, Q = \addresses_12_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10456 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_12_bits).
+Adding SRST signal on $procdff$7811 ($dff) from module SparseMem_0 (D = $procmux$6002_Y, Q = \addresses_11_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10460 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_11_bits).
+Adding SRST signal on $procdff$7810 ($dff) from module SparseMem_0 (D = $procmux$6009_Y, Q = \addresses_10_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10464 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_10_bits).
+Adding SRST signal on $procdff$7809 ($dff) from module SparseMem_0 (D = $procmux$6016_Y, Q = \addresses_9_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10468 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_9_bits).
+Adding SRST signal on $procdff$7808 ($dff) from module SparseMem_0 (D = $procmux$6023_Y, Q = \addresses_8_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10472 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_8_bits).
+Adding SRST signal on $procdff$7807 ($dff) from module SparseMem_0 (D = $procmux$6030_Y, Q = \addresses_7_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10476 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_7_bits).
+Adding SRST signal on $procdff$7806 ($dff) from module SparseMem_0 (D = $procmux$6037_Y, Q = \addresses_6_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10480 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_6_bits).
+Adding SRST signal on $procdff$7805 ($dff) from module SparseMem_0 (D = $procmux$6044_Y, Q = \addresses_5_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10484 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_5_bits).
+Adding SRST signal on $procdff$7804 ($dff) from module SparseMem_0 (D = $procmux$6051_Y, Q = \addresses_4_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10488 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_4_bits).
+Adding SRST signal on $procdff$7803 ($dff) from module SparseMem_0 (D = $procmux$6058_Y, Q = \addresses_3_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10492 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_3_bits).
+Adding SRST signal on $procdff$7802 ($dff) from module SparseMem_0 (D = $procmux$6065_Y, Q = \addresses_2_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10496 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_2_bits).
+Adding SRST signal on $procdff$7801 ($dff) from module SparseMem_0 (D = $procmux$6072_Y, Q = \addresses_1_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10500 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_1_bits).
+Adding SRST signal on $procdff$7800 ($dff) from module SparseMem_0 (D = $procmux$6079_Y, Q = \addresses_0_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10504 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_0_bits).
+Adding SRST signal on $procdff$7858 ($dff) from module SyncScratchPadMemory (D = \io_core_ports_0_req_bits_typ, Q = \req_typi, rval = 3'000).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \FrontEnd..
+Finding unused cells or wires in module \Sodor3Stage..
+Finding unused cells or wires in module \Sodor3StageTop..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \SparseMem_0..
+Finding unused cells or wires in module \SyncMem..
+Finding unused cells or wires in module \SyncScratchPadMemory..
+Removed 404 unused cells and 404 unused wires.
+<suppressed ~443 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+Optimizing module CSRFile.
+<suppressed ~32 debug messages>
+Optimizing module Core.
+Optimizing module CtlPath.
+Optimizing module DatPath.
+Optimizing module FrontEnd.
+Optimizing module Sodor3Stage.
+Optimizing module Sodor3StageTop.
+Optimizing module SparseMem.
+Optimizing module SparseMem_0.
+Optimizing module SyncMem.
+Optimizing module SyncScratchPadMemory.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Finding identical cells in module `\CSRFile'.
+<suppressed ~42 debug messages>
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\CtlPath'.
+Finding identical cells in module `\DatPath'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\FrontEnd'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\Sodor3Stage'.
+Finding identical cells in module `\Sodor3StageTop'.
+Finding identical cells in module `\SparseMem'.
+<suppressed ~96 debug messages>
+Finding identical cells in module `\SparseMem_0'.
+Finding identical cells in module `\SyncMem'.
+Finding identical cells in module `\SyncScratchPadMemory'.
+Removed a total of 49 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \FrontEnd..
+Finding unused cells or wires in module \Sodor3Stage..
+Finding unused cells or wires in module \Sodor3StageTop..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \SparseMem_0..
+Finding unused cells or wires in module \SyncMem..
+Finding unused cells or wires in module \SyncScratchPadMemory..
+Removed 0 unused cells and 49 unused wires.
+<suppressed ~4 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module ALU...
+Checking module CSRFile...
+Checking module Core...
+Checking module CtlPath...
+Checking module DatPath...
+Checking module FrontEnd...
+Checking module Sodor3Stage...
+Checking module Sodor3StageTop...
+Checking module SparseMem...
+Checking module SparseMem_0...
+Checking module SyncMem...
+Checking module SyncScratchPadMemory...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \Sodor3StageTop
+Used module:     \Sodor3Stage
+Used module:         \Core
+Used module:             \CtlPath
+Used module:             \DatPath
+Used module:                 \ALU
+Used module:                 \CSRFile
+Used module:                 \SparseMem
+Used module:             \FrontEnd
+Used module:         \SyncScratchPadMemory
+Used module:             \SyncMem
+Used module:                 \SparseMem_0
+
+8.2. Analyzing design hierarchy..
+Top module:  \Sodor3StageTop
+Used module:     \Sodor3Stage
+Used module:         \Core
+Used module:             \CtlPath
+Used module:             \DatPath
+Used module:                 \ALU
+Used module:                 \CSRFile
+Used module:                 \SparseMem
+Used module:             \FrontEnd
+Used module:         \SyncScratchPadMemory
+Used module:             \SyncMem
+Used module:                 \SparseMem_0
+Removed 0 unused modules.
+Module Sodor3StageTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing FLATTEN pass (flatten design).
+Deleting now unused module ALU.
+Deleting now unused module CSRFile.
+Deleting now unused module Core.
+Deleting now unused module CtlPath.
+Deleting now unused module DatPath.
+Deleting now unused module FrontEnd.
+Deleting now unused module Sodor3Stage.
+Deleting now unused module SparseMem.
+Deleting now unused module SparseMem_0.
+Deleting now unused module SyncMem.
+Deleting now unused module SyncScratchPadMemory.
+<suppressed ~14 debug messages>
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Sodor3StageTop.
+<suppressed ~11 debug messages>
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Sodor3StageTop'.
+<suppressed ~39 debug messages>
+Removed a total of 13 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\bb.\core.\frontend.$auto$ff.cc:262:slice$10240 ($sdff) from module Sodor3StageTop (D = $flatten\bb.\core.\frontend.$procmux$6128_Y [30:2], Q = \bb.core.frontend.if_reg_pc [30:2]).
+Adding SRST signal on $flatten\bb.\memory.\sync_data.$procdff$7842 ($dff) from module Sodor3StageTop (D = \bb.memory.sync_data.io_dataInstr_0_addr, Q = \bb.memory.sync_data.underlying_3__T_54_addr_pipe_0, rval = 21'000000000000000000000).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Sodor3StageTop..
+Removed 2164 unused cells and 2181 unused wires.
+<suppressed ~2165 debug messages>
+
+11.5. Rerunning OPT passes. (Removed registers in this run.)
+
+11.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Sodor3StageTop.
+
+11.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Sodor3StageTop'.
+Removed a total of 0 cells.
+
+11.8. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $flatten\bb.\memory.$auto$ff.cc:262:slice$10508 ($sdff) from module Sodor3StageTop (D = \bb.core.cpath._T_872 [2], Q = \bb.memory.req_typi [2], rval = 1'0).
+Adding SRST signal on $flatten\bb.\core.\dpath.$auto$ff.cc:262:slice$10227 ($sdff) from module Sodor3StageTop (D = \bb.core.cpath._T_600 [1], Q = \bb.core.dpath.wb_reg_ctrl_wb_sel [1], rval = 1'0).
+Adding SRST signal on $flatten\bb.\core.\dpath.$auto$ff.cc:262:slice$10224 ($sdff) from module Sodor3StageTop (D = \bb.core.cpath.cs0_2, Q = \bb.core.dpath.wb_reg_ctrl_rf_wen, rval = 1'0).
+Adding SRST signal on $flatten\bb.\core.\dpath.$auto$ff.cc:262:slice$10223 ($sdff) from module Sodor3StageTop (D = \bb.core.cpath._T_719, Q = \bb.core.dpath.wb_reg_ctrl_bypassable, rval = 1'0).
+Adding SRST signal on $flatten\bb.\core.\dpath.$auto$ff.cc:262:slice$10220 ($sdff) from module Sodor3StageTop (D = { \bb.core.cpath.csr_cmd [2] \bb.core.cpath.csr_cmd [0] }, Q = { \bb.core.dpath.wb_reg_ctrl_csr_cmd [2] \bb.core.dpath.wb_reg_ctrl_csr_cmd [0] }, rval = 2'00).
+Adding SRST signal on $flatten\bb.\core.\dpath.$auto$ff.cc:262:slice$10220 ($sdff) from module Sodor3StageTop (D = \bb.core.cpath.cs0_7 [1], Q = \bb.core.dpath.wb_reg_ctrl_csr_cmd [1], rval = 1'0).
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_0.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_1.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10381 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10385 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10389 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10393 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10397 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10401 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10405 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10409 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10413 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10417 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10421 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10425 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10429 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10433 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10437 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10441 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10445 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10449 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10453 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10457 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10461 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10465 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10469 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10473 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10477 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10481 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10485 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10489 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10493 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10497 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10501 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 0 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+Setting constant 0-bit at position 1 on $flatten\bb.\memory.\sync_data.\mem_sparse_2.$auto$ff.cc:262:slice$10505 ($sdffe) from module Sodor3StageTop.
+
+11.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Sodor3StageTop..
+Removed 10 unused cells and 19 unused wires.
+<suppressed ~29 debug messages>
+
+11.10. Rerunning OPT passes. (Removed registers in this run.)
+
+11.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Sodor3StageTop.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Sodor3StageTop'.
+<suppressed ~12 debug messages>
+Removed a total of 4 cells.
+
+11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Sodor3StageTop..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+11.15. Finished fast OPT passes.
+
+12. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+13. Printing statistics.
+
+=== Sodor3StageTop ===
+
+   Number of wires:               9047
+   Number of wire bits:          74210
+   Number of public wires:        6530
+   Number of public wire bits:   60234
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4963
+     $add                           14
+     $and                          183
+     $anyseq                       468
+     $assume                         1
+     $cover                        374
+     $dff                          679
+     $eq                           710
+     $le                             1
+     $logic_and                      1
+     $logic_not                    224
+     $lt                             2
+     $mem_v2                         5
+     $mux                         1579
+     $ne                            38
+     $not                           52
+     $or                           323
+     $reduce_and                   200
+     $reduce_bool                   48
+     $reduce_or                     55
+     $shl                            2
+     $sshr                           1
+     $sub                            2
+     $xor                            1
+
+14. Executing BTOR backend.
+
+14.1. Executing BMUXMAP pass.
+
+14.2. Executing DEMUXMAP pass.
+Warning: No driver for signal \bb.core.dpath.alu._T_83 [32].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_144 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_88 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_90 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_94 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._T_1035 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1037 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1039 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1041 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1043 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1045 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1047 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1049 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1051 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1053 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1055 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1057 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1059 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1061 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1065 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1067 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1069 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1071 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1073 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1075 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1077 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1079 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1081 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1083 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1085 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1087 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1089 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1091 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1093 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1095 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1097 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1099 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1101 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1103 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1105 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1107 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1109 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1111 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1113 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1115 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1117 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1119 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1121 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1123 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1125 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1127 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1129 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1131 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1133 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1135 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1137 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1139 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1141 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1143 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1145 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1147 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1149 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1151 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1153 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1155 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1160 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1161 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1164 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1165 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1166 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1167 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1168 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1169 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1170 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1172 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1174 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1175 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1176 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1177 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1178 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1179 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1180 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1181 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1182 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1183 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1184 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1185 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1186 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1187 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1188 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1189 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1190 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1191 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1192 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1193 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1194 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1195 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1196 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1197 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1198 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1199 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1200 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1201 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1202 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1203 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1204 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1205 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1206 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1207 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1208 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1209 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1210 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1211 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1212 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1213 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1214 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1215 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1216 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1217 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1218 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1219 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1220 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1221 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1222 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1223 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1224 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1225 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1226 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1227 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1228 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1229 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1230 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1231 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1232 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1233 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1234 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1235 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1236 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1237 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1238 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1239 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1240 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1241 [63:32].
+Warning: No driver for signal \bb.core.dpath.mem_sparse._T_524 [5].
+Warning: No driver for signal \bb.core.dpath.mem_sparse._T_652 [5].
+Warning: No driver for signal \bb.memory._T_277 [62:32].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_0._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_1._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_2._T_652 [5].
+
+15. Executing BTOR backend.
+
+15.1. Executing BMUXMAP pass.
+
+15.2. Executing DEMUXMAP pass.
+Warning: No driver for signal \bb.core.dpath.alu._T_83 [32].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_144 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_88 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_90 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._GEN_94 [63:6].
+Warning: No driver for signal \bb.core.dpath.csr._T_1035 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1037 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1039 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1041 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1043 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1045 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1047 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1049 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1051 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1053 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1055 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1057 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1059 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1061 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1065 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1067 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1069 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1071 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1073 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1075 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1077 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1079 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1081 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1083 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1085 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1087 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1089 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1091 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1093 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1095 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1097 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1099 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1101 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1103 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1105 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1107 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1109 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1111 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1113 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1115 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1117 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1119 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1121 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1123 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1125 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1127 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1129 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1131 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1133 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1135 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1137 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1139 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1141 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1143 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1145 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1147 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1149 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1151 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1153 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1155 [39:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1160 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1161 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1164 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1165 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1166 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1167 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1168 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1169 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1170 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1172 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1174 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1175 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1176 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1177 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1178 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1179 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1180 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1181 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1182 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1183 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1184 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1185 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1186 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1187 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1188 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1189 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1190 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1191 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1192 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1193 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1194 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1195 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1196 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1197 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1198 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1199 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1200 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1201 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1202 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1203 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1204 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1205 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1206 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1207 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1208 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1209 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1210 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1211 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1212 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1213 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1214 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1215 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1216 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1217 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1218 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1219 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1220 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1221 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1222 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1223 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1224 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1225 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1226 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1227 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1228 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1229 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1230 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1231 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1232 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1233 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1234 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1235 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1236 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1237 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1238 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1239 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1240 [63:32].
+Warning: No driver for signal \bb.core.dpath.csr._T_1241 [63:32].
+Warning: No driver for signal \bb.core.dpath.mem_sparse._T_524 [5].
+Warning: No driver for signal \bb.core.dpath.mem_sparse._T_652 [5].
+Warning: No driver for signal \bb.memory._T_277 [62:32].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_0._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_1._T_652 [5].
+Warning: No driver for signal \bb.memory.sync_data.mem_sparse_2._T_652 [5].
+
+Warnings: 150 unique messages, 300 total
+End of script. Logfile hash: a314c3ddc2, CPU: user 2.91s system 0.03s, MEM: 87.46 MB peak
+Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 35% 6x opt_clean (1 sec), 13% 5x opt_expr (0 sec), ...

@@ -1,0 +1,820 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SparseMem_0..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \Sodor5StageTop..
+Finding unused cells or wires in module \Sodor5Stage..
+Finding unused cells or wires in module \RegisterFile..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \AsyncScratchPadMemory..
+Finding unused cells or wires in module \AsyncReadMem..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AsyncReadMem.
+Optimizing module AsyncScratchPadMemory.
+Optimizing module CSRFile.
+Optimizing module Core.
+Optimizing module CtlPath.
+Optimizing module DatPath.
+Optimizing module RegisterFile.
+Optimizing module Sodor5Stage.
+Optimizing module Sodor5StageTop.
+Optimizing module SparseMem.
+Optimizing module SparseMem_0.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AsyncReadMem'.
+Finding identical cells in module `\AsyncScratchPadMemory'.
+Finding identical cells in module `\CSRFile'.
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\CtlPath'.
+Finding identical cells in module `\DatPath'.
+Finding identical cells in module `\RegisterFile'.
+Finding identical cells in module `\Sodor5Stage'.
+Finding identical cells in module `\Sodor5StageTop'.
+Finding identical cells in module `\SparseMem'.
+Finding identical cells in module `\SparseMem_0'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$8585 ($dff) from module CSRFile (D = $procmux$5481_Y, Q = \reg_dcsr_step, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10723 ($sdff) from module CSRFile (D = \wdata [2], Q = \reg_dcsr_step).
+Adding SRST signal on $procdff$8584 ($dff) from module CSRFile (D = $procmux$5491_Y, Q = \reg_dcsr_ebreakm, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10729 ($sdff) from module CSRFile (D = \wdata [15], Q = \reg_dcsr_ebreakm).
+Adding SRST signal on $procdff$8583 ($dff) from module CSRFile (D = $procmux$5501_Y, Q = \reg_dscratch, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10735 ($sdff) from module CSRFile (D = \wdata, Q = \reg_dscratch).
+Adding SRST signal on $procdff$8582 ($dff) from module CSRFile (D = $procmux$5508_Y, Q = \reg_dpc, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10739 ($sdff) from module CSRFile (D = \wdata, Q = \reg_dpc).
+Adding SRST signal on $procdff$8581 ($dff) from module CSRFile (D = \_GEN_140 [39:0], Q = \_T_290, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10743 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_290 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10743 ($sdff) from module CSRFile (D = \_GEN_85 [31:0], Q = \_T_290 [31:0]).
+Adding SRST signal on $procdff$8580 ($dff) from module CSRFile (D = { $auto$wreduce.cc:454:run$9556 [39:38] \_GEN_139 }, Q = \_T_287, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10756 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_287 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10756 ($sdff) from module CSRFile (D = \_GEN_83 [31:0], Q = \_T_287 [31:0]).
+Adding SRST signal on $procdff$8579 ($dff) from module CSRFile (D = \_GEN_138 [39:0], Q = \_T_284, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10769 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_284 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10769 ($sdff) from module CSRFile (D = \_GEN_81 [31:0], Q = \_T_284 [31:0]).
+Adding SRST signal on $procdff$8578 ($dff) from module CSRFile (D = \_GEN_136, Q = \_T_278, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10782 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_278 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10782 ($sdff) from module CSRFile (D = \_GEN_77 [31:0], Q = \_T_278 [31:0]).
+Adding SRST signal on $procdff$8577 ($dff) from module CSRFile (D = \_GEN_130, Q = \_T_260, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10795 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_260 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10795 ($sdff) from module CSRFile (D = \_GEN_65 [31:0], Q = \_T_260 [31:0]).
+Adding SRST signal on $procdff$8576 ($dff) from module CSRFile (D = \_GEN_126, Q = \_T_248, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10808 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_248 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10808 ($sdff) from module CSRFile (D = \_GEN_57 [31:0], Q = \_T_248 [31:0]).
+Adding SRST signal on $procdff$8575 ($dff) from module CSRFile (D = \_GEN_123, Q = \_T_239, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10821 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_239 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10821 ($sdff) from module CSRFile (D = \_GEN_51 [31:0], Q = \_T_239 [31:0]).
+Adding SRST signal on $procdff$8574 ($dff) from module CSRFile (D = \_GEN_122, Q = \_T_236, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10834 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_236 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10834 ($sdff) from module CSRFile (D = \_GEN_49 [31:0], Q = \_T_236 [31:0]).
+Adding SRST signal on $procdff$8573 ($dff) from module CSRFile (D = \_GEN_117, Q = \_T_221, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10847 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_221 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10847 ($sdff) from module CSRFile (D = \_GEN_39 [31:0], Q = \_T_221 [31:0]).
+Adding SRST signal on $procdff$8572 ($dff) from module CSRFile (D = \_GEN_116, Q = \_T_218, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10860 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_218 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10860 ($sdff) from module CSRFile (D = \_GEN_37 [31:0], Q = \_T_218 [31:0]).
+Adding SRST signal on $procdff$8571 ($dff) from module CSRFile (D = \_GEN_114, Q = \_T_212, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10873 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_212 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10873 ($sdff) from module CSRFile (D = \_GEN_33 [31:0], Q = \_T_212 [31:0]).
+Adding SRST signal on $procdff$8570 ($dff) from module CSRFile (D = \_GEN_112, Q = \_T_206, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10886 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_206 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10886 ($sdff) from module CSRFile (D = \_GEN_29 [31:0], Q = \_T_206 [31:0]).
+Adding SRST signal on $procdff$8569 ($dff) from module CSRFile (D = \_GEN_110, Q = \_T_200, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10899 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_200 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10899 ($sdff) from module CSRFile (D = \_GEN_25 [31:0], Q = \_T_200 [31:0]).
+Adding SRST signal on $procdff$8568 ($dff) from module CSRFile (D = $procmux$5524_Y, Q = \_T_192, rval = 58'0000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10912 ($sdff) from module CSRFile (D = $procmux$5524_Y [25:0], Q = \_T_192 [25:0]).
+Adding EN signal on $auto$ff.cc:262:slice$10912 ($sdff) from module CSRFile (D = $procmux$5524_Y [57:26], Q = \_T_192 [57:26]).
+Adding SRST signal on $procdff$8567 ($dff) from module CSRFile (D = \_GEN_144 [5:0], Q = \_T_188, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$10921 ($sdff) from module CSRFile (D = \_GEN_144 [5:0], Q = \_T_188).
+Adding SRST signal on $procdff$8566 ($dff) from module CSRFile (D = $procmux$5543_Y, Q = \_T_180, rval = 58'0000000000000000000000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10927 ($sdff) from module CSRFile (D = $procmux$5543_Y [25:0], Q = \_T_180 [25:0]).
+Adding EN signal on $auto$ff.cc:262:slice$10927 ($sdff) from module CSRFile (D = $procmux$5543_Y [57:26], Q = \_T_180 [57:26]).
+Adding SRST signal on $procdff$8565 ($dff) from module CSRFile (D = \_GEN_142, Q = \_T_176, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$10936 ($sdff) from module CSRFile (D = \_GEN_142, Q = \_T_176).
+Adding SRST signal on $procdff$8564 ($dff) from module CSRFile (D = $procmux$5553_Y, Q = \reg_mie_msip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10942 ($sdff) from module CSRFile (D = \wdata [3], Q = \reg_mie_msip).
+Adding SRST signal on $procdff$8563 ($dff) from module CSRFile (D = $procmux$5563_Y, Q = \reg_mie_mtip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10948 ($sdff) from module CSRFile (D = \wdata [7], Q = \reg_mie_mtip).
+Adding SRST signal on $procdff$8562 ($dff) from module CSRFile (D = $procmux$5573_Y, Q = \reg_mip_msip, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$10954 ($sdff) from module CSRFile (D = \wdata [3], Q = \reg_mip_msip).
+Adding SRST signal on $procdff$8561 ($dff) from module CSRFile (D = $procmux$5459_Y, Q = \reg_mip_mtip, rval = 1'0).
+Adding SRST signal on $procdff$8560 ($dff) from module CSRFile (D = $procmux$5583_Y, Q = \reg_medeleg, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10961 ($sdff) from module CSRFile (D = \wdata, Q = \reg_medeleg).
+Adding SRST signal on $procdff$8559 ($dff) from module CSRFile (D = $procmux$5590_Y, Q = \reg_mscratch, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10965 ($sdff) from module CSRFile (D = \wdata, Q = \reg_mscratch).
+Adding SRST signal on $procdff$8558 ($dff) from module CSRFile (D = $procmux$5597_Y, Q = \reg_mtval, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$10969 ($sdff) from module CSRFile (D = \wdata, Q = \reg_mtval).
+Adding SRST signal on $procdff$8557 ($dff) from module CSRFile (D = $procmux$5622_Y, Q = \reg_mcause, rval = 0).
+Adding SRST signal on $procdff$8556 ($dff) from module CSRFile (D = { $auto$wreduce.cc:454:run$9559 [31:30] \_GEN_148 }, Q = \reg_mepc, rval = 0).
+Adding SRST signal on $procdff$8555 ($dff) from module CSRFile (D = $procmux$5635_Y, Q = \reg_mstatus_mie, rval = 1'0).
+Adding SRST signal on $procdff$8554 ($dff) from module CSRFile (D = $procmux$5471_Y, Q = \reg_mstatus_mpie, rval = 1'0).
+Adding SRST signal on $procdff$8553 ($dff) from module CSRFile (D = \_GEN_115, Q = \_T_215, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10981 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_215 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10981 ($sdff) from module CSRFile (D = \_GEN_35 [31:0], Q = \_T_215 [31:0]).
+Adding SRST signal on $procdff$8552 ($dff) from module CSRFile (D = \_GEN_113, Q = \_T_209, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$10994 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_209 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$10994 ($sdff) from module CSRFile (D = \_GEN_31 [31:0], Q = \_T_209 [31:0]).
+Adding SRST signal on $procdff$8551 ($dff) from module CSRFile (D = \_GEN_141, Q = \_T_293, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11007 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_293 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11007 ($sdff) from module CSRFile (D = \_GEN_87 [31:0], Q = \_T_293 [31:0]).
+Adding SRST signal on $procdff$8550 ($dff) from module CSRFile (D = \_GEN_137, Q = \_T_281, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11020 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_281 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11020 ($sdff) from module CSRFile (D = \_GEN_79 [31:0], Q = \_T_281 [31:0]).
+Adding SRST signal on $procdff$8549 ($dff) from module CSRFile (D = \_GEN_129, Q = \_T_257, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11033 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_257 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11033 ($sdff) from module CSRFile (D = \_GEN_63 [31:0], Q = \_T_257 [31:0]).
+Adding SRST signal on $procdff$8548 ($dff) from module CSRFile (D = \_GEN_121, Q = \_T_233, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11046 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_233 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11046 ($sdff) from module CSRFile (D = \_GEN_47 [31:0], Q = \_T_233 [31:0]).
+Adding SRST signal on $procdff$8547 ($dff) from module CSRFile (D = \_GEN_135, Q = \_T_275, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11059 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_275 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11059 ($sdff) from module CSRFile (D = \_GEN_75 [31:0], Q = \_T_275 [31:0]).
+Adding SRST signal on $procdff$8546 ($dff) from module CSRFile (D = \_GEN_134 [39:0], Q = \_T_272, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11072 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_272 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11072 ($sdff) from module CSRFile (D = \_GEN_73 [31:0], Q = \_T_272 [31:0]).
+Adding SRST signal on $procdff$8545 ($dff) from module CSRFile (D = { $auto$wreduce.cc:454:run$9552 [39:30] \_GEN_133 }, Q = \_T_269, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11085 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_269 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11085 ($sdff) from module CSRFile (D = \_GEN_71 [31:0], Q = \_T_269 [31:0]).
+Adding SRST signal on $procdff$8544 ($dff) from module CSRFile (D = \_GEN_132, Q = \_T_266, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11098 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_266 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11098 ($sdff) from module CSRFile (D = \_GEN_69 [31:0], Q = \_T_266 [31:0]).
+Adding SRST signal on $procdff$8543 ($dff) from module CSRFile (D = \_GEN_127, Q = \_T_251, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11111 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_251 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11111 ($sdff) from module CSRFile (D = \_GEN_59 [31:0], Q = \_T_251 [31:0]).
+Adding SRST signal on $procdff$8542 ($dff) from module CSRFile (D = \_GEN_124, Q = \_T_242, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11124 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_242 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11124 ($sdff) from module CSRFile (D = \_GEN_53 [31:0], Q = \_T_242 [31:0]).
+Adding SRST signal on $procdff$8541 ($dff) from module CSRFile (D = \_GEN_119, Q = \_T_227, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11137 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_227 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11137 ($sdff) from module CSRFile (D = \_GEN_43 [31:0], Q = \_T_227 [31:0]).
+Adding SRST signal on $procdff$8540 ($dff) from module CSRFile (D = \_GEN_118, Q = \_T_224, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11150 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_224 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11150 ($sdff) from module CSRFile (D = \_GEN_41 [31:0], Q = \_T_224 [31:0]).
+Adding SRST signal on $procdff$8539 ($dff) from module CSRFile (D = \_GEN_111, Q = \_T_203, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11163 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_203 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11163 ($sdff) from module CSRFile (D = \_GEN_27 [31:0], Q = \_T_203 [31:0]).
+Adding SRST signal on $procdff$8538 ($dff) from module CSRFile (D = \_GEN_131, Q = \_T_263, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11176 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_263 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11176 ($sdff) from module CSRFile (D = \_GEN_67 [31:0], Q = \_T_263 [31:0]).
+Adding SRST signal on $procdff$8537 ($dff) from module CSRFile (D = \_GEN_128, Q = \_T_254, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11189 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_254 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11189 ($sdff) from module CSRFile (D = \_GEN_61 [31:0], Q = \_T_254 [31:0]).
+Adding SRST signal on $procdff$8536 ($dff) from module CSRFile (D = \_GEN_125, Q = \_T_245, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11202 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_245 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11202 ($sdff) from module CSRFile (D = { $auto$wreduce.cc:454:run$9623 [31:30] \_GEN_55 }, Q = \_T_245 [31:0]).
+Adding SRST signal on $procdff$8535 ($dff) from module CSRFile (D = \_GEN_120, Q = \_T_230, rval = 40'0000000000000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11215 ($sdff) from module CSRFile (D = \wdata [7:0], Q = \_T_230 [39:32]).
+Adding EN signal on $auto$ff.cc:262:slice$11215 ($sdff) from module CSRFile (D = \_GEN_45 [31:0], Q = \_T_230 [31:0]).
+Adding SRST signal on $procdff$8631 ($dff) from module CtlPath (D = \exe_reg_exception, Q = \_T_1225, rval = 1'0).
+Adding SRST signal on $procdff$8629 ($dff) from module CtlPath (D = $procmux$6187_Y, Q = \exe_inst_is_load, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11229 ($sdff) from module CtlPath (D = \_T_1197, Q = \exe_inst_is_load).
+Adding SRST signal on $procdff$8628 ($dff) from module CtlPath (D = $procmux$6201_Y, Q = \exe_reg_is_csr, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11233 ($sdff) from module CtlPath (D = $procmux$6201_Y, Q = \exe_reg_is_csr).
+Adding SRST signal on $procdff$8627 ($dff) from module CtlPath (D = $procmux$6215_Y, Q = \exe_reg_exception, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11239 ($sdff) from module CtlPath (D = $procmux$6215_Y, Q = \exe_reg_exception).
+Adding SRST signal on $procdff$8625 ($dff) from module CtlPath (D = $procmux$6229_Y, Q = \exe_reg_wbaddr, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11245 ($sdff) from module CtlPath (D = $procmux$6229_Y, Q = \exe_reg_wbaddr).
+Adding SRST signal on $procdff$8662 ($dff) from module DatPath (D = \_GEN_81, Q = \wb_reg_ctrl_rf_wen, rval = 1'0).
+Adding SRST signal on $procdff$8661 ($dff) from module DatPath (D = $procmux$6258_Y, Q = \wb_reg_wbdata, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11252 ($sdff) from module DatPath (D = $procmux$6256_Y, Q = \wb_reg_wbdata).
+Adding SRST signal on $procdff$8660 ($dff) from module DatPath (D = $procmux$6263_Y, Q = \wb_reg_wbaddr, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11254 ($sdff) from module DatPath (D = \mem_reg_wbaddr, Q = \wb_reg_wbaddr).
+Adding SRST signal on $procdff$8659 ($dff) from module DatPath (D = $procmux$6268_Y, Q = \mem_reg_ctrl_csr_cmd, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$11256 ($sdff) from module DatPath (D = \exe_reg_ctrl_csr_cmd, Q = \mem_reg_ctrl_csr_cmd).
+Adding SRST signal on $procdff$8658 ($dff) from module DatPath (D = $procmux$6281_Y, Q = \mem_reg_ctrl_wb_sel, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$11260 ($sdff) from module DatPath (D = \exe_reg_ctrl_wb_sel, Q = \mem_reg_ctrl_wb_sel).
+Adding SRST signal on $procdff$8657 ($dff) from module DatPath (D = $procmux$6288_Y, Q = \mem_reg_ctrl_mem_typ, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$11268 ($sdff) from module DatPath (D = \exe_reg_ctrl_mem_typ, Q = \mem_reg_ctrl_mem_typ).
+Adding SRST signal on $procdff$8656 ($dff) from module DatPath (D = $procmux$6298_Y, Q = \mem_reg_ctrl_mem_fcn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11278 ($sdff) from module DatPath (D = \exe_reg_ctrl_mem_fcn, Q = \mem_reg_ctrl_mem_fcn).
+Adding SRST signal on $procdff$8655 ($dff) from module DatPath (D = $procmux$6306_Y, Q = \mem_reg_ctrl_mem_val, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11288 ($sdff) from module DatPath (D = \exe_reg_ctrl_mem_val, Q = \mem_reg_ctrl_mem_val).
+Adding SRST signal on $procdff$8654 ($dff) from module DatPath (D = $procmux$6317_Y, Q = \mem_reg_ctrl_rf_wen, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11292 ($sdff) from module DatPath (D = \exe_reg_ctrl_rf_wen, Q = \mem_reg_ctrl_rf_wen).
+Adding SRST signal on $procdff$8653 ($dff) from module DatPath (D = $procmux$6330_Y, Q = \mem_reg_rs2_data, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11296 ($sdff) from module DatPath (D = \exe_reg_rs2_data, Q = \mem_reg_rs2_data).
+Adding SRST signal on $procdff$8652 ($dff) from module DatPath (D = $procmux$6337_Y, Q = \mem_reg_wbaddr, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11304 ($sdff) from module DatPath (D = \exe_reg_wbaddr, Q = \mem_reg_wbaddr).
+Adding SRST signal on $procdff$8651 ($dff) from module DatPath (D = $procmux$6383_Y, Q = \mem_reg_alu_out, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11312 ($sdff) from module DatPath (D = $procmux$6379_Y, Q = \mem_reg_alu_out).
+Adding SRST signal on $procdff$8650 ($dff) from module DatPath (D = $procmux$6390_Y, Q = \mem_reg_inst, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11320 ($sdff) from module DatPath (D = \exe_reg_inst, Q = \mem_reg_inst).
+Adding SRST signal on $procdff$8649 ($dff) from module DatPath (D = { $procmux$6398_Y [14] $procmux$6398_Y [5:4] $procmux$6398_Y [1:0] }, Q = { \mem_reg_pc [14] \mem_reg_pc [5:4] \mem_reg_pc [1:0] }, rval = 5'00000).
+Adding SRST signal on $procdff$8649 ($dff) from module DatPath (D = { $procmux$6395_Y [31:15] $procmux$6395_Y [13:6] $procmux$6395_Y [3:2] }, Q = { \mem_reg_pc [31:15] \mem_reg_pc [13:6] \mem_reg_pc [3:2] }, rval = 27'000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11329 ($sdff) from module DatPath (D = { \exe_reg_pc [31:15] \exe_reg_pc [13:6] \exe_reg_pc [3:2] }, Q = { \mem_reg_pc [31:15] \mem_reg_pc [13:6] \mem_reg_pc [3:2] }).
+Adding EN signal on $auto$ff.cc:262:slice$11328 ($sdff) from module DatPath (D = { $procmux$6398_Y [14] $procmux$6398_Y [5:4] $procmux$6398_Y [1:0] }, Q = { \mem_reg_pc [14] \mem_reg_pc [5:4] \mem_reg_pc [1:0] }).
+Adding SRST signal on $procdff$8648 ($dff) from module DatPath (D = $procmux$6406_Y, Q = \exe_reg_ctrl_csr_cmd, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$11336 ($sdff) from module DatPath (D = $procmux$6404_Y, Q = \exe_reg_ctrl_csr_cmd).
+Adding SRST signal on $procdff$8647 ($dff) from module DatPath (D = $procmux$6421_Y, Q = \exe_reg_ctrl_mem_typ, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$11340 ($sdff) from module DatPath (D = \io_ctl_mem_typ, Q = \exe_reg_ctrl_mem_typ).
+Adding SRST signal on $procdff$8646 ($dff) from module DatPath (D = \_GEN_28, Q = \exe_reg_ctrl_mem_fcn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11350 ($sdff) from module DatPath (D = \_GEN_11, Q = \exe_reg_ctrl_mem_fcn).
+Adding SRST signal on $procdff$8645 ($dff) from module DatPath (D = $procmux$6432_Y, Q = \exe_reg_ctrl_mem_val, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11354 ($sdff) from module DatPath (D = $procmux$6430_Y, Q = \exe_reg_ctrl_mem_val).
+Adding SRST signal on $procdff$8644 ($dff) from module DatPath (D = $procmux$6446_Y, Q = \exe_reg_ctrl_rf_wen, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$11358 ($sdff) from module DatPath (D = $procmux$6444_Y, Q = \exe_reg_ctrl_rf_wen).
+Adding SRST signal on $procdff$8643 ($dff) from module DatPath (D = $procmux$6459_Y, Q = \exe_reg_ctrl_wb_sel, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$11362 ($sdff) from module DatPath (D = \io_ctl_wb_sel, Q = \exe_reg_ctrl_wb_sel).
+Adding SRST signal on $procdff$8642 ($dff) from module DatPath (D = $procmux$6466_Y, Q = \exe_reg_ctrl_alu_fun, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$11368 ($sdff) from module DatPath (D = \io_ctl_alu_fun, Q = \exe_reg_ctrl_alu_fun).
+Adding SRST signal on $procdff$8641 ($dff) from module DatPath (D = $procmux$6474_Y, Q = \exe_reg_ctrl_br_type, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$11374 ($sdff) from module DatPath (D = $procmux$6472_Y, Q = \exe_reg_ctrl_br_type).
+Adding SRST signal on $procdff$8640 ($dff) from module DatPath (D = $procmux$6544_Y, Q = \exe_reg_rs2_data, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11378 ($sdff) from module DatPath (D = $procmux$6540_Y, Q = \exe_reg_rs2_data).
+Adding SRST signal on $procdff$8639 ($dff) from module DatPath (D = $procmux$6625_Y, Q = \brjmp_offset, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11384 ($sdff) from module DatPath (D = $procmux$6621_Y, Q = \brjmp_offset).
+Adding SRST signal on $procdff$8638 ($dff) from module DatPath (D = $procmux$6694_Y, Q = \exe_alu_op1, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11390 ($sdff) from module DatPath (D = $procmux$6690_Y, Q = \exe_alu_op1).
+Adding SRST signal on $procdff$8637 ($dff) from module DatPath (D = $procmux$6702_Y, Q = \exe_reg_wbaddr, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11396 ($sdff) from module DatPath (D = $procmux$6700_Y, Q = \exe_reg_wbaddr).
+Adding SRST signal on $procdff$8636 ($dff) from module DatPath (D = $procmux$6712_Y, Q = \exe_reg_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11400 ($sdff) from module DatPath (D = \dec_reg_pc, Q = \exe_reg_pc).
+Adding SRST signal on $procdff$8635 ($dff) from module DatPath (D = { $procmux$6729_Y [14] $procmux$6729_Y [5:4] $procmux$6729_Y [1:0] }, Q = { \exe_reg_inst [14] \exe_reg_inst [5:4] \exe_reg_inst [1:0] }, rval = 5'00000).
+Adding SRST signal on $procdff$8635 ($dff) from module DatPath (D = { $procmux$6723_Y [31:15] $procmux$6723_Y [13:6] $procmux$6723_Y [3:2] }, Q = { \exe_reg_inst [31:15] \exe_reg_inst [13:6] \exe_reg_inst [3:2] }, rval = 27'000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11409 ($sdff) from module DatPath (D = { $procmux$6721_Y [31:15] $procmux$6721_Y [13:6] $procmux$6721_Y [3:2] }, Q = { \exe_reg_inst [31:15] \exe_reg_inst [13:6] \exe_reg_inst [3:2] }).
+Adding EN signal on $auto$ff.cc:262:slice$11408 ($sdff) from module DatPath (D = { $procmux$6729_Y [14] $procmux$6729_Y [5:4] $procmux$6729_Y [1:0] }, Q = { \exe_reg_inst [14] \exe_reg_inst [5:4] \exe_reg_inst [1:0] }).
+Adding SRST signal on $procdff$8634 ($dff) from module DatPath (D = $procmux$6736_Y, Q = \dec_reg_pc, rval = 0).
+Adding EN signal on $auto$ff.cc:262:slice$11416 ($sdff) from module DatPath (D = \if_reg_pc, Q = \dec_reg_pc).
+Adding SRST signal on $procdff$8633 ($dff) from module DatPath (D = { $procmux$6753_Y [14] $procmux$6753_Y [5:4] $procmux$6753_Y [1:0] }, Q = { \dec_reg_inst [14] \dec_reg_inst [5:4] \dec_reg_inst [1:0] }, rval = 5'00000).
+Adding SRST signal on $procdff$8633 ($dff) from module DatPath (D = { $procmux$6747_Y [31:15] $procmux$6747_Y [13:6] $procmux$6747_Y [3:2] }, Q = { \dec_reg_inst [31:15] \dec_reg_inst [13:6] \dec_reg_inst [3:2] }, rval = 27'000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11425 ($sdff) from module DatPath (D = { $procmux$6745_Y [31:15] $procmux$6745_Y [13:6] $procmux$6745_Y [3:2] }, Q = { \dec_reg_inst [31:15] \dec_reg_inst [13:6] \dec_reg_inst [3:2] }).
+Adding EN signal on $auto$ff.cc:262:slice$11424 ($sdff) from module DatPath (D = { $procmux$6753_Y [14] $procmux$6753_Y [5:4] $procmux$6753_Y [1:0] }, Q = { \dec_reg_inst [14] \dec_reg_inst [5:4] \dec_reg_inst [1:0] }).
+Adding SRST signal on $procdff$8632 ($dff) from module DatPath (D = $procmux$6772_Y [31], Q = \if_reg_pc [31], rval = 1'0).
+Adding SRST signal on $procdff$8632 ($dff) from module DatPath (D = $procmux$6769_Y [30:0], Q = \if_reg_pc [30:0], rval = 31'0000000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11433 ($sdff) from module DatPath (D = $procmux$6765_Y [30:0], Q = \if_reg_pc [30:0]).
+Adding EN signal on $auto$ff.cc:262:slice$11432 ($sdff) from module DatPath (D = $procmux$6772_Y [31], Q = \if_reg_pc [31]).
+Adding SRST signal on $procdff$8528 ($dff) from module SparseMem (D = $procmux$5121_Y, Q = \nextAddr, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$11448 ($sdff) from module SparseMem (D = \_T_400, Q = \nextAddr).
+Adding SRST signal on $procdff$8527 ($dff) from module SparseMem (D = $procmux$5128_Y, Q = \addresses_31_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11450 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_31_bits).
+Adding SRST signal on $procdff$8526 ($dff) from module SparseMem (D = $procmux$5135_Y, Q = \addresses_30_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11454 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_30_bits).
+Adding SRST signal on $procdff$8525 ($dff) from module SparseMem (D = $procmux$5142_Y, Q = \addresses_29_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11458 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_29_bits).
+Adding SRST signal on $procdff$8524 ($dff) from module SparseMem (D = $procmux$5149_Y, Q = \addresses_28_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11462 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_28_bits).
+Adding SRST signal on $procdff$8523 ($dff) from module SparseMem (D = $procmux$5156_Y, Q = \addresses_27_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11466 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_27_bits).
+Adding SRST signal on $procdff$8522 ($dff) from module SparseMem (D = $procmux$5163_Y, Q = \addresses_26_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11470 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_26_bits).
+Adding SRST signal on $procdff$8521 ($dff) from module SparseMem (D = $procmux$5170_Y, Q = \addresses_25_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11474 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_25_bits).
+Adding SRST signal on $procdff$8520 ($dff) from module SparseMem (D = $procmux$5177_Y, Q = \addresses_24_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11478 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_24_bits).
+Adding SRST signal on $procdff$8519 ($dff) from module SparseMem (D = $procmux$5184_Y, Q = \addresses_23_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11482 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_23_bits).
+Adding SRST signal on $procdff$8518 ($dff) from module SparseMem (D = $procmux$5191_Y, Q = \addresses_22_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11486 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_22_bits).
+Adding SRST signal on $procdff$8517 ($dff) from module SparseMem (D = $procmux$5198_Y, Q = \addresses_21_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11490 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_21_bits).
+Adding SRST signal on $procdff$8516 ($dff) from module SparseMem (D = $procmux$5205_Y, Q = \addresses_20_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11494 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_20_bits).
+Adding SRST signal on $procdff$8515 ($dff) from module SparseMem (D = $procmux$5212_Y, Q = \addresses_19_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11498 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_19_bits).
+Adding SRST signal on $procdff$8514 ($dff) from module SparseMem (D = $procmux$5219_Y, Q = \addresses_18_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11502 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_18_bits).
+Adding SRST signal on $procdff$8513 ($dff) from module SparseMem (D = $procmux$5226_Y, Q = \addresses_17_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11506 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_17_bits).
+Adding SRST signal on $procdff$8512 ($dff) from module SparseMem (D = $procmux$5233_Y, Q = \addresses_16_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11510 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_16_bits).
+Adding SRST signal on $procdff$8511 ($dff) from module SparseMem (D = $procmux$5240_Y, Q = \addresses_15_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11514 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_15_bits).
+Adding SRST signal on $procdff$8510 ($dff) from module SparseMem (D = $procmux$5247_Y, Q = \addresses_14_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11518 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_14_bits).
+Adding SRST signal on $procdff$8509 ($dff) from module SparseMem (D = $procmux$5254_Y, Q = \addresses_13_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11522 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_13_bits).
+Adding SRST signal on $procdff$8508 ($dff) from module SparseMem (D = $procmux$5261_Y, Q = \addresses_12_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11526 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_12_bits).
+Adding SRST signal on $procdff$8507 ($dff) from module SparseMem (D = $procmux$5268_Y, Q = \addresses_11_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11530 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_11_bits).
+Adding SRST signal on $procdff$8506 ($dff) from module SparseMem (D = $procmux$5275_Y, Q = \addresses_10_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11534 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_10_bits).
+Adding SRST signal on $procdff$8505 ($dff) from module SparseMem (D = $procmux$5282_Y, Q = \addresses_9_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11538 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_9_bits).
+Adding SRST signal on $procdff$8504 ($dff) from module SparseMem (D = $procmux$5289_Y, Q = \addresses_8_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11542 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_8_bits).
+Adding SRST signal on $procdff$8503 ($dff) from module SparseMem (D = $procmux$5296_Y, Q = \addresses_7_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11546 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_7_bits).
+Adding SRST signal on $procdff$8502 ($dff) from module SparseMem (D = $procmux$5303_Y, Q = \addresses_6_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11550 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_6_bits).
+Adding SRST signal on $procdff$8501 ($dff) from module SparseMem (D = $procmux$5310_Y, Q = \addresses_5_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11554 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_5_bits).
+Adding SRST signal on $procdff$8500 ($dff) from module SparseMem (D = $procmux$5317_Y, Q = \addresses_4_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11558 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_4_bits).
+Adding SRST signal on $procdff$8499 ($dff) from module SparseMem (D = $procmux$5324_Y, Q = \addresses_3_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11562 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_3_bits).
+Adding SRST signal on $procdff$8498 ($dff) from module SparseMem (D = $procmux$5331_Y, Q = \addresses_2_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11566 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_2_bits).
+Adding SRST signal on $procdff$8497 ($dff) from module SparseMem (D = $procmux$5338_Y, Q = \addresses_1_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11570 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_1_bits).
+Adding SRST signal on $procdff$8496 ($dff) from module SparseMem (D = $procmux$5345_Y, Q = \addresses_0_bits, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$11574 ($sdff) from module SparseMem (D = \io_w_0_addr, Q = \addresses_0_bits).
+Adding SRST signal on $procdff$8618 ($dff) from module SparseMem_0 (D = $procmux$5661_Y, Q = \nextAddr, rval = 6'000000).
+Adding EN signal on $auto$ff.cc:262:slice$11578 ($sdff) from module SparseMem_0 (D = \_T_400, Q = \nextAddr).
+Adding SRST signal on $procdff$8617 ($dff) from module SparseMem_0 (D = $procmux$5668_Y, Q = \addresses_31_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11580 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_31_bits).
+Adding SRST signal on $procdff$8616 ($dff) from module SparseMem_0 (D = $procmux$5675_Y, Q = \addresses_30_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11584 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_30_bits).
+Adding SRST signal on $procdff$8615 ($dff) from module SparseMem_0 (D = $procmux$5682_Y, Q = \addresses_29_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11588 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_29_bits).
+Adding SRST signal on $procdff$8614 ($dff) from module SparseMem_0 (D = $procmux$5689_Y, Q = \addresses_28_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11592 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_28_bits).
+Adding SRST signal on $procdff$8613 ($dff) from module SparseMem_0 (D = $procmux$5696_Y, Q = \addresses_27_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11596 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_27_bits).
+Adding SRST signal on $procdff$8612 ($dff) from module SparseMem_0 (D = $procmux$5703_Y, Q = \addresses_26_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11600 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_26_bits).
+Adding SRST signal on $procdff$8611 ($dff) from module SparseMem_0 (D = $procmux$5710_Y, Q = \addresses_25_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11604 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_25_bits).
+Adding SRST signal on $procdff$8610 ($dff) from module SparseMem_0 (D = $procmux$5717_Y, Q = \addresses_24_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11608 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_24_bits).
+Adding SRST signal on $procdff$8609 ($dff) from module SparseMem_0 (D = $procmux$5724_Y, Q = \addresses_23_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11612 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_23_bits).
+Adding SRST signal on $procdff$8608 ($dff) from module SparseMem_0 (D = $procmux$5731_Y, Q = \addresses_22_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11616 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_22_bits).
+Adding SRST signal on $procdff$8607 ($dff) from module SparseMem_0 (D = $procmux$5738_Y, Q = \addresses_21_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11620 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_21_bits).
+Adding SRST signal on $procdff$8606 ($dff) from module SparseMem_0 (D = $procmux$5745_Y, Q = \addresses_20_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11624 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_20_bits).
+Adding SRST signal on $procdff$8605 ($dff) from module SparseMem_0 (D = $procmux$5752_Y, Q = \addresses_19_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11628 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_19_bits).
+Adding SRST signal on $procdff$8604 ($dff) from module SparseMem_0 (D = $procmux$5759_Y, Q = \addresses_18_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11632 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_18_bits).
+Adding SRST signal on $procdff$8603 ($dff) from module SparseMem_0 (D = $procmux$5766_Y, Q = \addresses_17_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11636 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_17_bits).
+Adding SRST signal on $procdff$8602 ($dff) from module SparseMem_0 (D = $procmux$5773_Y, Q = \addresses_16_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11640 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_16_bits).
+Adding SRST signal on $procdff$8601 ($dff) from module SparseMem_0 (D = $procmux$5780_Y, Q = \addresses_15_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11644 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_15_bits).
+Adding SRST signal on $procdff$8600 ($dff) from module SparseMem_0 (D = $procmux$5787_Y, Q = \addresses_14_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11648 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_14_bits).
+Adding SRST signal on $procdff$8599 ($dff) from module SparseMem_0 (D = $procmux$5794_Y, Q = \addresses_13_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11652 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_13_bits).
+Adding SRST signal on $procdff$8598 ($dff) from module SparseMem_0 (D = $procmux$5801_Y, Q = \addresses_12_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11656 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_12_bits).
+Adding SRST signal on $procdff$8597 ($dff) from module SparseMem_0 (D = $procmux$5808_Y, Q = \addresses_11_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11660 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_11_bits).
+Adding SRST signal on $procdff$8596 ($dff) from module SparseMem_0 (D = $procmux$5815_Y, Q = \addresses_10_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11664 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_10_bits).
+Adding SRST signal on $procdff$8595 ($dff) from module SparseMem_0 (D = $procmux$5822_Y, Q = \addresses_9_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11668 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_9_bits).
+Adding SRST signal on $procdff$8594 ($dff) from module SparseMem_0 (D = $procmux$5829_Y, Q = \addresses_8_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11672 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_8_bits).
+Adding SRST signal on $procdff$8593 ($dff) from module SparseMem_0 (D = $procmux$5836_Y, Q = \addresses_7_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11676 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_7_bits).
+Adding SRST signal on $procdff$8592 ($dff) from module SparseMem_0 (D = $procmux$5843_Y, Q = \addresses_6_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11680 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_6_bits).
+Adding SRST signal on $procdff$8591 ($dff) from module SparseMem_0 (D = $procmux$5850_Y, Q = \addresses_5_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11684 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_5_bits).
+Adding SRST signal on $procdff$8590 ($dff) from module SparseMem_0 (D = $procmux$5857_Y, Q = \addresses_4_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11688 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_4_bits).
+Adding SRST signal on $procdff$8589 ($dff) from module SparseMem_0 (D = $procmux$5864_Y, Q = \addresses_3_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11692 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_3_bits).
+Adding SRST signal on $procdff$8588 ($dff) from module SparseMem_0 (D = $procmux$5871_Y, Q = \addresses_2_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11696 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_2_bits).
+Adding SRST signal on $procdff$8587 ($dff) from module SparseMem_0 (D = $procmux$5878_Y, Q = \addresses_1_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11700 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_1_bits).
+Adding SRST signal on $procdff$8586 ($dff) from module SparseMem_0 (D = $procmux$5885_Y, Q = \addresses_0_bits, rval = 21'000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$11704 ($sdff) from module SparseMem_0 (D = \io_w_1_addr, Q = \addresses_0_bits).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AsyncReadMem..
+Finding unused cells or wires in module \AsyncScratchPadMemory..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \RegisterFile..
+Finding unused cells or wires in module \Sodor5Stage..
+Finding unused cells or wires in module \Sodor5StageTop..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \SparseMem_0..
+Removed 457 unused cells and 459 unused wires.
+<suppressed ~496 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module AsyncReadMem.
+Optimizing module AsyncScratchPadMemory.
+Optimizing module CSRFile.
+<suppressed ~32 debug messages>
+Optimizing module Core.
+Optimizing module CtlPath.
+<suppressed ~3 debug messages>
+Optimizing module DatPath.
+<suppressed ~3 debug messages>
+Optimizing module RegisterFile.
+Optimizing module Sodor5Stage.
+Optimizing module Sodor5StageTop.
+Optimizing module SparseMem.
+Optimizing module SparseMem_0.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\AsyncReadMem'.
+Finding identical cells in module `\AsyncScratchPadMemory'.
+Finding identical cells in module `\CSRFile'.
+<suppressed ~42 debug messages>
+Finding identical cells in module `\Core'.
+Finding identical cells in module `\CtlPath'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\DatPath'.
+<suppressed ~138 debug messages>
+Finding identical cells in module `\RegisterFile'.
+Finding identical cells in module `\Sodor5Stage'.
+Finding identical cells in module `\Sodor5StageTop'.
+Finding identical cells in module `\SparseMem'.
+Finding identical cells in module `\SparseMem_0'.
+Removed a total of 65 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \AsyncReadMem..
+Finding unused cells or wires in module \AsyncScratchPadMemory..
+Finding unused cells or wires in module \CSRFile..
+Finding unused cells or wires in module \Core..
+Finding unused cells or wires in module \CtlPath..
+Finding unused cells or wires in module \DatPath..
+Finding unused cells or wires in module \RegisterFile..
+Finding unused cells or wires in module \Sodor5Stage..
+Finding unused cells or wires in module \Sodor5StageTop..
+Finding unused cells or wires in module \SparseMem..
+Finding unused cells or wires in module \SparseMem_0..
+Removed 0 unused cells and 65 unused wires.
+<suppressed ~3 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module AsyncReadMem...
+Checking module AsyncScratchPadMemory...
+Checking module CSRFile...
+Checking module Core...
+Checking module CtlPath...
+Checking module DatPath...
+Checking module RegisterFile...
+Checking module Sodor5Stage...
+Checking module Sodor5StageTop...
+Checking module SparseMem...
+Checking module SparseMem_0...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \Sodor5StageTop
+Used module:     \Sodor5Stage
+Used module:         \Core
+Used module:             \CtlPath
+Used module:             \DatPath
+Used module:                 \CSRFile
+Used module:                 \RegisterFile
+Used module:                     \SparseMem
+Used module:         \AsyncScratchPadMemory
+Used module:             \AsyncReadMem
+Used module:                 \SparseMem_0
+
+8.2. Analyzing design hierarchy..
+Top module:  \Sodor5StageTop
+Used module:     \Sodor5Stage
+Used module:         \Core
+Used module:             \CtlPath
+Used module:             \DatPath
+Used module:                 \CSRFile
+Used module:                 \RegisterFile
+Used module:                     \SparseMem
+Used module:         \AsyncScratchPadMemory
+Used module:             \AsyncReadMem
+Used module:                 \SparseMem_0
+Removed 0 unused modules.
+Module Sodor5StageTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Printing statistics.
+
+=== AsyncReadMem ===
+
+   Number of wires:                 41
+   Number of wire bits:            417
+   Number of public wires:          41
+   Number of public wire bits:     417
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  4
+     SparseMem_0                     4
+
+=== AsyncScratchPadMemory ===
+
+   Number of wires:                 39
+   Number of wire bits:            610
+   Number of public wires:          39
+   Number of public wire bits:     610
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     $eq                             4
+     $mux                            6
+     $shl                            1
+     AsyncReadMem                    1
+
+=== CSRFile ===
+
+   Number of wires:               1240
+   Number of wire bits:          23748
+   Number of public wires:         872
+   Number of public wire bits:   19287
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                797
+     $add                            5
+     $and                           10
+     $dff                           85
+     $eq                            85
+     $le                             1
+     $logic_not                      1
+     $mux                          343
+     $ne                            37
+     $not                           38
+     $or                            85
+     $reduce_and                    72
+     $reduce_bool                   33
+     $reduce_or                      1
+     $shl                            1
+
+=== Core ===
+
+   Number of wires:               1653
+   Number of wire bits:           2067
+   Number of public wires:        1653
+   Number of public wire bits:    2067
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     CtlPath                         1
+     DatPath                         1
+
+=== CtlPath ===
+
+   Number of wires:               1108
+   Number of wire bits:           1810
+   Number of public wires:        1088
+   Number of public wire bits:    1770
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                672
+     $and                           17
+     $dff                            7
+     $eq                            62
+     $logic_not                      2
+     $mux                          419
+     $ne                             1
+     $not                           10
+     $or                           149
+     $reduce_bool                    4
+     $reduce_or                      1
+
+=== DatPath ===
+
+   Number of wires:                967
+   Number of wire bits:           5045
+   Number of public wires:         824
+   Number of public wire bits:    2489
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                264
+     $add                            4
+     $and                           23
+     $dff                           35
+     $eq                            31
+     $logic_not                      4
+     $lt                             4
+     $mux                          129
+     $ne                             2
+     $not                            6
+     $or                             3
+     $reduce_and                     6
+     $reduce_bool                    5
+     $reduce_or                      5
+     $shl                            1
+     $shr                            1
+     $sshr                           1
+     $sub                            1
+     $xor                            1
+     CSRFile                         1
+     RegisterFile                    1
+
+=== RegisterFile ===
+
+   Number of wires:                 25
+   Number of wire bits:            297
+   Number of public wires:          25
+   Number of public wire bits:     297
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  7
+     $and                            1
+     $mux                            2
+     $reduce_bool                    3
+     SparseMem                       1
+
+=== Sodor5Stage ===
+
+   Number of wires:               1709
+   Number of wire bits:          38089
+   Number of public wires:        1709
+   Number of public wire bits:   38089
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  2
+     AsyncScratchPadMemory           1
+     Core                            1
+
+=== Sodor5StageTop ===
+
+   Number of wires:               1732
+   Number of wire bits:           2588
+   Number of public wires:         224
+   Number of public wire bits:    1080
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1940
+     $anyseq                       429
+     $assume                         1
+     $cover                        428
+     $dff                          431
+     $logic_and                      1
+     $logic_not                    216
+     $mux                          431
+     $not                            1
+     $or                             1
+     Sodor5Stage                     1
+
+=== SparseMem ===
+
+   Number of wires:                333
+   Number of wire bits:           1388
+   Number of public wires:         195
+   Number of public wire bits:     847
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                301
+     $add                            1
+     $and                            1
+     $anyseq                         5
+     $dff                           33
+     $eq                           127
+     $logic_not                      1
+     $mem_v2                         1
+     $mux                           72
+     $not                            1
+     $or                            12
+     $reduce_and                    32
+     $reduce_bool                    3
+     $reduce_or                     12
+
+=== SparseMem_0 ===
+
+   Number of wires:                283
+   Number of wire bits:           2530
+   Number of public wires:         145
+   Number of public wire bits:    1062
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                259
+     $add                            1
+     $and                            1
+     $anyseq                         5
+     $dff                           33
+     $eq                            95
+     $logic_not                      1
+     $mem_v2                         1
+     $mux                           71
+     $not                            1
+     $or                             8
+     $reduce_and                    32
+     $reduce_bool                    2
+     $reduce_or                      8
+
+=== design hierarchy ===
+
+   Sodor5StageTop                    1
+     Sodor5Stage                     1
+       AsyncScratchPadMemory         1
+         AsyncReadMem                1
+           SparseMem_0               4
+       Core                          1
+         CtlPath                     1
+         DatPath                     1
+           CSRFile                   1
+           RegisterFile              1
+             SparseMem               1
+
+   Number of wires:               9979
+   Number of wire bits:          86179
+   Number of public wires:        7250
+   Number of public wire bits:   71201
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5024
+     $add                           14
+     $and                           56
+     $anyseq                       454
+     $assume                         1
+     $cover                        428
+     $dff                          723
+     $eq                           689
+     $le                             1
+     $logic_and                      1
+     $logic_not                    228
+     $lt                             4
+     $mem_v2                         5
+     $mux                         1686
+     $ne                            40
+     $not                           60
+     $or                           282
+     $reduce_and                   238
+     $reduce_bool                   56
+     $reduce_or                     51
+     $shl                            3
+     $shr                            1
+     $sshr                           1
+     $sub                            1
+     $xor                            1
+
+11. Executing SMT2 backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module CSRFile.
+Creating SMT-LIBv2 representation of module CtlPath.
+Creating SMT-LIBv2 representation of module SparseMem.
+Creating SMT-LIBv2 representation of module SparseMem_0.
+Creating SMT-LIBv2 representation of module AsyncReadMem.
+Creating SMT-LIBv2 representation of module RegisterFile.
+Creating SMT-LIBv2 representation of module AsyncScratchPadMemory.
+Creating SMT-LIBv2 representation of module DatPath.
+Creating SMT-LIBv2 representation of module Core.
+Creating SMT-LIBv2 representation of module Sodor5Stage.
+Creating SMT-LIBv2 representation of module Sodor5StageTop.
+
+End of script. Logfile hash: 8da8db4107, CPU: user 1.51s system 0.02s, MEM: 42.68 MB peak
+Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 31% 3x opt_clean (0 sec), 15% 1x check (0 sec), ...

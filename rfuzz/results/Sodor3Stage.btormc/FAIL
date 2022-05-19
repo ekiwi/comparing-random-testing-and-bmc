@@ -1,0 +1,9 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:01:51 (111)
+Elapsed process time [H:MM:SS (secs)]: 0:02:19 (139)
+engine_0 (btor btormc) returned FAIL
+trace: cover_btor/engine_0/trace0.vcd
+trace: cover_btor/engine_0/trace1.vcd
+trace: cover_btor/engine_0/trace2.vcd
+trace: cover_btor/engine_0/trace4.vcd
+trace: cover_btor/engine_0/trace6.vcd
+and 368 further traces

@@ -1,0 +1,324 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TLMonitor_72..
+Finding unused cells or wires in module \TLI2CTop..
+Finding unused cells or wires in module \TLI2C..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TLI2C.
+Optimizing module TLI2CTop.
+Optimizing module TLMonitor_72.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TLI2C'.
+Finding identical cells in module `\TLI2CTop'.
+Finding identical cells in module `\TLMonitor_72'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$2858 ($dff) from module TLI2C (D = $or$TLI2C.v:1438$1271_Y, Q = \statusReadReady, rval = 1'0).
+Adding SRST signal on $procdff$2857 ($dff) from module TLI2C (D = $procmux$1852_Y, Q = \receivedAck, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3486 ($sdff) from module TLI2C (D = \receivedBit, Q = \receivedAck).
+Adding SRST signal on $procdff$2856 ($dff) from module TLI2C (D = $procmux$1863_Y, Q = \bitCmdStop, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3500 ($sdff) from module TLI2C (D = \_T_348, Q = \bitCmdStop).
+Adding SRST signal on $procdff$2855 ($dff) from module TLI2C (D = $procmux$1871_Y, Q = \receivedBit, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3504 ($sdff) from module TLI2C (D = \sSDA, Q = \receivedBit).
+Adding SRST signal on $procdff$2854 ($dff) from module TLI2C (D = $procmux$1609_Y, Q = \transmitBit, rval = 1'0).
+Adding SRST signal on $procdff$2853 ($dff) from module TLI2C (D = $procmux$1924_Y, Q = \sdaChk, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3509 ($sdff) from module TLI2C (D = $procmux$1922_Y, Q = \sdaChk).
+Adding SRST signal on $procdff$2852 ($dff) from module TLI2C (D = $or$TLI2C.v:1336$1266_Y, Q = \sdaOen, rval = 1'0).
+Adding SRST signal on $procdff$2851 ($dff) from module TLI2C (D = $or$TLI2C.v:1331$1265_Y, Q = \sclOen, rval = 1'0).
+Adding SRST signal on $procdff$2850 ($dff) from module TLI2C (D = \_T_285, Q = \startCond, rval = 1'0).
+Adding SRST signal on $procdff$2849 ($dff) from module TLI2C (D = \io_port_scl_oe, Q = \dSCLOen, rval = 1'0).
+Adding SRST signal on $procdff$2848 ($dff) from module TLI2C (D = $or$TLI2C.v:1314$1264_Y, Q = \dSDA, rval = 1'0).
+Adding SRST signal on $procdff$2847 ($dff) from module TLI2C (D = $or$TLI2C.v:1309$1263_Y, Q = \sSDA, rval = 1'0).
+Adding SRST signal on $procdff$2846 ($dff) from module TLI2C (D = $procmux$1642_Y, Q = { $auto$wreduce.cc:454:run$3173 [3:2] \_T_255 [1] }, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3521 ($sdff) from module TLI2C (D = $procmux$1642_Y, Q = { $auto$wreduce.cc:454:run$3173 [3:2] \_T_255 [1] }).
+Adding SRST signal on $procdff$2845 ($dff) from module TLI2C (D = $procmux$1648_Y, Q = \fSCL, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3525 ($sdff) from module TLI2C (D = $procmux$1648_Y, Q = \fSCL).
+Adding SRST signal on $procdff$2844 ($dff) from module TLI2C (D = \_T_525, Q = \status_irqFlag, rval = 1'0).
+Adding SRST signal on $procdff$2843 ($dff) from module TLI2C (D = \_T_451, Q = \status_transferInProgress, rval = 1'0).
+Adding SRST signal on $procdff$2842 ($dff) from module TLI2C (D = \_GEN_201, Q = \status_arbLost, rval = 1'0).
+Adding SRST signal on $procdff$2841 ($dff) from module TLI2C (D = \_GEN_198, Q = \status_busy, rval = 1'0).
+Adding SRST signal on $procdff$2840 ($dff) from module TLI2C (D = \receivedAck, Q = \status_receivedAck, rval = 1'0).
+Adding SRST signal on $procdff$2839 ($dff) from module TLI2C (D = \nextCmd [0], Q = \cmd_irqAck, rval = 1'0).
+Adding SRST signal on $procdff$2838 ($dff) from module TLI2C (D = \nextCmd [3], Q = \cmd_ack, rval = 1'0).
+Adding SRST signal on $procdff$2837 ($dff) from module TLI2C (D = \_GEN_117, Q = \receivedData, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$3550 ($sdff) from module TLI2C (D = \_GEN_117, Q = \receivedData).
+Adding SRST signal on $procdff$2836 ($dff) from module TLI2C (D = $procmux$1935_Y, Q = \transmitData, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$3556 ($sdff) from module TLI2C (D = \auto_in_a_bits_data [7:0], Q = \transmitData).
+Adding SRST signal on $procdff$2835 ($dff) from module TLI2C (D = $procmux$1943_Y, Q = \control_intEn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3560 ($sdff) from module TLI2C (D = \auto_in_a_bits_data [6], Q = \control_intEn).
+Adding SRST signal on $procdff$2834 ($dff) from module TLI2C (D = $procmux$1954_Y, Q = \prescaler_lo, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$3564 ($sdff) from module TLI2C (D = $procmux$1954_Y, Q = \prescaler_lo).
+Adding SRST signal on $procdff$2833 ($dff) from module TLI2C (D = $procmux$1962_Y, Q = \prescaler_hi, rval = 8'00000000).
+Adding EN signal on $auto$ff.cc:262:slice$3568 ($sdff) from module TLI2C (D = $procmux$1962_Y, Q = \prescaler_hi).
+Adding SRST signal on $procdff$2832 ($dff) from module TLI2C (D = \_T_291, Q = \stopCond, rval = 1'0).
+Adding SRST signal on $procdff$2831 ($dff) from module TLI2C (D = $procmux$2015_Y, Q = \byteState, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3575 ($sdff) from module TLI2C (D = $procmux$2015_Y, Q = \byteState).
+Adding SRST signal on $procdff$2830 ($dff) from module TLI2C (D = $procmux$2029_Y, Q = \bitCnt, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3595 ($sdff) from module TLI2C (D = $procmux$2029_Y, Q = \bitCnt).
+Adding SRST signal on $procdff$2829 ($dff) from module TLI2C (D = \_GEN_108, Q = \bitCmdAck, rval = 1'0).
+Adding SRST signal on $procdff$2828 ($dff) from module TLI2C (D = $procmux$1720_Y, Q = \cmdAck, rval = 1'0).
+Adding SRST signal on $procdff$2827 ($dff) from module TLI2C (D = \nextCmd [6], Q = \cmd_stop, rval = 1'0).
+Adding SRST signal on $procdff$2826 ($dff) from module TLI2C (D = \nextCmd [7], Q = \cmd_start, rval = 1'0).
+Adding SRST signal on $procdff$2825 ($dff) from module TLI2C (D = \nextCmd [5], Q = \cmd_read, rval = 1'0).
+Adding SRST signal on $procdff$2824 ($dff) from module TLI2C (D = \nextCmd [4], Q = \cmd_write, rval = 1'0).
+Adding SRST signal on $procdff$2823 ($dff) from module TLI2C (D = $procmux$1780_Y, Q = \load, rval = 1'0).
+Adding SRST signal on $procdff$2822 ($dff) from module TLI2C (D = $procmux$1792_Y, Q = \shift, rval = 1'0).
+Adding SRST signal on $procdff$2821 ($dff) from module TLI2C (D = \_T_363, Q = \arbLost, rval = 1'0).
+Adding SRST signal on $procdff$2820 ($dff) from module TLI2C (D = $procmux$2101_Y, Q = \bitState, rval = 5'00000).
+Adding EN signal on $auto$ff.cc:262:slice$3628 ($sdff) from module TLI2C (D = $procmux$2099_Y, Q = \bitState).
+Adding SRST signal on $procdff$2819 ($dff) from module TLI2C (D = $procmux$2154_Y, Q = \bitCmd, rval = 4'0000).
+Adding EN signal on $auto$ff.cc:262:slice$3638 ($sdff) from module TLI2C (D = $procmux$2154_Y, Q = \bitCmd).
+Adding SRST signal on $procdff$2818 ($dff) from module TLI2C (D = $or$TLI2C.v:934$1262_Y, Q = \clkEn, rval = 1'0).
+Adding SRST signal on $procdff$2817 ($dff) from module TLI2C (D = $or$TLI2C.v:929$1261_Y, Q = \sSCL, rval = 1'0).
+Adding SRST signal on $procdff$2816 ($dff) from module TLI2C (D = $or$TLI2C.v:924$1260_Y, Q = \dSCL, rval = 1'0).
+Adding SRST signal on $procdff$2815 ($dff) from module TLI2C (D = $procmux$2168_Y, Q = \cnt, rval = 16'0000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$3661 ($sdff) from module TLI2C (D = $procmux$2168_Y, Q = \cnt).
+Adding SRST signal on $procdff$2814 ($dff) from module TLI2C (D = \_T_307, Q = \slaveWait, rval = 1'0).
+Adding SRST signal on $procdff$2813 ($dff) from module TLI2C (D = $procmux$2176_Y, Q = \control_coreEn, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3670 ($sdff) from module TLI2C (D = \auto_in_a_bits_data [7], Q = \control_coreEn).
+Adding SRST signal on $procdff$2812 ($dff) from module TLI2C (D = $procmux$1831_Y, Q = \filterCnt, rval = 14'00000000000000).
+Adding SRST signal on $procdff$2811 ($dff) from module TLMonitor_72 (D = $procmux$1509_Y, Q = \_T_792, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3679 ($sdff) from module TLMonitor_72 (D = $procmux$1507_Y, Q = \_T_792).
+Adding SRST signal on $procdff$2810 ($dff) from module TLMonitor_72 (D = $procmux$1520_Y, Q = \_T_764, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3683 ($sdff) from module TLMonitor_72 (D = $procmux$1518_Y, Q = \_T_764).
+Adding SRST signal on $procdff$2809 ($dff) from module TLMonitor_72 (D = \_T_848, Q = \_T_749, rval = 128'00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000).
+Adding SRST signal on $procdff$2808 ($dff) from module TLMonitor_72 (D = $procmux$1528_Y, Q = \_T_704, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$3690 ($sdff) from module TLMonitor_72 (D = \io_in_d_bits_source, Q = \_T_704).
+Adding SRST signal on $procdff$2807 ($dff) from module TLMonitor_72 (D = $procmux$1533_Y, Q = \_T_702, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$3692 ($sdff) from module TLMonitor_72 (D = \io_in_d_bits_size, Q = \_T_702).
+Adding SRST signal on $procdff$2806 ($dff) from module TLMonitor_72 (D = $procmux$1538_Y, Q = \_T_698, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3694 ($sdff) from module TLMonitor_72 (D = \io_in_d_bits_opcode, Q = \_T_698).
+Adding SRST signal on $procdff$2805 ($dff) from module TLMonitor_72 (D = $procmux$1546_Y, Q = \_T_681, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3696 ($sdff) from module TLMonitor_72 (D = $procmux$1544_Y, Q = \_T_681).
+Adding SRST signal on $procdff$2804 ($dff) from module TLMonitor_72 (D = $procmux$1554_Y, Q = \_T_638, rval = 29'00000000000000000000000000000).
+Adding EN signal on $auto$ff.cc:262:slice$3700 ($sdff) from module TLMonitor_72 (D = \io_in_a_bits_address, Q = \_T_638).
+Adding SRST signal on $procdff$2803 ($dff) from module TLMonitor_72 (D = $procmux$1559_Y, Q = \_T_636, rval = 7'0000000).
+Adding EN signal on $auto$ff.cc:262:slice$3702 ($sdff) from module TLMonitor_72 (D = \io_in_a_bits_source, Q = \_T_636).
+Adding SRST signal on $procdff$2802 ($dff) from module TLMonitor_72 (D = $procmux$1564_Y, Q = \_T_634, rval = 2'00).
+Adding EN signal on $auto$ff.cc:262:slice$3704 ($sdff) from module TLMonitor_72 (D = \io_in_a_bits_size, Q = \_T_634).
+Adding SRST signal on $procdff$2801 ($dff) from module TLMonitor_72 (D = $procmux$1569_Y, Q = \_T_632, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3706 ($sdff) from module TLMonitor_72 (D = \io_in_a_bits_param, Q = \_T_632).
+Adding SRST signal on $procdff$2800 ($dff) from module TLMonitor_72 (D = $procmux$1574_Y, Q = \_T_630, rval = 3'000).
+Adding EN signal on $auto$ff.cc:262:slice$3708 ($sdff) from module TLMonitor_72 (D = \io_in_a_bits_opcode, Q = \_T_630).
+Adding SRST signal on $procdff$2799 ($dff) from module TLMonitor_72 (D = $procmux$1582_Y, Q = \_T_613, rval = 1'0).
+Adding EN signal on $auto$ff.cc:262:slice$3710 ($sdff) from module TLMonitor_72 (D = $procmux$1580_Y, Q = \_T_613).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TLI2C..
+Finding unused cells or wires in module \TLI2CTop..
+Finding unused cells or wires in module \TLMonitor_72..
+Removed 145 unused cells and 145 unused wires.
+<suppressed ~147 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TLI2C.
+<suppressed ~7 debug messages>
+Optimizing module TLI2CTop.
+Optimizing module TLMonitor_72.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TLI2C'.
+<suppressed ~111 debug messages>
+Finding identical cells in module `\TLI2CTop'.
+Finding identical cells in module `\TLMonitor_72'.
+<suppressed ~12 debug messages>
+Removed a total of 41 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TLI2C..
+Finding unused cells or wires in module \TLI2CTop..
+Finding unused cells or wires in module \TLMonitor_72..
+Removed 0 unused cells and 41 unused wires.
+<suppressed ~2 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module TLI2C...
+Checking module TLI2CTop...
+Checking module TLMonitor_72...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \TLI2CTop
+Used module:     \TLI2C
+Used module:         \TLMonitor_72
+
+8.2. Analyzing design hierarchy..
+Top module:  \TLI2CTop
+Used module:     \TLI2C
+Used module:         \TLMonitor_72
+Removed 0 unused modules.
+Module TLI2CTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Printing statistics.
+
+=== TLI2C ===
+
+   Number of wires:                748
+   Number of wire bits:           5978
+   Number of public wires:         553
+   Number of public wire bits:    5395
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                481
+     $and                           55
+     $dff                           47
+     $eq                            35
+     $logic_not                      8
+     $mux                          221
+     $ne                             9
+     $not                           22
+     $or                            55
+     $reduce_and                     3
+     $reduce_bool                   10
+     $reduce_or                      7
+     $shl                            1
+     $sub                            3
+     $xor                            4
+     TLMonitor_72                    1
+
+=== TLI2CTop ===
+
+   Number of wires:                646
+   Number of wire bits:           1254
+   Number of public wires:         104
+   Number of public wire bits:     712
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                698
+     $anyseq                       153
+     $assume                         1
+     $cover                        152
+     $dff                          155
+     $logic_and                      1
+     $logic_not                     79
+     $mux                          155
+     $or                             1
+     TLI2C                           1
+
+=== TLMonitor_72 ===
+
+   Number of wires:                294
+   Number of wire bits:           1870
+   Number of public wires:         264
+   Number of public wire bits:    1617
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                245
+     $and                           83
+     $dff                           13
+     $eq                            19
+     $ge                             2
+     $le                             5
+     $logic_not                      6
+     $mux                           31
+     $not                           40
+     $or                            33
+     $reduce_bool                    1
+     $reduce_or                      1
+     $shl                            4
+     $shr                            2
+     $sub                            4
+     $xor                            1
+
+=== design hierarchy ===
+
+   TLI2CTop                          1
+     TLI2C                           1
+       TLMonitor_72                  1
+
+   Number of wires:               1688
+   Number of wire bits:           9102
+   Number of public wires:         921
+   Number of public wire bits:    7724
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1422
+     $and                          138
+     $anyseq                       153
+     $assume                         1
+     $cover                        152
+     $dff                          215
+     $eq                            54
+     $ge                             2
+     $le                             5
+     $logic_and                      1
+     $logic_not                     93
+     $mux                          407
+     $ne                             9
+     $not                           62
+     $or                            89
+     $reduce_and                     3
+     $reduce_bool                   11
+     $reduce_or                      8
+     $shl                            5
+     $shr                            2
+     $sub                            7
+     $xor                            5
+
+11. Executing SMT2 backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module TLMonitor_72.
+Creating SMT-LIBv2 representation of module TLI2C.
+Creating SMT-LIBv2 representation of module TLI2CTop.
+
+End of script. Logfile hash: 0a06208d66, CPU: user 0.23s system 0.01s, MEM: 17.76 MB peak
+Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 26% 3x opt_clean (0 sec), 14% 2x read_ilang (0 sec), ...

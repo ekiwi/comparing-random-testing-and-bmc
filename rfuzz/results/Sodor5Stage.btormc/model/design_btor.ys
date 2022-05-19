@@ -1,0 +1,19 @@
+# running in cover_btor/model/
+read_ilang design.il
+memory_nordff
+async2sync
+chformal -assume -early
+chformal -live -fair -remove
+opt_clean
+setundef -anyseq
+opt -keepdc -fast
+check
+hierarchy -simcheck
+flatten
+setundef -undriven -anyseq
+opt -fast
+delete -output
+dffunmap
+stat
+write_btor -c -i design_btor.info design_btor.btor
+write_btor -s -c -i design_btor_single.info design_btor_single.btor

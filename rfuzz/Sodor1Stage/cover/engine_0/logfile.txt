@@ -1,0 +1,857 @@
+##   0:00:00  Solver: boolector
+##   0:00:02  Checking cover reachability in step 0..
+##   0:00:02  Checking cover reachability in step 1..
+##   0:00:03  Checking cover reachability in step 2..
+##   0:00:03  Checking cover reachability in step 3..
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:428.32-429.31 ($cover$Sodor1Stage_formal.sv:428$1423) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:430.32-431.31 ($cover$Sodor1Stage_formal.sv:430$1425) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:432.32-433.31 ($cover$Sodor1Stage_formal.sv:432$1427) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:434.32-435.31 ($cover$Sodor1Stage_formal.sv:434$1429) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:436.32-437.31 ($cover$Sodor1Stage_formal.sv:436$1431) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:438.32-439.31 ($cover$Sodor1Stage_formal.sv:438$1433) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:440.32-441.31 ($cover$Sodor1Stage_formal.sv:440$1435) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:442.32-443.31 ($cover$Sodor1Stage_formal.sv:442$1437) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:444.32-445.31 ($cover$Sodor1Stage_formal.sv:444$1439) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:446.32-447.31 ($cover$Sodor1Stage_formal.sv:446$1441) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:448.33-449.32 ($cover$Sodor1Stage_formal.sv:448$1443) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:449.33-450.32 ($cover$Sodor1Stage_formal.sv:449$1444) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:452.33-453.32 ($cover$Sodor1Stage_formal.sv:452$1447) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:454.33-455.32 ($cover$Sodor1Stage_formal.sv:454$1449) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:456.33-457.32 ($cover$Sodor1Stage_formal.sv:456$1451) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:458.33-459.32 ($cover$Sodor1Stage_formal.sv:458$1453) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:460.33-461.32 ($cover$Sodor1Stage_formal.sv:460$1455) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:462.33-463.32 ($cover$Sodor1Stage_formal.sv:462$1457) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:464.33-465.32 ($cover$Sodor1Stage_formal.sv:464$1459) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:466.33-467.32 ($cover$Sodor1Stage_formal.sv:466$1461) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:468.33-469.32 ($cover$Sodor1Stage_formal.sv:468$1463) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:470.33-471.32 ($cover$Sodor1Stage_formal.sv:470$1465) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:472.33-473.32 ($cover$Sodor1Stage_formal.sv:472$1467) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:474.33-475.32 ($cover$Sodor1Stage_formal.sv:474$1469) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:476.33-477.32 ($cover$Sodor1Stage_formal.sv:476$1471) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:478.33-479.32 ($cover$Sodor1Stage_formal.sv:478$1473) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:480.33-481.32 ($cover$Sodor1Stage_formal.sv:480$1475) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:482.33-483.32 ($cover$Sodor1Stage_formal.sv:482$1477) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:484.33-485.32 ($cover$Sodor1Stage_formal.sv:484$1479) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:486.33-487.32 ($cover$Sodor1Stage_formal.sv:486$1481) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:488.33-489.32 ($cover$Sodor1Stage_formal.sv:488$1483) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:490.33-491.32 ($cover$Sodor1Stage_formal.sv:490$1485) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:492.33-493.32 ($cover$Sodor1Stage_formal.sv:492$1487) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:494.33-495.32 ($cover$Sodor1Stage_formal.sv:494$1489) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:496.33-497.32 ($cover$Sodor1Stage_formal.sv:496$1491) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:498.33-499.32 ($cover$Sodor1Stage_formal.sv:498$1493) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:500.33-501.32 ($cover$Sodor1Stage_formal.sv:500$1495) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:502.33-503.32 ($cover$Sodor1Stage_formal.sv:502$1497) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:504.33-505.32 ($cover$Sodor1Stage_formal.sv:504$1499) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:506.33-507.32 ($cover$Sodor1Stage_formal.sv:506$1501) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:508.33-509.32 ($cover$Sodor1Stage_formal.sv:508$1503) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:510.33-511.32 ($cover$Sodor1Stage_formal.sv:510$1505) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:512.33-513.32 ($cover$Sodor1Stage_formal.sv:512$1507) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:514.33-515.32 ($cover$Sodor1Stage_formal.sv:514$1509) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:516.33-517.32 ($cover$Sodor1Stage_formal.sv:516$1511) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:518.33-519.32 ($cover$Sodor1Stage_formal.sv:518$1513) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:520.33-521.32 ($cover$Sodor1Stage_formal.sv:520$1515) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:522.33-523.32 ($cover$Sodor1Stage_formal.sv:522$1517) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:524.33-525.32 ($cover$Sodor1Stage_formal.sv:524$1519) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:526.33-527.32 ($cover$Sodor1Stage_formal.sv:526$1521) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:528.33-529.32 ($cover$Sodor1Stage_formal.sv:528$1523) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:529.33-530.32 ($cover$Sodor1Stage_formal.sv:529$1524) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:531.33-532.32 ($cover$Sodor1Stage_formal.sv:531$1526) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:533.33-534.32 ($cover$Sodor1Stage_formal.sv:533$1528) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:536.33-537.32 ($cover$Sodor1Stage_formal.sv:536$1531) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:538.33-539.32 ($cover$Sodor1Stage_formal.sv:538$1533) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:540.33-541.32 ($cover$Sodor1Stage_formal.sv:540$1535) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:542.33-543.32 ($cover$Sodor1Stage_formal.sv:542$1537) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:544.33-545.32 ($cover$Sodor1Stage_formal.sv:544$1539) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:546.33-547.32 ($cover$Sodor1Stage_formal.sv:546$1541) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:548.33-549.32 ($cover$Sodor1Stage_formal.sv:548$1543) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:550.33-551.32 ($cover$Sodor1Stage_formal.sv:550$1545) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:552.33-553.32 ($cover$Sodor1Stage_formal.sv:552$1547) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:554.33-555.32 ($cover$Sodor1Stage_formal.sv:554$1549) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:555.33-556.32 ($cover$Sodor1Stage_formal.sv:555$1550) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:558.33-559.32 ($cover$Sodor1Stage_formal.sv:558$1553) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:560.33-561.32 ($cover$Sodor1Stage_formal.sv:560$1555) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:561.33-562.32 ($cover$Sodor1Stage_formal.sv:561$1556) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:563.33-564.32 ($cover$Sodor1Stage_formal.sv:563$1558) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:566.33-567.32 ($cover$Sodor1Stage_formal.sv:566$1561) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:568.33-569.32 ($cover$Sodor1Stage_formal.sv:568$1563) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:570.33-571.32 ($cover$Sodor1Stage_formal.sv:570$1565) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:572.33-573.32 ($cover$Sodor1Stage_formal.sv:572$1567) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:574.33-575.32 ($cover$Sodor1Stage_formal.sv:574$1569) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:576.33-577.32 ($cover$Sodor1Stage_formal.sv:576$1571) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:578.33-579.32 ($cover$Sodor1Stage_formal.sv:578$1573) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:580.33-581.32 ($cover$Sodor1Stage_formal.sv:580$1575) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:582.33-583.32 ($cover$Sodor1Stage_formal.sv:582$1577) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:584.33-585.32 ($cover$Sodor1Stage_formal.sv:584$1579) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:586.33-587.32 ($cover$Sodor1Stage_formal.sv:586$1581) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:588.33-589.32 ($cover$Sodor1Stage_formal.sv:588$1583) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:590.33-591.32 ($cover$Sodor1Stage_formal.sv:590$1585) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:592.33-593.32 ($cover$Sodor1Stage_formal.sv:592$1587) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:594.33-595.32 ($cover$Sodor1Stage_formal.sv:594$1589) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:596.33-597.32 ($cover$Sodor1Stage_formal.sv:596$1591) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:598.33-599.32 ($cover$Sodor1Stage_formal.sv:598$1593) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:600.33-601.32 ($cover$Sodor1Stage_formal.sv:600$1595) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:602.33-603.32 ($cover$Sodor1Stage_formal.sv:602$1597) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:604.33-605.32 ($cover$Sodor1Stage_formal.sv:604$1599) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:606.33-607.32 ($cover$Sodor1Stage_formal.sv:606$1601) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:608.33-609.32 ($cover$Sodor1Stage_formal.sv:608$1603) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:610.33-611.32 ($cover$Sodor1Stage_formal.sv:610$1605) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:612.33-613.32 ($cover$Sodor1Stage_formal.sv:612$1607) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:614.33-615.32 ($cover$Sodor1Stage_formal.sv:614$1609) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:616.33-617.32 ($cover$Sodor1Stage_formal.sv:616$1611) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:618.33-619.32 ($cover$Sodor1Stage_formal.sv:618$1613) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:620.33-621.32 ($cover$Sodor1Stage_formal.sv:620$1615) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:622.33-623.32 ($cover$Sodor1Stage_formal.sv:622$1617) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:624.33-625.32 ($cover$Sodor1Stage_formal.sv:624$1619) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:626.33-627.32 ($cover$Sodor1Stage_formal.sv:626$1621) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:628.34-629.33 ($cover$Sodor1Stage_formal.sv:628$1623) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:630.34-631.33 ($cover$Sodor1Stage_formal.sv:630$1625) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:632.34-633.33 ($cover$Sodor1Stage_formal.sv:632$1627) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:634.34-635.33 ($cover$Sodor1Stage_formal.sv:634$1629) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:636.34-637.33 ($cover$Sodor1Stage_formal.sv:636$1631) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:638.34-639.33 ($cover$Sodor1Stage_formal.sv:638$1633) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:640.34-641.33 ($cover$Sodor1Stage_formal.sv:640$1635) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:642.34-643.33 ($cover$Sodor1Stage_formal.sv:642$1637) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:644.34-645.33 ($cover$Sodor1Stage_formal.sv:644$1639) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:646.34-647.33 ($cover$Sodor1Stage_formal.sv:646$1641) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:648.34-649.33 ($cover$Sodor1Stage_formal.sv:648$1643) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:650.34-651.33 ($cover$Sodor1Stage_formal.sv:650$1645) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:652.34-653.33 ($cover$Sodor1Stage_formal.sv:652$1647) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:654.34-655.33 ($cover$Sodor1Stage_formal.sv:654$1649) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:656.34-657.33 ($cover$Sodor1Stage_formal.sv:656$1651) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:658.34-659.33 ($cover$Sodor1Stage_formal.sv:658$1653) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:660.34-661.33 ($cover$Sodor1Stage_formal.sv:660$1655) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:662.34-663.33 ($cover$Sodor1Stage_formal.sv:662$1657) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:664.34-665.33 ($cover$Sodor1Stage_formal.sv:664$1659) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:666.34-667.33 ($cover$Sodor1Stage_formal.sv:666$1661) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:668.34-669.33 ($cover$Sodor1Stage_formal.sv:668$1663) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:670.34-671.33 ($cover$Sodor1Stage_formal.sv:670$1665) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:672.34-673.33 ($cover$Sodor1Stage_formal.sv:672$1667) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:674.34-675.33 ($cover$Sodor1Stage_formal.sv:674$1669) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:676.34-677.33 ($cover$Sodor1Stage_formal.sv:676$1671) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:678.34-679.33 ($cover$Sodor1Stage_formal.sv:678$1673) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:680.34-681.33 ($cover$Sodor1Stage_formal.sv:680$1675) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:682.34-683.33 ($cover$Sodor1Stage_formal.sv:682$1677) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:684.34-685.33 ($cover$Sodor1Stage_formal.sv:684$1679) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:686.34-687.33 ($cover$Sodor1Stage_formal.sv:686$1681) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:688.34-689.33 ($cover$Sodor1Stage_formal.sv:688$1683) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:690.34-691.33 ($cover$Sodor1Stage_formal.sv:690$1685) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:692.34-693.33 ($cover$Sodor1Stage_formal.sv:692$1687) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:694.34-695.33 ($cover$Sodor1Stage_formal.sv:694$1689) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:696.34-697.33 ($cover$Sodor1Stage_formal.sv:696$1691) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:698.34-699.33 ($cover$Sodor1Stage_formal.sv:698$1693) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:700.34-701.33 ($cover$Sodor1Stage_formal.sv:700$1695) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:702.34-703.33 ($cover$Sodor1Stage_formal.sv:702$1697) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:704.34-705.33 ($cover$Sodor1Stage_formal.sv:704$1699) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:706.34-707.33 ($cover$Sodor1Stage_formal.sv:706$1701) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:708.34-709.33 ($cover$Sodor1Stage_formal.sv:708$1703) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:710.34-711.33 ($cover$Sodor1Stage_formal.sv:710$1705) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:712.34-713.33 ($cover$Sodor1Stage_formal.sv:712$1707) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:714.34-715.33 ($cover$Sodor1Stage_formal.sv:714$1709) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:716.34-717.33 ($cover$Sodor1Stage_formal.sv:716$1711) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:718.34-719.33 ($cover$Sodor1Stage_formal.sv:718$1713) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:720.34-721.33 ($cover$Sodor1Stage_formal.sv:720$1715) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:722.34-723.33 ($cover$Sodor1Stage_formal.sv:722$1717) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:724.34-725.33 ($cover$Sodor1Stage_formal.sv:724$1719) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:726.34-727.33 ($cover$Sodor1Stage_formal.sv:726$1721) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:728.34-729.33 ($cover$Sodor1Stage_formal.sv:728$1723) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:730.34-731.33 ($cover$Sodor1Stage_formal.sv:730$1725) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:732.34-733.33 ($cover$Sodor1Stage_formal.sv:732$1727) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:734.34-735.33 ($cover$Sodor1Stage_formal.sv:734$1729) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:736.34-737.33 ($cover$Sodor1Stage_formal.sv:736$1731) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:738.34-739.33 ($cover$Sodor1Stage_formal.sv:738$1733) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:740.34-741.33 ($cover$Sodor1Stage_formal.sv:740$1735) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:742.34-743.33 ($cover$Sodor1Stage_formal.sv:742$1737) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:744.34-745.33 ($cover$Sodor1Stage_formal.sv:744$1739) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:746.34-747.33 ($cover$Sodor1Stage_formal.sv:746$1741) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:748.34-749.33 ($cover$Sodor1Stage_formal.sv:748$1743) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:750.34-751.33 ($cover$Sodor1Stage_formal.sv:750$1745) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:752.34-753.33 ($cover$Sodor1Stage_formal.sv:752$1747) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:754.34-755.33 ($cover$Sodor1Stage_formal.sv:754$1749) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:756.34-757.33 ($cover$Sodor1Stage_formal.sv:756$1751) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:758.34-759.33 ($cover$Sodor1Stage_formal.sv:758$1753) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:760.34-761.33 ($cover$Sodor1Stage_formal.sv:760$1755) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:762.34-763.33 ($cover$Sodor1Stage_formal.sv:762$1757) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:764.34-765.33 ($cover$Sodor1Stage_formal.sv:764$1759) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:766.34-767.33 ($cover$Sodor1Stage_formal.sv:766$1761) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:767.34-768.33 ($cover$Sodor1Stage_formal.sv:767$1762) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:770.34-771.33 ($cover$Sodor1Stage_formal.sv:770$1765) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:772.34-773.33 ($cover$Sodor1Stage_formal.sv:772$1767) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:774.34-775.33 ($cover$Sodor1Stage_formal.sv:774$1769) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:775.34-776.33 ($cover$Sodor1Stage_formal.sv:775$1770) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:778.34-779.33 ($cover$Sodor1Stage_formal.sv:778$1773) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:780.34-781.33 ($cover$Sodor1Stage_formal.sv:780$1775) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:782.34-783.33 ($cover$Sodor1Stage_formal.sv:782$1777) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:784.34-785.33 ($cover$Sodor1Stage_formal.sv:784$1779) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:786.34-787.33 ($cover$Sodor1Stage_formal.sv:786$1781) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:787.34-788.33 ($cover$Sodor1Stage_formal.sv:787$1782) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:790.34-791.33 ($cover$Sodor1Stage_formal.sv:790$1785) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:792.34-793.33 ($cover$Sodor1Stage_formal.sv:792$1787) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:794.34-795.33 ($cover$Sodor1Stage_formal.sv:794$1789) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:796.34-797.33 ($cover$Sodor1Stage_formal.sv:796$1791) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:798.34-799.33 ($cover$Sodor1Stage_formal.sv:798$1793) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:800.34-801.33 ($cover$Sodor1Stage_formal.sv:800$1795) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:801.34-802.33 ($cover$Sodor1Stage_formal.sv:801$1796) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:804.34-805.33 ($cover$Sodor1Stage_formal.sv:804$1799) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:806.34-807.33 ($cover$Sodor1Stage_formal.sv:806$1801) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:808.34-809.33 ($cover$Sodor1Stage_formal.sv:808$1803) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:810.34-811.33 ($cover$Sodor1Stage_formal.sv:810$1805) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:812.34-813.33 ($cover$Sodor1Stage_formal.sv:812$1807) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:814.34-815.33 ($cover$Sodor1Stage_formal.sv:814$1809) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:816.34-817.33 ($cover$Sodor1Stage_formal.sv:816$1811) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:818.34-819.33 ($cover$Sodor1Stage_formal.sv:818$1813) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:820.34-821.33 ($cover$Sodor1Stage_formal.sv:820$1815) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:822.34-823.33 ($cover$Sodor1Stage_formal.sv:822$1817) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:824.34-825.33 ($cover$Sodor1Stage_formal.sv:824$1819) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:826.34-827.33 ($cover$Sodor1Stage_formal.sv:826$1821) in step 3.
+##   0:00:04  Reached cover statement at Sodor1Stage_formal.sv:828.34-829.33 ($cover$Sodor1Stage_formal.sv:828$1823) in step 3.
+##   0:00:04  Writing trace to VCD file: engine_0/trace0.vcd
+##   0:00:45  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+##   0:00:46  Writing trace to constraints file: engine_0/trace0.smtc
+##   0:00:46  Checking cover reachability in step 3..
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:450.33-451.32 ($cover$Sodor1Stage_formal.sv:450$1445) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:493.33-494.32 ($cover$Sodor1Stage_formal.sv:493$1488) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:562.33-563.32 ($cover$Sodor1Stage_formal.sv:562$1557) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:564.33-565.32 ($cover$Sodor1Stage_formal.sv:564$1559) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:751.34-752.33 ($cover$Sodor1Stage_formal.sv:751$1746) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:769.34-770.33 ($cover$Sodor1Stage_formal.sv:769$1764) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:783.34-784.33 ($cover$Sodor1Stage_formal.sv:783$1778) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:788.34-789.33 ($cover$Sodor1Stage_formal.sv:788$1783) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:802.34-803.33 ($cover$Sodor1Stage_formal.sv:802$1797) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:809.34-810.33 ($cover$Sodor1Stage_formal.sv:809$1804) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:815.34-816.33 ($cover$Sodor1Stage_formal.sv:815$1810) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:819.34-820.33 ($cover$Sodor1Stage_formal.sv:819$1814) in step 3.
+##   0:00:46  Reached cover statement at Sodor1Stage_formal.sv:821.34-822.33 ($cover$Sodor1Stage_formal.sv:821$1816) in step 3.
+##   0:00:46  Writing trace to VCD file: engine_0/trace1.vcd
+##   0:01:36  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+##   0:01:36  Writing trace to constraints file: engine_0/trace1.smtc
+##   0:01:36  Checking cover reachability in step 3..
+##   0:01:36  Reached cover statement at Sodor1Stage_formal.sv:817.34-818.33 ($cover$Sodor1Stage_formal.sv:817$1812) in step 3.
+##   0:01:36  Writing trace to VCD file: engine_0/trace2.vcd
+##   0:02:16  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+##   0:02:16  Writing trace to constraints file: engine_0/trace2.smtc
+##   0:02:16  Checking cover reachability in step 3..
+##   0:02:16  Reached cover statement at Sodor1Stage_formal.sv:777.34-778.33 ($cover$Sodor1Stage_formal.sv:777$1772) in step 3.
+##   0:02:16  Writing trace to VCD file: engine_0/trace3.vcd
+##   0:03:01  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+##   0:03:01  Writing trace to constraints file: engine_0/trace3.smtc
+##   0:03:01  Checking cover reachability in step 3..
+##   0:03:01  Reached cover statement at Sodor1Stage_formal.sv:755.34-756.33 ($cover$Sodor1Stage_formal.sv:755$1750) in step 3.
+##   0:03:01  Reached cover statement at Sodor1Stage_formal.sv:759.34-760.33 ($cover$Sodor1Stage_formal.sv:759$1754) in step 3.
+##   0:03:01  Reached cover statement at Sodor1Stage_formal.sv:763.34-764.33 ($cover$Sodor1Stage_formal.sv:763$1758) in step 3.
+##   0:03:01  Reached cover statement at Sodor1Stage_formal.sv:779.34-780.33 ($cover$Sodor1Stage_formal.sv:779$1774) in step 3.
+##   0:03:01  Writing trace to VCD file: engine_0/trace4.vcd
+##   0:03:47  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+##   0:03:47  Writing trace to constraints file: engine_0/trace4.smtc
+##   0:03:47  Checking cover reachability in step 3..
+##   0:03:47  Reached cover statement at Sodor1Stage_formal.sv:753.34-754.33 ($cover$Sodor1Stage_formal.sv:753$1748) in step 3.
+##   0:03:47  Writing trace to VCD file: engine_0/trace5.vcd
+##   0:04:37  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+##   0:04:38  Writing trace to constraints file: engine_0/trace5.smtc
+##   0:04:38  Checking cover reachability in step 3..
+##   0:04:38  Reached cover statement at Sodor1Stage_formal.sv:745.34-746.33 ($cover$Sodor1Stage_formal.sv:745$1740) in step 3.
+##   0:04:38  Writing trace to VCD file: engine_0/trace6.vcd
+##   0:05:20  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+##   0:05:20  Writing trace to constraints file: engine_0/trace6.smtc
+##   0:05:20  Checking cover reachability in step 3..
+##   0:05:20  Reached cover statement at Sodor1Stage_formal.sv:743.34-744.33 ($cover$Sodor1Stage_formal.sv:743$1738) in step 3.
+##   0:05:20  Writing trace to VCD file: engine_0/trace7.vcd
+##   0:06:05  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+##   0:06:05  Writing trace to constraints file: engine_0/trace7.smtc
+##   0:06:05  Checking cover reachability in step 3..
+##   0:06:05  Reached cover statement at Sodor1Stage_formal.sv:741.34-742.33 ($cover$Sodor1Stage_formal.sv:741$1736) in step 3.
+##   0:06:05  Writing trace to VCD file: engine_0/trace8.vcd
+##   0:06:50  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+##   0:06:50  Writing trace to constraints file: engine_0/trace8.smtc
+##   0:06:50  Checking cover reachability in step 3..
+##   0:06:51  Reached cover statement at Sodor1Stage_formal.sv:739.34-740.33 ($cover$Sodor1Stage_formal.sv:739$1734) in step 3.
+##   0:06:51  Writing trace to VCD file: engine_0/trace9.vcd
+##   0:07:41  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+##   0:07:42  Writing trace to constraints file: engine_0/trace9.smtc
+##   0:07:42  Checking cover reachability in step 3..
+##   0:07:42  Reached cover statement at Sodor1Stage_formal.sv:737.34-738.33 ($cover$Sodor1Stage_formal.sv:737$1732) in step 3.
+##   0:07:42  Writing trace to VCD file: engine_0/trace10.vcd
+##   0:08:32  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+##   0:08:32  Writing trace to constraints file: engine_0/trace10.smtc
+##   0:08:32  Checking cover reachability in step 3..
+##   0:08:33  Reached cover statement at Sodor1Stage_formal.sv:735.34-736.33 ($cover$Sodor1Stage_formal.sv:735$1730) in step 3.
+##   0:08:33  Writing trace to VCD file: engine_0/trace11.vcd
+##   0:09:21  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+##   0:09:22  Writing trace to constraints file: engine_0/trace11.smtc
+##   0:09:22  Checking cover reachability in step 3..
+##   0:09:22  Reached cover statement at Sodor1Stage_formal.sv:733.34-734.33 ($cover$Sodor1Stage_formal.sv:733$1728) in step 3.
+##   0:09:22  Writing trace to VCD file: engine_0/trace12.vcd
+##   0:10:13  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+##   0:10:13  Writing trace to constraints file: engine_0/trace12.smtc
+##   0:10:13  Checking cover reachability in step 3..
+##   0:10:14  Reached cover statement at Sodor1Stage_formal.sv:731.34-732.33 ($cover$Sodor1Stage_formal.sv:731$1726) in step 3.
+##   0:10:14  Writing trace to VCD file: engine_0/trace13.vcd
+##   0:10:58  Writing trace to Verilog testbench: engine_0/trace13_tb.v
+##   0:10:58  Writing trace to constraints file: engine_0/trace13.smtc
+##   0:10:58  Checking cover reachability in step 3..
+##   0:10:58  Reached cover statement at Sodor1Stage_formal.sv:729.34-730.33 ($cover$Sodor1Stage_formal.sv:729$1724) in step 3.
+##   0:10:58  Writing trace to VCD file: engine_0/trace14.vcd
+##   0:11:48  Writing trace to Verilog testbench: engine_0/trace14_tb.v
+##   0:11:48  Writing trace to constraints file: engine_0/trace14.smtc
+##   0:11:48  Checking cover reachability in step 3..
+##   0:11:49  Reached cover statement at Sodor1Stage_formal.sv:727.34-728.33 ($cover$Sodor1Stage_formal.sv:727$1722) in step 3.
+##   0:11:49  Writing trace to VCD file: engine_0/trace15.vcd
+##   0:12:50  Writing trace to Verilog testbench: engine_0/trace15_tb.v
+##   0:12:50  Writing trace to constraints file: engine_0/trace15.smtc
+##   0:12:50  Checking cover reachability in step 3..
+##   0:12:50  Reached cover statement at Sodor1Stage_formal.sv:725.34-726.33 ($cover$Sodor1Stage_formal.sv:725$1720) in step 3.
+##   0:12:50  Writing trace to VCD file: engine_0/trace16.vcd
+##   0:14:04  Writing trace to Verilog testbench: engine_0/trace16_tb.v
+##   0:14:05  Writing trace to constraints file: engine_0/trace16.smtc
+##   0:14:05  Checking cover reachability in step 3..
+##   0:14:05  Reached cover statement at Sodor1Stage_formal.sv:723.34-724.33 ($cover$Sodor1Stage_formal.sv:723$1718) in step 3.
+##   0:14:05  Writing trace to VCD file: engine_0/trace17.vcd
+##   0:15:16  Writing trace to Verilog testbench: engine_0/trace17_tb.v
+##   0:15:16  Writing trace to constraints file: engine_0/trace17.smtc
+##   0:15:16  Checking cover reachability in step 3..
+##   0:15:17  Reached cover statement at Sodor1Stage_formal.sv:721.34-722.33 ($cover$Sodor1Stage_formal.sv:721$1716) in step 3.
+##   0:15:17  Writing trace to VCD file: engine_0/trace18.vcd
+##   0:16:31  Writing trace to Verilog testbench: engine_0/trace18_tb.v
+##   0:16:32  Writing trace to constraints file: engine_0/trace18.smtc
+##   0:16:32  Checking cover reachability in step 3..
+##   0:16:32  Reached cover statement at Sodor1Stage_formal.sv:719.34-720.33 ($cover$Sodor1Stage_formal.sv:719$1714) in step 3.
+##   0:16:32  Writing trace to VCD file: engine_0/trace19.vcd
+##   0:17:47  Writing trace to Verilog testbench: engine_0/trace19_tb.v
+##   0:17:47  Writing trace to constraints file: engine_0/trace19.smtc
+##   0:17:47  Checking cover reachability in step 3..
+##   0:17:48  Reached cover statement at Sodor1Stage_formal.sv:717.34-718.33 ($cover$Sodor1Stage_formal.sv:717$1712) in step 3.
+##   0:17:48  Writing trace to VCD file: engine_0/trace20.vcd
+##   0:19:02  Writing trace to Verilog testbench: engine_0/trace20_tb.v
+##   0:19:02  Writing trace to constraints file: engine_0/trace20.smtc
+##   0:19:02  Checking cover reachability in step 3..
+##   0:19:02  Reached cover statement at Sodor1Stage_formal.sv:715.34-716.33 ($cover$Sodor1Stage_formal.sv:715$1710) in step 3.
+##   0:19:02  Writing trace to VCD file: engine_0/trace21.vcd
+##   0:20:34  Writing trace to Verilog testbench: engine_0/trace21_tb.v
+##   0:20:34  Writing trace to constraints file: engine_0/trace21.smtc
+##   0:20:34  Checking cover reachability in step 3..
+##   0:20:35  Reached cover statement at Sodor1Stage_formal.sv:713.34-714.33 ($cover$Sodor1Stage_formal.sv:713$1708) in step 3.
+##   0:20:35  Writing trace to VCD file: engine_0/trace22.vcd
+##   0:21:48  Writing trace to Verilog testbench: engine_0/trace22_tb.v
+##   0:21:48  Writing trace to constraints file: engine_0/trace22.smtc
+##   0:21:48  Checking cover reachability in step 3..
+##   0:21:48  Reached cover statement at Sodor1Stage_formal.sv:711.34-712.33 ($cover$Sodor1Stage_formal.sv:711$1706) in step 3.
+##   0:21:48  Writing trace to VCD file: engine_0/trace23.vcd
+##   0:23:05  Writing trace to Verilog testbench: engine_0/trace23_tb.v
+##   0:23:05  Writing trace to constraints file: engine_0/trace23.smtc
+##   0:23:05  Checking cover reachability in step 3..
+##   0:23:05  Reached cover statement at Sodor1Stage_formal.sv:709.34-710.33 ($cover$Sodor1Stage_formal.sv:709$1704) in step 3.
+##   0:23:05  Writing trace to VCD file: engine_0/trace24.vcd
+##   0:24:18  Writing trace to Verilog testbench: engine_0/trace24_tb.v
+##   0:24:18  Writing trace to constraints file: engine_0/trace24.smtc
+##   0:24:18  Checking cover reachability in step 3..
+##   0:24:18  Reached cover statement at Sodor1Stage_formal.sv:707.34-708.33 ($cover$Sodor1Stage_formal.sv:707$1702) in step 3.
+##   0:24:18  Writing trace to VCD file: engine_0/trace25.vcd
+##   0:25:45  Writing trace to Verilog testbench: engine_0/trace25_tb.v
+##   0:25:45  Writing trace to constraints file: engine_0/trace25.smtc
+##   0:25:45  Checking cover reachability in step 3..
+##   0:25:46  Reached cover statement at Sodor1Stage_formal.sv:705.34-706.33 ($cover$Sodor1Stage_formal.sv:705$1700) in step 3.
+##   0:25:46  Writing trace to VCD file: engine_0/trace26.vcd
+##   0:27:05  Writing trace to Verilog testbench: engine_0/trace26_tb.v
+##   0:27:05  Writing trace to constraints file: engine_0/trace26.smtc
+##   0:27:05  Checking cover reachability in step 3..
+##   0:27:06  Reached cover statement at Sodor1Stage_formal.sv:703.34-704.33 ($cover$Sodor1Stage_formal.sv:703$1698) in step 3.
+##   0:27:06  Writing trace to VCD file: engine_0/trace27.vcd
+##   0:28:12  Writing trace to Verilog testbench: engine_0/trace27_tb.v
+##   0:28:12  Writing trace to constraints file: engine_0/trace27.smtc
+##   0:28:12  Checking cover reachability in step 3..
+##   0:28:12  Reached cover statement at Sodor1Stage_formal.sv:701.34-702.33 ($cover$Sodor1Stage_formal.sv:701$1696) in step 3.
+##   0:28:12  Writing trace to VCD file: engine_0/trace28.vcd
+##   0:29:17  Writing trace to Verilog testbench: engine_0/trace28_tb.v
+##   0:29:17  Writing trace to constraints file: engine_0/trace28.smtc
+##   0:29:17  Checking cover reachability in step 3..
+##   0:29:17  Reached cover statement at Sodor1Stage_formal.sv:699.34-700.33 ($cover$Sodor1Stage_formal.sv:699$1694) in step 3.
+##   0:29:17  Writing trace to VCD file: engine_0/trace29.vcd
+##   0:30:24  Writing trace to Verilog testbench: engine_0/trace29_tb.v
+##   0:30:24  Writing trace to constraints file: engine_0/trace29.smtc
+##   0:30:24  Checking cover reachability in step 3..
+##   0:30:25  Reached cover statement at Sodor1Stage_formal.sv:697.34-698.33 ($cover$Sodor1Stage_formal.sv:697$1692) in step 3.
+##   0:30:25  Writing trace to VCD file: engine_0/trace30.vcd
+##   0:31:34  Writing trace to Verilog testbench: engine_0/trace30_tb.v
+##   0:31:34  Writing trace to constraints file: engine_0/trace30.smtc
+##   0:31:34  Checking cover reachability in step 3..
+##   0:31:34  Reached cover statement at Sodor1Stage_formal.sv:695.34-696.33 ($cover$Sodor1Stage_formal.sv:695$1690) in step 3.
+##   0:31:34  Writing trace to VCD file: engine_0/trace31.vcd
+##   0:32:33  Writing trace to Verilog testbench: engine_0/trace31_tb.v
+##   0:32:33  Writing trace to constraints file: engine_0/trace31.smtc
+##   0:32:33  Checking cover reachability in step 3..
+##   0:32:34  Reached cover statement at Sodor1Stage_formal.sv:693.34-694.33 ($cover$Sodor1Stage_formal.sv:693$1688) in step 3.
+##   0:32:34  Writing trace to VCD file: engine_0/trace32.vcd
+##   0:33:29  Writing trace to Verilog testbench: engine_0/trace32_tb.v
+##   0:33:29  Writing trace to constraints file: engine_0/trace32.smtc
+##   0:33:29  Checking cover reachability in step 3..
+##   0:33:30  Reached cover statement at Sodor1Stage_formal.sv:691.34-692.33 ($cover$Sodor1Stage_formal.sv:691$1686) in step 3.
+##   0:33:30  Writing trace to VCD file: engine_0/trace33.vcd
+##   0:34:29  Writing trace to Verilog testbench: engine_0/trace33_tb.v
+##   0:34:30  Writing trace to constraints file: engine_0/trace33.smtc
+##   0:34:30  Checking cover reachability in step 3..
+##   0:34:30  Reached cover statement at Sodor1Stage_formal.sv:689.34-690.33 ($cover$Sodor1Stage_formal.sv:689$1684) in step 3.
+##   0:34:30  Writing trace to VCD file: engine_0/trace34.vcd
+##   0:35:28  Writing trace to Verilog testbench: engine_0/trace34_tb.v
+##   0:35:28  Writing trace to constraints file: engine_0/trace34.smtc
+##   0:35:28  Checking cover reachability in step 3..
+##   0:35:29  Reached cover statement at Sodor1Stage_formal.sv:687.34-688.33 ($cover$Sodor1Stage_formal.sv:687$1682) in step 3.
+##   0:35:29  Writing trace to VCD file: engine_0/trace35.vcd
+##   0:36:24  Writing trace to Verilog testbench: engine_0/trace35_tb.v
+##   0:36:24  Writing trace to constraints file: engine_0/trace35.smtc
+##   0:36:24  Checking cover reachability in step 3..
+##   0:36:25  Reached cover statement at Sodor1Stage_formal.sv:685.34-686.33 ($cover$Sodor1Stage_formal.sv:685$1680) in step 3.
+##   0:36:25  Writing trace to VCD file: engine_0/trace36.vcd
+##   0:37:24  Writing trace to Verilog testbench: engine_0/trace36_tb.v
+##   0:37:25  Writing trace to constraints file: engine_0/trace36.smtc
+##   0:37:25  Checking cover reachability in step 3..
+##   0:37:25  Reached cover statement at Sodor1Stage_formal.sv:683.34-684.33 ($cover$Sodor1Stage_formal.sv:683$1678) in step 3.
+##   0:37:25  Writing trace to VCD file: engine_0/trace37.vcd
+##   0:38:24  Writing trace to Verilog testbench: engine_0/trace37_tb.v
+##   0:38:24  Writing trace to constraints file: engine_0/trace37.smtc
+##   0:38:24  Checking cover reachability in step 3..
+##   0:38:24  Reached cover statement at Sodor1Stage_formal.sv:681.34-682.33 ($cover$Sodor1Stage_formal.sv:681$1676) in step 3.
+##   0:38:24  Writing trace to VCD file: engine_0/trace38.vcd
+##   0:39:24  Writing trace to Verilog testbench: engine_0/trace38_tb.v
+##   0:39:24  Writing trace to constraints file: engine_0/trace38.smtc
+##   0:39:24  Checking cover reachability in step 3..
+##   0:39:25  Reached cover statement at Sodor1Stage_formal.sv:679.34-680.33 ($cover$Sodor1Stage_formal.sv:679$1674) in step 3.
+##   0:39:25  Writing trace to VCD file: engine_0/trace39.vcd
+##   0:40:19  Writing trace to Verilog testbench: engine_0/trace39_tb.v
+##   0:40:19  Writing trace to constraints file: engine_0/trace39.smtc
+##   0:40:19  Checking cover reachability in step 3..
+##   0:40:19  Reached cover statement at Sodor1Stage_formal.sv:677.34-678.33 ($cover$Sodor1Stage_formal.sv:677$1672) in step 3.
+##   0:40:19  Writing trace to VCD file: engine_0/trace40.vcd
+##   0:41:18  Writing trace to Verilog testbench: engine_0/trace40_tb.v
+##   0:41:18  Writing trace to constraints file: engine_0/trace40.smtc
+##   0:41:18  Checking cover reachability in step 3..
+##   0:41:18  Reached cover statement at Sodor1Stage_formal.sv:675.34-676.33 ($cover$Sodor1Stage_formal.sv:675$1670) in step 3.
+##   0:41:18  Writing trace to VCD file: engine_0/trace41.vcd
+##   0:42:16  Writing trace to Verilog testbench: engine_0/trace41_tb.v
+##   0:42:16  Writing trace to constraints file: engine_0/trace41.smtc
+##   0:42:17  Checking cover reachability in step 3..
+##   0:42:17  Reached cover statement at Sodor1Stage_formal.sv:673.34-674.33 ($cover$Sodor1Stage_formal.sv:673$1668) in step 3.
+##   0:42:17  Writing trace to VCD file: engine_0/trace42.vcd
+##   0:43:15  Writing trace to Verilog testbench: engine_0/trace42_tb.v
+##   0:43:15  Writing trace to constraints file: engine_0/trace42.smtc
+##   0:43:15  Checking cover reachability in step 3..
+##   0:43:15  Reached cover statement at Sodor1Stage_formal.sv:671.34-672.33 ($cover$Sodor1Stage_formal.sv:671$1666) in step 3.
+##   0:43:15  Writing trace to VCD file: engine_0/trace43.vcd
+##   0:44:15  Writing trace to Verilog testbench: engine_0/trace43_tb.v
+##   0:44:15  Writing trace to constraints file: engine_0/trace43.smtc
+##   0:44:15  Checking cover reachability in step 3..
+##   0:44:15  Reached cover statement at Sodor1Stage_formal.sv:669.34-670.33 ($cover$Sodor1Stage_formal.sv:669$1664) in step 3.
+##   0:44:15  Writing trace to VCD file: engine_0/trace44.vcd
+##   0:45:16  Writing trace to Verilog testbench: engine_0/trace44_tb.v
+##   0:45:17  Writing trace to constraints file: engine_0/trace44.smtc
+##   0:45:17  Checking cover reachability in step 3..
+##   0:45:17  Reached cover statement at Sodor1Stage_formal.sv:667.34-668.33 ($cover$Sodor1Stage_formal.sv:667$1662) in step 3.
+##   0:45:17  Writing trace to VCD file: engine_0/trace45.vcd
+##   0:46:14  Writing trace to Verilog testbench: engine_0/trace45_tb.v
+##   0:46:14  Writing trace to constraints file: engine_0/trace45.smtc
+##   0:46:14  Checking cover reachability in step 3..
+##   0:46:14  Reached cover statement at Sodor1Stage_formal.sv:665.34-666.33 ($cover$Sodor1Stage_formal.sv:665$1660) in step 3.
+##   0:46:14  Writing trace to VCD file: engine_0/trace46.vcd
+##   0:47:12  Writing trace to Verilog testbench: engine_0/trace46_tb.v
+##   0:47:12  Writing trace to constraints file: engine_0/trace46.smtc
+##   0:47:12  Checking cover reachability in step 3..
+##   0:47:12  Reached cover statement at Sodor1Stage_formal.sv:663.34-664.33 ($cover$Sodor1Stage_formal.sv:663$1658) in step 3.
+##   0:47:12  Writing trace to VCD file: engine_0/trace47.vcd
+##   0:48:08  Writing trace to Verilog testbench: engine_0/trace47_tb.v
+##   0:48:08  Writing trace to constraints file: engine_0/trace47.smtc
+##   0:48:09  Checking cover reachability in step 3..
+##   0:48:09  Reached cover statement at Sodor1Stage_formal.sv:661.34-662.33 ($cover$Sodor1Stage_formal.sv:661$1656) in step 3.
+##   0:48:09  Writing trace to VCD file: engine_0/trace48.vcd
+##   0:49:06  Writing trace to Verilog testbench: engine_0/trace48_tb.v
+##   0:49:06  Writing trace to constraints file: engine_0/trace48.smtc
+##   0:49:06  Checking cover reachability in step 3..
+##   0:49:07  Reached cover statement at Sodor1Stage_formal.sv:659.34-660.33 ($cover$Sodor1Stage_formal.sv:659$1654) in step 3.
+##   0:49:07  Writing trace to VCD file: engine_0/trace49.vcd
+##   0:50:04  Writing trace to Verilog testbench: engine_0/trace49_tb.v
+##   0:50:04  Writing trace to constraints file: engine_0/trace49.smtc
+##   0:50:04  Checking cover reachability in step 3..
+##   0:50:05  Reached cover statement at Sodor1Stage_formal.sv:657.34-658.33 ($cover$Sodor1Stage_formal.sv:657$1652) in step 3.
+##   0:50:05  Writing trace to VCD file: engine_0/trace50.vcd
+##   0:51:04  Writing trace to Verilog testbench: engine_0/trace50_tb.v
+##   0:51:04  Writing trace to constraints file: engine_0/trace50.smtc
+##   0:51:04  Checking cover reachability in step 3..
+##   0:51:05  Reached cover statement at Sodor1Stage_formal.sv:655.34-656.33 ($cover$Sodor1Stage_formal.sv:655$1650) in step 3.
+##   0:51:05  Writing trace to VCD file: engine_0/trace51.vcd
+##   0:52:01  Writing trace to Verilog testbench: engine_0/trace51_tb.v
+##   0:52:01  Writing trace to constraints file: engine_0/trace51.smtc
+##   0:52:01  Checking cover reachability in step 3..
+##   0:52:02  Reached cover statement at Sodor1Stage_formal.sv:653.34-654.33 ($cover$Sodor1Stage_formal.sv:653$1648) in step 3.
+##   0:52:02  Writing trace to VCD file: engine_0/trace52.vcd
+##   0:53:00  Writing trace to Verilog testbench: engine_0/trace52_tb.v
+##   0:53:00  Writing trace to constraints file: engine_0/trace52.smtc
+##   0:53:00  Checking cover reachability in step 3..
+##   0:53:00  Reached cover statement at Sodor1Stage_formal.sv:651.34-652.33 ($cover$Sodor1Stage_formal.sv:651$1646) in step 3.
+##   0:53:01  Writing trace to VCD file: engine_0/trace53.vcd
+##   0:54:00  Writing trace to Verilog testbench: engine_0/trace53_tb.v
+##   0:54:00  Writing trace to constraints file: engine_0/trace53.smtc
+##   0:54:01  Checking cover reachability in step 3..
+##   0:54:01  Reached cover statement at Sodor1Stage_formal.sv:649.34-650.33 ($cover$Sodor1Stage_formal.sv:649$1644) in step 3.
+##   0:54:01  Writing trace to VCD file: engine_0/trace54.vcd
+##   0:54:57  Writing trace to Verilog testbench: engine_0/trace54_tb.v
+##   0:54:57  Writing trace to constraints file: engine_0/trace54.smtc
+##   0:54:57  Checking cover reachability in step 3..
+##   0:54:58  Reached cover statement at Sodor1Stage_formal.sv:647.34-648.33 ($cover$Sodor1Stage_formal.sv:647$1642) in step 3.
+##   0:54:58  Writing trace to VCD file: engine_0/trace55.vcd
+##   0:55:54  Writing trace to Verilog testbench: engine_0/trace55_tb.v
+##   0:55:54  Writing trace to constraints file: engine_0/trace55.smtc
+##   0:55:54  Checking cover reachability in step 3..
+##   0:55:54  Reached cover statement at Sodor1Stage_formal.sv:645.34-646.33 ($cover$Sodor1Stage_formal.sv:645$1640) in step 3.
+##   0:55:54  Writing trace to VCD file: engine_0/trace56.vcd
+##   0:56:52  Writing trace to Verilog testbench: engine_0/trace56_tb.v
+##   0:56:52  Writing trace to constraints file: engine_0/trace56.smtc
+##   0:56:52  Checking cover reachability in step 3..
+##   0:56:52  Reached cover statement at Sodor1Stage_formal.sv:643.34-644.33 ($cover$Sodor1Stage_formal.sv:643$1638) in step 3.
+##   0:56:52  Writing trace to VCD file: engine_0/trace57.vcd
+##   0:57:51  Writing trace to Verilog testbench: engine_0/trace57_tb.v
+##   0:57:51  Writing trace to constraints file: engine_0/trace57.smtc
+##   0:57:51  Checking cover reachability in step 3..
+##   0:57:52  Reached cover statement at Sodor1Stage_formal.sv:641.34-642.33 ($cover$Sodor1Stage_formal.sv:641$1636) in step 3.
+##   0:57:52  Writing trace to VCD file: engine_0/trace58.vcd
+##   0:58:48  Writing trace to Verilog testbench: engine_0/trace58_tb.v
+##   0:58:48  Writing trace to constraints file: engine_0/trace58.smtc
+##   0:58:48  Checking cover reachability in step 3..
+##   0:58:49  Reached cover statement at Sodor1Stage_formal.sv:639.34-640.33 ($cover$Sodor1Stage_formal.sv:639$1634) in step 3.
+##   0:58:49  Writing trace to VCD file: engine_0/trace59.vcd
+##   0:59:44  Writing trace to Verilog testbench: engine_0/trace59_tb.v
+##   0:59:44  Writing trace to constraints file: engine_0/trace59.smtc
+##   0:59:44  Checking cover reachability in step 3..
+##   0:59:45  Reached cover statement at Sodor1Stage_formal.sv:637.34-638.33 ($cover$Sodor1Stage_formal.sv:637$1632) in step 3.
+##   0:59:45  Writing trace to VCD file: engine_0/trace60.vcd
+##   1:00:40  Writing trace to Verilog testbench: engine_0/trace60_tb.v
+##   1:00:40  Writing trace to constraints file: engine_0/trace60.smtc
+##   1:00:40  Checking cover reachability in step 3..
+##   1:00:41  Reached cover statement at Sodor1Stage_formal.sv:635.34-636.33 ($cover$Sodor1Stage_formal.sv:635$1630) in step 3.
+##   1:00:41  Writing trace to VCD file: engine_0/trace61.vcd
+##   1:01:37  Writing trace to Verilog testbench: engine_0/trace61_tb.v
+##   1:01:37  Writing trace to constraints file: engine_0/trace61.smtc
+##   1:01:37  Checking cover reachability in step 3..
+##   1:01:38  Reached cover statement at Sodor1Stage_formal.sv:633.34-634.33 ($cover$Sodor1Stage_formal.sv:633$1628) in step 3.
+##   1:01:38  Writing trace to VCD file: engine_0/trace62.vcd
+##   1:02:33  Writing trace to Verilog testbench: engine_0/trace62_tb.v
+##   1:02:33  Writing trace to constraints file: engine_0/trace62.smtc
+##   1:02:33  Checking cover reachability in step 3..
+##   1:02:34  Reached cover statement at Sodor1Stage_formal.sv:631.34-632.33 ($cover$Sodor1Stage_formal.sv:631$1626) in step 3.
+##   1:02:34  Writing trace to VCD file: engine_0/trace63.vcd
+##   1:03:30  Writing trace to Verilog testbench: engine_0/trace63_tb.v
+##   1:03:30  Writing trace to constraints file: engine_0/trace63.smtc
+##   1:03:30  Checking cover reachability in step 3..
+##   1:03:31  Reached cover statement at Sodor1Stage_formal.sv:629.34-630.33 ($cover$Sodor1Stage_formal.sv:629$1624) in step 3.
+##   1:03:31  Writing trace to VCD file: engine_0/trace64.vcd
+##   1:04:26  Writing trace to Verilog testbench: engine_0/trace64_tb.v
+##   1:04:26  Writing trace to constraints file: engine_0/trace64.smtc
+##   1:04:26  Checking cover reachability in step 3..
+##   1:04:26  Reached cover statement at Sodor1Stage_formal.sv:627.33-628.33 ($cover$Sodor1Stage_formal.sv:627$1622) in step 3.
+##   1:04:26  Writing trace to VCD file: engine_0/trace65.vcd
+##   1:05:24  Writing trace to Verilog testbench: engine_0/trace65_tb.v
+##   1:05:25  Writing trace to constraints file: engine_0/trace65.smtc
+##   1:05:25  Checking cover reachability in step 3..
+##   1:05:26  Reached cover statement at Sodor1Stage_formal.sv:625.33-626.32 ($cover$Sodor1Stage_formal.sv:625$1620) in step 3.
+##   1:05:26  Writing trace to VCD file: engine_0/trace66.vcd
+##   1:06:17  Writing trace to Verilog testbench: engine_0/trace66_tb.v
+##   1:06:17  Writing trace to constraints file: engine_0/trace66.smtc
+##   1:06:17  Checking cover reachability in step 3..
+##   1:06:18  Reached cover statement at Sodor1Stage_formal.sv:623.33-624.32 ($cover$Sodor1Stage_formal.sv:623$1618) in step 3.
+##   1:06:18  Writing trace to VCD file: engine_0/trace67.vcd
+##   1:07:10  Writing trace to Verilog testbench: engine_0/trace67_tb.v
+##   1:07:10  Writing trace to constraints file: engine_0/trace67.smtc
+##   1:07:11  Checking cover reachability in step 3..
+##   1:07:11  Reached cover statement at Sodor1Stage_formal.sv:621.33-622.32 ($cover$Sodor1Stage_formal.sv:621$1616) in step 3.
+##   1:07:11  Writing trace to VCD file: engine_0/trace68.vcd
+##   1:08:09  Writing trace to Verilog testbench: engine_0/trace68_tb.v
+##   1:08:09  Writing trace to constraints file: engine_0/trace68.smtc
+##   1:08:09  Checking cover reachability in step 3..
+##   1:08:10  Reached cover statement at Sodor1Stage_formal.sv:619.33-620.32 ($cover$Sodor1Stage_formal.sv:619$1614) in step 3.
+##   1:08:10  Writing trace to VCD file: engine_0/trace69.vcd
+##   1:09:07  Writing trace to Verilog testbench: engine_0/trace69_tb.v
+##   1:09:07  Writing trace to constraints file: engine_0/trace69.smtc
+##   1:09:07  Checking cover reachability in step 3..
+##   1:09:08  Reached cover statement at Sodor1Stage_formal.sv:617.33-618.32 ($cover$Sodor1Stage_formal.sv:617$1612) in step 3.
+##   1:09:08  Writing trace to VCD file: engine_0/trace70.vcd
+##   1:10:01  Writing trace to Verilog testbench: engine_0/trace70_tb.v
+##   1:10:01  Writing trace to constraints file: engine_0/trace70.smtc
+##   1:10:01  Checking cover reachability in step 3..
+##   1:10:02  Reached cover statement at Sodor1Stage_formal.sv:615.33-616.32 ($cover$Sodor1Stage_formal.sv:615$1610) in step 3.
+##   1:10:02  Writing trace to VCD file: engine_0/trace71.vcd
+##   1:11:01  Writing trace to Verilog testbench: engine_0/trace71_tb.v
+##   1:11:01  Writing trace to constraints file: engine_0/trace71.smtc
+##   1:11:01  Checking cover reachability in step 3..
+##   1:11:01  Reached cover statement at Sodor1Stage_formal.sv:613.33-614.32 ($cover$Sodor1Stage_formal.sv:613$1608) in step 3.
+##   1:11:01  Writing trace to VCD file: engine_0/trace72.vcd
+##   1:11:59  Writing trace to Verilog testbench: engine_0/trace72_tb.v
+##   1:11:59  Writing trace to constraints file: engine_0/trace72.smtc
+##   1:11:59  Checking cover reachability in step 3..
+##   1:11:59  Reached cover statement at Sodor1Stage_formal.sv:611.33-612.32 ($cover$Sodor1Stage_formal.sv:611$1606) in step 3.
+##   1:11:59  Writing trace to VCD file: engine_0/trace73.vcd
+##   1:12:54  Writing trace to Verilog testbench: engine_0/trace73_tb.v
+##   1:12:54  Writing trace to constraints file: engine_0/trace73.smtc
+##   1:12:54  Checking cover reachability in step 3..
+##   1:12:55  Reached cover statement at Sodor1Stage_formal.sv:609.33-610.32 ($cover$Sodor1Stage_formal.sv:609$1604) in step 3.
+##   1:12:55  Writing trace to VCD file: engine_0/trace74.vcd
+##   1:13:49  Writing trace to Verilog testbench: engine_0/trace74_tb.v
+##   1:13:49  Writing trace to constraints file: engine_0/trace74.smtc
+##   1:13:49  Checking cover reachability in step 3..
+##   1:13:50  Reached cover statement at Sodor1Stage_formal.sv:607.33-608.32 ($cover$Sodor1Stage_formal.sv:607$1602) in step 3.
+##   1:13:50  Writing trace to VCD file: engine_0/trace75.vcd
+##   1:14:45  Writing trace to Verilog testbench: engine_0/trace75_tb.v
+##   1:14:45  Writing trace to constraints file: engine_0/trace75.smtc
+##   1:14:45  Checking cover reachability in step 3..
+##   1:14:45  Reached cover statement at Sodor1Stage_formal.sv:605.33-606.32 ($cover$Sodor1Stage_formal.sv:605$1600) in step 3.
+##   1:14:45  Writing trace to VCD file: engine_0/trace76.vcd
+##   1:15:41  Writing trace to Verilog testbench: engine_0/trace76_tb.v
+##   1:15:41  Writing trace to constraints file: engine_0/trace76.smtc
+##   1:15:41  Checking cover reachability in step 3..
+##   1:15:42  Reached cover statement at Sodor1Stage_formal.sv:603.33-604.32 ($cover$Sodor1Stage_formal.sv:603$1598) in step 3.
+##   1:15:42  Writing trace to VCD file: engine_0/trace77.vcd
+##   1:16:38  Writing trace to Verilog testbench: engine_0/trace77_tb.v
+##   1:16:38  Writing trace to constraints file: engine_0/trace77.smtc
+##   1:16:38  Checking cover reachability in step 3..
+##   1:16:39  Reached cover statement at Sodor1Stage_formal.sv:601.33-602.32 ($cover$Sodor1Stage_formal.sv:601$1596) in step 3.
+##   1:16:39  Writing trace to VCD file: engine_0/trace78.vcd
+##   1:17:39  Writing trace to Verilog testbench: engine_0/trace78_tb.v
+##   1:17:39  Writing trace to constraints file: engine_0/trace78.smtc
+##   1:17:39  Checking cover reachability in step 3..
+##   1:17:39  Reached cover statement at Sodor1Stage_formal.sv:599.33-600.32 ($cover$Sodor1Stage_formal.sv:599$1594) in step 3.
+##   1:17:39  Writing trace to VCD file: engine_0/trace79.vcd
+##   1:18:35  Writing trace to Verilog testbench: engine_0/trace79_tb.v
+##   1:18:35  Writing trace to constraints file: engine_0/trace79.smtc
+##   1:18:35  Checking cover reachability in step 3..
+##   1:18:36  Reached cover statement at Sodor1Stage_formal.sv:597.33-598.32 ($cover$Sodor1Stage_formal.sv:597$1592) in step 3.
+##   1:18:36  Writing trace to VCD file: engine_0/trace80.vcd
+##   1:19:29  Writing trace to Verilog testbench: engine_0/trace80_tb.v
+##   1:19:29  Writing trace to constraints file: engine_0/trace80.smtc
+##   1:19:29  Checking cover reachability in step 3..
+##   1:19:30  Reached cover statement at Sodor1Stage_formal.sv:595.33-596.32 ($cover$Sodor1Stage_formal.sv:595$1590) in step 3.
+##   1:19:30  Writing trace to VCD file: engine_0/trace81.vcd
+##   1:20:26  Writing trace to Verilog testbench: engine_0/trace81_tb.v
+##   1:20:26  Writing trace to constraints file: engine_0/trace81.smtc
+##   1:20:26  Checking cover reachability in step 3..
+##   1:20:27  Reached cover statement at Sodor1Stage_formal.sv:593.33-594.32 ($cover$Sodor1Stage_formal.sv:593$1588) in step 3.
+##   1:20:27  Writing trace to VCD file: engine_0/trace82.vcd
+##   1:21:26  Writing trace to Verilog testbench: engine_0/trace82_tb.v
+##   1:21:26  Writing trace to constraints file: engine_0/trace82.smtc
+##   1:21:26  Checking cover reachability in step 3..
+##   1:21:27  Reached cover statement at Sodor1Stage_formal.sv:591.33-592.32 ($cover$Sodor1Stage_formal.sv:591$1586) in step 3.
+##   1:21:27  Writing trace to VCD file: engine_0/trace83.vcd
+##   1:22:20  Writing trace to Verilog testbench: engine_0/trace83_tb.v
+##   1:22:21  Writing trace to constraints file: engine_0/trace83.smtc
+##   1:22:21  Checking cover reachability in step 3..
+##   1:22:21  Reached cover statement at Sodor1Stage_formal.sv:589.33-590.32 ($cover$Sodor1Stage_formal.sv:589$1584) in step 3.
+##   1:22:21  Writing trace to VCD file: engine_0/trace84.vcd
+##   1:23:14  Writing trace to Verilog testbench: engine_0/trace84_tb.v
+##   1:23:14  Writing trace to constraints file: engine_0/trace84.smtc
+##   1:23:14  Checking cover reachability in step 3..
+##   1:23:15  Reached cover statement at Sodor1Stage_formal.sv:587.33-588.32 ($cover$Sodor1Stage_formal.sv:587$1582) in step 3.
+##   1:23:15  Writing trace to VCD file: engine_0/trace85.vcd
+##   1:24:13  Writing trace to Verilog testbench: engine_0/trace85_tb.v
+##   1:24:13  Writing trace to constraints file: engine_0/trace85.smtc
+##   1:24:13  Checking cover reachability in step 3..
+##   1:24:15  Reached cover statement at Sodor1Stage_formal.sv:585.33-586.32 ($cover$Sodor1Stage_formal.sv:585$1580) in step 3.
+##   1:24:15  Writing trace to VCD file: engine_0/trace86.vcd
+##   1:25:07  Writing trace to Verilog testbench: engine_0/trace86_tb.v
+##   1:25:08  Writing trace to constraints file: engine_0/trace86.smtc
+##   1:25:08  Checking cover reachability in step 3..
+##   1:25:08  Reached cover statement at Sodor1Stage_formal.sv:583.33-584.32 ($cover$Sodor1Stage_formal.sv:583$1578) in step 3.
+##   1:25:08  Writing trace to VCD file: engine_0/trace87.vcd
+##   1:26:04  Writing trace to Verilog testbench: engine_0/trace87_tb.v
+##   1:26:04  Writing trace to constraints file: engine_0/trace87.smtc
+##   1:26:04  Checking cover reachability in step 3..
+##   1:26:05  Reached cover statement at Sodor1Stage_formal.sv:559.33-560.32 ($cover$Sodor1Stage_formal.sv:559$1554) in step 3.
+##   1:26:05  Reached cover statement at Sodor1Stage_formal.sv:573.33-574.32 ($cover$Sodor1Stage_formal.sv:573$1568) in step 3.
+##   1:26:05  Reached cover statement at Sodor1Stage_formal.sv:749.34-750.33 ($cover$Sodor1Stage_formal.sv:749$1744) in step 3.
+##   1:26:05  Reached cover statement at Sodor1Stage_formal.sv:768.34-769.33 ($cover$Sodor1Stage_formal.sv:768$1763) in step 3.
+##   1:26:05  Writing trace to VCD file: engine_0/trace88.vcd
+##   1:26:49  Writing trace to Verilog testbench: engine_0/trace88_tb.v
+##   1:26:49  Writing trace to constraints file: engine_0/trace88.smtc
+##   1:26:49  Checking cover reachability in step 3..
+##   1:26:49  Reached cover statement at Sodor1Stage_formal.sv:525.33-526.32 ($cover$Sodor1Stage_formal.sv:525$1520) in step 3.
+##   1:26:49  Reached cover statement at Sodor1Stage_formal.sv:579.33-580.32 ($cover$Sodor1Stage_formal.sv:579$1574) in step 3.
+##   1:26:49  Writing trace to VCD file: engine_0/trace89.vcd
+##   1:27:30  Writing trace to Verilog testbench: engine_0/trace89_tb.v
+##   1:27:30  Writing trace to constraints file: engine_0/trace89.smtc
+##   1:27:31  Checking cover reachability in step 3..
+##   1:27:31  Reached cover statement at Sodor1Stage_formal.sv:523.33-524.32 ($cover$Sodor1Stage_formal.sv:523$1518) in step 3.
+##   1:27:31  Reached cover statement at Sodor1Stage_formal.sv:577.33-578.32 ($cover$Sodor1Stage_formal.sv:577$1572) in step 3.
+##   1:27:31  Writing trace to VCD file: engine_0/trace90.vcd
+##   1:28:09  Writing trace to Verilog testbench: engine_0/trace90_tb.v
+##   1:28:10  Writing trace to constraints file: engine_0/trace90.smtc
+##   1:28:10  Checking cover reachability in step 3..
+##   1:28:11  Reached cover statement at Sodor1Stage_formal.sv:521.33-522.32 ($cover$Sodor1Stage_formal.sv:521$1516) in step 3.
+##   1:28:11  Reached cover statement at Sodor1Stage_formal.sv:575.33-576.32 ($cover$Sodor1Stage_formal.sv:575$1570) in step 3.
+##   1:28:11  Writing trace to VCD file: engine_0/trace91.vcd
+##   1:28:50  Writing trace to Verilog testbench: engine_0/trace91_tb.v
+##   1:28:50  Writing trace to constraints file: engine_0/trace91.smtc
+##   1:28:50  Checking cover reachability in step 3..
+##   1:28:51  Reached cover statement at Sodor1Stage_formal.sv:519.33-520.32 ($cover$Sodor1Stage_formal.sv:519$1514) in step 3.
+##   1:28:51  Reached cover statement at Sodor1Stage_formal.sv:581.33-582.32 ($cover$Sodor1Stage_formal.sv:581$1576) in step 3.
+##   1:28:51  Writing trace to VCD file: engine_0/trace92.vcd
+##   1:29:33  Writing trace to Verilog testbench: engine_0/trace92_tb.v
+##   1:29:33  Writing trace to constraints file: engine_0/trace92.smtc
+##   1:29:33  Checking cover reachability in step 3..
+##   1:29:34  Reached cover statement at Sodor1Stage_formal.sv:517.33-518.32 ($cover$Sodor1Stage_formal.sv:517$1512) in step 3.
+##   1:29:34  Writing trace to VCD file: engine_0/trace93.vcd
+##   1:30:13  Writing trace to Verilog testbench: engine_0/trace93_tb.v
+##   1:30:13  Writing trace to constraints file: engine_0/trace93.smtc
+##   1:30:13  Checking cover reachability in step 3..
+##   1:30:14  Reached cover statement at Sodor1Stage_formal.sv:515.33-516.32 ($cover$Sodor1Stage_formal.sv:515$1510) in step 3.
+##   1:30:14  Writing trace to VCD file: engine_0/trace94.vcd
+##   1:30:53  Writing trace to Verilog testbench: engine_0/trace94_tb.v
+##   1:30:53  Writing trace to constraints file: engine_0/trace94.smtc
+##   1:30:53  Checking cover reachability in step 3..
+##   1:30:53  Reached cover statement at Sodor1Stage_formal.sv:513.33-514.32 ($cover$Sodor1Stage_formal.sv:513$1508) in step 3.
+##   1:30:53  Reached cover statement at Sodor1Stage_formal.sv:747.34-748.33 ($cover$Sodor1Stage_formal.sv:747$1742) in step 3.
+##   1:30:53  Reached cover statement at Sodor1Stage_formal.sv:789.34-790.33 ($cover$Sodor1Stage_formal.sv:789$1784) in step 3.
+##   1:30:53  Reached cover statement at Sodor1Stage_formal.sv:811.34-812.33 ($cover$Sodor1Stage_formal.sv:811$1806) in step 3.
+##   1:30:53  Writing trace to VCD file: engine_0/trace95.vcd
+##   1:31:34  Writing trace to Verilog testbench: engine_0/trace95_tb.v
+##   1:31:34  Writing trace to constraints file: engine_0/trace95.smtc
+##   1:31:34  Checking cover reachability in step 3..
+##   1:31:35  Reached cover statement at Sodor1Stage_formal.sv:511.33-512.32 ($cover$Sodor1Stage_formal.sv:511$1506) in step 3.
+##   1:31:35  Reached cover statement at Sodor1Stage_formal.sv:557.33-558.32 ($cover$Sodor1Stage_formal.sv:557$1552) in step 3.
+##   1:31:35  Writing trace to VCD file: engine_0/trace96.vcd
+##   1:32:16  Writing trace to Verilog testbench: engine_0/trace96_tb.v
+##   1:32:16  Writing trace to constraints file: engine_0/trace96.smtc
+##   1:32:16  Checking cover reachability in step 3..
+##   1:32:17  Reached cover statement at Sodor1Stage_formal.sv:509.33-510.32 ($cover$Sodor1Stage_formal.sv:509$1504) in step 3.
+##   1:32:17  Writing trace to VCD file: engine_0/trace97.vcd
+##   1:32:54  Writing trace to Verilog testbench: engine_0/trace97_tb.v
+##   1:32:54  Writing trace to constraints file: engine_0/trace97.smtc
+##   1:32:54  Checking cover reachability in step 3..
+##   1:32:55  Reached cover statement at Sodor1Stage_formal.sv:507.33-508.32 ($cover$Sodor1Stage_formal.sv:507$1502) in step 3.
+##   1:32:55  Reached cover statement at Sodor1Stage_formal.sv:771.34-772.33 ($cover$Sodor1Stage_formal.sv:771$1766) in step 3.
+##   1:32:55  Reached cover statement at Sodor1Stage_formal.sv:776.34-777.33 ($cover$Sodor1Stage_formal.sv:776$1771) in step 3.
+##   1:32:55  Writing trace to VCD file: engine_0/trace98.vcd
+##   1:33:35  Writing trace to Verilog testbench: engine_0/trace98_tb.v
+##   1:33:35  Writing trace to constraints file: engine_0/trace98.smtc
+##   1:33:36  Checking cover reachability in step 3..
+##   1:33:37  Reached cover statement at Sodor1Stage_formal.sv:483.33-484.32 ($cover$Sodor1Stage_formal.sv:483$1478) in step 3.
+##   1:33:37  Reached cover statement at Sodor1Stage_formal.sv:773.34-774.33 ($cover$Sodor1Stage_formal.sv:773$1768) in step 3.
+##   1:33:37  Writing trace to VCD file: engine_0/trace99.vcd
+##   1:34:19  Writing trace to Verilog testbench: engine_0/trace99_tb.v
+##   1:34:19  Writing trace to constraints file: engine_0/trace99.smtc
+##   1:34:19  Checking cover reachability in step 3..
+##   1:34:20  Reached cover statement at Sodor1Stage_formal.sv:505.33-506.32 ($cover$Sodor1Stage_formal.sv:505$1500) in step 3.
+##   1:34:20  Writing trace to VCD file: engine_0/trace100.vcd
+##   1:35:01  Writing trace to Verilog testbench: engine_0/trace100_tb.v
+##   1:35:01  Writing trace to constraints file: engine_0/trace100.smtc
+##   1:35:01  Checking cover reachability in step 3..
+##   1:35:02  Reached cover statement at Sodor1Stage_formal.sv:503.33-504.32 ($cover$Sodor1Stage_formal.sv:503$1498) in step 3.
+##   1:35:02  Writing trace to VCD file: engine_0/trace101.vcd
+##   1:35:40  Writing trace to Verilog testbench: engine_0/trace101_tb.v
+##   1:35:40  Writing trace to constraints file: engine_0/trace101.smtc
+##   1:35:40  Checking cover reachability in step 3..
+##   1:35:41  Reached cover statement at Sodor1Stage_formal.sv:445.32-446.31 ($cover$Sodor1Stage_formal.sv:445$1440) in step 3.
+##   1:35:41  Reached cover statement at Sodor1Stage_formal.sv:791.34-792.33 ($cover$Sodor1Stage_formal.sv:791$1786) in step 3.
+##   1:35:41  Writing trace to VCD file: engine_0/trace102.vcd
+##   1:36:25  Writing trace to Verilog testbench: engine_0/trace102_tb.v
+##   1:36:25  Writing trace to constraints file: engine_0/trace102.smtc
+##   1:36:25  Checking cover reachability in step 3..
+##   1:36:26  Reached cover statement at Sodor1Stage_formal.sv:443.32-444.31 ($cover$Sodor1Stage_formal.sv:443$1438) in step 3.
+##   1:36:26  Reached cover statement at Sodor1Stage_formal.sv:541.33-542.32 ($cover$Sodor1Stage_formal.sv:541$1536) in step 3.
+##   1:36:26  Reached cover statement at Sodor1Stage_formal.sv:556.33-557.32 ($cover$Sodor1Stage_formal.sv:556$1551) in step 3.
+##   1:36:26  Reached cover statement at Sodor1Stage_formal.sv:761.34-762.33 ($cover$Sodor1Stage_formal.sv:761$1756) in step 3.
+##   1:36:26  Reached cover statement at Sodor1Stage_formal.sv:813.34-814.33 ($cover$Sodor1Stage_formal.sv:813$1808) in step 3.
+##   1:36:26  Writing trace to VCD file: engine_0/trace103.vcd
+##   1:37:07  Writing trace to Verilog testbench: engine_0/trace103_tb.v
+##   1:37:07  Writing trace to constraints file: engine_0/trace103.smtc
+##   1:37:07  Checking cover reachability in step 3..
+##   1:37:08  Reached cover statement at Sodor1Stage_formal.sv:501.33-502.32 ($cover$Sodor1Stage_formal.sv:501$1496) in step 3.
+##   1:37:08  Writing trace to VCD file: engine_0/trace104.vcd
+##   1:37:50  Writing trace to Verilog testbench: engine_0/trace104_tb.v
+##   1:37:50  Writing trace to constraints file: engine_0/trace104.smtc
+##   1:37:50  Checking cover reachability in step 3..
+##   1:37:51  Reached cover statement at Sodor1Stage_formal.sv:499.33-500.32 ($cover$Sodor1Stage_formal.sv:499$1494) in step 3.
+##   1:37:51  Reached cover statement at Sodor1Stage_formal.sv:827.34-828.33 ($cover$Sodor1Stage_formal.sv:827$1822) in step 3.
+##   1:37:51  Writing trace to VCD file: engine_0/trace105.vcd
+##   1:38:31  Writing trace to Verilog testbench: engine_0/trace105_tb.v
+##   1:38:31  Writing trace to constraints file: engine_0/trace105.smtc
+##   1:38:31  Checking cover reachability in step 3..
+##   1:38:32  Reached cover statement at Sodor1Stage_formal.sv:497.33-498.32 ($cover$Sodor1Stage_formal.sv:497$1492) in step 3.
+##   1:38:32  Reached cover statement at Sodor1Stage_formal.sv:823.34-824.33 ($cover$Sodor1Stage_formal.sv:823$1818) in step 3.
+##   1:38:32  Writing trace to VCD file: engine_0/trace106.vcd
+##   1:39:12  Writing trace to Verilog testbench: engine_0/trace106_tb.v
+##   1:39:12  Writing trace to constraints file: engine_0/trace106.smtc
+##   1:39:12  Checking cover reachability in step 3..
+##   1:39:13  Reached cover statement at Sodor1Stage_formal.sv:495.33-496.32 ($cover$Sodor1Stage_formal.sv:495$1490) in step 3.
+##   1:39:13  Reached cover statement at Sodor1Stage_formal.sv:825.34-826.33 ($cover$Sodor1Stage_formal.sv:825$1820) in step 3.
+##   1:39:13  Writing trace to VCD file: engine_0/trace107.vcd
+##   1:39:57  Writing trace to Verilog testbench: engine_0/trace107_tb.v
+##   1:39:57  Writing trace to constraints file: engine_0/trace107.smtc
+##   1:39:57  Checking cover reachability in step 3..
+##   1:39:57  Reached cover statement at Sodor1Stage_formal.sv:491.33-492.32 ($cover$Sodor1Stage_formal.sv:491$1486) in step 3.
+##   1:39:57  Reached cover statement at Sodor1Stage_formal.sv:781.34-782.33 ($cover$Sodor1Stage_formal.sv:781$1776) in step 3.
+##   1:39:57  Writing trace to VCD file: engine_0/trace108.vcd
+##   1:40:38  Writing trace to Verilog testbench: engine_0/trace108_tb.v
+##   1:40:38  Writing trace to constraints file: engine_0/trace108.smtc
+##   1:40:38  Checking cover reachability in step 3..
+##   1:40:39  Reached cover statement at Sodor1Stage_formal.sv:489.33-490.32 ($cover$Sodor1Stage_formal.sv:489$1484) in step 3.
+##   1:40:39  Writing trace to VCD file: engine_0/trace109.vcd
+##   1:41:22  Writing trace to Verilog testbench: engine_0/trace109_tb.v
+##   1:41:22  Writing trace to constraints file: engine_0/trace109.smtc
+##   1:41:22  Checking cover reachability in step 3..
+##   1:41:23  Reached cover statement at Sodor1Stage_formal.sv:487.33-488.32 ($cover$Sodor1Stage_formal.sv:487$1482) in step 3.
+##   1:41:23  Writing trace to VCD file: engine_0/trace110.vcd
+##   1:42:02  Writing trace to Verilog testbench: engine_0/trace110_tb.v
+##   1:42:02  Writing trace to constraints file: engine_0/trace110.smtc
+##   1:42:02  Checking cover reachability in step 3..
+##   1:42:03  Reached cover statement at Sodor1Stage_formal.sv:485.33-486.32 ($cover$Sodor1Stage_formal.sv:485$1480) in step 3.
+##   1:42:03  Reached cover statement at Sodor1Stage_formal.sv:785.34-786.33 ($cover$Sodor1Stage_formal.sv:785$1780) in step 3.
+##   1:42:03  Writing trace to VCD file: engine_0/trace111.vcd
+##   1:42:44  Writing trace to Verilog testbench: engine_0/trace111_tb.v
+##   1:42:44  Writing trace to constraints file: engine_0/trace111.smtc
+##   1:42:44  Checking cover reachability in step 3..
+##   1:42:45  Reached cover statement at Sodor1Stage_formal.sv:481.33-482.32 ($cover$Sodor1Stage_formal.sv:481$1476) in step 3.
+##   1:42:45  Writing trace to VCD file: engine_0/trace112.vcd
+##   1:43:26  Writing trace to Verilog testbench: engine_0/trace112_tb.v
+##   1:43:26  Writing trace to constraints file: engine_0/trace112.smtc
+##   1:43:26  Checking cover reachability in step 3..
+##   1:43:27  Reached cover statement at Sodor1Stage_formal.sv:479.33-480.32 ($cover$Sodor1Stage_formal.sv:479$1474) in step 3.
+##   1:43:27  Reached cover statement at Sodor1Stage_formal.sv:805.34-806.33 ($cover$Sodor1Stage_formal.sv:805$1800) in step 3.
+##   1:43:27  Writing trace to VCD file: engine_0/trace113.vcd
+##   1:44:04  Writing trace to Verilog testbench: engine_0/trace113_tb.v
+##   1:44:04  Writing trace to constraints file: engine_0/trace113.smtc
+##   1:44:04  Checking cover reachability in step 3..
+##   1:44:05  Reached cover statement at Sodor1Stage_formal.sv:477.33-478.32 ($cover$Sodor1Stage_formal.sv:477$1472) in step 3.
+##   1:44:05  Reached cover statement at Sodor1Stage_formal.sv:803.34-804.33 ($cover$Sodor1Stage_formal.sv:803$1798) in step 3.
+##   1:44:05  Writing trace to VCD file: engine_0/trace114.vcd
+##   1:44:44  Writing trace to Verilog testbench: engine_0/trace114_tb.v
+##   1:44:44  Writing trace to constraints file: engine_0/trace114.smtc
+##   1:44:44  Checking cover reachability in step 3..
+##   1:44:45  Reached cover statement at Sodor1Stage_formal.sv:475.33-476.32 ($cover$Sodor1Stage_formal.sv:475$1470) in step 3.
+##   1:44:45  Writing trace to VCD file: engine_0/trace115.vcd
+##   1:45:21  Writing trace to Verilog testbench: engine_0/trace115_tb.v
+##   1:45:21  Writing trace to constraints file: engine_0/trace115.smtc
+##   1:45:22  Checking cover reachability in step 3..
+##   1:45:22  Reached cover statement at Sodor1Stage_formal.sv:473.33-474.32 ($cover$Sodor1Stage_formal.sv:473$1468) in step 3.
+##   1:45:22  Reached cover statement at Sodor1Stage_formal.sv:799.34-800.33 ($cover$Sodor1Stage_formal.sv:799$1794) in step 3.
+##   1:45:22  Writing trace to VCD file: engine_0/trace116.vcd
+##   1:46:03  Writing trace to Verilog testbench: engine_0/trace116_tb.v
+##   1:46:03  Writing trace to constraints file: engine_0/trace116.smtc
+##   1:46:04  Checking cover reachability in step 3..
+##   1:46:04  Reached cover statement at Sodor1Stage_formal.sv:471.33-472.32 ($cover$Sodor1Stage_formal.sv:471$1466) in step 3.
+##   1:46:04  Reached cover statement at Sodor1Stage_formal.sv:797.34-798.33 ($cover$Sodor1Stage_formal.sv:797$1792) in step 3.
+##   1:46:04  Writing trace to VCD file: engine_0/trace117.vcd
+##   1:46:42  Writing trace to Verilog testbench: engine_0/trace117_tb.v
+##   1:46:42  Writing trace to constraints file: engine_0/trace117.smtc
+##   1:46:42  Checking cover reachability in step 3..
+##   1:46:43  Reached cover statement at Sodor1Stage_formal.sv:469.33-470.32 ($cover$Sodor1Stage_formal.sv:469$1464) in step 3.
+##   1:46:43  Reached cover statement at Sodor1Stage_formal.sv:795.34-796.33 ($cover$Sodor1Stage_formal.sv:795$1790) in step 3.
+##   1:46:43  Writing trace to VCD file: engine_0/trace118.vcd
+##   1:47:24  Writing trace to Verilog testbench: engine_0/trace118_tb.v
+##   1:47:24  Writing trace to constraints file: engine_0/trace118.smtc
+##   1:47:24  Checking cover reachability in step 3..
+##   1:47:25  Reached cover statement at Sodor1Stage_formal.sv:467.33-468.32 ($cover$Sodor1Stage_formal.sv:467$1462) in step 3.
+##   1:47:25  Reached cover statement at Sodor1Stage_formal.sv:793.34-794.33 ($cover$Sodor1Stage_formal.sv:793$1788) in step 3.
+##   1:47:25  Writing trace to VCD file: engine_0/trace119.vcd
+##   1:48:03  Writing trace to Verilog testbench: engine_0/trace119_tb.v
+##   1:48:03  Writing trace to constraints file: engine_0/trace119.smtc
+##   1:48:03  Checking cover reachability in step 3..
+##   1:48:04  Reached cover statement at Sodor1Stage_formal.sv:465.33-466.32 ($cover$Sodor1Stage_formal.sv:465$1460) in step 3.
+##   1:48:04  Writing trace to VCD file: engine_0/trace120.vcd
+##   1:48:47  Writing trace to Verilog testbench: engine_0/trace120_tb.v
+##   1:48:47  Writing trace to constraints file: engine_0/trace120.smtc
+##   1:48:47  Checking cover reachability in step 3..
+##   1:48:48  Reached cover statement at Sodor1Stage_formal.sv:463.33-464.32 ($cover$Sodor1Stage_formal.sv:463$1458) in step 3.
+##   1:48:48  Writing trace to VCD file: engine_0/trace121.vcd

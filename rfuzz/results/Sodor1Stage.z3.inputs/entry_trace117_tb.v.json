@@ -1,0 +1,1 @@
+{"entry": {"id": 117, "discovered_after": {"secs": 3505, "nanos": 0}, "is_valid": true, "not_covered": [], "lineage": null, "inputs": [0, 16, 0, 115, 64, 0, 0, 0, 64, 36, 32, 19, 64, 0, 0, 0, 192, 128, 32, 115, 64, 0, 0, 0]}, "stats": {}}

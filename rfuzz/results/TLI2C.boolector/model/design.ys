@@ -1,0 +1,8 @@
+# running in cover/src/
+read -formal TLI2C.v
+read -formal TLI2C_formal.sv
+prep -top TLI2CTop
+
+hierarchy -simcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

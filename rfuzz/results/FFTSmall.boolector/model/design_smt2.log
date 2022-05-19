@@ -1,0 +1,284 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_smt2.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \FFTSmallTop..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \BiplexFFT..
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module BiplexFFT.
+Optimizing module DirectFFT.
+Optimizing module FFTSmall.
+Optimizing module FFTSmallTop.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\BiplexFFT'.
+Finding identical cells in module `\DirectFFT'.
+Finding identical cells in module `\FFTSmall'.
+Finding identical cells in module `\FFTSmallTop'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$3262 ($dff) from module BiplexFFT (D = $procmux$2127_Y, Q = \stage_outputs_2_6_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3261 ($dff) from module BiplexFFT (D = $procmux$2133_Y, Q = \stage_outputs_2_6_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3260 ($dff) from module BiplexFFT (D = \_T_1326 [24:8], Q = \_T_1602_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3259 ($dff) from module BiplexFFT (D = \_T_1324 [24:8], Q = \_T_1602_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3258 ($dff) from module BiplexFFT (D = $procmux$2145_Y, Q = \stage_outputs_2_4_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3257 ($dff) from module BiplexFFT (D = $procmux$2151_Y, Q = \stage_outputs_2_4_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3256 ($dff) from module BiplexFFT (D = \_T_1184 [24:8], Q = \_T_1516_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3255 ($dff) from module BiplexFFT (D = \_T_1182 [24:8], Q = \_T_1516_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3254 ($dff) from module BiplexFFT (D = $procmux$2163_Y, Q = \stage_outputs_2_2_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3253 ($dff) from module BiplexFFT (D = $procmux$2169_Y, Q = \stage_outputs_2_2_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3252 ($dff) from module BiplexFFT (D = \_T_1042 [24:8], Q = \_T_1430_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3251 ($dff) from module BiplexFFT (D = \_T_1040 [24:8], Q = \_T_1430_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3250 ($dff) from module BiplexFFT (D = $procmux$2181_Y, Q = \stage_outputs_2_0_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3249 ($dff) from module BiplexFFT (D = $procmux$2187_Y, Q = \stage_outputs_2_0_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3248 ($dff) from module BiplexFFT (D = \_T_900 [24:8], Q = \_T_1344_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3247 ($dff) from module BiplexFFT (D = \_T_898 [24:8], Q = \_T_1344_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3246 ($dff) from module BiplexFFT (D = $procmux$2199_Y, Q = \_T_1281_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3245 ($dff) from module BiplexFFT (D = $procmux$2205_Y, Q = \_T_1281_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3244 ($dff) from module BiplexFFT (D = { \io_in_bits_7_imag [15] \io_in_bits_7_imag }, Q = \_T_1202_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3243 ($dff) from module BiplexFFT (D = { \io_in_bits_7_real [15] \io_in_bits_7_real }, Q = \_T_1202_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3242 ($dff) from module BiplexFFT (D = $procmux$2217_Y, Q = \_T_1139_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3241 ($dff) from module BiplexFFT (D = $procmux$2223_Y, Q = \_T_1139_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3240 ($dff) from module BiplexFFT (D = { \io_in_bits_5_imag [15] \io_in_bits_5_imag }, Q = \_T_1060_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3239 ($dff) from module BiplexFFT (D = { \io_in_bits_5_real [15] \io_in_bits_5_real }, Q = \_T_1060_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3238 ($dff) from module BiplexFFT (D = $procmux$2235_Y, Q = \_T_997_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3237 ($dff) from module BiplexFFT (D = $procmux$2241_Y, Q = \_T_997_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3236 ($dff) from module BiplexFFT (D = { \io_in_bits_3_imag [15] \io_in_bits_3_imag }, Q = \_T_918_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3235 ($dff) from module BiplexFFT (D = { \io_in_bits_3_real [15] \io_in_bits_3_real }, Q = \_T_918_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3234 ($dff) from module BiplexFFT (D = $procmux$2253_Y, Q = \_T_855_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3233 ($dff) from module BiplexFFT (D = $procmux$2259_Y, Q = \_T_855_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3232 ($dff) from module BiplexFFT (D = { \io_in_bits_1_imag [15] \io_in_bits_1_imag }, Q = \_T_776_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3231 ($dff) from module BiplexFFT (D = { \io_in_bits_1_real [15] \io_in_bits_1_real }, Q = \_T_776_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3230 ($dff) from module BiplexFFT (D = \_T_579, Q = \_T_581, rval = 1'0).
+Adding SRST signal on $procdff$3229 ($dff) from module BiplexFFT (D = \io_in_valid, Q = \_T_579, rval = 1'0).
+Adding SRST signal on $procdff$3228 ($dff) from module BiplexFFT (D = \sync_0, Q = \sync_1, rval = 1'0).
+Adding SRST signal on $procdff$3227 ($dff) from module BiplexFFT (D = \_GEN_2, Q = \value, rval = 1'0).
+Adding SRST signal on $procdff$3226 ($dff) from module BiplexFFT (D = \io_in_valid, Q = \valid_delay, rval = 1'0).
+Adding SRST signal on $procdff$3225 ($dff) from module DirectFFT (D = \_GEN_2, Q = \value, rval = 1'0).
+Adding SRST signal on $procdff$3224 ($dff) from module DirectFFT (D = \io_in_valid, Q = \valid_delay, rval = 1'0).
+Adding SRST signal on $procdff$3264 ($dff) from module FFTSmall (D = \_GEN_34, Q = \dses, rval = 1'0).
+Adding SRST signal on $procdff$3263 ($dff) from module FFTSmall (D = \io_out_valid, Q = \valid_delay, rval = 1'0).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \BiplexFFT..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \FFTSmallTop..
+Removed 47 unused cells and 47 unused wires.
+<suppressed ~50 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module BiplexFFT.
+Optimizing module DirectFFT.
+Optimizing module FFTSmall.
+Optimizing module FFTSmallTop.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\BiplexFFT'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\DirectFFT'.
+Finding identical cells in module `\FFTSmall'.
+Finding identical cells in module `\FFTSmallTop'.
+Removed a total of 3 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \BiplexFFT..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \FFTSmallTop..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module BiplexFFT...
+Checking module DirectFFT...
+Checking module FFTSmall...
+Checking module FFTSmallTop...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \FFTSmallTop
+Used module:     \FFTSmall
+Used module:         \BiplexFFT
+Used module:         \DirectFFT
+
+8.2. Analyzing design hierarchy..
+Top module:  \FFTSmallTop
+Used module:     \FFTSmall
+Used module:         \BiplexFFT
+Used module:         \DirectFFT
+Removed 0 unused modules.
+Module FFTSmallTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+10. Printing statistics.
+
+=== BiplexFFT ===
+
+   Number of wires:                302
+   Number of wire bits:           4962
+   Number of public wires:         248
+   Number of public wire bits:    4140
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                160
+     $add                           19
+     $and                            1
+     $dff                           37
+     $mul                           12
+     $mux                           71
+     $not                            2
+     $or                             1
+     $reduce_or                      1
+     $sub                           16
+
+=== DirectFFT ===
+
+   Number of wires:                824
+   Number of wire bits:          12771
+   Number of public wires:         821
+   Number of public wire bits:   12768
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                396
+     $add                           62
+     $and                            2
+     $dff                            2
+     $eq                            98
+     $mul                           37
+     $mux                          137
+     $not                            1
+     $or                             1
+     $reduce_or                      1
+     $sub                           55
+
+=== FFTSmall ===
+
+   Number of wires:                502
+   Number of wire bits:           4434
+   Number of public wires:         499
+   Number of public wire bits:    4431
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 30
+     $and                            2
+     $dff                            2
+     $mux                           19
+     $not                            3
+     $or                             1
+     $reduce_or                      1
+     BiplexFFT                       1
+     DirectFFT                       1
+
+=== FFTSmallTop ===
+
+   Number of wires:                943
+   Number of wire bits:           1632
+   Number of public wires:         138
+   Number of public wire bits:     827
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1036
+     $anyseq                       228
+     $cover                        228
+     $dff                          231
+     $logic_and                      1
+     $logic_not                    116
+     $mux                          230
+     $or                             1
+     FFTSmall                        1
+
+=== design hierarchy ===
+
+   FFTSmallTop                       1
+     FFTSmall                        1
+       BiplexFFT                     1
+       DirectFFT                     1
+
+   Number of wires:               2571
+   Number of wire bits:          23799
+   Number of public wires:        1706
+   Number of public wire bits:   22166
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1619
+     $add                           81
+     $and                            5
+     $anyseq                       228
+     $cover                        228
+     $dff                          272
+     $eq                            98
+     $logic_and                      1
+     $logic_not                    116
+     $mul                           49
+     $mux                          457
+     $not                            6
+     $or                             4
+     $reduce_or                      3
+     $sub                           71
+
+11. Executing SMT2 backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module BiplexFFT.
+Creating SMT-LIBv2 representation of module DirectFFT.
+Creating SMT-LIBv2 representation of module FFTSmall.
+Creating SMT-LIBv2 representation of module FFTSmallTop.
+
+End of script. Logfile hash: d298e8987c, CPU: user 0.38s system 0.02s, MEM: 24.95 MB peak
+Yosys 0.17+5 (git sha1 c862b1dbf, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 32% 3x opt_clean (0 sec), 20% 1x check (0 sec), ...

@@ -1,0 +1,15 @@
+[options]
+mode cover
+depth 200
+
+[engines]
+btor btormc
+
+[script]
+read -formal FFTSmall.v
+read -formal FFTSmall_formal.sv
+prep -top FFTSmallTop
+
+[files]
+FFTSmall.v
+FFTSmall_formal.sv

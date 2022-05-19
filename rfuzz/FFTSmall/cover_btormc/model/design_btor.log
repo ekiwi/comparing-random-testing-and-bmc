@@ -1,0 +1,794 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.16+63 (git sha1 11e75bc27, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Executing script file `design_btor.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design.il
+
+2. Executing MEMORY_NORDFF pass (extracting $dff cells from memories).
+
+3. Executing ASYNC2SYNC pass.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \FFTSmallTop..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \BiplexFFT..
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module BiplexFFT.
+Optimizing module DirectFFT.
+Optimizing module FFTSmall.
+Optimizing module FFTSmallTop.
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\BiplexFFT'.
+Finding identical cells in module `\DirectFFT'.
+Finding identical cells in module `\FFTSmall'.
+Finding identical cells in module `\FFTSmallTop'.
+Removed a total of 0 cells.
+
+6.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$3262 ($dff) from module BiplexFFT (D = $procmux$2127_Y, Q = \stage_outputs_2_6_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3261 ($dff) from module BiplexFFT (D = $procmux$2133_Y, Q = \stage_outputs_2_6_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3260 ($dff) from module BiplexFFT (D = \_T_1326 [24:8], Q = \_T_1602_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3259 ($dff) from module BiplexFFT (D = \_T_1324 [24:8], Q = \_T_1602_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3258 ($dff) from module BiplexFFT (D = $procmux$2145_Y, Q = \stage_outputs_2_4_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3257 ($dff) from module BiplexFFT (D = $procmux$2151_Y, Q = \stage_outputs_2_4_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3256 ($dff) from module BiplexFFT (D = \_T_1184 [24:8], Q = \_T_1516_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3255 ($dff) from module BiplexFFT (D = \_T_1182 [24:8], Q = \_T_1516_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3254 ($dff) from module BiplexFFT (D = $procmux$2163_Y, Q = \stage_outputs_2_2_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3253 ($dff) from module BiplexFFT (D = $procmux$2169_Y, Q = \stage_outputs_2_2_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3252 ($dff) from module BiplexFFT (D = \_T_1042 [24:8], Q = \_T_1430_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3251 ($dff) from module BiplexFFT (D = \_T_1040 [24:8], Q = \_T_1430_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3250 ($dff) from module BiplexFFT (D = $procmux$2181_Y, Q = \stage_outputs_2_0_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3249 ($dff) from module BiplexFFT (D = $procmux$2187_Y, Q = \stage_outputs_2_0_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3248 ($dff) from module BiplexFFT (D = \_T_900 [24:8], Q = \_T_1344_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3247 ($dff) from module BiplexFFT (D = \_T_898 [24:8], Q = \_T_1344_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3246 ($dff) from module BiplexFFT (D = $procmux$2199_Y, Q = \_T_1281_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3245 ($dff) from module BiplexFFT (D = $procmux$2205_Y, Q = \_T_1281_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3244 ($dff) from module BiplexFFT (D = { \io_in_bits_7_imag [15] \io_in_bits_7_imag }, Q = \_T_1202_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3243 ($dff) from module BiplexFFT (D = { \io_in_bits_7_real [15] \io_in_bits_7_real }, Q = \_T_1202_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3242 ($dff) from module BiplexFFT (D = $procmux$2217_Y, Q = \_T_1139_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3241 ($dff) from module BiplexFFT (D = $procmux$2223_Y, Q = \_T_1139_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3240 ($dff) from module BiplexFFT (D = { \io_in_bits_5_imag [15] \io_in_bits_5_imag }, Q = \_T_1060_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3239 ($dff) from module BiplexFFT (D = { \io_in_bits_5_real [15] \io_in_bits_5_real }, Q = \_T_1060_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3238 ($dff) from module BiplexFFT (D = $procmux$2235_Y, Q = \_T_997_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3237 ($dff) from module BiplexFFT (D = $procmux$2241_Y, Q = \_T_997_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3236 ($dff) from module BiplexFFT (D = { \io_in_bits_3_imag [15] \io_in_bits_3_imag }, Q = \_T_918_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3235 ($dff) from module BiplexFFT (D = { \io_in_bits_3_real [15] \io_in_bits_3_real }, Q = \_T_918_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3234 ($dff) from module BiplexFFT (D = $procmux$2253_Y, Q = \_T_855_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3233 ($dff) from module BiplexFFT (D = $procmux$2259_Y, Q = \_T_855_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3232 ($dff) from module BiplexFFT (D = { \io_in_bits_1_imag [15] \io_in_bits_1_imag }, Q = \_T_776_imag, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3231 ($dff) from module BiplexFFT (D = { \io_in_bits_1_real [15] \io_in_bits_1_real }, Q = \_T_776_real, rval = 17'00000000000000000).
+Adding SRST signal on $procdff$3230 ($dff) from module BiplexFFT (D = \_T_579, Q = \_T_581, rval = 1'0).
+Adding SRST signal on $procdff$3229 ($dff) from module BiplexFFT (D = \io_in_valid, Q = \_T_579, rval = 1'0).
+Adding SRST signal on $procdff$3228 ($dff) from module BiplexFFT (D = \sync_0, Q = \sync_1, rval = 1'0).
+Adding SRST signal on $procdff$3227 ($dff) from module BiplexFFT (D = \_GEN_2, Q = \value, rval = 1'0).
+Adding SRST signal on $procdff$3226 ($dff) from module BiplexFFT (D = \io_in_valid, Q = \valid_delay, rval = 1'0).
+Adding SRST signal on $procdff$3225 ($dff) from module DirectFFT (D = \_GEN_2, Q = \value, rval = 1'0).
+Adding SRST signal on $procdff$3224 ($dff) from module DirectFFT (D = \io_in_valid, Q = \valid_delay, rval = 1'0).
+Adding SRST signal on $procdff$3264 ($dff) from module FFTSmall (D = \_GEN_34, Q = \dses, rval = 1'0).
+Adding SRST signal on $procdff$3263 ($dff) from module FFTSmall (D = \io_out_valid, Q = \valid_delay, rval = 1'0).
+
+6.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \BiplexFFT..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \FFTSmallTop..
+Removed 47 unused cells and 47 unused wires.
+<suppressed ~50 debug messages>
+
+6.5. Rerunning OPT passes. (Removed registers in this run.)
+
+6.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module BiplexFFT.
+Optimizing module DirectFFT.
+Optimizing module FFTSmall.
+Optimizing module FFTSmallTop.
+
+6.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\BiplexFFT'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\DirectFFT'.
+Finding identical cells in module `\FFTSmall'.
+Finding identical cells in module `\FFTSmallTop'.
+Removed a total of 3 cells.
+
+6.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \BiplexFFT..
+Finding unused cells or wires in module \DirectFFT..
+Finding unused cells or wires in module \FFTSmall..
+Finding unused cells or wires in module \FFTSmallTop..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+6.10. Finished fast OPT passes.
+
+7. Executing CHECK pass (checking for obvious problems).
+Checking module BiplexFFT...
+Checking module DirectFFT...
+Checking module FFTSmall...
+Checking module FFTSmallTop...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+
+8.1. Analyzing design hierarchy..
+Top module:  \FFTSmallTop
+Used module:     \FFTSmall
+Used module:         \BiplexFFT
+Used module:         \DirectFFT
+
+8.2. Analyzing design hierarchy..
+Top module:  \FFTSmallTop
+Used module:     \FFTSmall
+Used module:         \BiplexFFT
+Used module:         \DirectFFT
+Removed 0 unused modules.
+Module FFTSmallTop directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing FLATTEN pass (flatten design).
+Deleting now unused module BiplexFFT.
+Deleting now unused module DirectFFT.
+Deleting now unused module FFTSmall.
+<suppressed ~3 debug messages>
+
+10. Executing SETUNDEF pass (replace undef values with defined constants).
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module FFTSmallTop.
+<suppressed ~27 debug messages>
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\FFTSmallTop'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+11.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \FFTSmallTop..
+Removed 716 unused cells and 791 unused wires.
+<suppressed ~1093 debug messages>
+
+11.5. Finished fast OPT passes.
+
+12. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+13. Printing statistics.
+
+=== FFTSmallTop ===
+
+   Number of wires:               2144
+   Number of wire bits:          14779
+   Number of public wires:        1334
+   Number of public wire bits:   13969
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1246
+     $add                           10
+     $and                            2
+     $anyseq                       228
+     $cover                        228
+     $dff                          238
+     $eq                            98
+     $logic_and                      1
+     $logic_not                    114
+     $mul                            1
+     $mux                          318
+     $not                            4
+     $or                             3
+     $reduce_or                      1
+
+14. Executing BTOR backend.
+
+14.1. Executing BMUXMAP pass.
+
+14.2. Executing DEMUXMAP pass.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_124 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_131 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24:8] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_133 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [25] \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1013 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1015 [28] \bb.BiplexFFT._T_1015 [28] \bb.BiplexFFT._T_1015 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [25] \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1155 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1157 [28] \bb.BiplexFFT._T_1157 [28] \bb.BiplexFFT._T_1157 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [25] \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1297 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1299 [28] \bb.BiplexFFT._T_1299 [28] \bb.BiplexFFT._T_1299 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_124 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [32] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [32] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [33:15] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [33:32] \bb.BiplexFFT._T_873 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [26:25] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_876 [29] \bb.BiplexFFT._T_876 [29] \bb.BiplexFFT._T_876 [27:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_133 [24:8].
+Warning: No driver for signal \bb.BiplexFFT._GEN_131 [24:8].
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_0_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_0_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_1_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_1_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_2_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_2_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_3_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_3_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_4_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_4_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_5_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_5_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_6_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_6_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_7_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_7_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_0_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_0_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_1_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_1_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_2_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_2_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_3_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_3_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_4_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_4_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_5_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_5_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_6_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_6_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_7_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_7_real.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_0_imag [15] \bb.BiplexFFT.io_in_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_0_real [15] \bb.BiplexFFT.io_in_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_2_imag [15] \bb.BiplexFFT.io_in_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_2_real [15] \bb.BiplexFFT.io_in_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_4_imag [15] \bb.BiplexFFT.io_in_bits_4_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_4_real [15] \bb.BiplexFFT.io_in_bits_4_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_6_imag [15] \bb.BiplexFFT.io_in_bits_6_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_6_real [15] \bb.BiplexFFT.io_in_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal \bb.direct._GEN_35 [26:11].
+Warning: No driver for signal \bb.direct._GEN_36 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal \bb.direct._GEN_43 [26:11].
+Warning: No driver for signal \bb.direct._GEN_44 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal \bb.direct._GEN_51 [26:11].
+Warning: No driver for signal \bb.direct._GEN_52 [26:11].
+Warning: No driver for signal \bb.direct._GEN_55 [26:11].
+Warning: No driver for signal \bb.direct._GEN_56 [26:11].
+Warning: No driver for signal \bb.direct._GEN_59 [26:11].
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal \bb.direct._GEN_60 [26:11].
+Warning: No driver for signal \bb.direct._GEN_63 [26:11].
+Warning: No driver for signal \bb.direct._GEN_64 [26:11].
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real }.
+Warning: No driver for signal { \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [18:0] }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_35 [26:11].
+Warning: No driver for signal \bb.direct._GEN_36 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_846 [25:20] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_850 [25:20] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_43 [26:11].
+Warning: No driver for signal \bb.direct._GEN_44 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_884 [25:20] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_888 [25:20] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_51 [26:11].
+Warning: No driver for signal \bb.direct._GEN_52 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_55 [26:11].
+Warning: No driver for signal \bb.direct._GEN_56 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_59 [26:11].
+Warning: No driver for signal \bb.direct._GEN_60 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_63 [26:11].
+Warning: No driver for signal \bb.direct._GEN_64 [26:11].
+Warning: No driver for signal { \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [29:0] }.
+Warning: No driver for signal { \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [29:0] }.
+Warning: No driver for signal { \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [29:0] }.
+Warning: No driver for signal { \bb.direct._GEN_35 [26:11] \bb.direct._T_1306 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_36 [26:11] \bb.direct._T_1308 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_43 [26:11] \bb.direct._T_1318 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_44 [26:11] \bb.direct._T_1320 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [36:7] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] \bb.direct._T_1363 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] \bb.direct._T_1365 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_884 [25:20] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] \bb.direct._T_1375 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] \bb.direct._T_1377 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1515 [34] \bb.direct._T_1515 [34] \bb.direct._T_1515 [32:0] }.
+Warning: No driver for signal { \bb.direct._GEN_51 [26:11] \bb.direct._T_1534 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_52 [26:11] \bb.direct._T_1536 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_55 [26:11] \bb.direct._T_1546 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_56 [26:11] \bb.direct._T_1548 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1572 [34] \bb.direct._T_1572 [34] \bb.direct._T_1572 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1629 [34] \bb.direct._T_1629 [34] \bb.direct._T_1629 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1632 [34] \bb.direct._T_1632 [34] \bb.direct._T_1632 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1635 [34] \bb.direct._T_1635 [34] \bb.direct._T_1635 [32:0] }.
+Warning: No driver for signal { \bb.direct._GEN_59 [26:11] \bb.direct._T_1648 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_60 [26:11] \bb.direct._T_1650 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_63 [26:11] \bb.direct._T_1660 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_64 [26:11] \bb.direct._T_1662 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1686 [34] \bb.direct._T_1686 [34] \bb.direct._T_1686 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1689 [34] \bb.direct._T_1689 [34] \bb.direct._T_1689 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1692 [34] \bb.direct._T_1692 [34] \bb.direct._T_1692 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1743 [34] \bb.direct._T_1743 [34] \bb.direct._T_1743 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1800 [34] \bb.direct._T_1800 [34] \bb.direct._T_1800 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1857 [34] \bb.direct._T_1857 [34] \bb.direct._T_1857 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1860 [34] \bb.direct._T_1860 [34] \bb.direct._T_1860 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1863 [34] \bb.direct._T_1863 [34] \bb.direct._T_1863 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1914 [34] \bb.direct._T_1914 [34] \bb.direct._T_1914 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1917 [34] \bb.direct._T_1917 [34] \bb.direct._T_1917 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1920 [34] \bb.direct._T_1920 [34] \bb.direct._T_1920 [32:0] }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_0_imag [19:16] \bb.direct._GEN_36 [26:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_0_real [19:16] \bb.direct._GEN_35 [26:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_4_imag [19:16] \bb.direct._GEN_44 [26:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_4_real [19:16] \bb.direct._GEN_43 [26:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [18:0] }.
+
+15. Executing BTOR backend.
+
+15.1. Executing BMUXMAP pass.
+
+15.2. Executing DEMUXMAP pass.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_124 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_131 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24:8] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_133 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24] \bb.BiplexFFT._GEN_124 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24] \bb.BiplexFFT._GEN_131 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24] \bb.BiplexFFT._GEN_133 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [28] \bb.BiplexFFT._T_1009 [25] \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1013 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1015 [28] \bb.BiplexFFT._T_1015 [28] \bb.BiplexFFT._T_1015 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_130 [17] \bb.BiplexFFT._GEN_130 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_11 [29] \bb.BiplexFFT._GEN_11 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_10 [29] \bb.BiplexFFT._GEN_10 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [28] \bb.BiplexFFT._T_1151 [25] \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1155 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1157 [28] \bb.BiplexFFT._T_1157 [28] \bb.BiplexFFT._T_1157 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_139 [17] \bb.BiplexFFT._GEN_139 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_15 [29] \bb.BiplexFFT._GEN_15 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_14 [29] \bb.BiplexFFT._GEN_14 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [28] \bb.BiplexFFT._T_1293 [25] \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._T_1297 [31:15].
+Warning: No driver for signal { \bb.BiplexFFT._T_1299 [28] \bb.BiplexFFT._T_1299 [28] \bb.BiplexFFT._T_1299 [26:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._GEN_148 [17] \bb.BiplexFFT._GEN_148 [15:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_124 [24:8].
+Warning: No driver for signal { \bb.BiplexFFT._GEN_0 [29] \bb.BiplexFFT._GEN_0 [23:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [32] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [35] \bb.BiplexFFT._T_865 [32] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [33:15] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [35] \bb.BiplexFFT._T_871 [33:32] \bb.BiplexFFT._T_873 [24:8] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [29] \bb.BiplexFFT._T_874 [26:25] \bb.BiplexFFT._GEN_121 [17] \bb.BiplexFFT._GEN_121 [15:0] }.
+Warning: No driver for signal { \bb.BiplexFFT._T_876 [29] \bb.BiplexFFT._T_876 [29] \bb.BiplexFFT._T_876 [27:0] }.
+Warning: No driver for signal \bb.BiplexFFT._GEN_133 [24:8].
+Warning: No driver for signal \bb.BiplexFFT._GEN_131 [24:8].
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_0_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_0_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_1_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_1_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_2_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_2_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_3_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_3_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_4_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_4_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_5_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_5_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_6_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_6_real.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_7_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_in_bits_7_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_0_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_0_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_1_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_1_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_2_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_2_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_3_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_3_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_4_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_4_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_5_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_5_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_6_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_6_real.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_7_imag.
+Warning: No driver for signal \bb.BiplexFFT.io_out_bits_7_real.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_0_imag [15] \bb.BiplexFFT.io_in_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_0_real [15] \bb.BiplexFFT.io_in_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_2_imag [15] \bb.BiplexFFT.io_in_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_2_real [15] \bb.BiplexFFT.io_in_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_4_imag [15] \bb.BiplexFFT.io_in_bits_4_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_4_real [15] \bb.BiplexFFT.io_in_bits_4_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_6_imag [15] \bb.BiplexFFT.io_in_bits_6_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_in_bits_6_real [15] \bb.BiplexFFT.io_in_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal \bb.direct._GEN_35 [26:11].
+Warning: No driver for signal \bb.direct._GEN_36 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal \bb.direct._GEN_43 [26:11].
+Warning: No driver for signal \bb.direct._GEN_44 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal \bb.direct._GEN_51 [26:11].
+Warning: No driver for signal \bb.direct._GEN_52 [26:11].
+Warning: No driver for signal \bb.direct._GEN_55 [26:11].
+Warning: No driver for signal \bb.direct._GEN_56 [26:11].
+Warning: No driver for signal \bb.direct._GEN_59 [26:11].
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal \bb.direct._GEN_60 [26:11].
+Warning: No driver for signal \bb.direct._GEN_63 [26:11].
+Warning: No driver for signal \bb.direct._GEN_64 [26:11].
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real }.
+Warning: No driver for signal { \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [18:0] }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_35 [26:11].
+Warning: No driver for signal \bb.direct._GEN_36 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_846 [25:20] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_850 [25:20] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_43 [26:11].
+Warning: No driver for signal \bb.direct._GEN_44 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_884 [25:20] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_888 [25:20] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_51 [26:11].
+Warning: No driver for signal \bb.direct._GEN_52 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_55 [26:11].
+Warning: No driver for signal \bb.direct._GEN_56 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_59 [26:11].
+Warning: No driver for signal \bb.direct._GEN_60 [26:11].
+Warning: No driver for signal { \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [18:0] }.
+Warning: No driver for signal \bb.direct._GEN_63 [26:11].
+Warning: No driver for signal \bb.direct._GEN_64 [26:11].
+Warning: No driver for signal { \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [20] \bb.direct._T_1281 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [20] \bb.direct._T_1283 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [34] \bb.direct._T_1287 [29:0] }.
+Warning: No driver for signal { \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [34] \bb.direct._T_1290 [29:0] }.
+Warning: No driver for signal { \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [34] \bb.direct._T_1293 [29:0] }.
+Warning: No driver for signal { \bb.direct._GEN_35 [26:11] \bb.direct._T_1306 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_36 [26:11] \bb.direct._T_1308 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_43 [26:11] \bb.direct._T_1318 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_44 [26:11] \bb.direct._T_1320 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [20] \bb.direct._T_1338 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [20] \bb.direct._T_1340 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [41] \bb.direct._T_1342 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [41] \bb.direct._T_1345 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [41] \bb.direct._T_1348 [36:7] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] \bb.direct._T_1363 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] \bb.direct._T_1365 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_884 [25:20] \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] \bb.direct._T_1375 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] \bb.direct._T_1377 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [20] \bb.direct._T_1395 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [20] \bb.direct._T_1397 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [41] \bb.direct._T_1399 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [41] \bb.direct._T_1402 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [41] \bb.direct._T_1405 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [20] \bb.direct._T_1452 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [20] \bb.direct._T_1454 [16:0] }.
+Warning: No driver for signal { \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [41] \bb.direct._T_1456 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [41] \bb.direct._T_1459 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [36:0] }.
+Warning: No driver for signal { \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [41] \bb.direct._T_1462 [36:7] }.
+Warning: No driver for signal { \bb.direct._T_1515 [34] \bb.direct._T_1515 [34] \bb.direct._T_1515 [32:0] }.
+Warning: No driver for signal { \bb.direct._GEN_51 [26:11] \bb.direct._T_1534 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_52 [26:11] \bb.direct._T_1536 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_55 [26:11] \bb.direct._T_1546 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_56 [26:11] \bb.direct._T_1548 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1572 [34] \bb.direct._T_1572 [34] \bb.direct._T_1572 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1629 [34] \bb.direct._T_1629 [34] \bb.direct._T_1629 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1632 [34] \bb.direct._T_1632 [34] \bb.direct._T_1632 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1635 [34] \bb.direct._T_1635 [34] \bb.direct._T_1635 [32:0] }.
+Warning: No driver for signal { \bb.direct._GEN_59 [26:11] \bb.direct._T_1648 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_60 [26:11] \bb.direct._T_1650 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_63 [26:11] \bb.direct._T_1660 [10:0] }.
+Warning: No driver for signal { \bb.direct._GEN_64 [26:11] \bb.direct._T_1662 [10:0] }.
+Warning: No driver for signal { \bb.direct._T_1686 [34] \bb.direct._T_1686 [34] \bb.direct._T_1686 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1689 [34] \bb.direct._T_1689 [34] \bb.direct._T_1689 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1692 [34] \bb.direct._T_1692 [34] \bb.direct._T_1692 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1743 [34] \bb.direct._T_1743 [34] \bb.direct._T_1743 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1800 [34] \bb.direct._T_1800 [34] \bb.direct._T_1800 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1857 [34] \bb.direct._T_1857 [34] \bb.direct._T_1857 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1860 [34] \bb.direct._T_1860 [34] \bb.direct._T_1860 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1863 [34] \bb.direct._T_1863 [34] \bb.direct._T_1863 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1914 [34] \bb.direct._T_1914 [34] \bb.direct._T_1914 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1917 [34] \bb.direct._T_1917 [34] \bb.direct._T_1917 [32:0] }.
+Warning: No driver for signal { \bb.direct._T_1920 [34] \bb.direct._T_1920 [34] \bb.direct._T_1920 [32:0] }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag [16] \bb.BiplexFFT.io_out_bits_0_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real [16] \bb.BiplexFFT.io_out_bits_0_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag [16] \bb.BiplexFFT.io_out_bits_1_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real [16] \bb.BiplexFFT.io_out_bits_1_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag [16] \bb.BiplexFFT.io_out_bits_2_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real [16] \bb.BiplexFFT.io_out_bits_2_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag [16] \bb.BiplexFFT.io_out_bits_3_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real [16] \bb.BiplexFFT.io_out_bits_3_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag [16] \bb.BiplexFFT.io_out_bits_4_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real [16] \bb.BiplexFFT.io_out_bits_4_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag [16] \bb.BiplexFFT.io_out_bits_5_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real [16] \bb.BiplexFFT.io_out_bits_5_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag [16] \bb.BiplexFFT.io_out_bits_6_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real [16] \bb.BiplexFFT.io_out_bits_6_real }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag [16] \bb.BiplexFFT.io_out_bits_7_imag }.
+Warning: No driver for signal { \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real [16] \bb.BiplexFFT.io_out_bits_7_real }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_0_imag [19:16] \bb.direct._GEN_36 [26:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_0_real [19:16] \bb.direct._GEN_35 [26:11] }.
+Warning: No driver for signal { \bb.direct._GEN_40 [35] \bb.direct._GEN_40 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_39 [35] \bb.direct._GEN_39 [29:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_4_imag [19:16] \bb.direct._GEN_44 [26:11] }.
+Warning: No driver for signal { \bb.direct.stage_outputs_1_4_real [19:16] \bb.direct._GEN_43 [26:11] }.
+Warning: No driver for signal { \bb.direct._GEN_48 [35] \bb.direct._GEN_48 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_47 [35] \bb.direct._GEN_47 [29:11] }.
+Warning: No driver for signal { \bb.direct._GEN_777 [20] \bb.direct._GEN_777 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_778 [20] \bb.direct._GEN_778 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_825 [20] \bb.direct._GEN_825 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_826 [20] \bb.direct._GEN_826 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_901 [20] \bb.direct._GEN_901 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_902 [20] \bb.direct._GEN_902 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_920 [20] \bb.direct._GEN_920 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_921 [20] \bb.direct._GEN_921 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_863 [20] \bb.direct._GEN_863 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_864 [20] \bb.direct._GEN_864 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_939 [20] \bb.direct._GEN_939 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_940 [20] \bb.direct._GEN_940 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_958 [20] \bb.direct._GEN_958 [18:0] }.
+Warning: No driver for signal { \bb.direct._GEN_959 [20] \bb.direct._GEN_959 [18:0] }.
+
+Warnings: 243 unique messages, 564 total
+End of script. Logfile hash: 465fe25125, CPU: user 0.59s system 0.02s, MEM: 28.03 MB peak
+Yosys 0.16+63 (git sha1 11e75bc27, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 35% 4x opt_clean (0 sec), 16% 3x opt_expr (0 sec), ...

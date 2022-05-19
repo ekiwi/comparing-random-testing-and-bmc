@@ -1,0 +1,8 @@
+# running in cover_z3/src/
+read -formal Sodor3Stage.v
+read -formal Sodor3Stage_formal.sv
+prep -top Sodor3StageTop
+
+hierarchy -simcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il
