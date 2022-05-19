@@ -1,0 +1,67 @@
+[tasks]
+bug09
+bug11
+
+[options]
+mode bmc
+depth 100
+bug09: expect fail
+bug11: expect fail
+
+[engines]
+smtbmc boolector
+
+[script]
+verilog_defines -DSPECS_BUG
+bug09: verilog_defines -DBUG09
+bug11: verilog_defines -DBUG11
+verilog_defines -DSYM_MEM -DDISABLE_DATA_MEM -DASSUME_VALID_INSTRUCTION
+read -formal harness.v
+read -formal or1200_assertions.v
+read -formal or1200_assumptions.v
+read -formal or1200_alu.v
+read -formal or1200_cfgr.v
+read -formal or1200_cpu.v
+read -formal or1200_except.v
+read -formal or1200_freeze.v
+read -formal or1200_wbmux.v
+read -formal or1200_lsu.v
+read -formal or1200_sprs.v
+read -formal or1200_mult_mac.v
+read -formal or1200_fpu.v
+read -formal or1200_operandmuxes.v
+read -formal or1200_rf.v
+read -formal or1200_ctrl.v
+read -formal or1200_if.v
+read -formal or1200_genpc.v
+read -formal or1200_dpram.v
+read -formal or1200_gmultp2_32x32.v
+read -formal or1200_reg2mem.v
+read -formal or1200_mem2reg.v
+prep -top harness
+
+
+[files]
+harness.v
+or1200_assertions.v
+or1200_assumptions.v
+../rtl/specs/or1200_defines.v
+../rtl/specs/or1200_alu.v
+../rtl/specs/or1200_cfgr.v
+../rtl/specs/or1200_cpu.v
+../rtl/specs/or1200_except.v
+../rtl/specs/or1200_freeze.v
+../rtl/specs/or1200_wbmux.v
+../rtl/specs/or1200_lsu.v
+../rtl/specs/or1200_sprs.v
+../rtl/specs/or1200_mult_mac.v
+../rtl/specs/or1200_fpu.v
+../rtl/specs/or1200_operandmuxes.v
+../rtl/specs/or1200_rf.v
+../rtl/specs/or1200_ctrl.v
+../rtl/specs/or1200_if.v
+../rtl/specs/or1200_genpc.v
+../rtl/specs/or1200_dpram.v
+../rtl/specs/or1200_gmultp2_32x32.v
+../rtl/specs/or1200_reg2mem.v
+../rtl/specs/or1200_mem2reg.v

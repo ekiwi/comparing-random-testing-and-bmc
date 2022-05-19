@@ -1,0 +1,66 @@
+[tasks]
+bug20
+bug24
+
+[options]
+mode bmc
+depth 10
+bug20: expect fail
+bug24: expect fail
+
+[engines]
+smtbmc boolector
+
+[script]
+bug20: verilog_defines -DBUG20
+bug24: verilog_defines -DBUG24
+verilog_defines -DSYM_MEM -DDISABLE_DATA_MEM -DASSUME_VALID_INSTRUCTION
+read -formal harness.v
+read -formal or1200_assertions.v
+read -formal or1200_assumptions.v
+read -formal or1200_alu.v
+read -formal or1200_cfgr.v
+read -formal or1200_cpu.v
+read -formal or1200_except.v
+read -formal or1200_freeze.v
+read -formal or1200_wbmux.v
+read -formal or1200_lsu.v
+read -formal or1200_sprs.v
+read -formal or1200_mult_mac.v
+read -formal or1200_fpu.v
+read -formal or1200_operandmuxes.v
+read -formal or1200_rf.v
+read -formal or1200_ctrl.v
+read -formal or1200_if.v
+read -formal or1200_genpc.v
+read -formal or1200_dpram.v
+read -formal or1200_gmultp2_32x32.v
+read -formal or1200_reg2mem.v
+read -formal or1200_mem2reg.v
+prep -top harness
+
+
+[files]
+harness.v
+or1200_assertions.v
+or1200_assumptions.v
+../rtl/exposed-init-zero/or1200_defines.v
+../rtl/exposed-init-zero/or1200_alu.v
+../rtl/exposed-init-zero/or1200_cfgr.v
+../rtl/exposed-init-zero/or1200_cpu.v
+../rtl/exposed-init-zero/or1200_except.v
+../rtl/exposed-init-zero/or1200_freeze.v
+../rtl/exposed-init-zero/or1200_wbmux.v
+../rtl/exposed-init-zero/or1200_lsu.v
+../rtl/exposed-init-zero/or1200_sprs.v
+../rtl/exposed-init-zero/or1200_mult_mac.v
+../rtl/exposed-init-zero/or1200_fpu.v
+../rtl/exposed-init-zero/or1200_operandmuxes.v
+../rtl/exposed-init-zero/or1200_rf.v
+../rtl/exposed-init-zero/or1200_ctrl.v
+../rtl/exposed-init-zero/or1200_if.v
+../rtl/exposed-init-zero/or1200_genpc.v
+../rtl/exposed-init-zero/or1200_dpram.v
+../rtl/exposed-init-zero/or1200_gmultp2_32x32.v
+../rtl/exposed-init-zero/or1200_reg2mem.v
+../rtl/exposed-init-zero/or1200_mem2reg.v
